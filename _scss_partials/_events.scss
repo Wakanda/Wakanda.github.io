@@ -1,0 +1,37 @@
+#section-events {
+    ul {
+        li {
+            list-style: none;
+            h4 {
+                padding: 6px 0 2px 0;
+                margin: 0;
+            }
+            a {
+                color: $base-color;
+            }
+            p {
+                color: $base-light-color;
+            }
+        }
+    }
+    .calendar {
+        width: 55px;
+        border-radius: 2px;
+        border: 1px solid $highlighted-color;
+        float: left;
+        margin-right: 20px;
+        text-align: center;
+        .calendar-month {
+            height: 22px;
+            background-color: $highlighted-color;
+            padding-top: 2px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        .calendar-day {
+            height: 32px;
+            background-color: #fff;
+            font-size: 1.4rem;
+        }
+    }
+}

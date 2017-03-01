@@ -1,0 +1,59 @@
+---
+id: marketplace
+layout: page
+title: Marketplace
+top_title: true
+css:
+    - css/lib/select2.min.css
+    - css/lib/flag-icon.min.css
+    - css/lib/remodal.css
+    - css/lib/remodal-default-theme.css
+scripts:
+    - js/isotope.pkgd.js
+    - js/select2.min.js
+    - js/jquery.flip.min.js
+    - js/remodal.min.js
+    - js/lib/jquery-validate/jquery.validate.js
+    - https://www.google.com/recaptcha/api.js
+
+    
+---
+<!-- Nav tabs -->
+<div class="marketplace">
+    <div class="row header-market">
+        <div class="container">
+            <div class="row">
+                <ul class="col-md-8 col-sm-12 nav" id="market-tab" role="tablist">
+                    <li class="nav-item" style="display: none">
+                        <a class="nav-link" data-toggle="tab" href="#template" role="tab">Template</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#consultant" role="tab">Consultant</a>
+                    </li>
+                    <li class="nav-item" style="display: none">
+                        <a class="nav-link" data-toggle="tab" href="#apps" role="tab">Apps</a>
+                    </li>
+                </ul>
+                <div class="col-md-4 col-sm-12" id="market-link">
+                    <a class="nav-link" href="wakanda-partners.html">Become partner</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane" id="template" role="tabpanel">
+            {% include marketplace/template.html %}
+        </div>
+        <div class="tab-pane active" id="consultant" role="tabpanel">
+            {% include marketplace/consultant.html %}
+        </div>
+        <div class="tab-pane" id="apps" role="tabpanel">
+            {% include marketplace/apps.html %}
+        </div>
+    </div>
+</div>
+<script>
+    var isoCountries = {{ site.data.country | jsonify }};
+</script>

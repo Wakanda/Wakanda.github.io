@@ -1,0 +1,90 @@
+
+<div id="template">
+    <div id="filters">
+        <div class="row intro">
+            <div class="container" id="started">
+                <p>Getting started with templates : </p>
+                <ol>
+                    <li>Download the files</li>
+                    <li>Install</li>
+                    <li>Lorem ipsum dolor</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container" id="search">
+                <label for="quicksearch_template" class="title col-form-label">Search : </label>
+                <input class="form-control quicksearch" type="text" id="quicksearch_template" placeholder="Keywords" />
+            </div>
+        </div>
+        
+        <div class="options" id="options_template">
+            {% for filter in site.data.marketplace.filters.template %}
+            <div class="row">
+                <div class="option-set container" data-group="{{ filter.id }}">
+                    <p class="title">{{ filter.title }} : </p>
+                    <ul class="list-filter">
+                        {% for tag in filter.values %}
+                            <li>
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input button filter_checkbox" value=".{{ tag.filter_id }}">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">{{ tag.title }}</span>
+                                </label>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row filtered_items" id="filtered_items_template">
+            {% assign posts = site.marketplace | where: "category", "template" | sort: 'date' | reverse %}
+            {% for post in posts %}
+                {% assign index_post = forloop.index %}
+                <div class="item col-md-4 {{ post.tags | join: ' '}} {{ post.type | join: ' '}} {{ post.powered.type | join: ' '}}">
+                    <div id="slide-image_{{index_post}}" class="carousel slide" data-wrap="false">
+                        <ol class="carousel-indicators">
+                            {% for image in post.images %}
+                                <li data-target="#slide-image_{{index_post}}" data-slide-to="{{forloop.index}}" {% if forloop.index == 1 %}class="active"{% endif %}></li>
+                            {% endfor %}
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            {% for image in post.images %}
+                            <div class="carousel-item {% if forloop.index == 1 %} active {% endif %}">
+                                <img class="d-block img-fluid" src="{{ image.url }}" alt="{{ image.alt }}">
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#slide-image_{{index_post}}" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon icon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#slide-image_{{index_post}}" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon icon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3>{{ post.title }}</h3>
+                        <div class="description">{{ post.description | truncatewords: 20, "..." }}</div>
+                        <div class="row market-links">
+                            <div class="col-lg-3 col-md-12 type-market">
+                                <span>{{ post.type | replace: '_', ' '}}</span>
+                            </div>
+                            <div class="col-lg-6 col-md-12 powered">
+                                <a href="{{ post.powered.url }}">Powered by {{ post.powered.type }}</a>
+                            </div>
+                            <div class="col-lg-3 col-md-12 get-it">
+                                <a href="{{ post.url }}" class="">Get it <i class="icon-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

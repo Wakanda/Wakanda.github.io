@@ -1,0 +1,39 @@
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+  integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+  crossorigin="anonymous"></script>
+<script src="js/layout.js"></script>
+<script src="js/lib/typed/typed.min.js"></script>
+{% for script in page.scripts %}
+  <script src="{{ script }}"></script>
+{% endfor %}
+<script src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "Click I Agree to accept cookies and go directly to the site or click on More Information to see detailed descriptions of the types of cookies and choose whether to accept certain cookies while on the site.",
+    "dismiss": "I agree",
+    "link": "More info",
+    "href": "http://wakanda.io/acceptable-use-policy-aup"
+  },
+  onStatusChange: function(status) {
+  },
+  onPopupOpen: function() {
+      $('.fixed-top').css('top', 70);
+
+  },
+  onPopupClose: function() {
+      $('.fixed-top').css('top', 0);
+
+  }
+})});
+</script>

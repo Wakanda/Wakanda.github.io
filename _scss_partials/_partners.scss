@@ -1,0 +1,114 @@
+.wk-partners{
+    .introduction-partners{
+        padding: 40px 0;
+    }
+   .snd {
+       background: $light-bg;
+        padding: 60px 30px 0 160px;
+        h2{
+            font-size: 44px;
+        }
+        li {
+            padding: 15px;
+        } 
+        .bme {
+            margin-top: 30px;
+            a{
+                @include transition(all 200ms ease-out);
+                background: #ffc600;
+                color: #fff;
+                font-size: 17px;
+                font-weight: bold;
+                margin-right: 30px;
+                padding: 10px 20px;
+                &:hover{
+                    background: #fff;
+                    color: #ffc600;
+                    border: 1px solid #ffc600;
+                }
+            }
+        }
+    }
+    .business-partners{
+        h2 {
+            font-size: 37px;
+            margin-bottom: 40px;
+            font-family: 'MyriadProSemibold';
+            padding-top: 30px;
+            span {
+                font-size: 18px;
+                font-weight: 100;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        .cardBox {
+            margin-top: 51px;
+             .box {
+                background: #f0f4f7;
+                padding-bottom: 20px;
+                padding-top: 6px;
+                margin-bottom: 10px;
+                height: 200px;
+                .row{
+                    padding: 20px;
+                }
+                .system {
+                    background: url(../img/sprite_ico.png) no-repeat 0px 0px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 60px;
+                }
+                 .digital {
+                    background: url(../img/sprite_ico.png) no-repeat 0px -56px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 40px;
+                }
+                 .innovation {
+                    background: url(../img/sprite_ico.png) no-repeat 0px -104px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 40px;
+                }
+                 .education {
+                    background: url(../img/sprite_ico.png) no-repeat 0px -197px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 40px;
+                }
+                .techpartner {
+                    background: url(../img/sprite_ico.png) no-repeat 0px -158px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 40px;
+                }
+                .developer {
+                    background: url(../img/sprite_ico.png) no-repeat 0px -242px;
+                    padding-top: 24px;
+                    margin-top: 17px;
+                    height: 40px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+            }
+             .tech {
+                margin-top: 30px;
+                text-align: center;
+                width: 100%;
+                p {
+                    color: #333;
+                    @include font-size(16px);
+                }
+                .btn{
+                    padding: 10px 50px;
+                }
+            }
+        }
+    }
+}

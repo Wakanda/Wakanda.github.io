@@ -1,0 +1,30 @@
+full_rebuild: true
+name: FullStack JavaScript Platform | Develop &amp; Run Web &amp; Mobile Apps
+author: Wakanda SAS
+url: http://wakanda.io
+version: 0.1
+repository: https://github.com/Wakanda/wakanda.io
+branch: gh-pages
+encoding: utf-8
+version: 1.3
+encoding: utf-8
+sass:
+  sass_dir: _scss_partials
+defaults:
+  -
+    values:
+      layout: "index"
+  - scope:
+      path: ""
+      type: marketplace
+    values:
+      layout: marketplace
+exclude: [
+.git,
+.gitignore,
+README.md,
+LICENSE
+]
+collections:
+  marketplace:
+    output: true

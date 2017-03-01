@@ -1,0 +1,519 @@
+
+/* EVENTIAL CSS 
+
+	1. CORE CSS
+	2. NAVIGATION
+	3. TOP
+	   - Countdown
+	4. OVERVIEW
+	   - Milestone
+	5. SPEAKERS
+	6. SCHEDULE
+	7. VENUE
+	8. TESTIMONIAL
+	9. SPONSORS
+	10. SUBSCRIBE
+	11. FAQ & GALLERY
+	12. REGISTER
+	13. CONTACT 
+	14. MISC.
+		- Form Elements
+		- Buttons
+		- Preload	
+*/
+
+
+/* CORE CSS */
+
+@font-face {
+    font-family: 'sinkin_sans200_x_light';
+    src: url('../fonts/SinkinSans-200XLight-webfont.eot');
+    src: url('../fonts/SinkinSans-200XLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-200XLight-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-200XLight-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-200XLight-webfont.svg#sinkin_sans200_x_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sinkin_sans300_light';
+    src: url('../fonts/SinkinSans-300Light-webfont.eot');
+    src: url('../fonts/SinkinSans-300Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-300Light-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-300Light-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-300Light-webfont.svg#sinkin_sans300_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sinkin_sans400_regular';
+    src: url('../fonts/SinkinSans-400Regular-webfont.eot');
+    src: url('../fonts/SinkinSans-400Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-400Regular-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-400Regular-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-400Regular-webfont.svg#sinkin_sans400_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sinkin_sans600_semibold';
+    src: url('../fonts/SinkinSans-600SemiBold-webfont.eot');
+    src: url('../fonts/SinkinSans-600SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-600SemiBold-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-600SemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-600SemiBold-webfont.svg#sinkin_sans600_semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sinkin_sans700_bold';
+    src: url('../fonts/SinkinSans-700Bold-webfont.eot');
+    src: url('../fonts/SinkinSans-700Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SinkinSans-700Bold-webfont.woff') format('woff'),
+         url('../fonts/SinkinSans-700Bold-webfont.ttf') format('truetype'),
+         url('../fonts/SinkinSans-700Bold-webfont.svg#sinkin_sans700_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+	font-family:'sinkin_sans300_light';
+	font-size:1.4em;
+	line-height:1.5em;
+	overflow-x:hidden;
+}
+
+section {
+	padding:35px 0;
+}
+
+h2 {
+	font-family:'sinkin_sans300_light';
+	font-size:27px;
+	margin-top:0;
+	margin-bottom:40px;
+}
+
+h2 span {
+	font-family:'sinkin_sans700_bold';
+}
+
+h3 {
+	font-family:'sinkin_sans300_light';
+}
+
+h4 {
+	font-family:'sinkin_sans400_regular';
+	font-size:17px;
+	letter-spacing:-1px;
+	margin-bottom:5px;	
+}
+
+.lead {
+    margin-top:20px;
+	font-family:'sinkin_sans300_light';
+	font-size:17px;
+	letter-spacing:1px;
+    line-height:26px;
+}
+
+.uppercase {
+	text-transform:uppercase;
+}
+
+p {
+    line-height:1.5;
+}
+
+/* NAVIGATION */
+
+.navbar {
+	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.navbar-custom {
+	font-family:'sinkin_sans300_light';
+	font-size:12px;
+	border-radius:0;
+	margin-bottom:0;
+	padding:50px 0;
+}
+
+.navbar-brand {
+	padding:0 15px;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.top-nav-collapse {
+	padding: 20px 0;
+}
+
+
+/* TOP */
+
+#top {
+	background:url(../img/singapore.jpg) bottom center no-repeat;
+	width:100%;
+	max-height:auto;
+	height:650px;
+	margin-bottom:15px;
+	position:relative;
+	display:table;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+
+#top h1 {
+	font-family:'Economica';
+  color:#313131;
+  padding: .5em 0 .5em 0;
+	font-size:60px;
+}
+
+#top h3 {
+  padding-bottom:1.5em;
+  
+}
+
+#top .date {
+  background-color:rgba(255,255,255,.7);
+}
+
+.countdown {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#countdown {
+	margin:40px 0 60px 0;
+}
+
+#countdown .countdown_amount {
+	font-family:'Economica';
+  color:#313131;
+	font-size:50px;
+	margin-bottom:10px;
+}
+
+#countdown .countdown_section {
+	font-family:'Economica';
+  color:#313131;
+	font-size:16px;
+}
+
+/* OVERVIEW */
+
+#overview h2 {
+	margin:0;
+}
+
+.highlight {
+  display:inline-block;
+  background-color:#5fbe40;
+  color:#fff;
+  padding:5px;
+  margin: 1em 0 3em 0;
+}
+
+#overview h3 span {
+	font-size:30px;
+	vertical-align:middle;
+}
+
+#overview ul {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+#overview ul li {
+  padding-left: 1em;
+  text-indent:-.7em;
+}
+
+  #overview ul li:first-child {
+    margin-bottom:10px;
+  }
+
+  #overview ul li:before {
+      content: "• ";
+      color: #313131;
+  }
+
+#overview h4 {
+	margin-bottom:20px;
+}
+
+#overview .lead {
+	letter-spacing:0px;
+}
+
+#overview .textblock {
+  margin-bottom: 1em;
+}
+
+/* USE CASES */
+
+#useCases h2 {
+	margin:10px 0;
+}
+
+/* WINNERS */
+
+#winners {
+  background:url(../img/testimonial-bg.png) bottom center no-repeat fixed;
+  background-size:cover;
+  color:#fff;
+}
+
+#winners .container {
+  background-color:rgba(0,0,0,.5);
+  margin-top:50px;
+  margin-bottom:50px;
+  padding:20px;
+}
+
+
+/* WAKANDA APP FACTORY */
+
+#wakandaAppFactory {
+	padding:70px 0;
+	background-color:#f4f4f4;
+}
+
+#wakandaAppFactory h2 {
+  color:#313131;
+}
+
+/* GET STARTED */
+
+#getstarted h2 {
+  margin:1em 0 0 0;
+}
+
+/* register form */
+
+#register-form {
+	padding:25px;
+}
+
+#register-form h2 {
+	margin-bottom:15px;
+}
+
+.register-form {
+	margin-top:20px;
+}
+
+
+/* CONTACT */
+
+#contact {
+	font-size:16px;
+	padding:0;
+	position:relative;
+}
+
+.contact {
+	padding:15px;
+	margin:0 15px 0 10px;
+	height:576px;
+	position:absolute;
+	bottom:0;
+}
+
+.contact h2 {
+	margin-bottom:10px;
+}
+
+#contact p {
+	float:left;
+}
+
+#contact .address {
+	font-size:21px;
+	margin:20px 0;
+}
+
+#contact .social {
+	position:absolute;
+	bottom:5px;
+}
+
+#gmap_canvas {
+	position:relative;
+	height:576px;
+	width:100%;
+}
+
+#gmap_canvas img{
+	max-width:none!important;
+	background:none!important
+}
+
+.social {
+	margin:10px 0;
+}
+
+.social .fa-inverse {
+}
+
+.social a {
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}
+
+.social a:hover{
+	text-decoration:none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+/* MISC */
+
+/* FORM ELEMENTS */
+
+input[type="text"],
+input[type="email"],
+select {
+	font-size:20px;
+	font-family:inherit;
+	width:100%;
+	min-height:30px;
+	padding:12px 10px;
+	text-transform:uppercase;
+	border:0;
+	border:1px solid #2e2e2e;
+	margin-bottom:20px;
+	outline:none;
+} 
+
+
+
+/* BUTTONS */
+
+.button {
+	font-family:'sinkin_sans700_bold';
+	font-size: 10px;
+	text-transform: uppercase;
+	border: none;
+	margin: 15px 0;
+	padding: 5px 15px;
+	display: inline-block;
+	position: relative;
+	outline: none;
+	cursor: pointer;
+	-webkit-border-radius:4px;
+	   -moz-border-radius:4px;
+	   		border-radius:4px;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+	            transition: all 0.3s;
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+.button-big {
+	padding:15px 25px;
+	font-size:14px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	   -moz-border-radius:4px;
+}
+
+.button-light:hover,
+.button-light:active {
+	text-decoration:none;
+}
+
+.button-dark:hover,
+.button-dark:active {
+	text-decoration:none;
+}
+
+
+/* PRELOAD */
+
+#preload {
+	position: fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width: 100%;
+	height: 100%; 
+	z-index: 9999;
+	display:table;
+}
+
+.preload {
+	display:table-cell;
+	vertical-align:middle;
+	width: 100%;
+	height: 100%;
+}
+
+.loader {
+  margin: 3em auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
