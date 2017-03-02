@@ -49,7 +49,7 @@ feature_details:
           url: img/icons/files.png
           alt: Prototype
 
-      - h4: One IDE to the Full-Stack
+      - h4: One IDE to cover the Full-Stack
         p: Develop your Font-End, your Back-End and your data integration in the same IDE
         img:
           url: img/icons/fullstack.png

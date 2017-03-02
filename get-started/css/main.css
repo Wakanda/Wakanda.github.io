@@ -9064,9 +9064,9 @@ hr {
   pre, code {
     word-wrap: normal; } }
 @media print, screen and (max-width: 640px) {
-  body {
-    padding: 15px; }
-
+  /*body {
+    padding:15px;
+  }*/
   header ul {
     width: 99%; }
 
