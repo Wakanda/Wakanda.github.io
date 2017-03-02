@@ -1,5 +1,7 @@
-.main-nav{
-  //margin: 20px 0;
+.io-header-container{
+  padding: 20px 0;
+}
+.io-header{
   padding: 0;
   height: 66px;
   width: 100%;
@@ -13,13 +15,15 @@
   }
   .logo{
     float: left;
-    margin: 12px 0 0 0;
+    margin: 0;
+    max-width: 200px;
 
     @media (max-width: 340px){
       max-width: 162px;
     }
     > img{
       max-width: 100%;
+      margin-top: 15px;
     }
   }
   ul{
@@ -28,6 +32,10 @@
     list-style-type: none;
     margin: 5px 0 0 0;
     padding: 0;
+
+    width: initial !important;
+    display: initial !important;
+    clear: initial !important;
 
     @media(min-width: 991px){
       margin-top: 12px;
@@ -114,10 +122,10 @@
     }
   }
 }
-.mobile-main-nav{
+.io-header-mobile{
   animation: mobile;
   animation-duration: 0.2s;
-  background: $btn-dark-bg;
+  background: $highlighted-item-mobile;
   display: none;
   position: fixed;
   top: 0;
@@ -133,6 +141,7 @@
   .logo{
     float: left;
     margin: 20px 0px 20px 15px;
+    max-width: 200px;
 
     > img{
       max-width: 100%;
@@ -141,6 +150,7 @@
   .close-main-nav{
     animation: close;
     animation-duration: .5s;
+    //color: $base-color;
     color: $white-color;
     float: right;
     font-size: 3rem;
@@ -163,7 +173,7 @@
       padding-left: 45px;
       background: $dark-bg;
       &.highlighted-item{
-        background: $btn-dark-bg;
+        background: $highlighted-item-mobile;
       }
       &:nth-of-type(2) a{
         animation-delay: -0.8s;
@@ -204,7 +214,7 @@
     }
   }
 }
-.mobile-main-nav:target{
+.io-header-mobile:target{
   display: block;
 }
 

@@ -26,44 +26,55 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-2x{
+    @include font-size(24px);
+}
+.icon-3x{
+    @include font-size(28px);
+}
+.icon-4x{
+    @include font-size(32px);
+}
+.icon-5x{
+    @include font-size(48px);
+}
+.icon-6x{
+    @include font-size(56px);
+}
+.icon-7x{
+    @include font-size(64px);
+}
+.icon-8x{
+    @include font-size(72px);
+}
+.icon-9x{
+    @include font-size(80px);
+}
+.icon-10x{
+    @include font-size(92px);
+}
+.icon-11x{
+    @include font-size(125px);
+}
+.icon-circle{
+    border: 1px solid;
+    @include border-radius(50%);
+    &.icon-5x{
+        border: 3px solid;
+        padding: 20px;
+    }
+}
+
+
+
+.square .path1{ background-color: $square-bg;}
 
 
 
 
 
-.icon-map-marker:before {
-  content: "\e938";
-}
-.icon-chevron-o-up:before {
-  content: "\e900";
-}
-.icon-chevron-o-left:before {
-  content: "\e901";
-}
-.icon-chevron-o-down:before {
-  content: "\e931";
-}
-.icon-chevron-o-right:before {
-  content: "\e932";
-}
-.icon-close:before {
-  content: "\e933";
-}
-.icon-chevron-up:before {
-  content: "\e934";
-}
-.icon-chevron-down:before {
-  content: "\e935";
-}
-.icon-chevron-right:before {
-  content: "\e936";
-}
-.icon-chevron-left:before {
-  content: "\e937";
-}
-.icon-message:before {
-  content: "\e930";
-}
+
+
 .icon-mysql-o .path1:before {
   content: "\e92d";
   color: rgb(245, 245, 245);
@@ -262,5 +273,11 @@
 }
 .icon-wakanda-cloud:before {
   content: "\e909";
+}
+.icon-chevron-right:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\e901";
 }
 

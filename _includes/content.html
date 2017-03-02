@@ -1,0 +1,48 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJTRHS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="announcement">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar-left col-lg-2 col-md-3 col-sm-12">
+                {% include search.html %}
+            </div>
+            <div class="sidebar-rigth col-lg-8 col-md-9 col-sm-12">
+                {% include announcement.html %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-md-12 col-sm-12 page">
+            
+            {% include nav.html %}             
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <section id="{{ page.id }}">
+                <div id="chapter">
+                    <span>{{ chapter_title }}</span>
+                </div>
+                <div id="contribute">
+                    <a href="{{ site.repository }}/blob/{{ site.branch }}/{{ page.path }}"><span class="fa fa-github"> </span> </a>
+                </div>
+                {{ content }}
+            </section>
+        </div>
+        <div data-spy="scroll" data-target=".navbar " class="col-lg-2 col-md-12 col-sm-12 page">
+            <nav class="navbar social-media">
+                <div class="scroll">
+                    {% include subnav.html %}
+                    {% include mailing.html %}
+                </div>
+            </nav>
+        </div>
+        <footer class="clear-all">
+            {% include footer.html %}
+        </footer>
+    </div>
+</div>
+{% include sync_scripts.html %}

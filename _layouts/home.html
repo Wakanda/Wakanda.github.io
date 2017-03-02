@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+</head>
+
+<body class="home">
+    <!--{% include home_header.html %}-->
+    {% include content.html %}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                var stepsTitle = [
+                    '<i class="fa fa-magic" aria-hidden="true"></i> Project Type',
+                    '<i class="fa fa-cog" aria-hidden="true"></i> Setup',
+                    '<i class="fa fa-database" aria-hidden="true"></i> Data Visual Editor',
+                    '<i class="fa fa-laptop" aria-hidden="true"></i> Web app',
+                    '<i class="fa fa-mobile" aria-hidden="true"></i> Mobile app'
+                ];
+                $('.slides').slick({
+                    dots: true,
+                    customPaging : function(slider, i) {
+                        return '<span>'+stepsTitle[i]+'</span>';
+                    },
+                    appendDots: "#dots"
+                });
+                $(".slick-dots").append('<li class="secondary"><span><a href="#announcement">Start Now »</a></span></li>');
+            });
+    </script>
+</body>
+
+</html>
