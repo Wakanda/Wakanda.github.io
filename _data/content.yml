@@ -62,7 +62,7 @@ feature_details:
           alt: Integrate
 
       - h4: Code once, deploy everywhere
-        p: Build omnichannel Apps with one Back-End to your multiple Frontend projects and Mobile Apps! All platforms are supported.
+        p: Build omnichannel Apps with one Back-End for your multiple Frontend projects and Mobile Apps! All platforms are supported.
         img:
           url: img/icons/deploy.png
           alt: Omnichannel

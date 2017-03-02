@@ -9441,3 +9441,7 @@ h2 {
         display: none; }
       #footer #accordion .collapse {
         display: block; } }
+
+@media (max-width: 992px) {
+  #community-dl {
+    display: none; } }
