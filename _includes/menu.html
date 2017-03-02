@@ -1,0 +1,41 @@
+<div class="container">
+  <nav class="navbar fixed-top navbar-light bg-faded">
+    <div class="row">
+      <div class="container">
+        <div class="main-nav">
+          <a class="logo"  href="index.html">
+            <img src="img/Logo-Wakanda.png" alt="Wakanda Logo" />
+          </a>
+          {% if page.top_title %}
+              <a class="top-title" href="{{ page.url }}" style="display: none">{{ page.title }}</a>
+          {% endif %}
+          <ul>
+            {% for item in site.data.menu.items %}
+              <li class="hidden-sm-down {% if item.highlighted %}highlighted-item{% endif %}" {% if page.url contains item.url %} class="active" {% endif %}>
+                  <a class="{{ item.class }}" href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
+              </li>
+            {% endfor %}
+            <li class="hidden-md-up">
+              <a class="mobile-nav-trigger icon" href="#mobile-nav">Menu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<nav id="mobile-nav" class="mobile-main-nav">
+  <div>
+    <a class="logo" href="">
+      <img src="img/logo/wakandaio_full_darkBG.png" alt="Wakanda Logo" />
+    </a>
+    <a href="#close" class="close-main-nav">&times;</a>
+  </div>
+  <ul>
+    {% for item in site.data.menu.items %}
+      <li {% if item.highlighted %} class="highlighted-item" {% endif %} {% if page.url contains item.url %} class="active" {% endif %}>
+          <a href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

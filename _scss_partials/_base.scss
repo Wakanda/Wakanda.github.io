@@ -1,10 +1,30 @@
 /** Mixins */
 @import "mixin";
 
-
 /** General theme */
 @import "variables";
+@import "buttons";
 @import "icons";
+@import "type";
+@import "layout";
+@import "mail_form";
 
-/** Site Navigation **/
+/** Sections **/
 @import "navigation";
+@import "headlines";
+@import "slideshow";
+@import "features";
+@import "download";
+@import "community";
+@import "quotes";
+@import "events";
+@import "footer";
+
+/** Pages **/
+@import "pricing";
+@import "marketplace";
+@import "partners";
+
+/** Effects */
+@import "strips";
+@import "typed";

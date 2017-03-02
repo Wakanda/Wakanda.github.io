@@ -35,6 +35,17 @@ box-shadow: $shadow;
   -o-border-radius: $radius;
 }
 
+/**
+* Transition radius shorthand
+*/
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
 
 /**
 * Transform radius shorthand
@@ -62,44 +73,9 @@ box-shadow: $shadow;
   transform-style: $val;
 }
 
-
-/**
-* Opacity mixin
-*/
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity = $opacity-ie); //IE8
-}
-
-
-@mixin transition($transition) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
-}
-@mixin transition-property($property) {
-    -moz-transition-property:    $property;
-    -o-transition-property:      $property;
-    -webkit-transition-property: $property;
-    transition-property:         $property;
-}
-@mixin transition-duration($duration) {
-    -moz-transition-property:    $duration;
-    -o-transition-property:      $duration;
-    -webkit-transition-property: $duration;
-    transition-property:         $duration;
-}
-@mixin transition-timing-function($timing) {
-    -moz-transition-timing-function:    $timing;
-    -o-transition-timing-function:      $timing;
-    -webkit-transition-timing-function: $timing;
-    transition-timing-function:         $timing;
-}
-@mixin transition-delay($delay) {
-    -moz-transition-delay:    $delay;
-    -o-transition-delay:      $delay;
-    -webkit-transition-delay: $delay;
-    transition-delay:         $delay;
+@mixin flex($val) {
+  -webkit-box-flex: 0;
+  -webkit-flex:$val;
+  -ms-flex:$val;
+  flex:$val;
 }

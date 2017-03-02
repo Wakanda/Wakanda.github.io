@@ -1,0 +1,21 @@
+#mc_embed_signup {
+  color: #555; }
+  #mc_embed_signup h2 {
+    padding: 0 0 4px 0;
+    font-size: 11px; }
+  #mc_embed_signup .mc-field-group {
+    font-size: 11px;
+    margin-bottom: 8px; }
+  #mc_embed_signup .mce_inline_error {
+    color: #df5a49 !important;
+    background-color: white !important; }
+  #mc_embed_signup .email, #mc_embed_signup .mc-inline-error {
+    padding: 5px 3px;
+    width: 100%; }
+  #mc_embed_signup .button {
+    background-color: #fbb500;
+    padding: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%; }

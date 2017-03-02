@@ -1,4 +1,0 @@
----
-id: home
-layout: home
----

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Getting Started</title>
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Wakanda SAS">
+<link rel="shortcut icon" href="http://www.wakanda.io/sites/all/themes/wakanda_cloud/favicon.ico" type="image/vnd.microsoft.icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css?v=071016">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript">
+	var $mcGoal = {'settings':{'uuid':'f0f5ce5be3ec91715eb87cf9c','dc':'us12'}};
+	(function() {
+		 var sp = document.createElement('script'); sp.type = 'text/javascript'; sp.async = true; sp.defer = true;
+		sp.src = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/downloads.mailchimp.com' : 'http://downloads.mailchimp.com') + '/js/goal.min.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sp, s);
+	})();
+</script>
+<!-- <script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'wakandasoft/Lobby'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script> -->
+
+<!-- Google Tag Manager -->
+<script>
+dataLayer = [ ];
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLJTRHS');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Crasy EGG -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0061/8148.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<!-- End Crasy EGG -->
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0061/8148.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJTRHS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="io-header-container">
+    <div class="container-fluid">
+        <nav class="main-nav io-header" role="navigation">
+            <a class="logo" href="/index.html">
+                <img src="img/Logo-Wakanda.png">
+            </a>
+            <ul>
+
+
+                <li class="hidden-sm-down ">
+                    <a class="" href="/get-started">Get started</a>
+                </li>
+
+
+                <li class="hidden-sm-down ">
+                    <a class="" href="/pricing.html">Pricing</a>
+                </li>
+
+                <li class="hidden-sm-down ">
+                    <a class="" href="/marketplace.html">Partners</a>
+                </li>
+
+                <li class="hidden-sm-down ">
+                    <a class="" href="https://blog.wakanda.io" target="_blank">Blog</a>
+                </li>
+
+                <li class="hidden-sm-down highlighted-item">
+                    <a class="" href="https://console.wakanda.io">Sign in</a>
+                </li>
+
+                <li class="hidden-md-up">
+                    <a class="mobile-nav-trigger icon" href="#mobile-nav">Menu</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <nav id="mobile-nav" class="mobile-main-nav io-header-mobile" role="navigation">
+        <div>
+            <a class="logo" href="">
+                <img src="img/logo/wakandaio_full_darkBG.png">
+            </a>
+            <a href="#close" class="close-main-nav">×</a>
+        </div>
+        <ul>
+            <li>
+                <a href="/pricing.html">Pricing</a>
+            </li>
+
+            <li>
+                <a href="/marketplace.html">Partners</a>
+            </li>
+
+            <li>
+                <a href="https://blog.wakanda.io" target="_blank">Blog</a>
+            </li>
+
+            <li>
+                <a href="/get-started">Get started</a>
+            </li>
+
+            <li class="highlighted-item">
+                <a href="https://console.wakanda.io">Sign in</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+        <div class="announcement">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="sidebar-left col-lg-2 col-md-3 col-sm-12">
+                        <div class="search-input-wrapper">
+    <span class="fa fa-search"> </span>
+    <input type="text" id="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search the docs..." >
+</div>
+                    </div>
+                    <div class="sidebar-rigth col-lg-8 col-md-9 col-sm-12">
+                        <div id="announcement">
+    <p>
+        <strong><i class="fa fa-flash " aria-hidden="true "></i>
+          <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases "> Version 1.1 </a>
+        </strong> is now available! <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases ">
+        Read about the new features and fixes »</a>
+    </p>
+</div>
+<script>
+    function urlParse(key) {
+        var t = new RegExp("[\\?&]" + key + "=([^&#]*)");
+        var ret = t.exec(location.search);
+        var value = null === ret ? "" : ret[1];
+        return value;
+    }
+
+    var edition = urlParse('v');
+    var os = urlParse('os');
+
+    var platformLabelCollection = {
+        osx: "macOS",
+        win32: "Windows",
+        win64: "Windows",
+        linux32: "Linux",
+        linux64: "Linux"
+    };
+
+    var platformLinkCollection = edition == 'enterprise' ?
+        {
+            osx: "http://www.wakanda.io/productionchannel/1.1.0/mac/wakanda-enterprise-all_1.1.0_x64.dmg",
+            win32: "http://www.wakanda.io/productionchannel/1.1.0/windows/wakanda-enterprise-all_1.1.0_x86.msi",
+            win64: "http://www.wakanda.io/productionchannel/1.1.0/windows/wakanda-enterprise-all_1.1.0_x64.msi",
+            linux64: "http://www.wakanda.io/productionchannel/1.1.0/linux/wakanda-enterprise-server_1.1.0_amd64.deb"
+        } : {
+            osx: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x64.dmg",
+            win32: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x86.msi",
+            win64: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x64.msi",
+            linux32: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-server_1.1.0_i386.deb",
+            linux64: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-server_1.1.0_i386.deb"
+        };
+
+    var productName = edition == 'enterprise' ? 'Wakanda Enterprise' : 'Wakanda';
+    var platformLabel = platformLabelCollection[os];
+    var platformLink = platformLinkCollection[os];
+
+    if(typeof platformLink != 'undefined') {
+        document.getElementById('announcement').innerHTML =
+            '<p><i class="fa fa-rocket" aria-hidden="true"></i> Thanks for downloading <strong>' + productName + '</strong> for '+ platformLabel +'! \
+            Download not starting? <a href="' + platformLink + '">Try this direct download link.</a> \
+            </p>';
+    }
+</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 col-sm-12 page">
+                    
+                    <nav class="navbar navbar-toggleable-md navbar-light bg-faded main-nav">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <header class="navbar-brand" >
+        <a href="index.html" class="logo">Getting Started</a>
+    </header>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="nav-list row">
+            
+            
+            <li class="nav-group col-lg-12 col-md-4">
+                <a href="index.html#hello-world" >
+                    Hello World
+                </a>
+                <ul class="aside-nav ">
+                    
+                    <li >
+                        <a href="hello-world-mobile.html" target="">Hello World mobile app</a>
+                    </li>
+                    
+                    <li >
+                        <a href="create-web-app.html#web-app-creation" target="">Hello World web app</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            <li class="nav-group col-lg-12 col-md-4">
+                <a href="index.html#server-side" >
+                    Server-side
+                </a>
+                <ul class="aside-nav ">
+                    
+                    <li >
+                        <a href="populate-database.html" target="">Generate your datamodel</a>
+                    </li>
+                    
+                    <li >
+                        <a href="display-data-in-webapp.html" target="">Display your data</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            <li class="nav-group col-lg-12 col-md-4">
+                <a href="index.html#publish-app" >
+                    Publish your App
+                </a>
+                <ul class="aside-nav ">
+                    
+                    <li >
+                        <a href="build-mobile-app.html" target="">Build your mobile app</a>
+                    </li>
+                    
+                    <li >
+                        <a href="deploy-your-app.html" target="">Deploy to Your Server</a>
+                    </li>
+                    
+                    <li >
+                        <a href="deploy-your-app.html" target="">Deploy to Wakanda Cloud</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            <li class="nav-group col-lg-12 col-md-4">
+                <a href="index.html#go-further" >
+                    Go further
+                </a>
+                <ul class="aside-nav ">
+                    
+                    <li >
+                        <a href="http://wakanda.github.io/wakanda-server-doc/?_ga=1.144688306.662619326.1486638840#/doc/data/server-side" target="">Code your Server-Side Logic</a>
+                    </li>
+                    
+                    <li >
+                        <a href="http://doc.wakanda.org/home2.en.html#/MySQL-Connector-Pro/MySQL-Connector-Pro.100-1168858.en.html" target="">Connect your MySQL DB</a>
+                    </li>
+                    
+                    <li >
+                        <a href="http://wakanda.github.io/wakanda-server-doc/?_ga=1.189719596.662619326.1486638840#/doc/authentication/custom-session-management" target="">Manage scalabality</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="download">
+        <a id="community-dl" href="#" class="btn btn-lg btn-default btn-dl">
+            Download Wakanda
+        </a>
+    </div>
+</nav>             
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <section id="" class="main-section">
+                        <div id="chapter">
+                            <span></span>
+                        </div>
+                        <div id="contribute">
+                            <a href="https://github.com/ssalibi/wakanda-studio/blob/gh-pages/create-web-app.md"><span class="fa fa-github"> </span> </a>
+                        </div>
+                        <h1 id="hello-world-your-first-web-app-with-angular2">Hello World: your first Web App with Angular2</h1>
+
+<h2 id="step-1--install-wakanda">Step 1 : Install Wakanda</h2>
+
+<p>First, download and install <strong>Wakanda Community Edition</strong></p>
+
+<ul>
+  <li>On Windows, <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x86.msi" title="download">x86</a> or <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.msi" title="download">x64</a></li>
+  <li>On Mac OS X, <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.dmg" title="download">x64</a></li>
+</ul>
+
+<p>Now we can start our <strong>HelloWorldWeb</strong> project.</p>
+
+<h2 id="step-2-choose--mobile-or-web-app-">Step 2: Choose : mobile or web app ?</h2>
+
+<p>We can choose the kind of app we want to create : mobile, web or both.</p>
+
+<p>Here we want to create an <em>Angular2 web app</em>.</p>
+
+<p>To do that, we’re going to open the studio, (add studio icon here) and click on <strong>“Create a new solution”</strong>:</p>
+
+<p><img src="img/hp-initial.png" /></p>
+
+<p>Which opens the template selection page:</p>
+
+<p><img src="img/hww-template-selection.png" /></p>
+
+<p>The structure of your future projects depends of the template you choose.</p>
+
+<p>You’ll always have the <strong>same back end strcture</strong>, but you can choose to have a <strong>web front-end and/or mobile front-end</strong>.</p>
+
+<p>There, you can name your app and select the <strong>Angular basic template</strong>.</p>
+
+<p>Now, in your <strong>HelloWorldWeb</strong> project, you can find the Angular web app file structure :</p>
+
+<p><img src="img/hww-file-structure.png" /></p>
+
+<p>You have 3 folders at the root of your project:</p>
+
+<ul>
+  <li><strong>Backend</strong>: Wakanda JavaScript Server. It contains all the Server files to logs, settings, permissions.</li>
+  <li><strong>Database</strong>: Wakanda DB folder. It contains your data model(s), backups and your data.</li>
+  <li><strong>Web</strong>: where you’ll find all your web app front-end files. It contains all you need to code your Angular 1 or 2 projects.</li>
+</ul>
+
+<blockquote>
+  <p><strong>TIPS</strong>:</p>
+  <ul>
+    <li>If you choose web and mobile in the template selection, you’ll have both a <code class="highlighter-rouge">mobile</code> and a <code class="highlighter-rouge">web</code>folder.</li>
+    <li>A mobile and a web front-end, for the same back-end.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>NOTE</strong>:</p>
+  <ul>
+    <li><code class="highlighter-rouge">prototyper</code> folder in the Web Project is a prototyper tool to create quickly Web UI based on widgets architecture. But it is deprecated and will be excluded from the platform in our next major release!
+For our <strong>HelloWorldWeb</strong> we’re going to work first in the <code class="highlighter-rouge">web</code> folder.</li>
+  </ul>
+</blockquote>
+
+<h2 id="step-3-run-your-web-application">Step 3: Run your web application</h2>
+
+<p>First let’s have a look to our web template.</p>
+
+<p>Click on the <em>Run Page</em> toolbar button:</p>
+
+<p><img src="img/web-run-page.png" /></p>
+
+<blockquote>
+  <p><strong>TIPS</strong>:</p>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>To open your application in your default browser, set this preference via <em>Run Page</em> dropdown</li>
+    <li>Customize the panels: open the right panel from the toolbar toggles</li>
+    <li>You can move the web preview on the right panel</li>
+  </ol>
+</blockquote>
+
+<p><img src="img/web-app-creation.png" /></p>
+
+<p><img src="img/hww-run-template.png" /></p>
+
+<h2 id="step-4-code-your-angular2-application">Step 4: Code your Angular2 application</h2>
+
+<p>Let’s have a look to our project structure : the src folder is the classical Angular2 project structure. <a href="https://angular.io/docs/ts/latest/cli-quickstart.html" title="Angular CLI">More info here</a>.</p>
+
+<p>A simple change in <code class="highlighter-rouge">web/src/app/app.component.html</code> and I have my <strong>HelloWorld</strong> done.</p>
+
+<p>To make it more visual, you can change the background color in its scss file <code class="highlighter-rouge">web/src/app.scss</code>:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span><span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span><span class="m">#51D8C6</span>
+  <span class="n">color</span><span class="p">:</span><span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre>
+</div>
+
+<p>The preview is automatically reloaded after each saving.</p>
+
+<p><img src="img/hww-run-helloworld.png" /></p>
+
+<!-- <div class="navigation-step">
+  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
+</div> -->
+
+<hr />
+
+
+                    </section>
+                </div>
+                <div data-spy="scroll" data-target=".navbar " class="col-lg-2 col-md-12 col-sm-12 page">
+                    <nav class="navbar social-media">
+                        <div class="scroll">
+                            <ul>
+<li><i class="fa fa-stack-overflow"></i><a href="http://stackoverflow.com/questions/tagged/wakanda" target="_blank">Ask questions</a></li>
+<li><i class="fa fa-comments"></i><a href="https://github.com/Wakanda/wakanda-issues/issues" target="_blank">Request features</a></li>
+<li><i class="fa fa-github"></i><a href="https://github.com/Wakanda/wakanda-issues/issues" target="_blank">Report issues</a></li>
+</ul>
+
+                            <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+    <form action="//wakanda.us12.list-manage.com/subscribe/post?u=f0f5ce5be3ec91715eb87cf9c&amp;id=94c52bff22" method="post"
+    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+            <label>Stay in touch!</label>
+            <div class="mc-field-group">
+                <input placeholder="Enter your email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_f0f5ce5be3ec91715eb87cf9c_94c52bff22" tabindex="-1" value="">
+            </div>
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="feedback hidden">
+            <span class="desc">Is this page helpful ?</span>
+            <button class="btn">Yes</button>
+            <button class="btn">Non</button>
+        </div>
+        <div class=" disqus_thread hidden">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div id="disqus_thread"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="container container-accordion">
+  <div id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="card">
+      <div class="card-header" role="tab" id="headingTwo">
+        <h5 class="mb-0">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Platform
+          </a>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="card-block">
+  				<h3 class="hidden-sm-down">Platform</h3>
+          <ul>
+            <li><a href="wakanda-platform#studio">Studio</a></li>
+            <li><a href="wakanda-platform#backend">Backend</a></li>
+            <li><a href="/wakanda-platform#admin">Administration</a></li>
+            <li><a href="index.html">Get Started</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="headingThree">
+        <h5 class="mb-0">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Support
+          </a>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="card-block">
+  				<h3 class="hidden-sm-down">Support</h3>
+          <ul>
+  				  <li><a href="https://support.wakanda.io/">Ticketing</a></li>
+  				  <li><a href="http://stackoverflow.com/questions/tagged/wakanda">Stack Overflow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="headingFour">
+        <h5 class="mb-0">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Company
+          </a>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="card-block">
+  				<h3 class="hidden-sm-down">Company</h3>
+          <ul>
+  				  <li><a href="/about-wakanda">Our Story</a></li>
+  				  <li><a href="/about-wakanda">Team</a></li>
+  				  <li><a href="http://blog.wakanda.io">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="headingFive">
+        <h5 class="mb-0">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Legal
+          </a>
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="card-block">
+  				<h3 class="hidden-sm-down">Legal</h3>
+          <ul>
+  				  <li><a href="/license">License</a></li>
+  				  <li><a href="/legal-notice">Legal Notice</a></li>
+  				  <li><a href="/acceptable-use-policy-aup">AUP</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" role="tab" id="headingOne">
+        <h5 class="mb-0">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Member of
+          </a>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="card-block">
+          <h3 class="hidden-sm-down">Member of</h3>
+          <ul>
+            <li>
+              <a href="http://www.francedigitale.org/" target="_blank">France Digitale</a>
+            </li>
+            <li>
+              <a href="http://www.lafrenchtech.com/" target="_blank ">La French Tech</a>
+            </li>
+            <li>
+              <a href="https://www.ow2.org" target="_blank ">OW2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="secondary-footer">
+  <div class="container">
+    <div class="footer-logo">
+      <a href="">
+        <img class="img-fluid" src="img/logo/wakandaio_pic.png" alt="Wakanda Logo"/>
+      </a>
+    </div>
+    <ul class="footer-social-links">
+      <li>
+        <a href="https://blog.wakanda.io/?_ga=1.248519943.1654117092.1480425928">
+          <span class="fa fa-rss"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/wakandasoft">
+          <span class="fa fa-twitter"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/wakandasoft">
+          <span class="fa fa-facebook"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UC1I5--suuO34nD5gDoK_IAw">
+          <span class="fa fa-youtube"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/wakanda">
+          <span class="fa fa-linkedin"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+        </footer>
+        
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script> 
+<script type="text/javascript"> docsearch({
+apiKey: '7c5609c68a1793fb3d9b585e503e7ece',
+indexName: 'wakanda_studio',
+inputSelector: '#search'
+}); 
+</script>
+<script>
+    $('.gif').gifplayer({label: '►', wait: true});
+</script>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//wakanda.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<script id="dsq-count-scr" src="//wakanda.disqus.com/count.js" async></script>
+<script src="js/main.js"></script>
+
+        <script>
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'wakandasoft/Lobby'
+        };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    </body>
+</html>

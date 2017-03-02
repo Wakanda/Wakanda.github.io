@@ -1,15 +1,22 @@
 <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>{{ site.name }}</title>
+<link rel="shortcut icon" href="http://www.wakanda.io/sites/all/themes/wakanda/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="http://www.wakanda.io/">
+<link rel="shortlink" href="http://www.wakanda.io/">
 <meta name="viewport" content="width=device-width">
-<meta name="author" content="{{ site.author }}">
-<link rel="shortcut icon" href="http://www.wakanda.io/sites/all/themes/wakanda_cloud/favicon.ico" type="image/vnd.microsoft.icon">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css?v=071016">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-{% include analytics.html %}
-<script type="text/javascript">
-setTimeout(function(){var a=document.createElement("script");
-var b=document.getElementsByTagName("script")[0];
-a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0061/8148.js?"+Math.floor(new Date().getTime()/3600000);
-a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script>
+<meta name="keywords" content="Javascript, mobile applications, Apps, iOS, Android, Windows phone, mobile, develop, code, make Apps, Open Source, full-stack, frontend developer, developer, Angular, Ionic, Cordova">
+<meta property="og:site_name" content="FullStack JavaScript Platform">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://www.wakanda.io/">
+<meta property="og:title" content="FullStack JavaScript Platform">
+<meta property="og:description" content="Develop &amp; Run Web &amp; Mobile Apps">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+{% for css in page.css %}
+  <link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+<link rel="stylesheet" href="css/main.css?v=021517b" />
+{% include tag_manager_head.html %}
+{% include olark.html %}

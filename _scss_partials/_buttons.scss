@@ -1,0 +1,98 @@
+.btn {
+    transition: all 50ms linear 0s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 1.25rem 2.5rem;
+}
+.btn-primary {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-bg;
+    color: $btn-default-color;
+    &:hover, &:focus, &:active {
+        background-color: $btn-default-hover-bg;
+        border-color: $btn-default-hover-bg;
+        box-shadow: none;
+        color: $white-color;
+    }
+}
+.btn-inverted {
+    background-color: $dark-bg;
+    color: white;
+    &:hover, &:focus, &:active {
+        background-color: $hover-menu;
+        color: $btn-default-color;
+    }
+}
+.btn-success {
+    background-color: $highlighted-color-transition;
+    color: $white-color;
+    border: none;
+    &.active, &:hover, &:focus, &:active, .show>&.dropdown-toggle {
+        background-color: $highlighted-color;
+    }
+}
+
+/**:before,
+*:after {
+  z-index: -1;
+}*/
+.btn-default{
+    position: relative;
+    overflow: hidden;
+    background-color: $white-color;
+    color: $dark-bg;
+    border: 2px solid $dark-bg;
+    z-index: 1;
+    &.active, &:hover, &:focus, &:active, .show>&.dropdown-toggle {
+        color: $white-color;
+        background-color: $dark-bg;
+    }
+    /*
+    &:before, &:after,
+    & span:before,
+    & span:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        width: 0%;
+        height: 100%;
+        background: rgba(35, 42, 51, 0.45);
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+    
+    &:after,
+    span:before {
+        left: auto;
+        right: 0;
+    }
+    
+    span:before,
+    span:after {
+        transition-delay: 0.3s;
+    }
+    &:hover {
+        color: $white-color;
+        &:before,
+        &:after,
+        span:before,
+        span:after {
+            width: 100%;
+        }
+    }
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
