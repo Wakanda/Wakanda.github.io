@@ -341,7 +341,8 @@ Modified:
         max-width: 162px; } }
     .io-header .logo > img {
       max-width: 100%;
-      margin-top: 15px; }
+      margin-top: 15px;
+      max-height: 40px; }
   .io-header ul {
     box-sizing: border-box;
     float: right;

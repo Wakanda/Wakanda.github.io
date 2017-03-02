@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecacd684-4bb3-4006-9a17-10e369fca72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data/content.yml" afterPath="$PROJECT_DIR$/_data/content.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="$PROJECT_DIR$/css/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/CONTRIBUTING.html" afterPath="$PROJECT_DIR$/get-started/CONTRIBUTING.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/build-mobile-app.html" afterPath="$PROJECT_DIR$/get-started/build-mobile-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/create-web-app-ng1.html" afterPath="$PROJECT_DIR$/get-started/create-web-app-ng1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/create-web-app.html" afterPath="$PROJECT_DIR$/get-started/create-web-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/css/main.css" afterPath="$PROJECT_DIR$/get-started/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/deploy-your-app.html" afterPath="$PROJECT_DIR$/get-started/deploy-your-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/display-data-in-webapp.html" afterPath="$PROJECT_DIR$/get-started/display-data-in-webapp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/feed.xml" afterPath="$PROJECT_DIR$/get-started/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/hello-world-mobile.html" afterPath="$PROJECT_DIR$/get-started/hello-world-mobile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/img/build-process-introduction.html" afterPath="$PROJECT_DIR$/get-started/img/build-process-introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/index-enterprise.html" afterPath="$PROJECT_DIR$/get-started/index-enterprise.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/index.html" afterPath="$PROJECT_DIR$/get-started/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/populate-database.html" afterPath="$PROJECT_DIR$/get-started/populate-database.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/sass-precompilation.html" afterPath="$PROJECT_DIR$/get-started/sass-precompilation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-started/version-control.html" afterPath="$PROJECT_DIR$/get-started/version-control.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Angular@2x.png" afterPath="$PROJECT_DIR$/img/Angular@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/DB@2x.png" afterPath="$PROJECT_DIR$/img/DB@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Datamodel@2x.png" afterPath="$PROJECT_DIR$/img/Datamodel@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/IDE@2x.png" afterPath="$PROJECT_DIR$/img/IDE@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/JS@2x.png" afterPath="$PROJECT_DIR$/img/JS@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/RESTful@2x.png" afterPath="$PROJECT_DIR$/img/RESTful@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Web@2x.png" afterPath="$PROJECT_DIR$/img/Web@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/menu.html" afterPath="$PROJECT_DIR$/_includes/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss_partials/_navigation.scss" afterPath="$PROJECT_DIR$/_scss_partials/_navigation.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wakanda-studio/_includes/head.html" afterPath="$PROJECT_DIR$/../wakanda-studio/_includes/head.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wakanda-studio/_includes/header.html" afterPath="$PROJECT_DIR$/../wakanda-studio/_includes/header.html" />
@@ -59,11 +52,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="53" column="65" lean-forward="false" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../wakanda-studio/_includes/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -77,7 +90,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../wakanda-studio" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -89,6 +102,8 @@
         <option value="$PROJECT_DIR$/../wakanda-studio/css/main.scss" />
         <option value="$PROJECT_DIR$/../wakanda-studio/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
+        <option value="$PROJECT_DIR$/../wakanda-studio/_includes/header.html" />
+        <option value="$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss" />
       </list>
     </option>
   </component>
@@ -145,16 +160,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wakanda-new-site-online" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wakanda-new-site-online" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,12 +291,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488469816900</updated>
-      <workItem from="1488469818172" duration="1468000" />
+      <workItem from="1488469818172" duration="2122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1468000" />
+    <option name="totallyTimeSpent" value="2122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -445,6 +450,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="53" column="65" lean-forward="false" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wakanda-studio/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
