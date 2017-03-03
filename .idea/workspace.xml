@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecacd684-4bb3-4006-9a17-10e369fca72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Angular@2x.png" afterPath="$PROJECT_DIR$/img/Angular@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/DB@2x.png" afterPath="$PROJECT_DIR$/img/DB@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Datamodel@2x.png" afterPath="$PROJECT_DIR$/img/Datamodel@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/IDE@2x.png" afterPath="$PROJECT_DIR$/img/IDE@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/JS@2x.png" afterPath="$PROJECT_DIR$/img/JS@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/RESTful@2x.png" afterPath="$PROJECT_DIR$/img/RESTful@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Web@2x.png" afterPath="$PROJECT_DIR$/img/Web@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/menu.html" afterPath="$PROJECT_DIR$/_includes/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss_partials/_navigation.scss" afterPath="$PROJECT_DIR$/_scss_partials/_navigation.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wakanda-studio/_includes/head.html" afterPath="$PROJECT_DIR$/../wakanda-studio/_includes/head.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wakanda-studio/_includes/header.html" afterPath="$PROJECT_DIR$/../wakanda-studio/_includes/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss" afterPath="$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss" />
@@ -75,8 +64,8 @@
       <file leaf-file-name="_navigation.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="231">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -291,15 +280,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488469816900</updated>
-      <workItem from="1488469818172" duration="2122000" />
+      <workItem from="1488469818172" duration="2743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2122000" />
+    <option name="totallyTimeSpent" value="2743000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -464,8 +453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../wakanda-studio/_scss_partials/_navigation.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="231">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
