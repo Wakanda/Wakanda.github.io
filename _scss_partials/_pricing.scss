@@ -552,6 +552,9 @@
 
 @media (max-width: 425px) { 
     .pricing{
+        .row{
+            margin: 0;
+        }
         .btn{
             white-space: initial;
         }
