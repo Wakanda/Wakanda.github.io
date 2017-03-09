@@ -18,7 +18,7 @@ document.onscroll = scroll;
  */
 
 var versionCommunityLink = { 
-    stable: "1.1.3",
+    stable: "1.1.4",
     preview: "2.0.1"
 };
 
