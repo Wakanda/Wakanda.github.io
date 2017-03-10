@@ -8,7 +8,7 @@
     </header>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        {% for entry in site.data.toc.entries %}
+        {% for entry in site.data.get_started.entries %}
             {% for node in entry.pages %}
                 {% if page.url contains node.url %}
                     {% assign chapter_title = entry.title %}
@@ -20,7 +20,7 @@
         {% endfor %}
         <ul class="nav-list row">
             
-            {% for entry in site.data.toc.entries %}
+            {% for entry in site.data.get_started.entries %}
             <li class="nav-group col-lg-12 col-md-4">
                 <a href="{{ entry.url }}" {% if chapter_title == entry.title %} class="active" {% endif %}>
                     {{ entry.title }}

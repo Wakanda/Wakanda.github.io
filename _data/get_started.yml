@@ -8,7 +8,7 @@ entries:
      url: hello-world-mobile.html
 
    - title: "Hello World web app"
-     url: create-web-app.html#web-app-creation
+     url: create-web-app-ng1.html#web-app-creation
 
  - title: Server-side
    url: index.html#server-side
