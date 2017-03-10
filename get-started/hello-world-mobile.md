@@ -72,7 +72,7 @@ Just click on your project, and then on **"Preview"**.
 <img src="../img/hw-first-preview.png"/>
 
 
-Let's have a look at our project structure : the src folder is the classical ionic2 project structure. [More info here](http://ionicframework.com/docs/v2/setup/tutorial/project-structure/ "ionic tutorial").
+Let's have a look at our project structure : the src folder is the classical ionic2 project structure.
 
 A simple change in `mobile/src/pages/home.html` and I have my **HelloWorld** done.
 

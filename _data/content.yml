@@ -97,7 +97,7 @@ slideshow:
     # If have more than one video, you can define navigation buttons like this:
     # btn: <i class="fa fa-magic" aria-hidden="true"></i> Templates
     title: Full Platform to develop, build, deploy and run your Apps
-    url: https://ssalibi.github.io/wakanda-studio/
+    url: /get-started
 
 quotes:
   - p: Incredible work guys, wakanda looks stunning!!!!
