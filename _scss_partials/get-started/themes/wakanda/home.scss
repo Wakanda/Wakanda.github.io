@@ -1,0 +1,338 @@
+
+
+//@import url(../../lib/slick-theme.css);
+
+.home-header {
+  color: black;
+  text-align: center;
+  background-color: #c9d4db;
+  -webkit-box-shadow: inset 0px -10px 23px -4px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: inset 0px -10px 23px -4px rgba(0, 0, 0, 0.10);
+  box-shadow: inset 0px -10px 23px -4px rgba(0, 0, 0, 0.10);
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+    margin-top: -20px;
+  }
+
+  .caption {
+    font-size: 22px;
+    font-weight: 200;
+    padding: 10px 0 0 0;
+  }
+
+  .slides {
+    margin-bottom: 0px;
+  }
+
+  .hide-before-init {
+    display: none;
+  }
+
+  .play-gif {
+    opacity: 0;
+    -webkit-animation-name: appear;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .slick-dots,
+  .slick-arrow {
+    max-height: 0;
+    opacity: 0;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-name: reveal;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-name: reveal;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes reveal {
+    from {
+      max-height: 0;
+      opacity: 0.2;
+    }
+
+    to {
+      max-height: 200px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      max-height: 0;
+      opacity: 0.2;
+    }
+
+    to {
+      max-height: 200px;
+      opacity: 1;
+    }
+  }
+
+  .slick-initialized {
+    .hide-before-init {
+      display: block;
+    }
+  }
+
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+
+    &:before {
+      font-size: 40px;
+    }
+  }
+
+  .slick-next {
+    right: -55px;
+  }
+
+  .slick-prev {
+    left: -55px;
+  }
+
+  .slick-dots {
+    margin: auto;
+    font-size: 15px;
+
+
+    li {
+      width: auto;
+      height: auto;
+      margin: 15px 0 15px 0;
+
+      span {
+        font-weight: 400;
+        padding: .4em .8em .5em;
+        border: 1px solid #c9d4db;
+        color: #272727;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+
+        i.fa {
+          padding: 0 3px 0 3px;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+      }
+
+      &.slick-active span {
+        border: 1px solid black;
+        color: black;
+      }
+    }
+
+    li.secondary {
+      span {
+        font-weight: 100;
+        &:hover {
+          background-color: none;
+        }
+      }
+    }
+  }
+}
+
+.square {
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+
+  &:hover {
+    background-color: #f3f3f3;
+
+    &:hover .head {
+      color: #fff;
+    }
+  }
+
+  .head {
+    color: #323232;
+    text-align: center;
+    height: 50px;
+    background-color: #f3f3f3;
+    font-size: 18px;
+    line-height: 50px;
+  }
+
+  .head .label {
+    font-size: 10px;
+    background-color: white;
+    border-radius: 5px;
+    color: #545454;
+    padding: 4px 8px 4px 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: -3px;
+    letter-spacing: 1px;
+  }
+
+  a.action {
+    float: none;
+    height: auto;
+    display: block;
+    width: 100%;
+    color: #555555;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+
+    .stepPic {
+      height: 96px;
+      width: 96px;
+      background-position: 0 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.templates {
+        background-image: url(../../../img/pic_templates.png);
+      }
+      &.angular {
+        background-image: url(../../../img/pic_angular.png);
+      }
+      &.wizard {
+        background-image: url(../../../img/pic_wizard.png);
+      }
+      &.scalability {
+        background-image: url(../../../img/pic_scalability.png);
+      }
+      &.ionic {
+        background-image: url(../../../img/pic_ionic.png);
+      }
+      &.wakCloud {
+        background-image: url(../../../img/pic_wakCloud.png);
+      }
+      &.deployServer {
+        background-image: url(../../../img/pic_deployServer.png);
+      }
+      &.connectDB {
+        background-image: url(../../../img/pic_connectDB.png);
+      }
+      &.designData {
+        background-image: url(../../../img/pic_designData.png);
+      }
+      &.model {
+        background-image: url(../../../img/pic_model.png);
+      }
+      &.prototype {
+        background-image: url(../../../img/pic_prototype.png);
+      }
+      &.webApp {
+        background-image: url(../../../img/pic_webApp.png);
+      }
+      &.mobileApp {
+        background-image: url(../../../img/pic_mobileApp.png);
+      }
+      &.session {
+        background-image: url(../../../img/icon-session.png);
+      }
+      &.circle {
+        background-color: white;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 4px solid white;
+      }
+      &.deploy {
+        background-image: url(../../../img/icon-deploy.png);
+      }
+      &.connect {
+        background-image: url(../../../img/icon-connect.png);
+      }
+      &.session {
+        background-image: url(../../../img/icon-session.png);
+      }
+    }
+
+    &:hover {
+      color: #555;
+    }
+  }
+}
+
+#home {
+  #contribute {
+    visibility: hidden;
+  }
+}
+
+@media print, screen and (max-width: 800px) {
+  .home-header {
+    h1 {
+      margin-top: 10px;
+    }
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+@media print, screen and (max-width: 1060px) {
+  section {
+    .getting-started {
+      margin-top: 5px;
+      width: 360px;
+    }
+
+    .step {
+      width: 160px;
+    }
+  }
+
+  /*.home {
+    display: none;
+  }*/
+}

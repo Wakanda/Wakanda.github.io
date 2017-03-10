@@ -1,0 +1,42 @@
+entries:
+ - title: Hello World
+   url: index.html#hello-world
+
+   pages:
+
+   - title: "Hello World mobile app"
+     url: hello-world-mobile.html
+
+   - title: "Hello World web app"
+     url: create-web-app.html#web-app-creation
+
+ - title: Server-side
+   url: index.html#server-side
+   pages:
+   - title: "Generate your datamodel"
+     url: populate-database.html
+
+   - title: "Display your data"
+     url: display-data-in-webapp.html
+
+ - title: Publish your App
+   url: index.html#publish-app
+
+   pages:
+   - title: "Build your mobile app"
+     url: build-mobile-app.html
+   - title: "Deploy to Your Server"
+     url: deploy-your-app.html
+   - title: Deploy to Wakanda Cloud
+     url: //docs.wakcloud.com/en/latest/getting_started.html
+
+ - title: Go further
+   url: index.html#go-further
+
+   pages:
+   - title: "Code your Server-Side Logic"
+     url: //wakanda.github.io/wakanda-server-doc/?_ga=1.144688306.662619326.1486638840#/doc/data/server-side
+   - title: "Connect your MySQL DB"
+     url: //doc.wakanda.org/home2.en.html#/MySQL-Connector-Pro/MySQL-Connector-Pro.100-1168858.en.html
+   - title: "Manage scalabality"
+     url: //wakanda.github.io/wakanda-server-doc/?_ga=1.189719596.662619326.1486638840#/doc/authentication/custom-session-management
