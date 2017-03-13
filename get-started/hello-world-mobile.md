@@ -112,6 +112,6 @@ Open the _Run_ dropdown and select the device to run on:
 
 <img src="../img/mobile-run-devices.png" />
 
-<!-- <div class="navigation-step">
-  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
-</div> -->
+<div class="navigation-step">
+  <a class="btn next-button" href="create-web-app-ng1.html">Next: Create a web app in Angular<i class="icon-chevron-right"></i></a>
+</div>
