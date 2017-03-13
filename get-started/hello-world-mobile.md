@@ -34,7 +34,7 @@ You'll always have the **same back-end structure**, however you can choose to ha
 
 Enter *- HelloWorld -* as an app name and select the **Ionic2 blank template**.
 
-Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure :
+Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure [More info here](https://ionicframework.com/docs/v2/intro/tutorial/project-structure/ "ionic tutorial").:
 
 <img src="../img/hw-file-structure.png"/>  
 
