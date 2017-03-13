@@ -34,7 +34,7 @@ You'll always have the **same back-end structure**, however you can choose to ha
 
 Enter *- HelloWorld -* as an app name and select the **Ionic2 blank template**.
 
-Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure :
+Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure [More info here](https://ionicframework.com/docs/v2/intro/tutorial/project-structure/ "ionic tutorial").:
 
 <img src="../img/hw-file-structure.png"/>  
 
@@ -112,6 +112,6 @@ Open the _Run_ dropdown and select the device to run on:
 
 <img src="../img/mobile-run-devices.png" />
 
-<!-- <div class="navigation-step">
-  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
-</div> -->
+<div class="navigation-step">
+  <a class="btn next-button" href="create-web-app-ng1.html">Next: Create a web app in Angular<i class="icon-chevron-right"></i></a>
+</div>
