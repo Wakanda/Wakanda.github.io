@@ -1,0 +1,85 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+#get-started-studio{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    #top{
+        min-height: 50%;
+        .content{
+                text-align: center;
+                padding: 100px;
+                img {
+                    width: 113px;
+                }
+                h1{
+                    font-weight: 400;
+                    @include font-size(28px);
+                    margin: 20px;
+                }
+                a.btn{
+                    font-weight: bold;
+                    background-color: $main-color !important;
+                    padding: 15px 50px !important;
+                    margin-top: 40px !important;
+                    font-size: 27px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    &:hover{
+                        background-color: $square-desc !important;
+                    }
+                }
+        }
+    }
+    #bottom{
+        min-height: 50%;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            img{
+                max-width: 15px;
+                margin-right: 4px;
+            }
+        }
+        .content{
+            text-align: center;
+            padding: 50px;
+            background-color: $base-color;
+            #top-content{
+                p{
+                    color: #96B5DC;
+                    @include font-size(16px);
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+                img{
+                    margin-right: 10px;
+                }
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        width: 170px;
+                        text-align: left;
+                        display: inline-block;
+                        color: #fff;
+                    }
+                    
+                }
+            }
+            #bottom-content {
+                position: absolute;
+                width: 100%;
+                bottom: 20px;
+                li{
+                    display: inline-block;
+                    margin-right: 70px;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

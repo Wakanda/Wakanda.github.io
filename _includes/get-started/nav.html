@@ -21,11 +21,11 @@
         <ul class="nav-list row">
             
             {% for entry in site.data.get_started.entries %}
-            <li class="nav-group col-lg-12 col-md-4">
-                <a href="{{ entry.url }}" {% if chapter_title == entry.title %} class="active" {% endif %}>
+            <li class="nav-group col-lg-12 col-md-4 menu-expanded {% if chapter_title == entry.title %} parentActive {% endif %}">
+                <a>
                     {{ entry.title }}
                 </a>
-                <ul class="aside-nav {{ entry.class }}">
+                <ul class="aside-nav {{ entry.class }} menu" style="display: none;">
                     {% for node in entry.pages %}
                     <li {% if page.url contains node.url %} class="active" {% endif %}>
                         <a href="{{ node.url }}" target="{{ node.target }}">{{ node.title }}</a>

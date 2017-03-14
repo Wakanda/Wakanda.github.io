@@ -68,6 +68,9 @@ nav {
 }
 .main-section, .social-media{
   margin-top: 160px;
+  @media (max-width: 425px) {
+    margin-top: 200px;
+  }
 }
 .announcement {
   position: absolute;
@@ -94,6 +97,10 @@ nav {
   @media (max-width: 992px) {
     position: relative !important;
     width: 100%;
+  }
+  
+  @media (max-width: 425px) {
+    top: 220px;
   }
   .btn-default{
     background-color: $light-green !important;
@@ -467,3 +474,45 @@ h2{
 
 
 .square .path1{ background-color: $square-bg;}
+
+.menu-expanded{
+  & > a {
+    font-family: Roboto-Regular;
+    font-size: 14px !important;
+    font-weight: bold;
+    color: $sub-title;
+    text-transform: initial !important;
+    letter-spacing: initial !important;
+    cursor: pointer;
+  }
+  &.parentActive > a {
+    color: $lighten-green;
+  }
+  .menu{
+    li{
+      margin-left: 30px;
+      position: relative;
+      &.active{
+        &:before{
+          content: "";
+          width: 3px;
+          height: 80%;
+          background-color: $lighten-green;
+          display: inline-block;
+          position: absolute;
+          left: -30px;
+          top: 10%;
+        }
+        a{
+          color: $lighten-green;
+        }
+      }
+    }
+  }
+}
+.main-section{
+  h1{
+    margin: initial !important;
+  }
+}
+

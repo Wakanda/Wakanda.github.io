@@ -1,5 +1,5 @@
 entries:
- - title: Hello World
+ - title: "Step 1: Hello World"
    url: index.html#hello-world
 
    pages:
@@ -8,18 +8,18 @@ entries:
      url: hello-world-mobile.html
 
    - title: "Hello World web app"
-     url: create-web-app-ng1.html#web-app-creation
+     url: create-web-app-ng1.html
 
- - title: Server-side
+ - title: "Step 2: Use the Built-in DB"
    url: index.html#server-side
    pages:
-   - title: "Generate your datamodel"
+   - title: "Server-Side: Populate your DB"
      url: populate-database.html
 
-   - title: "Display your data"
+   - title: "Client-Side: Bind your data"
      url: display-data-in-webapp.html
 
- - title: Publish your App
+ - title: "Step 3: Publish your App"
    url: index.html#publish-app
 
    pages:
@@ -30,11 +30,11 @@ entries:
    - title: Deploy to Wakanda Cloud
      url: //docs.wakcloud.com/en/latest/getting_started.html
 
- - title: Go further
+ - title: "Step 4: Go further"
    url: index.html#go-further
 
    pages:
-   - title: "Code your Server-Side Logic"
+   - title: "Wakanda DB"
      url: //wakanda.github.io/wakanda-server-doc/?_ga=1.144688306.662619326.1486638840#/doc/data/server-side
    - title: "Connect your MySQL DB"
      url: //doc.wakanda.org/home2.en.html#/MySQL-Connector-Pro/MySQL-Connector-Pro.100-1168858.en.html

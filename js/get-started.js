@@ -1,4 +1,24 @@
 $(document).ready(function(){
+
+    // Navigation Menu
+    $('li.parentActive .menu').show();
+    $('li.menu-expanded > a').click(function () {
+        var found = $(this).parent().find('.menu').eq(0);
+        if (found.length > 0) {
+            if (!$(this).parent().hasClass('parentActive')) {
+                $('li.menu-expanded .menu').filter(':visible').slideUp('slow');
+                $('.parentActive').removeClass('parentActive');
+                found.stop(true, true).slideDown('slow');
+                $(this).parent().addClass('parentActive');
+            } else {
+                found.stop(true, true).slideUp('slow');
+                $(this).parent().removeClass('parentActive');
+            }
+        }
+        return false;
+    });
+
+
     if($('.feedback').length) {
         var $feedback = $('.feedback');
         $('button', $feedback).click(function(){
@@ -115,6 +135,7 @@ $(document).ready(function(){
             </tr>"
         );
     };
+
 
 
 });
