@@ -483,6 +483,7 @@ h2{
     color: $sub-title;
     text-transform: initial !important;
     letter-spacing: initial !important;
+    cursor: pointer;
   }
   &.parentActive > a {
     color: $lighten-green;
