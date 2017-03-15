@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include get-started/head.html %}
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJTRHS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% include get-started/header.html %}
+        <div class="announcement">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="sidebar-left col-lg-2 col-md-3 col-sm-12">
+                        {% include get-started/search.html %}
+                    </div>
+                    <div class="sidebar-rigth col-lg-8 col-md-9 col-sm-12">
+                        {% include get-started/announcement.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 col-sm-12 page">
+                    
+                    {% include get-started/nav.html %}             
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <section id="{{ page.id }}" class="main-section">
+                        <div id="chapter">
+                            <span>{{ chapter_title }}</span>
+                        </div>
+                        {{ content }}
+                    </section>
+                </div>
+                <div data-spy="scroll" data-target=".navbar " class="col-lg-2 col-md-12 col-sm-12 page">
+                    <nav class="navbar social-media">
+                        <div class="scroll">
+                            {% include get-started/subnav.html %}
+                            {% include get-started/mailing.html %}
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="feedback hidden">
+            <span class="desc">Is this page helpful ?</span>
+            <button class="btn">Yes</button>
+            <button class="btn">Non</button>
+        </div>
+        <div class=" disqus_thread hidden">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div id="disqus_thread"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            {% include get-started/footer.html %}
+        </footer>
+        {% include get-started/sync_scripts.html %}
+        <script>
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'wakandasoft/Lobby'
+        };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    </body>
+</html>

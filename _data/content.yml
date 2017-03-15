@@ -50,7 +50,7 @@ feature_details:
           alt: Prototype
 
       - h4: One IDE to cover the Full-Stack
-        p: Develop your Font-End, your Back-End and your data integration in the same IDE
+        p: Develop your Front-End, your Back-End and your data integration in the same IDE
         img:
           url: img/icons/fullstack.png
           alt: Boost
@@ -62,7 +62,7 @@ feature_details:
           alt: Integrate
 
       - h4: Code once, deploy everywhere
-        p: Build omnichannel Apps with one Back-End for your multiple Frontend projects and Mobile Apps! All platforms are supported.
+        p: Build omnichannel Apps with one Back-End for your multiple Front-end projects and Mobile Apps! All platforms are supported.
         img:
           url: img/icons/deploy.png
           alt: Omnichannel
@@ -70,8 +70,8 @@ feature_details:
   column_right:
     h3: Wakanda 2.0 is coming soon!
     items:
-      - h4: NodeJS support
-        p: Develop Server Side JS in Single Threaded Event Loop architecture. Get access to more than 230000 modules!
+      - h4: NodeJS Support
+        p: Develop Server Side JS in Single Threaded Event Loop architecture. Get access to more than 230,000 modules!
 
         img:
           url: img/icons/node.png
@@ -97,7 +97,7 @@ slideshow:
     # If have more than one video, you can define navigation buttons like this:
     # btn: <i class="fa fa-magic" aria-hidden="true"></i> Templates
     title: Full Platform to develop, build, deploy and run your Apps
-    url: https://ssalibi.github.io/wakanda-studio/
+    url: /get-started
 
 quotes:
   - p: Incredible work guys, wakanda looks stunning!!!!
@@ -116,7 +116,7 @@ quotes:
   # You can set more than 2 quotes, a carousel will automatically be used.
 
 mail_form:
-  title: Wakanda 2.0.0 is coming soon!
+  title: Wakanda 2.0 is coming soon!
   p: "Enter your email to be added to the invite list:"
 
 community:
@@ -141,7 +141,7 @@ event:
     title: User testing session
     p: Be part of the adventure. Get a $50 Amazon coupon
     url: mailto:claire.morin@wakanda.io
-  - month: Apr.
+  - month: April
     day: 5
     title: User testing session
     p: Be part of the adventure. Get a $50 Amazon coupon

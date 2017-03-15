@@ -189,7 +189,6 @@
         p{
             @include font-size(25px);
             color: $white-color;
-            background: url(../images/letter.png) no-repeat;
             padding-left: 90px;
             &:before{
                 content: "\e930";

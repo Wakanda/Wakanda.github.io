@@ -18,7 +18,7 @@ document.onscroll = scroll;
  */
 
 var versionCommunityLink = { 
-    stable: "1.1.3",
+    stable: "1.1.4",
     preview: "2.0.1"
 };
 
@@ -106,11 +106,11 @@ var stableLinks = communityLinks("stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
 var entrepriseLink = {
-    macOS: "//wakanda.io/productionchannel/1.1.3/mac/wakanda-enterprise-all_1.1.3_x64.dmg",
-    win64: "//wakanda.io/productionchannel/1.1.3/windows/wakanda-enterprise-all_1.1.3_x64.msi",
-    win32: "//wakanda.io/productionchannel/1.1.3/windows/wakanda-enterprise-all_1.1.3_x86.msi",
-    linux32: "//wakanda.io/productionchannel/1.1.3/linux/wakanda-enterprise-server_1.1.3_i386.deb",
-    linux64: "//wakanda.io/productionchannel/1.1.3/linux/wakanda-enterprise-server_1.1.3_amd64.deb"
+    macOS: "//bo.wakanda.io/productionchannel/1.1.4/mac/wakanda-enterprise-all_1.1.4_x64.dmg",
+    win64: "//bo.wakanda.io/productionchannel/1.1.4/windows/wakanda-enterprise-all_1.1.4_x64.msi",
+    win32: "//bo.wakanda.io/productionchannel/1.1.4/windows/wakanda-enterprise-all_1.1.4_x86.msi",
+    linux32: "//bo.wakanda.io/productionchannel/1.1.4/linux/wakanda-enterprise-server_1.1.4_i386.deb",
+    linux64: "//bo.wakanda.io/productionchannel/1.1.4/linux/wakanda-enterprise-server_1.1.4_amd64.deb"
 };
 
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);

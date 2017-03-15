@@ -1,0 +1,52 @@
+<div id="announcement">
+    <p>
+        <strong><i class="fa fa-flash " aria-hidden="true "></i>
+          <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases "> Version 1.1 </a>
+        </strong> is now available! <a href="https://github.com/Wakanda/wakanda-digital-app-factory/releases ">
+        Read about the new features and fixes »</a>
+    </p>
+</div>
+<script>
+    function urlParse(key) {
+        var t = new RegExp("[\\?&]" + key + "=([^&#]*)");
+        var ret = t.exec(location.search);
+        var value = null === ret ? "" : ret[1];
+        return value;
+    }
+
+    var edition = urlParse('v');
+    var os = urlParse('os');
+
+    var platformLabelCollection = {
+        osx: "macOS",
+        win32: "Windows",
+        win64: "Windows",
+        linux32: "Linux",
+        linux64: "Linux"
+    };
+
+    var platformLinkCollection = edition == 'enterprise' ?
+        {
+            osx: "http://www.wakanda.io/productionchannel/1.1.0/mac/wakanda-enterprise-all_1.1.0_x64.dmg",
+            win32: "http://www.wakanda.io/productionchannel/1.1.0/windows/wakanda-enterprise-all_1.1.0_x86.msi",
+            win64: "http://www.wakanda.io/productionchannel/1.1.0/windows/wakanda-enterprise-all_1.1.0_x64.msi",
+            linux64: "http://www.wakanda.io/productionchannel/1.1.0/linux/wakanda-enterprise-server_1.1.0_amd64.deb"
+        } : {
+            osx: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x64.dmg",
+            win32: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x86.msi",
+            win64: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-all_1.1.0_x64.msi",
+            linux32: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-server_1.1.0_i386.deb",
+            linux64: "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.0/wakanda-community-server_1.1.0_i386.deb"
+        };
+
+    var productName = edition == 'enterprise' ? 'Wakanda Enterprise' : 'Wakanda';
+    var platformLabel = platformLabelCollection[os];
+    var platformLink = platformLinkCollection[os];
+
+    if(typeof platformLink != 'undefined') {
+        document.getElementById('announcement').innerHTML =
+            '<p><i class="fa fa-rocket" aria-hidden="true"></i> Thanks for downloading <strong>' + productName + '</strong> for '+ platformLabel +'! \
+            Download not starting? <a href="' + platformLink + '">Try this direct download link.</a> \
+            </p>';
+    }
+</script>

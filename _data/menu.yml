@@ -4,10 +4,10 @@ items:
     url: /get-started
 
   - title: Pricing
-    url: pricing.html
+    url: /pricing.html
 
   - title: Partners
-    url: marketplace.html
+    url: /marketplace.html
 
   - title: Blog
     url: https://blog.wakanda.io
