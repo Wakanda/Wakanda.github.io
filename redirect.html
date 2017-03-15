@@ -17,17 +17,19 @@
                 font-family: 'Roboto', sans-serif;
                 min-height: 100%;
             }
-            
+            #top{
+                min-height: 86.2%;
+            }
             #top .content{
                 text-align: center;
-                padding: 40px;
+                padding: 40px 0 0;
                 /*background-color: #FFC600;*/
             }
             #top .content > img {
                 width: 350px;
             }
             #top .content #truck{
-                width: 700px;
+                min-width: 56%;
                 margin-top: -40px;
             }
             #top .content h1{
@@ -36,9 +38,9 @@
                 margin: 20px;
             }
             #bottom{
-                position: absolute;
-                bottom: 0;
-                width: 101%;
+                /*position: absolute;
+                bottom: 0;*/
+                min-height: 13%;
             }
             #bottom ul {
                 margin: 0;
@@ -154,7 +156,7 @@
                 var timer = setInterval(function() { 
                 $('#counted').text(sec--);
                 if (sec == -1) {
-                    window.location.href = "//www.wakanda.io/";
+                    //window.location.href = "//www.wakanda.io/";
                 } 
                 }, 1000);
 
