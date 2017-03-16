@@ -13,10 +13,10 @@ entries:
  - title: "Step 2: Use the Built-in DB"
    url: index.html#server-side
    pages:
-   - title: "Populate your DB"
+   - title: "Server-Side: Populate your DB"
      url: populate-database.html
 
-   - title: "Bind your data"
+   - title: "Client-Side: Bind your data"
      url: display-data-in-webapp.html
 
  - title: "Step 3: Publish your App"
