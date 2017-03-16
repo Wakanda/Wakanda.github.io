@@ -1,0 +1,567 @@
+
+/****************
+*  Pricing
+****************/
+
+.pricing {
+    & > .container{
+        padding-top: 60px;
+    }
+	.dev-sup {
+		cursor:pointer
+	}
+     .dev-sup-txt {
+         padding: 20px ;
+        background: #fff;
+        border: 1px solid #d7d7d7;
+        margin-bottom: 10px;
+     }
+    .block-pricing {
+      > div {
+      
+         padding-left: 0;
+         padding-right: 20px;
+         margin-bottom:60px;
+
+        .head {
+          color:#fff;
+          background:#334d5c;
+          text-align:center;
+            padding: 27px 0;
+          font-size: 20px;
+          font-weight: lighter;
+
+        }
+      }
+      .oge .head {
+        background:#ec5c09
+      }
+
+      .txt-model {
+         background:#f0f4f7;
+         padding: 40px 34px;
+         font-size: 14px;
+         padding-bottom:0px;
+         min-height: 600px;
+        @media (max-width: 768px) { 
+            min-height: auto;
+        }
+      }
+
+      .txt-support {
+        padding: 22px 0;
+        background: #fff;
+        border: 1px solid #d7d7d7;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        display:none;
+        min-height:125px;
+      }
+
+	.txt-support.on{
+		 display:block
+	 }
+
+      .ct{
+        padding-bottom: 26px;
+        background: #f0f4f7;
+        
+        button {
+          text-align: center;
+          display: block;
+          margin: auto;
+          font-size: 17px;
+          padding: 6px 18px;
+          background: #334d5c;
+          color: #fff;
+
+          a {
+            color:#334d5c
+          }
+
+
+        }
+
+         a:hover {
+              text-decoration:none
+          }
+
+         button:hover {
+            background: #fff;
+            border:1px solid #334d5c;
+            color:#334d5c;
+        }
+      
+      }
+
+      .txt-price {
+          font-size:22px;
+          margin-bottom:0;
+          margin-top: 27px;
+        span {
+          font-size:60px;
+        }
+        
+      }
+        .cloud {
+          .support {
+            button {
+            padding-left: 8px;
+          padding-right: 8px;
+          margin-right: 4px;
+            }
+            .btn.on {
+                background:#ec5c09; 
+            }
+            button:hover {
+              background:#ec5c09;
+              color:#fff
+            }
+          }
+
+          .txt-support {
+    		    padding: 4px 12px;
+    		    padding-left: 22px;
+    		    padding-top: 26px;
+    		    vertical-align: middle;
+	        p {
+	              font-size: 13px;
+
+	              span {
+	              font-weight:700;
+	              font-size:16px;
+	              margin-right: 8px;
+	            }
+            }
+          
+          }
+
+          .ct button {
+            background: #ec5c09;
+          }
+
+          button:hover {
+            background: #fff;
+            border:1px solid #ec5c09;
+            color:#ec5c09;
+          }
+        }
+
+      .support {
+        margin-top: 10px;
+        button {
+            background: #fff;
+          border: 1px solid #cdcdcd;
+          border-radius: 0;
+          padding-left: 18px;
+          padding-right: 18px;
+              margin-right: 4px;
+          font-weight: 700;
+        }
+        button.on{
+        	 background:#334d5c;
+        	 color:#fff
+        }
+        button:hover {
+          background:#334d5c;
+          color:#fff
+        }
+        
+      }
+    }
+
+  .dvpt {
+    margin-top:40px;
+  }
+
+ 
+
+  h2 {
+    margin-bottom: 30px;
+    font-size:44px;
+  }
+
+  h3 {
+    font-weight:400;    
+    font-size:34px;
+    margin-bottom: 14px;
+  }
+
+    /*.text-alinea {
+        padding-left:65px;
+        @media (max-width: 768px) { 
+            padding-left: 0;
+        }
+    }*/
+     
+
+    .evt {
+    background: #f0f4f7;
+      padding: 36px 0px;
+      border-left: 15px solid #ffc600;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+
+      > div {
+         padding-left:58px
+      }
+    }
+
+    .price {
+        font-size:22px;
+        text-align: center;
+        padding-left:0 !important;
+        position: relative;
+        bottom: 15px;
+
+        .btn {
+          font-size: 17px;
+        padding: 6px 18px;
+        background: #ffc600;
+        color: #fff;
+        margin-bottom: 6px;
+        margin-top: 0px;
+        }
+
+       .btn:hover {
+         background: #fff none repeat scroll 0 0;
+         color:#ffc600;
+         border:1px solid  #ffc600;
+      }
+
+      span {
+        font-size:60px   ;
+
+      }
+
+      p {
+        margin-bottom:0px;
+        color:#313131
+      }
+      .asterisk {
+        font-size:14px;
+        display:block;
+        font-weight:500;
+      }
+    } 
+    
+
+    .pricing.community {
+        .evt {
+            background: #fff none repeat scroll 0 0;
+            border-left: 15px solid #00d5ac;
+            margin-bottom: 80px;
+            padding: 36px 0 8px;
+        }
+        .price .btn {
+            background: #00d5ac none repeat scroll 0 0;
+        }
+
+        .price p{
+            font-size:36px;
+        }
+
+        .price .btn:hover {
+            background: #fff none repeat scroll 0 0;
+            color:#00d5ac;
+            border:1px solid  #00d5ac;
+        }
+    }
+
+
+    .business img {
+    display:inline-block; 
+    }
+
+
+    .btn-action {
+        
+        .dl {
+                font-size: 17px;
+                padding: 10px 35px;
+                color: #fff;
+                background: $main-color;
+                //text-indent: 20px;
+                margin-right: 10px;
+        }
+
+        .dl:hover {
+            background: $main-color-transition;
+        }
+    }
+    .show-support{
+        background: #f9f9f9;
+        color: #4e4e4e;
+        padding: 4px 5px;
+        border: 1px solid #d0d0d0;
+        @include font-size(10px);
+        display: inline-block;
+        cursor: pointer;
+        i{
+            @include transition(transform .2s ease-in-out);
+        }
+    }
+    .rotated {
+    @include transform(rotate(180deg));
+    display: inline-block;
+    }
+    #feature-dev {
+        padding: 0px;
+        margin-bottom: 70px;
+        margin-top: 20px;
+        //display: none;
+        .header {
+            font-size: 18px;
+            color: #555555;
+            letter-spacing: 0px;
+            border: 1px solid #CDCDCD;
+            text-transform: uppercase;
+            padding-left: 20px;
+            vertical-align: middle;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            &:after{
+                border-color: transparent;
+                border-style: solid;
+                border-width: 0;
+                content: "";
+                display: block;
+                height: 75px;
+                margin-left: -10px;
+                position: absolute;
+                top: 1px;
+                width: 0;
+            }
+        }
+        #zone-task p {
+            font-size: 14px;
+            color: #555555;
+            letter-spacing: 0px;
+            padding-left: 30px;
+            vertical-align: middle;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 0;
+        }
+        #zone-task > p:nth-child(odd) {
+            background: #F4F8FB;
+        }
+    }
+    .btn.feature{
+        background: rgba(0,213,172,0.00);
+        border: 1px solid #555555;
+        border-radius: 4px;
+        font-size: 18px;
+        color: #555555;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        padding: 10px 30px;
+        &:hover{
+            background: #555555;
+            border: 1px solid #555555;
+            color: #fff;
+        }
+    }
+    
+    .production-tab thead td  {
+        vertical-align: bottom !important;
+    }
+    .production-tab thead td table {
+        margin:0;
+    }
+    .production-tab  td  {
+        vertical-align:middle !important;
+        border: none !important;
+        //font-size: 14px;
+        color: #555555;
+
+    }
+    .production-tab  tr.title  {
+        background-color: #fff  !important;
+        height: 40px;
+        font-weight:700;
+        text-transform:uppercase;
+        font-size: 18px;
+        color: #555555;
+    }
+    .production-tab  .vers {
+        border-right: 7px solid #fff  !important;
+    }
+    .production-tab  .vers, .production-tab  .community {
+        background-color: #163B50 !important;
+        text-align: center;
+        font-size: 16px;
+        color: #FFFFFF;
+        height:40px;
+        vertical-align: middle !important;
+    }
+    .production-tab thead td table  tr{
+        background-color: #f0f4f7  !important;
+    }
+    .production-tab .ets{
+        padding: 0 !important;
+        height: 40px;
+        vertical-align: middle !important;
+        border-top: 10px solid #334d5c  !important;
+    }
+    .production-tab .pad {
+        padding-left: 50px;
+    }
+    .production-tab .free {
+        height: 60px;
+        background: #00d5ac;
+        color: #fff;
+        font-weight: 700;
+    }
+    .production-tab .price {
+        font-size:19px;
+        background: none !important;
+    }
+    .production-tab .toal span {
+        font-size:14px;
+    }
+    .production-tab .toal, .production-tab .contact {
+        background: #334d5c;
+        color: #fff;
+    }
+    .production-tab .title td {
+        border-bottom: 1px solid #CDCDCD !important;
+        border-top: 1px solid #CDCDCD !important;
+        color: #555555;
+        font-size: 18px;
+    }
+    .table-striped > tbody > tr:nth-of-type(even) {
+        background-color: #F4F8FB;
+    }
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #fff;
+    }
+    .production-tab .title td:last-child {
+        border-right: 1px solid #CDCDCD !important;
+    }
+    .production-tab .title td:first-child {
+        border-left: 1px solid #CDCDCD !important;
+    }
+    .pricing .price span {
+        font-size: 22px;
+        color: #212121;
+    }
+    .pricing .free  {
+        font-weight: Bold;
+        font-size: 58px !important;
+        color: #212121;
+        letter-spacing: 0px;
+        height: 64px;
+        display: block
+    }
+    .pricing .price p {
+        text-decoration: line-through !important;
+        height: 9px;
+    }
+    .partner .title-header {
+        height: 370px !important;
+    }
+    .partner  .title-content {
+        height: 460px;
+    }
+    .managers .title-header {
+        height: 600px !important;
+    }
+    .managers .title-content{
+        height: 690px !important;
+    }
+    .archi .title-header {
+        height: 638px !important;
+    }
+    .archi .title-content{
+        height: 730px !important;
+    }
+    .develop .title-header {
+        height: 638px !important;
+    }
+    .develop .title-content{
+        height: 730px !important;
+    }
+    section.grey {
+        background: #f0f4f7;
+        padding: 30px 0;
+    }
+  .started {
+      //background: url(../img/downloadBg.png) no-repeat;
+      //background-size: cover;
+      background-color: $highlighted-bg;
+      padding: 40px 0;
+
+      h2 {
+        font-size: 44px;
+        line-height: 1.1;
+        color: #fff;
+        font-weight: normal;
+
+        span {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 40px;
+          text-transform: uppercase;
+      }
+    }
+    .btn-action {
+      .btn {
+          margin-right: 15px;
+          padding: 16px 25px;
+          font-size: 17px;
+        }
+      .demo {
+          background: none;
+          border: 1px solid #000;
+          color: #000;
+          font-weight: 700;
+
+      }
+      .demo:hover {
+          background: #000;
+          color: #fff;
+      }
+      .btn.dl:hover {
+          background: #000;
+          color:#fff;
+          border:1px solid #000
+      } 
+       .btn.dl {
+          color: $highlighted-bg;
+          font-weight: 700;
+          background: #fff;
+      }
+
+    }
+      
+  }
+}
+#request-demo {
+    background-color: #f6f6f6;
+    padding: 0;
+    .remodal-close{
+        right: initial;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 425px) { 
+    .pricing{
+        .row{
+            margin: 0;
+            display: block;
+        }
+        .btn{
+            white-space: initial;
+        }
+        .block-pricing > div{
+            padding: initial;
+            margin: initial;
+        }
+    }
+}

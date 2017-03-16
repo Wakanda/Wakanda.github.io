@@ -1,0 +1,148 @@
+h1: Develop and Run Web & Mobile Apps
+
+h2:
+  prefix: Full-Stack JavaScript Platform
+  typing:
+    - <strong>for Web<span class="highlighted"> &plus; </span>Hybrid<span class="highlighted"> &plus; </span>Native</strong>
+    - <strong>from code<span class="highlighted"> to </span> go live!</strong>
+
+feature_highlights:
+  - p: Open Source Platform
+    img:
+      url: img/open-source.png
+      alt: Open Source
+    class: offset-lg-1 offset-md-2 col-lg-2 col-md-4
+
+  - p: Connect to external DB or Web Service
+    img:
+      url: img/data-source.png
+      alt: Data Source
+    class: col-lg-2 col-md-4
+
+  - p: IDE Mac & Windows
+    img:
+      url: img/mac-win.png
+      alt: macOS and Windows
+    class: col-lg-2 col-md-4
+
+  - p: Server On-Prem In the Cloud
+    img:
+      url: img/premise-cloud.png
+      alt: On Premise and in the Cloud
+    class: col-lg-2 col-md-4
+
+  - p: Mobile Web Apps AngularJS & Ionic
+    img:
+      url: img/mobile-apps.png
+      alt: Mobile Apps
+    class: col-lg-2 col-md-4
+
+feature_details:
+
+  column_left:
+    h3: Speed-up your development...
+    img: http://placehold.it/450x100?text=Illustration-Picture
+    items:
+      - h4: Code from ready-made skeletons
+        p: Install in one-click, check your configuration in a look, all libraries you need already integrated!
+        img:
+          url: img/icons/files.png
+          alt: Prototype
+
+      - h4: One IDE to cover the Full-Stack
+        p: Develop your Front-End, your Back-End and your data integration in the same IDE
+        img:
+          url: img/icons/fullstack.png
+          alt: Boost
+
+      - h4: ORM in JavaScript
+        p: Integrate, extend, manage your business entities in JavaScript.
+        img:
+          url: img/icons/data.png
+          alt: Integrate
+
+      - h4: Code once, deploy everywhere
+        p: Build omnichannel Apps with one Back-End for your multiple Front-end projects and Mobile Apps! All platforms are supported.
+        img:
+          url: img/icons/deploy.png
+          alt: Omnichannel
+
+  column_right:
+    h3: Wakanda 2.0 is coming soon!
+    items:
+      - h4: NodeJS Support
+        p: Develop Server Side JS in Single Threaded Event Loop architecture. Get access to more than 230,000 modules!
+
+        img:
+          url: img/icons/node.png
+          alt: Integrate
+
+      - h4: JavaScript Abstract Layer
+        p: Whatever the datasource (Relational DB, Web Services, …), integrate your business entities directly, add security layer or events.
+
+        img:
+          url: img/icons/abstractJS.png
+          alt: Integrate
+
+      - h4: New DataBases are supported
+        p: Wakanda DB like! Thanks to the new ODBC Connector, integrate to Wakanda MSSQL DB and manipulate directly business entities.
+        img:
+          url: img/icons/mssql.png
+          alt: Integrate
+
+slideshow:
+  - video:
+      id: 196703573
+      alt: Templates
+    # If have more than one video, you can define navigation buttons like this:
+    # btn: <i class="fa fa-magic" aria-hidden="true"></i> Templates
+    title: Full Platform to develop, build, deploy and run your Apps
+    url: /get-started
+
+quotes:
+  - p: Incredible work guys, wakanda looks stunning!!!!
+    author:
+      name: João
+      username: "@Djayci"
+      url: https://twitter.com/DjayCi/status/791280762918232064
+      img: https://pbs.twimg.com/profile_images/3440695201/10bb1785880137833ab77639791c15b2.png
+
+  - p: To all @angularjs & @Ionicframework developers, I would highly recommend checking out the @wakandasoft platform!
+    author:
+      name: Corey
+      username: "@thecoreyshelton"
+      url: https://twitter.com/thecoreyshelton/status/809485633316130816
+      img: https://pbs.twimg.com/profile_images/549945253977804800/JOx5qkcX.jpeg
+  # You can set more than 2 quotes, a carousel will automatically be used.
+
+mail_form:
+  title: Wakanda 2.0 is coming soon!
+  p: "Enter your email to be added to the invite list:"
+
+community:
+  - title: Ask questions on Stackoverflow
+    icon: fa fa-stack-overflow
+    url: http://stackoverflow.com/questions/tagged/wakanda
+  - title: Report issues, request new features
+    icon: fa fa-github
+    url: https://github.com/Wakanda/wakanda-issues/issues
+  - title: Read our engineering blog
+    icon: fa fa-rss
+    url: https://blog.wakanda.io/category/developers
+
+event:
+  title: Next Wakanda & JavaScript events
+  paragraphs:
+    - Meet our team at <a href="https://www.ng-conf.org/" >The World's Original Angular Conference </a> on April 5th-7th 2017, Salt Lake City, UT
+    - We can help you start a new JavaScript Meetup. <a href="javascript:void(0);" onclick="olark('api.box.expand')">Contact us!</a>
+  calendar:
+  - month: March
+    day: 15
+    title: User testing session
+    p: Be part of the adventure. Get a $50 Amazon coupon
+    url: mailto:claire.morin@wakanda.io
+  - month: April
+    day: 5
+    title: User testing session
+    p: Be part of the adventure. Get a $50 Amazon coupon
+    url: mailto:claire.morin@wakanda.io

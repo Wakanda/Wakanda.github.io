@@ -1,0 +1,211 @@
+/* CORE CSS */
+
+body {
+	color:#2e2e2e;
+}
+
+p {
+    color:#555;
+}
+
+/* NAVIGATION */
+
+.navbar-custom {
+	color:#ffffff;
+}
+
+.navbar-custom a {
+	color:#ffffff;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+	color:#ffb800;
+}
+
+.navbar-custom .navbar-toggle {
+	background:#ffffff;
+}
+
+.top-nav-collapse {
+	background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.top-nav-collapse a {
+	color:#262626;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+	background:#ffb800;
+}
+
+.navbar-brand {
+    width:180px;
+    height:50px;
+    background-image: url('../../img/logo.png');
+}
+
+.top-nav-collapse .navbar-brand {
+    background-image: url('../../img/logo.png');
+}
+
+
+/* TOP */
+
+#top {
+	color:#000;
+}
+
+/* Countdown */
+
+#countdown {
+	color:#000;
+}
+
+
+/* OVERVIEW */
+
+#overview h3 {
+	color:#999999;
+}
+
+#overview h3 span {
+	color:#2e2e2e;
+
+}
+
+#overview h4 {
+	margin-bottom:20px;
+}
+
+#overview i {
+	color:#df5a49;
+}
+
+#overview .lead {
+	color:#555555;
+}
+
+#overview .fa-circle {
+	color:#ffb800;
+}
+
+
+/* USE CASES */
+
+#useCases {
+	background:#f4f4f4;
+}
+
+
+
+
+/* CONTACT */
+
+.contact {
+	color:#ffffff;
+	background:rgba(255, 184, 0, 0.85);
+}
+
+.social .fa-inverse {
+	color:#ffb800;
+}
+
+.social a {
+	color:rgba(255, 255, 255, 0.65);
+}
+
+.social a:hover{
+	color:rgba(255, 255, 255, 1);
+}
+
+
+/* MISC */
+
+/* FORM ELEMENTS */
+
+input[type="text"],
+input[type="email"],
+select {
+	color:#2e2e2e;
+} 
+
+::-webkit-input-placeholder {
+   color: #2e2e2e;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #2e2e2e;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #2e2e2e;  
+}
+
+:-ms-input-placeholder {  
+   color: #2e2e2e;  
+}
+
+
+/* BUTTONS */
+
+.button {
+	color: inherit;
+	background: none;
+}
+
+
+.button-light {
+	border: 1px solid #919191;
+	color: #313131;
+  font-family: 'sinkin_sans400_regular';
+}
+
+.button-light:hover,
+.button-light:active {
+	color: #ffb800;
+	background: #ffffff;
+}
+
+.button-dark {
+	color: #ffffff;
+	background:#555;
+}
+
+.button-dark:hover,
+.button-dark:active {
+	color: #ffffff;
+	background: #313131;
+}
+
+.button-yellow {
+	color: #ffffff;
+	background:#ffb800;
+}
+
+.button-yellow:hover,
+.button-yellow:active {
+	color: #ffffff;
+	background: #e67e22;
+}
+
+
+
+/* PRELOAD */
+
+#preload {
+	background:#ececee;
+}
+
+.loader {
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffb800;
+}
+
+
+/* magnific popup */
+.mfp-bg {
+	background:#ffb800;
+}
