@@ -1,2 +1,75 @@
+<<<<<<< HEAD
 ---
 ---
+=======
+<html>
+    <body>
+        
+        <style>
+/****/
+*:before,
+*:after {
+  z-index: -1;
+}
+a {
+  text-decoration: none;
+  line-height: 80px;
+  color: black;
+}
+
+[class^="btn-"] {
+  position: relative;
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: 1px solid currentColor;
+}
+
+.btn-10 {
+  color: #62476f;
+}
+.btn-10:before, .btn-10:after,
+.btn-10 span:before,
+.btn-10 span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 80px;
+  background: rgba(42, 23, 52, 0.25);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.btn-10:after,
+.btn-10 span:before {
+  left: auto;
+  right: 0;
+}
+.btn-10 span:before,
+.btn-10 span:after {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.btn-10:hover {
+  color: #d1c9d5;
+}
+.btn-10:hover:before, .btn-10:hover:after,
+.btn-10:hover span:before,
+.btn-10:hover span:after {
+  width: 250px;
+}
+.btn-10:active {
+  background: #462656;
+}
+
+        </style>
+        
+    <a class="btn-10" href="#"><span>Horizontal Overlap</span></a>
+    </body>
+</html>
+>>>>>>> gh-pages
