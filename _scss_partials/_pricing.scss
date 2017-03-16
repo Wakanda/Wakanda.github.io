@@ -18,7 +18,7 @@
      }
     .block-pricing {
       > div {
-      
+
          padding-left: 0;
          padding-right: 20px;
          margin-bottom:60px;
@@ -41,9 +41,9 @@
          background:#f0f4f7;
          padding: 40px 34px;
          font-size: 14px;
-         padding-bottom:0px;
+         padding-bottom:46px;
          min-height: 600px;
-        @media (max-width: 768px) { 
+        @media (max-width: 768px) {
             min-height: auto;
         }
       }
@@ -65,7 +65,7 @@
       .ct{
         padding-bottom: 26px;
         background: #f0f4f7;
-        
+
         button {
           text-align: center;
           display: block;
@@ -91,7 +91,7 @@
             border:1px solid #334d5c;
             color:#334d5c;
         }
-      
+
       }
 
       .txt-price {
@@ -101,7 +101,7 @@
         span {
           font-size:60px;
         }
-        
+
       }
         .cloud {
           .support {
@@ -111,7 +111,7 @@
           margin-right: 4px;
             }
             .btn.on {
-                background:#ec5c09; 
+                background:#ec5c09;
             }
             button:hover {
               background:#ec5c09;
@@ -133,7 +133,7 @@
 	              margin-right: 8px;
 	            }
             }
-          
+
           }
 
           .ct button {
@@ -166,7 +166,7 @@
           background:#334d5c;
           color:#fff
         }
-        
+
       }
     }
 
@@ -174,7 +174,7 @@
     margin-top:40px;
   }
 
- 
+
 
   h2 {
     margin-bottom: 30px;
@@ -182,18 +182,18 @@
   }
 
   h3 {
-    font-weight:400;    
+    font-weight:400;
     font-size:34px;
     margin-bottom: 14px;
   }
 
     /*.text-alinea {
         padding-left:65px;
-        @media (max-width: 768px) { 
+        @media (max-width: 768px) {
             padding-left: 0;
         }
     }*/
-     
+
 
     .evt {
     background: #f0f4f7;
@@ -243,8 +243,8 @@
         display:block;
         font-weight:500;
       }
-    } 
-    
+    }
+
 
     .pricing.community {
         .evt {
@@ -270,12 +270,12 @@
 
 
     .business img {
-    display:inline-block; 
+    display:inline-block;
     }
 
 
     .btn-action {
-        
+
         .dl {
                 font-size: 17px;
                 padding: 10px 35px;
@@ -365,7 +365,7 @@
             color: #fff;
         }
     }
-    
+
     .production-tab thead td  {
         vertical-align: bottom !important;
     }
@@ -529,7 +529,7 @@
           background: #000;
           color:#fff;
           border:1px solid #000
-      } 
+      }
        .btn.dl {
           color: $highlighted-bg;
           font-weight: 700;
@@ -537,7 +537,7 @@
       }
 
     }
-      
+
   }
 }
 #request-demo {
@@ -550,7 +550,7 @@
     }
 }
 
-@media (max-width: 425px) { 
+@media (max-width: 425px) {
     .pricing{
         .row{
             margin: 0;
