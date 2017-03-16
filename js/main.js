@@ -113,11 +113,11 @@ var entrepriseLink = {
     linux64: "//bo.wakanda.io/productionchannel/1.1.4/linux/wakanda-enterprise-server_1.1.4_amd64.deb"
 };
 
+
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);
 $("#version-stable").append(versionCommunityLink.stable);
 //$("#version-preview").append(versionCommunityLink.preview);
 $("#community-dl").attr('href', stableLinks[platform]);
-
 
 for (var key in platformNames) {
     document.createElement("td", document.createElement)
