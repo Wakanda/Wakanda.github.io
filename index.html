@@ -157,43 +157,86 @@ scripts:
 
 <section id="section-slideshow">
   <div class="container">
-    <div class="col-md-10 offset-md-1">
-      <div id="slideshow" class="carousel slide" data-ride="carousel" data-interval="false">
-        {% if site.data.content.slideshow.size > 1 %}
-        <ol class="carousel-indicators">
-          {% for item in site.data.content.slideshow %}
-          <li data-target="#slideshow" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}>
-            <span>{{ item.btn }}</span>
-          </li>
-          {% endfor %}
-        </ol>
-        {% endif %}
-        <div class="carousel-inner" role="listbox">
-          {% for item in site.data.content.slideshow %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-              <div class="embed-video d-block img-fluid">
-                <iframe src="https://player.vimeo.com/video/{{item.video.id}}?title=0&byline=0&portrait=0"></iframe>
-              </div>
-              <div class="carousel-caption">
-                <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-              </div>
-          </div>
-          {% endfor %}
+    <h2>Wakanda 2.0 is coming soon</h2>
+    <div class="row">
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/nodejs_2x.png" alt="NodeJS">
         </div>
-        {% if site.data.content.slideshow.size > 1 %}
-        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-        {% endif %}
+        <h3>NodeJS Support</h3>
+        <p>Develop Server Side JS in Single Threaded Event Loop architecture. Get access to more than 230,000 modules!</p>
+      </div>
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/js-action-layer.png" alt="JavaScript">
+        </div>
+        <h3>JavaScript Action Layer</h3>
+        <p>Whatever the datasource (Relational DB, Web Services, …), integrate your business entities directly, add security layer or events.</p>
+      </div>
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/new-db.png" alt="New Database">
+        </div>
+        <h3>New DataBases are supported</h3>
+        <p>Wakanda DB like! Thanks to the new ODBC Connector, integrate to Wakanda MSSQL DB and manipulate directly business entities.</p>
       </div>
     </div>
   </div>
 </section>
+
+<div id="section-newsletter">
+  {% include newsletter-mailchimp.html %}
+</div>
+
+{% for service in site.data.content.services %}
+<section class="wakanda-service">
+  <div class="container">
+    <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
+  </div>
+  {% for item in service.items %}
+  <div class="item {{ item.orientation }}-item">
+    <div class="container">
+      <div class="row">
+        {% if item.orientation == 'left' %}
+          <div class="col-md-4 img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+          </div>
+        {% endif %}
+        <div class="col-md-8 content-container">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <a href="{{ item.link }}">Learn More</a>
+        </div>
+        {% if item.orientation == 'right' %}
+          <div class="col-md-4 img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="row download-wakanda">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="img-container">
+            <img src="/img/wakanda_bleu_2x.png" alt="Wakanda Open Source Platform to Develop Mobile & Web Apps">
+          </div>
+          <p>is an Open Source Platform to Develop Mobile & Web Apps</p>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="community-dl btn btn-lg btn-primary btn-dl">
+              <span class="fa fa-download"></span> Download for <span class="platform-name"></span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
 
 <section id="section-feature-details">
   <div class="container">
@@ -221,9 +264,6 @@ scripts:
     </div>
   </div>
 </section>
-<div id="section-newsletter">
-  {% include newsletter-mailchimp.html %}
-</div>
 <section id="section-download" class="hidden-xs-down">
   <div class="container">
     <div class="row">
