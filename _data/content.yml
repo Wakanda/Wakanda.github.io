@@ -162,6 +162,11 @@ services:
         link: "#"
         image: "/img/illu_server-side_2x.png"
       - orientation: right
+        title: "RESTful API"
+        description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
+        link: "#"
+        image: "/img/illu_api_2x.png"
+      - orientation: left
         title: "Angular 1&2, Ionic, Cordova"
         description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
         link: "#"

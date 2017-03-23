@@ -216,7 +216,7 @@ scripts:
     </div>
   </div>
   {% endfor %}
-  <div class="row download-wakanda">
+  <div class="row download-wakanda" style="display: none">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
@@ -237,33 +237,6 @@ scripts:
 {% endfor %}
 
 
-
-<section id="section-feature-details">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h3>{{ site.data.content.feature_details.column_left.h3 }}</h3>
-        {% for feature in site.data.content.feature_details.column_left.items %}
-          <div class="feature-block">
-            <img class="" alt="{{ feature.img.alt }}" src="{{ feature.img.url }}">
-            <h4>{{ feature.h4 }}</h4>
-            <p>{{ feature.p }}</p>
-          </div>
-        {% endfor %}
-      </div>
-      <div class="col-md-6">
-        <h3>{{ site.data.content.feature_details.column_right.h3 }}</h3>
-        {% for feature in site.data.content.feature_details.column_right.items %}
-          <div class="feature-block">
-            <img class="" alt="{{ feature.img.alt }}" src="{{ feature.img.url }}">
-            <h4>{{ feature.h4 }}</h4>
-            <p>{{ feature.p }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
 <section id="section-download" class="hidden-xs-down">
   <div class="container">
     <div class="row">

@@ -90,7 +90,7 @@ body{
 * Home page
 */
 #section-headline .btn{
-	display: block;
+	display: inline-block;
     width: 310px;
     margin: 10px auto;
 }
@@ -300,6 +300,7 @@ a.top-title {
 		}
 		.community-dl{
 			color: $darken-blue;
+			white-space: initial;
 			span{
 				color: $darken-blue;
 			}
