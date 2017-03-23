@@ -146,3 +146,46 @@ event:
     title: User testing session
     p: Be part of the adventure. Get a $50 Amazon coupon
     url: mailto:claire.morin@wakanda.io
+
+services:
+  - title: Wakanda Server
+    image: img/serverLogo@2x.png
+    items:
+      - orientation: right
+        title: Use Wakanda DB or any 3rd-party DB
+        description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
+        link: "#"
+        image: "/img/illu_database_2x.png"
+      - orientation: left
+        title: Server-Side JavaScript
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ludo qui morantur, ex his quidam denudantur. In taberna quando sumus, non curamus quid sit humus. Ibi nullus timet."
+        link: "#"
+        image: "/img/illu_server-side_2x.png"
+      - orientation: right
+        title: "RESTful API"
+        description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
+        link: "#"
+        image: "/img/illu_api_2x.png"
+      - orientation: left
+        title: "Angular 1&2, Ionic, Cordova"
+        description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
+        link: "#"
+        image: "/img/illu_angularionic_2x.png"
+  - title: Wakanda Studio
+    image: img/studioLogo@2x.png
+    items:
+      - orientation: right
+        title: All-in-one IDE
+        description: "Develop your Front-End, your Back-End and your data integration in the same IDE."
+        link: "#"
+        image: "/img/illu_allinone_2x.png"
+      - orientation: left
+        title: Visual Data Modelling
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ludo qui morantur, ex his quidam denudantur. In taberna quando sumus, non curamus quid sit humus. Ibi nullus timet."
+        link: "#"
+        image: "/img/illu_visualdata_2x.png"
+      - orientation: right
+        title: "Shaped for Mobile and Web Apps"
+        description: "Wakanda provides you with a fully integrated database, lightning-fast and ready to use. But no problem if you’d rather use a third-party DB: our connectors will do the job."
+        link: "#"
+        image: "/img/illu_webmobileapps_2x.png"

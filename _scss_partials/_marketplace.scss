@@ -446,3 +446,11 @@
     height: 25px;
     top: -7px;
 }
+
+.localisation span{
+	border-right: 1px solid #929292;
+    padding-right: 5px;
+	&:last-child{
+		border-right: none;
+	}
+}
