@@ -143,10 +143,11 @@ header {
     margin-bottom: 10px;
     & > a{
       @include font-size(12px);
-      font-weight: bold;
+      font-weight: 400;
       color: $sub-title;
       text-transform: uppercase;
       letter-spacing: 2px;
+      font-family: Roboto;
     }
     .aside-nav {
       a{
@@ -516,3 +517,9 @@ h2{
   }
 }
 
+.io-header-container{
+    @include transition(all 0.4s ease-out);
+}
+.sticky{
+  padding: 0;
+}

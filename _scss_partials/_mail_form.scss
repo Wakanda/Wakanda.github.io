@@ -180,24 +180,30 @@
 
 #section-newsletter{
     .newsletter{
-        background: $highlighted-color-transition;
-        color: $white-color;
-        padding: 40px 0;
+        background: $main-color;
+        color: $gray-bold;
+        padding: 30px 0;
         .row{
             margin: 0;
         }
+        h2{
+            @include font-size(28px);
+            margin-bottom: 0;
+        }
         p{
-            @include font-size(25px);
-            color: $white-color;
-            padding-left: 90px;
-            &:before{
+            @include font-size(15px);
+            color: $gray-bold;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin: 0;
+            /*&:before{
                 content: "\e930";
                 font-family: 'icomoon';
                 @include font-size(70px);
                 position: absolute;
                 left: 20px;
                 top: -18px;
-            }
+            }*/
             span{
                 display: block;
                 font-weight: 700;
@@ -206,16 +212,18 @@
         #mc_embed_signup {
             background: none;
             position: relative;
-            top: 14px;
+            /*top: 14px;*/
             form {
                 text-align: center;
                 padding: 10px 0 10px 0;
                 input.email {
-                    width: 60%;
-                    height: 40px;
+                    width: 65%;
+                    height: 45px;
                     border: none;
-                    border-radius: 0;
+                    @include border-radius(5px);
                     margin-right: 10px;
+                    @include font-size(13px);
+                    padding: 0 15px;
                 }
                 #mc-embedded-subscribe {
                     background: none;
@@ -223,9 +231,13 @@
                     font-size: 15px;
                     text-align: center;
                     width: 146px;
-                    height: 40px;
+                    height: 45px;
                     border: 1px solid #fff;
-                    border-radius: 3px;
+                    @include border-radius(5px);
+                    color: $gray-bold;
+                    @include font-size(14px);
+                    font-weight: 500;
+                    font-family: Roboto;
                 }
             }
         }

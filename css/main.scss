@@ -90,7 +90,7 @@ body{
 * Home page
 */
 #section-headline .btn{
-	display: block;
+	display: inline-block;
     width: 310px;
     margin: 10px auto;
 }
@@ -118,12 +118,13 @@ body{
 
 @media(max-width:768px) {
 	.fixed-top{
-		position: relative;
-		z-index: initial;
+		//position: relative;
+		//z-index: initial;
+		z-index: 999;
 	}
 	#section-headline, #section-feature-highlights, #page-header{
-		margin-top: 60px;
-		margin: 0;
+		//margin-top: 60px;
+		//margin: 0;
 		padding-bottom: 0;
 	}
 }
@@ -207,3 +208,133 @@ a.top-title {
 .notice{
 	margin-top: 40px;
 }
+#section-slideshow{
+	padding: 40px 0;
+	h2{
+		font-size: 42px;
+		color: $white-color;
+		letter-spacing: 0;
+		line-height: 66px;
+		margin-bottom: 20px;
+	}
+	.item{
+		padding: 0 6%;
+		.img-container{
+			max-width: 100px;
+			margin: 0 auto;
+			img{
+				width: 100%;
+			}
+		}
+		h3{
+			font-size: 18px;
+			color: $main-color-sub;
+			letter-spacing: 0;
+		}
+		p{
+			font-size: 15px;
+			color: $white-color;
+			letter-spacing: 0;
+			line-height: 24px;
+		}
+	}
+}
+.wakanda-service{
+	background-color: $white-color;
+	padding-bottom: 0;
+	h2{
+		text-align: center;
+		margin-bottom: 0;
+		img{
+			max-width: 64px;
+			margin: -10px 10px 0 0;
+		}
+	}
+	.item{
+		padding: 80px 0;
+		border-bottom: 1px solid $btn-secondary-light-bd;
+		&:last-child{
+			border: none;
+		}
+		.content-container{
+			vertical-align: middle;
+			h3{
+				@include font-size(28px);
+				color: $dark-bg;
+				letter-spacing: -0.28px;
+			}
+			p{
+				@include font-size(15px);
+				color: $secondary-light-bg-color;
+				letter-spacing: 0;
+				line-height: 24px;
+				margin: 30px 0 60px 0;
+			}
+			a{
+				@include font-size(15px);
+				color: $highlighted-color-transition;
+				letter-spacing: 0;
+			}
+		}
+		.img-container{
+			vertical-align: middle;
+			padding: 0 40px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.download-wakanda{
+		background-color: $dark-bg;
+		padding: 40px 0;
+		.img-container{
+			max-width: 280px;
+			img{
+				width: 100%;
+			}
+		}
+		p{
+			@include font-size(18px);
+			color: $negatif-gray;
+			letter-spacing: 0;
+			margin: -8px 0 0 70px;
+		}
+		.community-dl{
+			color: $darken-blue;
+			white-space: initial;
+			span{
+				color: $darken-blue;
+			}
+		}
+	}
+}
+
+@media(max-width:767px) {
+	
+	.wakanda-service .item{
+		padding: 30px 0;
+	}
+	.wakanda-service .row { display: table; }
+	.wakanda-service .row .col-md-8{ 
+		display: table-footer-group;
+	}
+	.wakanda-service .row .col-md-4 {
+		display: table-header-group;
+		text-align: center;
+		.img-container {
+			max-width: 260px;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
+	
+	.wakanda-service .row .col-md-8 .content-container, #section-slideshow .item{
+		padding: 0 12%;
+		text-align: center;
+	}
+}
+/*.btn-hp{
+	background-color: $orange;
+    color: $white-color;
+}*/
