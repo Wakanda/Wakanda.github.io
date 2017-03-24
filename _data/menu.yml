@@ -1,0 +1,18 @@
+items:
+
+  - title: Get started
+    url: /get-started
+
+  - title: Pricing
+    url: /pricing.html
+
+  - title: Partners
+    url: /marketplace.html
+
+  - title: Blog
+    url: https://blog.wakanda.io
+    target: _blank
+
+  - title: Sign in
+    url: https://console.wakanda.io
+    highlighted: true

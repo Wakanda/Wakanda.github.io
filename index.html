@@ -1,0 +1,438 @@
+---
+id: index
+layout: default
+css:
+  - css/lib/remodal.css
+  - css/lib/remodal-default-theme.css
+
+description: Full Platform to Develop & Run your Web & Mobile Apps with JavaScript.
+keywords: Test, Test23, Test4
+scripts:
+  - js/remodal.min.js
+  - js/lib/jquery-validate/jquery.validate.js
+  #- js/lib/jquery.uniform.js
+  - https://www.google.com/recaptcha/api.js
+---
+
+<section id="section-headline" class="module parallax parallax-bg-1">
+    <div id="strips" class="hidden-sm-down">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="section-wrapper-parallax bg-overlay bg-overlay-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>{{site.data.content.h1}}</h1>
+            <div class="h2">
+              <div>
+                <span>{{site.data.content.h2.prefix}} </span><span class="typed-text"></span>
+              </div>
+              <div id="typed-strings">
+                {% for typed_text in site.data.content.h2.typing %}
+                <p>{{typed_text}}</p>
+                {% endfor %}
+              </div>
+            </div>
+            <p class="text-center">
+              <a class="btn btn-lg btn-inverted btn-dl hidden-xs-down js-scrollTo" href="#section-download">
+              Download for <span class="platform-name"></span>
+              </a>
+              <a class="btn btn-lg btn-default btn-dl js-scrollTo" href="/get-started">
+                <span>Get started</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section id="section-feature-highlights">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 left">
+          <div class="row hidden-lg-up">
+            <div class="bottom-text">
+              <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
+              <h4>Server</h4>
+            </div>
+          </div>
+          <div class="row container-item">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="row">
+                <div class="item">
+                  <img src="img/DB_2x.png" alt="Database">
+                  <p>Built-in DB & 3rd party DBs</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="row">
+                <div class="item">
+                  <img src="img/JS_2x.png" alt="JavaScript">
+                  <p>Server-Side JavaScript</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="row">
+                <div class="item">
+                  <img src="img/Angular_2x.png" alt="Angular">
+                  <p>Angular 1&2, Ionic, Cordova</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="row">
+                <div class="item">
+                  <img src="img/RESTful_2x.png" alt="RESTful">
+                  <p>RESTful API</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hidden-md-down">
+            <div class="bottom-text">
+              <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
+              <h4>Server</h4>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-6 right">
+        <div class="row">
+            <div class="col-lg-2 plus-item">
+              <i class="fa fa-plus fa-6x"></i>
+            </div>
+            <div class="col-lg-10">
+              <div class="row  hidden-lg-up">
+                <div class="bottom-text">
+                  <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
+                  <h4>Studio</h4>
+                </div>
+              </div>
+              <div class="row container-item">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="row">
+                  <div class="item">
+                      <img src="img/IDE_2x.png" alt="IDE">
+                      <p>All-in-One IDE</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="row">
+                    <div class="item">
+                      <img src="img/Datamodel_2x.png" alt="Datamodel">
+                      <p>Visual Data Modeling</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="row">
+                    <div class="item">
+                      <img src="img/Web-new_2x.png" alt="Web">
+                      <p>Shaped for Web Apps</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row  hidden-md-down">
+                <div class="bottom-text">
+                  <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
+                  <h4>Studio</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section-slideshow">
+  <div class="container">
+    <h2>Wakanda 2.0 is coming soon</h2>
+    <div class="row">
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/nodejs_2x.png" alt="NodeJS">
+        </div>
+        <h3>NodeJS Support</h3>
+        <p>Develop Server Side JS in Single Threaded Event Loop architecture. Get access to more than 230,000 modules!</p>
+      </div>
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/js-action-layer.png" alt="JavaScript">
+        </div>
+        <h3>JavaScript Action Layer</h3>
+        <p>Whatever the datasource (Relational DB, Web Services, …), integrate your business entities directly, add security layer or events.</p>
+      </div>
+      <div class="col-md-4 item">
+        <div class="img-container">
+          <img src="/img/new-db.png" alt="New Database">
+        </div>
+        <h3>New DataBases are supported</h3>
+        <p>Wakanda DB like! Thanks to the new ODBC Connector, integrate to Wakanda MSSQL DB and manipulate directly business entities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="section-newsletter">
+  {% include newsletter-mailchimp.html %}
+</div>
+
+{% for service in site.data.content.services %}
+<section class="wakanda-service">
+  <div class="container">
+    <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
+  </div>
+  {% for item in service.items %}
+  <div class="item {{ item.orientation }}-item">
+    <div class="container">
+      <div class="row">
+        {% if item.orientation == 'left' %}
+          <div class="col-md-4 img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+          </div>
+        {% endif %}
+        <div class="col-md-8 content-container">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <a href="{{ item.link }}">Learn More</a>
+        </div>
+        {% if item.orientation == 'right' %}
+          <div class="col-md-4 img-container">
+            <img src="{{ item.image }}" alt="{{ item.title }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="row download-wakanda" style="display: none">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="img-container">
+            <img src="/img/wakanda_bleu_2x.png" alt="Wakanda Open Source Platform to Develop Mobile & Web Apps">
+          </div>
+          <p>is an Open Source Platform to Develop Mobile & Web Apps</p>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="community-dl btn btn-lg btn-primary btn-dl">
+              <span class="fa fa-download"></span> Download for <span class="platform-name"></span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+<section id="section-download" class="hidden-xs-down">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="with-legend">Choose your edition</h2>
+        <p class="title-legend">
+          By downloading and using Wakanda, you agree to the <a href="http://www.wakanda.io/license">license terms</a> and the <a href="http://www.wakanda.io/acceptable-use-policy-aup">acceptable use policy</a>.
+        </p>
+        <table class="table table-striped production-table">
+          <thead>
+            <tr>
+              <td >&nbsp;</td>
+              <td class="community"><b>Community</b>
+              </td>
+              <td class="enterprise"><span><b>Enterprise</b></span>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="item-title">
+                Wakanda Studio (Full IDE)
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                Wakanda Server (Wakanda DB included)
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                Angular 1 & 2 , Ionic, Cordova ...
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                JavaScript and TypeScript
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                Scalability
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                MySQL Connector
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="item-title">
+                Wakanda Support Team
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <span class="fa fa-check"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td class="action">
+                <div class="btn-group">
+                  <a id="community-dl" href="#" class="btn btn-lg btn-success btn-dl">
+                    <span class="fa fa-download"></span> Download for <span class="platform-name"></span>
+                  </a>
+                  <a class="btn btn-lg btn-success btn-dl dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <table>
+                      <colgroup>
+                        <col>
+                        <col class="insiders-column">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th class="build-header" scope="col">Stable <code id="version-stable" class="hidden-md-down"></code></th>
+                          <th class="build-header" scope="col" style="display: none;">Preview <code id="version-preview"  class="hidden-md-down"></code></th>
+                        </tr>
+                      </thead>
+                      <tbody id="all-downloads" class="os-group">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="dl-info"><span>Free download</span></div>
+              </td>
+              <td class="action">
+                <a class="btn btn-lg btn-inverted" href="#download-entreprise">
+                  <span class="fa fa-download"></span> Download for <span class="platform-name"></span>
+                </a>
+                <div class="dl-info">
+                  <span>Free 30 day trial</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="section-community">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Join the community on
+              <a href="https://gitter.im/wakandasoft/Lobby">Gitter</a>
+            </h3>
+            <a href="https://gitter.im/wakandasoft/Lobby">
+              <img class="img-fluid" src="img/gitter.jpg" alt="Gitter Community" />
+            </a>
+          </div>
+          <div class="col-md-6">
+            <h3>Learn more</h3>
+            {% for link in site.data.content.community %}
+            <p>
+              <a class="btn btn-success" href="{{ link.url }}">
+                <i class="{{ link.icon }}"></i> {{ link.title }}
+              </a>
+            </p>
+            {% endfor %}
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section-events">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>{{ site.data.content.event.title }}</h4>
+        {% for p in site.data.content.event.paragraphs %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
+      <div class="col-md-6">
+        <ul>
+          {% for event in site.data.content.event.calendar %}
+          <li>
+            <div class="calendar">
+              <div class="calendar-month">{{ event.month }}</div>
+              <div class="calendar-day">{{ event.day }}</div>
+            </div>
+            <a href="{{ event.url }}">
+              <h4>{{ event.title }}</h4>
+              <p>{{ event.p }}</p>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include community-mailchimp.html %}
+  

@@ -1,0 +1,373 @@
+
+/* EVENTIAL CSS 
+
+	1. CORE CSS
+	2. NAVIGATION
+	3. TOP
+	   - Countdown
+	4. OVERVIEW
+	   - Milestone
+	5. SPEAKERS
+	6. SCHEDULE
+	7. VENUE
+	8. TESTIMONIAL
+	9. SPONSORS
+	10. SUBSCRIBE
+	11. FAQ & GALLERY
+	12. REGISTER
+	13. CONTACT 
+	14. MISC.
+		- Form Elements
+		- Buttons
+		- Preload	
+*/
+
+
+/* CORE CSS */
+
+body {
+	color:#2e2e2e;
+}
+
+
+/* NAVIGATION */
+
+.navbar-custom {
+	color:#ffffff;
+}
+
+.navbar-custom a {
+	color:#ffffff;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+	color:#e67e22;
+}
+
+.navbar-custom .navbar-toggle {
+	background:#ffffff;
+}
+
+.top-nav-collapse {
+	background-color: #ffaa33;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+	background:#ffaa33;
+}
+
+
+/* TOP */
+
+#top {
+	color:#ffffff;
+}
+
+
+/* Countdown */
+
+#countdown {
+	color:#ffffff;
+}
+
+
+/* OVERVIEW */
+
+#overview h3 {
+	color:#999999;
+}
+
+#overview h3 span {
+	color:#2e2e2e;
+
+}
+
+#overview h4 {
+	margin-bottom:20px;
+}
+
+#overview i {
+	color:#ffaa33;
+}
+
+#overview .lead {
+	color:#999999;
+}
+
+#overview .fa-circle {
+	color:#ffaa33;
+}
+
+
+/* SPEAKER */
+
+#speakers {
+	background:#efefef;
+}
+
+.speaker figcaption {
+	background: rgba(255, 170, 51, 0.85);
+	color: #ffffff;
+}
+ 
+.speaker figcaption h4 {
+	color:#ffffff;
+}
+
+.speaker figcaption p {
+	color:#ffffff;
+}
+
+.speaker a,
+.speaker .social a {
+	color:rgba(255, 255, 255, .75);
+}
+
+.speaker a:hover,
+.speaker .social a:hover{
+	color:rgba(255, 255, 255, 1);
+}
+
+.speaker .title {
+	color:#888888;
+}
+
+
+/* speaker detail popup */
+
+#speaker-detail {
+	color:#2e2e2e;
+	background:#ffffff;
+}
+
+#speaker-detail h3 {
+	color:#ffaa33;
+}
+
+#speaker-detail a {
+	color:#ffaa33;
+}
+
+#speaker-detail i {
+	color:#888888;
+}
+
+
+/* SCHEDULE */
+
+.event h3 {
+	color:#ffaa33;
+}
+
+.event .icon {
+	color:#ffffff;
+	background:#ffaa33;
+}
+
+.event .description {
+	background:#efefef;
+
+}
+
+
+/* Schedule Pagination */
+
+#days .item {
+	background:#efefef;
+}
+
+#days .item:hover,
+#days .item:active {
+	color:#ffffff;
+	background:#ffaa33;
+}
+
+/* VENUE */
+
+.venue-address {
+	color:#ffffff;
+	background:rgba(255, 170, 51, 0.85);
+}
+
+#venue h3 {
+	color:#ffaa33;
+}
+
+#venue .venue-address h2 {
+	color:#ffffff;
+}
+
+#venue i {
+	color:#ffaa33;
+}
+
+#venue .fa-inverse {
+	color:#ffffff;
+}
+
+
+/* TESTIMONIAL */
+
+#testimonial {
+	color:#ffffff;
+}
+
+
+/* SPONSOR */
+
+#sponsors h3 {
+	color:#999999;
+}
+
+
+/* SUBSCRIBE */
+
+#subscribe {
+	color:#ffffff;
+}
+
+#subscribe input {
+	color:#ffffff;
+	background:rgba(255,255,255, 0.30);
+	border:1px solid #ffffff;
+}
+
+/* FAQ - GALLERY */
+
+#faq-gallery {
+	background:#ececec;
+}
+
+#faq i {
+	color:#ffaa33;
+}
+
+/* REGISTER */
+
+#register {
+	color:#ffffff;
+	/*background:#efefef;*/
+}
+
+.price-table-header {
+	color:#ffffff;
+	background:#ffaa33;
+}
+
+.price-table-description {
+	background:#ffffff;
+}
+
+.description-item {
+	color:#2e2e2e;
+}
+
+.price-table-description .stripe {
+	color:#ffffff;
+	background:#ffaa33;
+}
+
+
+/* register form */
+
+#register-form {
+	background:#ffffff;
+}
+
+
+/* CONTACT */
+
+.contact {
+	color:#ffffff;
+	background:rgba(255, 170, 51, 0.85);
+}
+
+.social .fa-inverse {
+	color:#ffaa33;
+}
+
+.social a {
+	color:rgba(255, 255, 255, 0.65);
+}
+
+.social a:hover{
+	color:rgba(255, 255, 255, 1);
+}
+
+
+/* MISC */
+
+/* FORM ELEMENTS */
+
+input[type="text"],
+input[type="email"],
+select {
+	color:#2e2e2e;
+} 
+
+::-webkit-input-placeholder {
+   color: #2e2e2e;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #2e2e2e;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #2e2e2e;  
+}
+
+:-ms-input-placeholder {  
+   color: #2e2e2e;  
+}
+
+
+/* BUTTONS */
+
+.button {
+	color: inherit;
+	background: none;
+}
+
+
+.button-light {
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.button-light:hover,
+.button-light:active {
+	color: #ffaa33;
+	background: #ffffff;
+}
+
+.button-dark {
+	color: #ffffff;
+	background:#ffaa33;
+}
+
+.button-dark:hover,
+.button-dark:active {
+	color: #ffffff;
+	background: #e67e22;
+}
+
+
+/* PRELOAD */
+
+#preload {
+	background:#ececee;
+}
+
+.loader {
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffaa33;
+}
+
+
+/* magnific popup */
+.mfp-bg {
+	background:#ffaa33;
+}
