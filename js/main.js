@@ -1,16 +1,25 @@
 
+
+/** Start Fixed Menu **/
 var menu = $('.main-nav');
 var origOffsetY = menu.offset().top;
-console.log('origOffsetY : '+origOffsetY);
 
 function scroll() {
-    if ($(window).scrollTop() >= origOffsetY) {
+    var origOffsetY = menu.offset().top;
+    //console.log('window'); console.log($(window).scrollTop());
+    //console.log('origOffsetY'); console.log(origOffsetY);
+    if ($(window).scrollTop() >= origOffsetY && origOffsetY>0) {
         $('.fixed-top').addClass('sticky');
     } else {
         $('.fixed-top').removeClass('sticky');
     }
 }
 document.onscroll = scroll;
+
+$('#navbarmenu-toggle').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+/** End Fixed Menu **/
 
 
 /*

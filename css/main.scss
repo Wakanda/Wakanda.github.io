@@ -118,12 +118,13 @@ body{
 
 @media(max-width:768px) {
 	.fixed-top{
-		position: relative;
-		z-index: initial;
+		//position: relative;
+		//z-index: initial;
+		z-index: 999;
 	}
 	#section-headline, #section-feature-highlights, #page-header{
-		margin-top: 60px;
-		margin: 0;
+		//margin-top: 60px;
+		//margin: 0;
 		padding-bottom: 0;
 	}
 }
