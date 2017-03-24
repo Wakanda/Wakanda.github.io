@@ -517,3 +517,9 @@ h2{
   }
 }
 
+.io-header-container{
+    @include transition(all 0.4s ease-out);
+}
+.sticky{
+  padding: 0;
+}
