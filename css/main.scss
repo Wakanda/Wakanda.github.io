@@ -308,3 +308,33 @@ a.top-title {
 		}
 	}
 }
+
+@media(max-width:767px) {
+	
+	.wakanda-service .item{
+		padding: 30px 0;
+	}
+	.wakanda-service .row { display: table; }
+	.wakanda-service .row .col-md-8{ 
+		display: table-footer-group;
+	}
+	.wakanda-service .row .col-md-4 {
+		display: table-header-group;
+		text-align: center;
+		.img-container {
+			max-width: 260px;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
+	
+	.wakanda-service .row .col-md-8 .content-container, #section-slideshow .item{
+		padding: 0 12%;
+		text-align: center;
+	}
+}
+.btn-hp{
+	background-color: $orange;
+    color: $white-color;
+}

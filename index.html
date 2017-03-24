@@ -43,7 +43,7 @@ scripts:
               <a class="btn btn-lg btn-inverted btn-dl hidden-xs-down js-scrollTo" href="#section-download">
               Download for <span class="platform-name"></span>
               </a>
-              <a class="btn btn-lg btn-default btn-dl js-scrollTo" href="/get-started">
+              <a class="btn btn-lg btn-default btn-dl js-scrollTo btn-hp" href="/get-started">
                 <span>Get started</span>
               </a>
             </p>
@@ -198,18 +198,24 @@ scripts:
     <div class="container">
       <div class="row">
         {% if item.orientation == 'left' %}
-          <div class="col-md-4 img-container">
-            <img src="{{ item.image }}" alt="{{ item.title }}">
+          <div class="col-md-4">
+            <div class=" img-container">
+              <img src="{{ item.image }}" alt="{{ item.title }}">
+            </div>
           </div>
         {% endif %}
-        <div class="col-md-8 content-container">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.description }}</p>
-          <a href="/get-started">Get Started</a>
+        <div class="col-md-8">
+          <div class="content-container">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <a href="/get-started">Get Started</a>
+          </div>
         </div>
         {% if item.orientation == 'right' %}
-          <div class="col-md-4 img-container">
-            <img src="{{ item.image }}" alt="{{ item.title }}">
+          <div class="col-md-4">
+            <div class=" img-container">
+              <img src="{{ item.image }}" alt="{{ item.title }}">
+            </div>
           </div>
         {% endif %}
       </div>
