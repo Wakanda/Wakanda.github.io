@@ -82,9 +82,11 @@
                                         <i class="icon-map-marker"></i>
                                         {% capture country_size %}{{ post.country | size }}{% endcapture %}
 
-                                        {% if country_size == '1' or country_size == '2' %}
+                                        {% if country_size == '1' %}
+                                            <span>{{ post.country[0].name }}</span>
+                                        {% elsif country_size == '2' || country_size == '3' %}
                                             {% for country in post.country %}
-                                                <span title="{{ country.name }}">{{ country.name }}</span>
+                                                <span title="{{ country.name }}">{{ country.code }}</span>
                                             {% endfor %}
                                         {% else %}
                                             <span>International</span>
