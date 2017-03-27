@@ -523,3 +523,29 @@ h2{
 .sticky{
   padding: 0;
 }
+
+
+.not-found-page{
+  #bottom {
+    min-height: 43.5% !important;
+  }
+  #not-found{
+    span{
+      font-size: 134px;
+      display: inline-block;
+      color: #ffc600;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+    img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h1{
+      text-transform: uppercase;
+      font-size: 40px !important;
+      font-weight: 200 !important;
+      margin: 0 !important;
+    }
+  }
+}
