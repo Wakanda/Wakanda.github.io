@@ -190,9 +190,7 @@ scripts:
 
 {% for service in site.data.content.services %}
 <section class="wakanda-service">
-  <div class="container">
-    <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
-  </div>
+  <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
   {% for item in service.items %}
   <div class="item {{ item.orientation }}-item">
     <div class="container">

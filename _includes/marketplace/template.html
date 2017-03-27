@@ -42,7 +42,7 @@
 
     <div class="container">
         <div class="row filtered_items" id="filtered_items_template">
-            {% assign posts = site.marketplace | where: "category", "template" | sort: 'date' | reverse %}
+            {% assign posts = site.data.marketplace.items.template | sort: 'date' | reverse %}
             {% for post in posts %}
                 {% assign index_post = forloop.index %}
                 <div class="item col-md-4 {{ post.tags | join: ' '}} {{ post.type | join: ' '}} {{ post.powered.type | join: ' '}}">
