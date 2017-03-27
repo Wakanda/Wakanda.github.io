@@ -15,9 +15,12 @@ First, download and install **Wakanda Community Edition**
 Now we can start our **HelloWorld** project.  
 
 ## Step 2: Choose your template
+
 We can choose the type of app we want to create : mobile, web or both.
 
-Let’s say we want to create an *Android app with Ionic2*.
+In this example we are going to create an *Android app with Ionic2*.   
+You need to use Angular2 to create an app with Ionic2, but you don't need any Angular2 knowledge for this **Hello World**
+
 
 To do that, we're going to launch the studio <img src="../img/iconWakanda.png"/> and click on **"Create a new solution"**:
 
@@ -28,27 +31,22 @@ Which opens the template selection page:
 <img src="../img/hw-template-selection.png"/>
 
 
-The structure of your future projects depends on the template you choose.
+The structure of your future projects depends on the template you choose. 
 
-You'll always have the **same back-end structure**, however you can choose to have a **web front-end and/or mobile front-end**.
+For our mobile **Hello World**, we just need a mobile front-end, with the **Ionic2 blank template**.
 
-Enter *- HelloWorld -* as an app name and select the **Ionic2 blank template**.
 
 Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure [More info here](https://ionicframework.com/docs/v2/intro/tutorial/project-structure/ "ionic tutorial").:
 
 <img src="../img/hw-file-structure.png"/>  
 
-You have 3 folders at the root of your project:
+You have 2 folders at the root of your project:
 
-- **Backend:** Wakanda JavaScript Server. It contains all the Server files to logs, settings, permissions.  
-- **Database:** Wakanda DB folder. It contains your data model(s), backups and your data.
-- **Mobile:** where you’ll find all your front-end files to develop and build your mobile app. It contains all you need to code your Ionic 1 or 2 projects.
+- **HelloWorldMobile:** where you can access your solution settings, logs and directory. 
+- **Mobile:** where you’ll find all your front-end files to develop and build your mobile app. 
 
-> **TIPS**:  
-> - If you select both mobile and web, the same backend will be used for both applications. 
+ That's where we are going to work for this **Hello World**
 
-
-For our **HelloWorld** we’re going to work first in the `mobile` folder.
 
 
 ## Step 3: Check for dependencies
