@@ -121,7 +121,7 @@ event:
     url: mailto:claire.morin@wakanda.io
 
 services:
-  - title: Wakanda Server
+  - title: Server
     image: img/serverLogo@2x.png
     items:
       - orientation: right
@@ -144,7 +144,7 @@ services:
         description: "Use the strength of Angular with or connector: bind your data to your front-end easily. <br/>And soon, many other integrations : React, Aurelia..."
         link: "#"
         image: "/img/illu_angularionic_2x.png"
-  - title: Wakanda Studio
+  - title: Studio
     image: img/studioLogo@2x.png
     items:
       - orientation: right

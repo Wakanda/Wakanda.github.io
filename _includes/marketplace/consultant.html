@@ -57,7 +57,7 @@
 
     <div class="container">
         <div class="row filtered_items" id="filtered_items_consultant">
-            {% assign posts = site.marketplace | where: "category", "consultant" | sort: 'type' %}
+            {% assign posts = site.data.marketplace.items.consultant | sort: 'type' %}
             {% for post in posts %}
                 {% assign index_post = forloop.index %}
                 <div class="item col-lg-4 col-md-6 col-ms-12 {{ post.category_consultant | join: ' '}} {{ post.type | join: ' '}} {{ post.country.code | join: ' '}}">
