@@ -54,7 +54,7 @@ You have 2 folders at the root of your project:
 Mobile apps are based on **AngularJS**, **Ionic** and **Cordova**.
 
 For mobile apps, you need to check for any missing dependencies.
-Go in the main menu  (_Help_ > _Wakanda Troubleshooting_) and choose Android. (Troubelshooting can also be accessed from the console)
+Go in the main menu  (_Help_ > _Wakanda Troubleshooting_) and choose Mobile and then Android.
 
 <img src="../img/hw-troubleshooting.png"/>
 
@@ -65,14 +65,25 @@ Here you can see that Homebrew, Apache and Android SDK are missing. Everything i
 
 Once all your dependencies are checked you can preview your app.
 
-Just click on your project, and then on **"Preview"**.
+Just click on your project, and then on **"Run"**.
 
 <img src="../img/hw-first-preview.png"/>
+
+> **TIPS**:  
+> - The first time you click **Run** if you prefer to see the result in your default browser.  
 
 
 Let's have a look at our project structure : the src folder is the classical ionic2 project structure.
 
-A simple change in `mobile/src/pages/home.html` and I have my **HelloWorld** done.
+In `mobile/src/pages/home.html`, replace:
+
+```html
+<h2>Welcome to Ionic!</h2>
+```
+with:
+```html
+<h2>Hello Wakanda newbie!</h2>
+```
 
 To make it more visual, you can change the home page background color in its scss file `mobile/src/pages/home.scss` by adding:
 
