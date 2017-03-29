@@ -27,7 +27,7 @@
     box-sizing: border-box;
     float: right;
     list-style-type: none;
-    margin: 15px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 0;
 
     @media(min-width: 991px){
@@ -92,9 +92,6 @@
   }
   .mobile-nav-trigger.icon{
     float: right;
-    margin-left: 120px;
-    margin-top: 0;
-    font-size: 14px;
 
     @media (min-width: 768px){
       display: none;

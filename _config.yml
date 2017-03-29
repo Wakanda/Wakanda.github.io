@@ -10,15 +10,12 @@ version: 1.3
 encoding: utf-8
 gems:
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-assets
-  # - jekyll-minifier
-#sass:
- # sass_dir: _scss_partials
+sass:
+  sass_dir: _scss_partials
 defaults:
   -
     values:
-      layout: "default"
+      layout: "index"
   - scope:
       path: ""
       type: marketplace
@@ -33,42 +30,3 @@ LICENSE
 collections:
   marketplace:
     output: true
-
-assets:
-  compress:
-    css: true
-    js: true
-
-  autowrite: true
-  #cache: false | directory | default: .asset-cache
-  #cache_type: memory | filesystem | default: filesystem
-  #cdn: https://cdn.example.com
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: "/assets"
-  digest: true
-
-  #
-
-  assets:
-    - "*.png"
-    - "bundle.css"
-
-  #
-
-  sources:
-    - _assets/css
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/fonts
-    - _assets/img
-    - _assets/js
-
-  #
-
-  features:
-    liquid: false
-    integrity: false
-    automatic_img_size: true
-    automatic_img_alt : true

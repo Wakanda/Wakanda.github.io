@@ -39,7 +39,7 @@
     clear: initial !important;
 
     @media(min-width: 991px){
-      margin-top: 15px;
+      margin-top: 12px;
     }
     li{
       display: inline-block;
@@ -100,17 +100,12 @@
   }
   .mobile-nav-trigger.icon{
     float: right;
-    margin-left: 120px;
-    margin-top: 10px;
-    font-size: 14px;
 
     @media (min-width: 768px){
       display: none;
     }
     i{
         vertical-align: middle;
-        margin: 0;
-        padding: 0;
     }
   }
   .mobile-nav-trigger.text{

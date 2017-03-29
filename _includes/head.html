@@ -12,6 +12,11 @@
 <meta property="og:title" content="FullStack JavaScript Platform">
 <meta property="og:description" content="Develop &amp; Run Web &amp; Mobile Apps">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet" />
-{% css main %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+{% for css in page.css %}
+  <link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+<link rel="stylesheet" href="/css/main.css?v=021517b" />
 {% include olark.html %}
 {% include tag_manager_head.html %}
