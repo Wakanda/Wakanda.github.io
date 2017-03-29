@@ -76,7 +76,7 @@ Just click on your project, and then on **"Run"**.
 
 Let's have a look at the project's structure : the src folder is the classical ionic2 project structure.
 
-In `mobile/src/pages/home.html`, replace:
+In `mobile/src/pages/home/home.html`, replace:
 
 ```html
 <h2>Welcome to Ionic!</h2>
@@ -86,7 +86,7 @@ with:
 <h2>Hello Wakanda newbie!</h2>
 ```
 
-To make it more visual, you can change the home page background color in its scss file `mobile/src/pages/home.scss` by adding:
+To make it more visual, you can change the home page background color in its scss file `mobile/src/pages/home/home.scss` by adding:
 
 ```css
 .scroll-content {
