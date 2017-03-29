@@ -35,18 +35,18 @@ The structure of your future projects depends on the template you choose.
 
 For our mobile **Hello World**, we just need a mobile front-end, with the **Ionic2 blank template**.
 
-
-Now, in your **HelloWorld** project, you can find the basic Ionic2 file structure [More info here](https://ionicframework.com/docs/v2/intro/tutorial/project-structure/ "ionic tutorial").:
-
-<img src="../img/hw-file-structure.png"/>  
-
-You have 2 folders at the root of your project:
+Now, at the root of your project, you have 2 folders:
 
 - **HelloWorldMobile:** where you can access your solution settings, logs and directory. 
 - **Mobile:** where you’ll find all your front-end files to develop and build your mobile app. 
 
  That's where we are going to work for this **Hello World**
 
+In your **Mobile:** folder, you can find the classical Ionic2 project file structure [More info here](https://ionicframework.com/docs/v2/intro/tutorial/project-structure/ "ionic tutorial").:
+
+That's where we are going to work for this **Hello World**
+
+<img src="../img/hw-file-structure.png"/>  
 
 
 ## Step 3: Check for dependencies
@@ -67,13 +67,12 @@ Once all your dependencies are checked you can preview your app.
 
 Just click on your project, and then on **"Run"**.
 
-<img src="../img/hw-first-preview.png"/>
+> **TIPS**:
+> - The first click on **Run** on a project with a mobile front opens the mobile settings.
+> - You can choose on which OS you want to run your mobile app, and the way you want to visualise it: **Preview**, **Emulator** or **Device** 
 
-> **TIPS**:  
-> - The first time you click **Run** if you prefer to see the result in your default browser.  
 
-
-Let's have a look at our project structure : the src folder is the classical ionic2 project structure.
+Let's have a look at the project's structure : the src folder is the classical ionic2 project structure.
 
 In `mobile/src/pages/home.html`, replace:
 
