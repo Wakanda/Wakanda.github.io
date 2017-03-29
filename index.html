@@ -57,50 +57,50 @@ scripts:
     <div class="row">
       <div class="col-lg-6 col-md-12 left">
           <div class="row hidden-lg-up">
-            <div class="bottom-text">
+            <a class="bottom-text" href="#server">
               <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
               <h4>Server</h4>
-            </div>
+            </a>
           </div>
           <div class="row container-item">
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <div class="item">
+                <a class="item" href="#db-3rd-party">
                   <img src="img/DB_2x.png" alt="Database">
                   <p>Built-in DB & 3rd party DBs</p>
-                </div>
+                </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <div class="item">
+                <a class="item" href="#js-a-z">
                   <img src="img/JS_2x.png" alt="JavaScript">
                   <p>Server-Side JavaScript</p>
-                </div>
+                </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <div class="item">
+                <a class="item" href="#rest-api">
                   <img src="img/Angular_2x.png" alt="Angular">
                   <p>Angular 1&2, Ionic, Cordova</p>
-                </div>
+                </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <div class="item">
+                <a class="item" href="#front-end">
                   <img src="img/RESTful_2x.png" alt="RESTful">
                   <p>RESTful API</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
           <div class="row hidden-md-down">
-            <div class="bottom-text">
+            <a class="bottom-text" href="#server">
               <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
               <h4>Server</h4>
-            </div>
+            </a>
           </div>
       </div>
       <div class="col-lg-6 right">
@@ -110,42 +110,42 @@ scripts:
             </div>
             <div class="col-lg-10">
               <div class="row  hidden-lg-up">
-                <div class="bottom-text">
+                <a class="bottom-text" href="#studio">
                   <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
                   <h4>Studio</h4>
-                </div>
+                </a>
               </div>
               <div class="row container-item">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                  <div class="item">
+                    <a class="item" href="#all-ide">
                       <img src="img/IDE_2x.png" alt="IDE">
                       <p>All-in-One IDE</p>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                    <div class="item">
+                    <a class="item" href="#visual-data">
                       <img src="img/Datamodel_2x.png" alt="Datamodel">
                       <p>Visual Data Modeling</p>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                    <div class="item">
+                    <a class="item" href="#mobile-web">
                       <img src="img/Web-new_2x.png" alt="Web">
                       <p>Shaped for Web Apps</p>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
               <div class="row  hidden-md-down">
-                <div class="bottom-text">
+                <a class="bottom-text" href="#studio">
                   <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
                   <h4>Studio</h4>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -188,10 +188,10 @@ scripts:
 </div>
 
 {% for service in site.data.content.services %}
-<section class="wakanda-service">
+<section class="wakanda-service" id="{{ service.id }}">
   <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
   {% for item in service.items %}
-  <div class="item {{ item.orientation }}-item">
+  <div class="item {{ item.orientation }}-item" id="{{ item.id }}">
     <div class="container">
       <div class="row">
         {% if item.orientation == 'left' %}
