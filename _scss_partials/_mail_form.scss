@@ -180,8 +180,8 @@
 
 #section-newsletter{
     .newsletter{
-        background: $highlighted-color-transition;
-        color: $white-color;
+        background: $main-color;
+        color: $gray-bold;
         padding: 30px 0;
         .row{
             margin: 0;
@@ -189,11 +189,10 @@
         h2{
             @include font-size(28px);
             margin-bottom: 0;
-            color: $white-color;
         }
         p{
             @include font-size(15px);
-            color: $white-color;
+            color: $gray-bold;
             letter-spacing: 0;
             line-height: 24px;
             margin: 0;
@@ -235,7 +234,7 @@
                     height: 45px;
                     border: 1px solid #fff;
                     @include border-radius(5px);
-                    color: $white-color;
+                    color: $gray-bold;
                     @include font-size(14px);
                     font-weight: 500;
                     font-family: Roboto;
