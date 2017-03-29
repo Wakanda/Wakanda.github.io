@@ -1,3 +1,26 @@
+
+
+/** Start Fixed Menu **/
+var menu = $('.io-header-container');
+var origOffsetY = menu.offset().top;
+
+function scroll() {
+    var origOffsetY = menu.offset().top;
+    console.log('window'); console.log($(window).scrollTop());
+    console.log('origOffsetY'); console.log(origOffsetY);
+    if ($(window).scrollTop() >= origOffsetY && origOffsetY>0) {
+        $('.io-header-container').addClass('sticky');
+    } else {
+        $('.io-header-container').removeClass('sticky');
+    }
+}
+document.onscroll = scroll;
+
+$('#navbarmenu-toggle').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+/** End Fixed Menu **/
+
 $(document).ready(function(){
 
     // Navigation Menu
@@ -26,11 +49,11 @@ $(document).ready(function(){
            $('.disqus_thread').removeClass('hidden'); 
         });
     }
-    var $blah = $(".main-nav"),
-        $window = $(window),
-        offset = $blah.offset();
 
     $window.scroll(function () {
+        var $blah = $(".main-nav"),
+        $window = $(window),
+        offset = $blah.offset();
         if($window.width() >= 992) {
             if ($window.scrollTop() > offset.top) {
                 $blah.stop().animate({
