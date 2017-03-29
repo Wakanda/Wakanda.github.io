@@ -15,7 +15,7 @@ sass:
 defaults:
   -
     values:
-      layout: "index"
+      layout: "default"
   - scope:
       path: ""
       type: marketplace

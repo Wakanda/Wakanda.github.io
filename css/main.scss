@@ -137,7 +137,7 @@ a.top-title {
 	color: $main-color !important;
 }
 
-.cc-grower{
+.cc-banner{
 	background-color: #FFF7DA;
 	color:  #232A33;
 	.cc-btn{
@@ -306,4 +306,8 @@ a.top-title {
 			}
 		}
 	}
+}
+
+.olark-launch-button{
+	z-index: 1000 !important;
 }
