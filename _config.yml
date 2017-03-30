@@ -10,6 +10,7 @@ version: 1.3
 encoding: utf-8
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
 sass:
   sass_dir: _scss_partials
 defaults:
