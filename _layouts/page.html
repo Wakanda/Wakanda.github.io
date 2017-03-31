@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div id="page-content">
+        <div id="page-content" {% if page.top_title %} class="page-no-title" {% endif %}>
             {{ content }}
         </div>
         <footer id="footer">

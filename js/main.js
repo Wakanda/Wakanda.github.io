@@ -459,3 +459,84 @@ function formatCountry (country) {
 };
 
 /*** ================== End Marketplace Script ================== ***/
+
+
+
+/*** ================== Start What we do Script ================== ***/
+
+if($('.what-we-do').length) {
+
+    // on click show detail
+    $(".show-detail").click(function(){
+        var element = $(this).parent().find('.details');
+        if ($(element).css('display') == 'none' ){
+            $(element ).slideDown( "slow" );
+            $('i', this).addClass('rotated');
+        }else {
+            $(element ).slideUp( "slow" );
+            $('i', this).removeClass('rotated');
+        }
+        return false;
+    });
+
+    // on charge page caclule sum price
+    (function init_price() {
+        $( ".block-comp" ).each(function() {
+            calculate(this);
+        })
+    })();
+
+    // on click container caclule sum price
+    $(document).on( "click", "[data-price-container]", function () {
+        calculate($(this).closest( ".block-comp" ));
+    } );
+
+    // on change price element caclule sum price
+    $(document).on( "click", "[data-price]", function () {
+        var parent = $(this).closest( ".tab-pane" ).attr('id');
+        calculate($('#'+parent).closest( ".block-comp" ));
+    } );
+
+    // calculate price function
+    function calculate(data_price_container) {
+        var sum = 0;
+        $('[data-price-container]', data_price_container).each(function() {
+            if($(this).hasClass('active')){
+                sum += parseFloat($(this).attr('data-price-container'));
+                var id = $(this).attr('href');
+                console.log('ID'); console.log(id);
+                if(id) {
+                    $('[data-price]', id).each(function() {
+                        if($(this).hasClass('active') || $(this).is(':checked')) {
+                            sum += parseFloat($(this).attr('data-price'));
+                        }
+                        else if($(this).is('select')){
+                            sum += parseFloat($(this).val());
+                        }
+                    });
+                }
+            }
+        });
+        $('.comp-footer .price strong', data_price_container).html('$' + sum);
+    }
+
+    // display target element
+    $(document).on('click', '[data-target]', function(){
+        var id = $(this).attr('data-target');
+        var parent = $(this).closest( "[data-target-container]" );
+        $('[data-target-cible]', parent).each(function(){
+            if(!$(this).hasClass('hidden')) {
+                $(this).addClass('hidden');
+            }
+        })
+        $('#'+id, parent).removeClass('hidden');
+    });
+
+    // on change tab change plan
+    $(document).on('click', '.block-comp .nav-link', function(){
+        var parent = $(this).closest( ".details" ).parent();
+        $('.show-detail strong', parent).text($(this).text());
+    });
+}
+
+/*** ================== End What we do Script ================== ***/
