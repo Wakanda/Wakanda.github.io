@@ -70,6 +70,35 @@
 
 
 
+
+.icon-badge .path1:before {
+  content: "\e939";
+  color: rgb(243, 243, 243);
+}
+.icon-badge .path2:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-badge .path3:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(85, 85, 85);
+}
+.icon-wakanda .path1:before {
+  content: "\e93c";
+  color: rgb(243, 243, 243);
+}
+.icon-wakanda .path2:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-wakanda .path3:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(85, 85, 85);
+}
 .icon-map-marker:before {
   content: "\e938";
 }
@@ -302,3 +331,4 @@
 .icon-wakanda-cloud:before {
   content: "\e909";
 }
+

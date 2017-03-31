@@ -109,16 +109,16 @@ event:
     - Meet our team at <a href="https://www.ng-conf.org/" >The World's Original Angular Conference </a> on April 5th-7th 2017, Salt Lake City, UT
     - We can help you start a new JavaScript Meetup. <a href="javascript:void(0);" onclick="olark('api.box.expand')">Contact us!</a>
   calendar:
-  - month: March
-    day: 15
-    title: User testing session
-    p: Be part of the adventure. Get a $50 Amazon coupon
-    url: mailto:claire.morin@wakanda.io
   - month: April
     day: 5
     title: User testing session
-    p: Be part of the adventure. Get a $50 Amazon coupon
-    url: mailto:claire.morin@wakanda.io
+    p: Test the next version. Get a $50 Amazon gift card
+    url: http://try.wakanda.io/user-test/
+  - month: April
+    day: 12
+    title: User testing session
+    p: Test our next version. Get a $50 Amazon gift card
+    url: http://try.wakanda.io/user-test/
 
 services:
   - title: Server

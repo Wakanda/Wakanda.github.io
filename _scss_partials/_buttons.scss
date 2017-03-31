@@ -31,11 +31,6 @@
         background-color: $highlighted-color;
     }
 }
-
-/**:before,
-*:after {
-  z-index: -1;
-}*/
 .btn-default{
     position: relative;
     overflow: hidden;
@@ -47,46 +42,53 @@
         color: $white-color;
         background-color: $dark-bg;
     }
-    /*
-    &:before, &:after,
-    & span:before,
-    & span:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        width: 0%;
-        height: 100%;
-        background: rgba(35, 42, 51, 0.45);
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-    }
-    
-    &:after,
-    span:before {
-        left: auto;
-        right: 0;
-    }
-    
-    span:before,
-    span:after {
-        transition-delay: 0.3s;
-    }
-    &:hover {
-        color: $white-color;
-        &:before,
-        &:after,
-        span:before,
-        span:after {
-            width: 100%;
-        }
-    }
-    */
 }
 
+.btn-success{
+    background-color: $highlighted-color;
+    color: $white-color;
+    &:hover, &:focus, &:active {
+        background-color: $highlighted-color-transition;
+        color: $white-color;
+    }
+}
 
-
+.btn-gray{
+    background-color: $secondary-light-bg-color;
+    color: $white-color;
+    &:hover, &:focus, &:active {
+        background-color: $highlighted-color-transition;
+        color: $white-color;
+    }
+}
+.btn-blue {
+    background-color: $intro-color;
+    color: white;
+    &:hover, &:focus, &:active {
+        background-color: $hover-intro-color;
+        color: $btn-default-color;
+    }
+}
+.btn-base-blue {
+    background-color: $base-blue;
+    color: white;
+    &:hover, &:focus, &:active {
+        background-color: $lighten-base-blue;
+        color: $btn-default-color;
+    }
+}
+.btn-small{
+    padding: 10px 20px;
+}
+.btn-transparent{
+    background-color: transparent;
+    border: 1px solid $white-color;
+    color: $white-color;
+    &:hover, &:focus, &:active {
+        background-color: $white-color;
+        color: $checkbox-color;
+    }
+}
 
 
 
