@@ -459,3 +459,69 @@ function formatCountry (country) {
 };
 
 /*** ================== End Marketplace Script ================== ***/
+
+
+$(".show-detail").click(function(){
+    var element = $(this).parent().find('.details');
+    if ($(element).css('display') == 'none' ){
+        $(element ).slideDown( "slow" );
+        $('i', this).addClass('rotated');
+    }else {
+        $(element ).slideUp( "slow" );
+        $('i', this).removeClass('rotated');
+    }
+    return false;
+});
+
+(function init_price() {
+    $( ".block-comp" ).each(function() {
+        calculate(this);
+    })
+})();
+
+$(document).on( "click", "[data-price-container]", function () {
+    calculate($(this).closest( ".block-comp" ));
+} );
+
+$(document).on( "click", "[data-price]", function () {
+    var parent = $(this).closest( ".tab-pane" ).attr('id');
+    calculate($('#'+parent).closest( ".block-comp" ));
+} );
+
+function calculate(data_price_container) {
+    var sum = 0;
+    $('[data-price-container]', data_price_container).each(function() {
+        if($(this).hasClass('active')){
+            sum += parseFloat($(this).attr('data-price-container'));
+            var id = $(this).attr('href');
+            console.log('ID'); console.log(id);
+            if(id) {
+                $('[data-price]', id).each(function() {
+                    if($(this).hasClass('active') || $(this).is(':checked')) {
+                        sum += parseFloat($(this).attr('data-price'));
+                    }
+                    else if($(this).is('select')){
+                        sum += parseFloat($(this).val());
+                    }
+                });
+            }
+        }
+    });
+    $('.comp-footer .price strong', data_price_container).html('$' + sum);
+}
+
+$(document).on('click', '[data-target]', function(){
+    var id = $(this).attr('data-target');
+    var parent = $(this).closest( "[data-target-container]" );
+    $('[data-target-cible]', parent).each(function(){
+        if(!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+        }
+    })
+    $('#'+id, parent).removeClass('hidden');
+});
+
+$(document).on('click', '.block-comp .nav-link', function(){
+    var parent = $(this).closest( ".details" ).parent();
+    $('.show-detail strong', parent).text($(this).text());
+})
