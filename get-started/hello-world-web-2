@@ -14,97 +14,81 @@ First, download and install **Wakanda Community Edition**
 
 Now we can start our **HelloWorldWeb** project.  
 
-## Step 2: Choose : mobile or web app ?
+## Step 2: Choose : mobile or web app, angular or angular2 ?
 
 We can choose the kind of app we want to create : mobile, web or both.
 
 Here we want to create an *Angular web app*.
 
-To do that, we're going to open the studio <img src="../img/iconWakanda.png"/> , and click on **"Create a new solution"**:
+To do that: 
 
-<img src="../img/hp-initial.png"/>
+- open the studio <img src="../img/iconWakanda.png"/>
+- click on **"Create a new solution"**:
+
+<img src="../img/hp2-initial.png"/>
 
 Which opens the template selection page:  
 
-<img src="../img/hww-template-selection-ng1.png"/>
+<img src="../img/hww2-template-selection-ng1.png"/>
 
-Now, a solution and a project structure have been created. A solution, represent your whole app and can contain multiple projects. The first one is created by default. 
+For a Hello World we don't need a back-end. So, select only **web**, to have a web front-end, with the **Angular1 template**.
 
-The structure of your project depends of the template you choose.
+Name your app **HelloWorldWeb**, and click on **Create**
 
-You'll always have the **same back end structure**, but you can choose to have a **web front-end and/or mobile front-end**.
+In the left panel, a tab with the name of your solution **HelloWorldWeb** is now openned.
 
-There, you can name your app *- without spaces -* and select the **Angular basic template**.
+You can find two folders:
+- **HelloWorldWeb**: it contains the files of your solution.
+- **web**: it contains your web front-end project structure.
 
-Now, in your **HelloWorldWeb** project, you can find the Angular web app file structure :
-
-<img src="../img/hww-file-structure-ng1.png"/>  
-
-You have 3 folders at the root of your project:
-
-- **Backend**: Wakanda JavaScript Server. It contains all the Server files to logs, settings, permissions.  
-- **Database**: Wakanda DB folder. It contains your data model(s), backups and your data.
-- **Web**: where you’ll find all your web app front-end files. It contains all you need to code your Angular 1 or 2 projects.
+<img src="../img/hww2-file-structure-ng1.png"/>  
 
 > **TIPS**:  
-> - If you choose web and mobile in the template selection, you'll have both a `mobile` and a `web`folder.
-> - A mobile and a web front-end, for the same back-end.
+> - You can create multiple web (or mobile) front-ends by right-clicking on the name of your solution (_New_>_Project_)
 
-
-**Note** : `Prototyper` folder in the Web Project is a prototyper tool to create quickly Web UI based on widgets architecture. But it is deprecated and will be excluded from the platform in our next major release.
-
-For our **HelloWorldWeb** we’re going to work first in the `web` folder.
+For our **HelloWorldWeb** we’re only going to work in the `web` folder.
 
 
 ## Step 3: Run your web application
 
 First let's have a look to our web template.
 
-Click on the _Run Page_ toolbar button:
-<img src="../img/web-run-page-ng1.png"/>
+Click on the _Run_ toolbar button:
 
+<img src="../img/hww2-run-button-ng1.png"/>
 
-> **TIPS**:  
+<img src="../img/hww2-run-template-ng1.png"/>
 
-> 1. To open your application in your default browser, set this preference via _Run Page_ dropdown
-> 2. Customize the panels: open the right panel from the toolbar toggles
-> 3. You can move the web preview on the right panel
-
-
-<img src="../img/web-app-creation-ng1.png" />
-
-
-<img src="../img/hww-run-template-ng1.png" />
 
 
 ## Step 4: Code your Angular application
 
-Let's have a look to our project structure : in the `web` folder, as for a classical Angular app file structure, you have the `index.html` file and folders `app` and `assets` at the root.
+Let's have a look to our `web project structure : as for a classical Angular app file structure, you have the `index.html` file and folders `app` and `assets` at the root.
 
-`index.html` handles loading in all the libraries and Angular elements
-`assets` is very standard: it contains all the shared assets as css, images, libs
-`app` is the core of your app. It contains all your controllers.
+- `index.html` handles loading in all the libraries and Angular elements
+- `assets` is very standard: it contains all the shared assets as css, images, librairies
+- `app` is the core of your app. It contains all your controllers.
 
-A simple change in `web/index.html` and I have my **HelloWorld** done.
+A simple change in `web/index.html` and I have my **HelloWorld** done:
+```html
+<h1>Hello Wakanda Newbies!</h1>
+```
 To make it more visual, you can change the background color in its css file `web/assets/css/style.scss`:
 
 ```css
 body {
     background-color: #51D8C6;
 }
-p {
-  padding: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  display: block;
-  font-size: 200%;
+#wakanda-logo {
+    margin: 0;
+    max-height: 50%;
+    max-width: 50%;
 }
 ```
 
-The preview is automatically reloaded after each saving.
+> **Tips:** The preview is automatically reloaded after each saving.
 
-<img src="../img/hww-run-helloworld-ng1.png"/>
+<img src="../img/hww2-run-helloworld-ng1.png"/>
 
 
 <div class="navigation-step">
