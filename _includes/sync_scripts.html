@@ -26,7 +26,12 @@ window.cookieconsent.initialise({
   onStatusChange: function(status) {
   },
   onPopupOpen: function() {
-    $('.olark-launch-button').attr('style', 'z-index: 100 !important');
+    
+  setTimeout(
+    function() {
+      $('.olark-launch-button', document).attr('style', 'z-index: 100 !important');
+    }, 1000);
+    
   },
   onPopupClose: function() {
 
