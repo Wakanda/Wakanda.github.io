@@ -55,6 +55,13 @@
     .details {
         padding: 15px 20px;
     }
+    h3{
+        @include font-size(28px);
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 10px 0 30px;
+    }
     #were-lazy{
         h2{
             margin: 0 auto 50px;
@@ -89,13 +96,6 @@
     #server-studio{
         .title{
             margin-bottom: 30px;
-            h3{
-                @include font-size(24px);
-                font-weight: 300;
-                line-height: 1.46;
-                letter-spacing: 1px;
-                text-align: center;
-            }
             p{
                 @include font-size(15px);
                 font-weight: 300;
@@ -158,14 +158,6 @@
         }
     }
     #edition-business{
-        h3{
-            @include font-size(24px);
-            font-weight: 300;
-            line-height: 1.5;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 10px 0 30px;
-        }
         .block-comp {
             width: 80%;
             margin: 0 auto;
@@ -243,13 +235,6 @@
         }
     }
     #pro-service{
-        h3{
-            @include font-size(28px);
-            line-height: 1.5;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 10px 0 30px;
-        }
         .block-comp {
             width: 80%;
             margin: 0 auto;
