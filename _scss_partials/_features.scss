@@ -3,6 +3,12 @@
 		max-height: 40px;
 		margin-bottom: 20px;
 	}
+    a{
+        color: $base-color;
+        &:hover, &:active, &::focus{
+            color: $base-color;
+        }
+    }
 }
 #section-feature-details {
     font-size: 85%;

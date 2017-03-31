@@ -1,4 +1,5 @@
 ---
+layout: get-started-default
 ---
 
 # Build process introduction

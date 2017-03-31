@@ -84,7 +84,10 @@ body{
 	}
 }
 #section-headline .text-center {
-    padding: 70px 0;
+    padding: 70px 0 10px;
+}
+#section-headline{
+	padding-bottom: 20px;
 }
 /**
 * Home page
@@ -118,12 +121,13 @@ body{
 
 @media(max-width:768px) {
 	.fixed-top{
-		position: relative;
-		z-index: initial;
+		//position: relative;
+		//z-index: initial;
+		z-index: 999;
 	}
 	#section-headline, #section-feature-highlights, #page-header{
-		margin-top: 60px;
-		margin: 0;
+		//margin-top: 60px;
+		//margin: 0;
 		padding-bottom: 0;
 	}
 }
@@ -241,9 +245,13 @@ a.top-title {
 .wakanda-service{
 	background-color: $white-color;
 	padding-bottom: 0;
+	padding-top: 0;
 	h2{
 		text-align: center;
 		margin-bottom: 0;
+		background-color: $lighten-bg-gray;
+		padding: 20px 0;
+		border-bottom: 1px solid $btn-secondary-light-bd;
 		img{
 			max-width: 64px;
 			margin: -10px 10px 0 0;
@@ -307,3 +315,33 @@ a.top-title {
 		}
 	}
 }
+
+@media(max-width:767px) {
+	
+	.wakanda-service .item{
+		padding: 30px 0;
+	}
+	.wakanda-service .row { display: table; }
+	.wakanda-service .row .col-md-8{ 
+		display: table-footer-group;
+	}
+	.wakanda-service .row .col-md-4 {
+		display: table-header-group;
+		text-align: center;
+		.img-container {
+			max-width: 260px;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
+	
+	.wakanda-service .row .col-md-8 .content-container, #section-slideshow .item{
+		padding: 0 12%;
+		text-align: center;
+	}
+}
+/*.btn-hp{
+	background-color: $orange;
+    color: $white-color;
+}*/

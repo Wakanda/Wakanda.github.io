@@ -50,3 +50,300 @@ filters:
           filter_id: prime
         - title: Standard
           filter_id: standard
+items:
+  consultant:
+    - title: Agnium
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Indonesia
+            code: ID
+      description: "Agnium exists to develop people so that they can do the best work. We enable people first development in every place throughout the world. We help digital and software industry move forward by developing the people. We assist developers and engineers create quality result of system and software. We educate people about the importance of learning by teaching and doing."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/agnium_logo.png
+      email: info@agnium.co.id
+    - title: Ajar
+      category: consultant
+      category_consultant: developers
+      type: prime
+      country:
+          - name: Switzerland
+            code: CH
+      description: "Since 1993 we are the official distributor of 4D products for Switzerland and the Liechtenstein. Our main customers are IT professionals who develop innovative solutions. Since 2012, we are promoting Wakanda in Switzerland and the Liechtenstein. We have technically invested to be able to help, support and provide development consulting to our partners on our local Market."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/ajar_logo.png
+      external_url: http://www.ajar.ch
+      email: info@ajar.ch.io
+    - title: Baymediasoft Technologies
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: India
+            code: IN
+      description: "Baymediasoft is a leading Web Development and Mobile Application Development company in India with an in-house team of 50+ full time designers and development professionals. Our mobile expertise: Web designing, Web development, Mobile app development ... "
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/baymediasoft_logo.png
+      external_url: http://www.baymediasoft.com/ 
+      email: sales@baymediasoft.com
+    - title: Deep Current
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: South Africa
+            code: ZA
+      description: "Our focus is ‘Digital Platform Strategy’ and our approach will help you realise your business objectives across multiple devices and channels. We manage skills and capacity through careful collaboration with specialists in tech, content & branding. Our specialisations are SEO, UX, Drupal & Wakanda."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/deep_current_logo.png
+      external_url: http://www.deepcurrent.co.za/
+      email: wakanda@deepcurrent.digital
+    - title: Erminesoft
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: United States
+            code: US
+      description: "Erminesoft is a US-owned mobile app design and development agency with proven expertise in delivering solutions to enterprise and consumer-facing companies as well as startups. We provide a full spectrum of services starting from your idea in mind to the fully functioning app and its maintenance."
+      date: 2017-02-07 17:40:00
+      logo: "img/marketplace/consultant/erminesoft_logo.svg"
+      external_url: http://erminesoft.com/
+      email: Mark@erminesoft.com
+    - title: Expertise Code
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Ivory Coast
+            code: CI
+      description: "Expertise Code is a company of digital technologies and solutions. It also specializes in security and video surveillance systems. Motivated by innovation, our offerings are the result of a combination of creativity, in-depth knowledge of computer science and the Digital Economy."
+      date: 2017-02-07 17:40:00
+      logo: "img/marketplace/consultant/expertise_code_logo.png"
+      external_url: http://www.expertisecode.com
+      email: issa.camara@expertisecode.com
+    - title: Formation.Tech
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: France
+            code: FR
+      description: Formation.tech is a group of international web and mobile app experts. Our main goal is to reduce the learning path of your teams and follow the development of your products from the beginning. We are proud to be recognized as Wakanda partners and would be thrilled to contribute to your success.
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/formation-tech.svg
+      email: romain.bohdanowicz@gmail.com
+      external_url: http://formation.tech/
+    - title: HybApps
+      category: consultant
+      category_consultant: developers
+      type: prime
+      country:
+          - name: Egypt
+            code: EG
+      description: "HybApps is specialized in accelerating hybrid mobile apps development by providing mobile appsthemes , apps source code , custom design services , custom application development and many other services
+      We are Specialised in Hybrid mobile applications using Ionic Framework ,Angular.js ,PHP/MySQL and node.js for backend ."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/hybapps_logo.png
+      external_url: https://hybapps.com/
+      email: info@hybapps.com
+    - title: IP Ventures
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Australia
+            code: AU
+      description: "For over thirty years, the combined minds behind IP Ventures have been delivering industry-leading technology solutions to large enterprises and government agencies. IP Ventures has built a reputation within the global financial industry by delivering quality work, deployed fast. we create Fintech applications and platforms that drive positive, quantifiable business results."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/ipv.svg
+      external_url: http://ipventures.com.au
+      email: steve@ipventures.com.au
+    - title: Kagiso Interactive
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: South Africa
+            code: ZA
+      description: "Kagiso Interactive is at the forefront of high-end dynamic advanced mobile app development solutions. We deliver customized, results-driven programs to achieve our clients’ specific project goals."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/kagiso_logo.png
+      external_url: https://www.kagisointeractive.com/
+      email: info@kagisointeractive.com
+    - title: Koding
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: South Africa
+            code: ZA
+      description: "Koding for Africa are a group of mentors located in South Africa housed at the Johannesburg Center of Engineering at WITS (JCSE) The aim is to level the playing flields between disadvantaged students and the rest of the industry using real world examples and play! Checkbox: Please verify our Partner Program Terms and Conditions before applying. Type of services provided: Development/Integration"
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/koding.jpg
+      external_url: http://koding.co.za
+      email: koder@koding.co.za
+    - title: Mergeye
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Ukraine
+            code: UA
+      description: "We are team of experienced developers and IT professionals. The core of our team contain from Senior specialists with more than 10 years experience at the global IT market."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/logo.png
+      external_url: http://mergeye.com/
+      email: semenrom@gmail.com
+    - title: Miabit
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Ukraine
+            code: UA
+      description: "Offers consulting, development and systems integration services, as well as products and business solutions, tailored to client's needs. Ready solutions for Manufacturing, Wholesale Trade and Distribution, Transportation and Warehousing, Real Estate and IT Services industries."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/logo_MIABIT.png
+      email: wakanda@miabit.com
+    - title: OEM Brasil Desenvolvimento e Tecnologia Ltda.
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: Brazil
+            code: BR
+      description: "We are people with a passion for innovation and seek to take intelligent business with people seeking to perform again. Thus creating a unique business model."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/ktdu_logo.png
+      external_url: http://www.ktudu.com
+      email: contact@ktudu.com
+    - title: Punch
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: United States
+            code: US
+          - name: Pakistan
+            code: PK
+      description: Punch is a full-service digital agency. We research, build, market, and grow companies of all sizes with our suite of engineering, design, marketing, and staffing services.
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/punch.svg
+      email: verdiergun@punch.cool
+      external_url: http://punch.cool/
+    - title: Slate Apps Ltd
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: United Kingdom
+            code: GB
+      description: "Slate Apps live and breath web technologies.  We create and deploy solutions from servers through to 'Internet of Things' devices using the most powerful programming language on the planet - JavaScript."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/Slate_App_Logo.svg
+      external_url: http://www.slateapps.com
+      email: ashley.coker@slateapps.com
+    - title: Tolmai
+      category: consultant
+      category_consultant: developers
+      type: standard
+      country:
+          - name: South Africa
+            code: ZA
+      description: "Tolmai Pty Limited (Tolmai) is a dynamic, business-oriented Information technology company focused  on applying innovative engineering techniques, technology and collective experience. This is to  ensure growing successful and sustainable business by achieving and maintaining competitive edge."
+      date: 2017-02-07 17:40:00
+      logo: img/marketplace/consultant/tolmai.jpg
+      email: jeanbernard.mathias@tolmai.co.za
+  template:
+    - title: AirFly
+      category: template
+      tags:  ecommerce modern
+      type: Design_only
+      powered: 
+        type: Hybapps
+        url: #
+      description: Online Airlines reservation theme for ionic app
+      date: 2017-02-07 17:30:00
+      images:
+        - url: img/marketplace/template/6.png
+          alt: Clinic
+        - url: img/marketplace/template/6.png
+          alt: Clinic
+    - title: Clinic
+      category: template
+      tags: instagram music ecommerce
+      type: Design_only
+      powered: 
+        type: Hybapps
+        url: #
+      description: Online integrated medical service for ionic app
+      date: 2017-02-07 17:40:00
+      images:
+        - url: img/marketplace/template/5.png
+          alt: Clinic
+        - url: img/marketplace/template/5.png
+          alt: Clinic
+    - title: Documentary
+      category: template
+      tags: 
+        - instagram
+        - music
+      type: Design_only
+      powered: 
+        type: Hybapps
+        url: #
+      description: Online document and articles theme for ionic framework
+      date: 2017-02-08 10:20:00
+      images:
+        - url: img/marketplace/template/1.png
+          alt: Phone Documentary
+        - url: img/marketplace/template/1.png
+          alt: Phone Documentary
+        - url: img/marketplace/template/1.png
+          alt: Phone Documentary
+        - url: img/marketplace/template/1.png
+          alt: Phone Documentary
+    - title: Dream concept
+      category: template
+      tags: modern responsive wordpress
+      type: Design_only
+      powered: 
+        type: Hybapps
+        url: #
+      description: Services and business guide theme for ionic app
+      date: 2017-02-08 08:00:00
+      images:
+        - url: img/marketplace/template/3.png
+          alt: Reponsive Application
+        - url: img/marketplace/template/3.png
+          alt: Reponsive Application
+    - title: Kids
+      category: template
+      tags: simple news wordpress
+      type: Ready_app
+      powered: 
+        type: Hybapps
+        url: #
+      description: A small world for your baby for ionic framework application
+      date: 2017-02-07 18:00:00
+      images:
+        - url: img/marketplace/template/4.png
+          alt: Your kids world
+        - url: img/marketplace/template/4.png
+          alt: Your kids world
+    - title: Post news
+      category: template
+      tags: modern music
+      type: Ready_app
+      powered: 
+        type: Hybapps
+        url: #
+      description: Online news theme for ionic framework
+      date: 2017-02-08 09:00:00
+      images:
+        - url: img/marketplace/template/2.png
+          alt: Phone Documentary
+        - url: img/marketplace/template/2.png
+          alt: Phone Documentary
