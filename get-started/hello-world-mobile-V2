@@ -24,7 +24,7 @@ In this example we are going to create a Hello World for an *Android app with Io
 > -You need to use Angular2 to create an app with Ionic2, but you don't need any Angular2 knowledge for this **Hello World**. It works the same way with an other template.
 
 
-To do that, we're going to launch the studio <img src="../img/iconWakanda.png"/> and click on **"Create a new solution"**:
+To do this, we're going to launch the studio <img src="../img/iconWakanda.png"/> and click on **"Create a new solution"**:
 
 <img src="../img/hp2-initial.png"/>
 
@@ -46,7 +46,7 @@ In your **Mobile:** folder, you can find the classical Ionic2 project file struc
 
 That's where we are going to work for this **Hello World**
 
-<img src="../img/hw-file-structure.png"/>  
+<img src="../img/hwm2-file-structure.png"/>  
 
 
 ## Step 3: Check for dependencies
@@ -65,12 +65,19 @@ Here you can see that Homebrew, Apache and Android SDK are missing. Everything i
 
 Once all your dependencies are checked you can preview your app.
 
-Just click on your project, and then on **"Run"**.
+Just click on your project, and then on **"Run"**. 
+It triggers a list of tasks you can follow in this tab :
+<img src="../img/hwm2-run-tasks.png"/>
+
+And then opens a preview of your app in your browser, in different mobile OS:
+<img src="../img/hwm2-preview"/>
 
 > **TIPS**:
-> - The first click on **Run** on a project with a mobile front opens the mobile settings.
+> - The first click on **Run** opens the **Mobile Preferences**. You can access it from the Run menu.
 > - You can choose on which OS you want to run your mobile app, and the way you want to visualise it: **Preview**, **Emulator** or **Device** 
 
+
+<img src="../img/hwm2-mobile-preferences"/>
 
 Let's have a look at the project's structure : the src folder is the classical ionic2 project structure.
 
@@ -88,16 +95,18 @@ To make it more visual, you can change the home page background color in its scs
 
 ```css
 .scroll-content {
-  background-color:#f0f8ff
+  background-color:#00d5ac
 } 
 ```
 
+Tips:
+<img src="../img/hwm2-splited-screen.png"/>
+
 The preview is automatically reloaded after each saving.
 
-<img src="../img/hw-colored-preview.png"/>
 
 
-<img src="../img/hw-final-preview.png"/>
+<img src="../img/hwm2-final-preview.png"/>
 
 
 ## Step 5: Run on emulator  
