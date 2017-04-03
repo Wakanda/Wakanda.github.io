@@ -93,7 +93,7 @@ body {
 
 
 <div class="navigation-step">
-  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
+  <a class="btn next-button" href="populate-database-2.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
 </div>
 
 ---
