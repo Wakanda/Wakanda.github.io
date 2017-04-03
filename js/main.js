@@ -535,7 +535,13 @@ if($('.what-we-do').length) {
     // on change tab change plan
     $(document).on('click', '.block-comp .nav-link', function(){
         var parent = $(this).closest( ".details" ).parent();
+        var id = $(this).attr('href');
         $('.show-detail strong', parent).text($(this).text());
+        $('.show-detail sup', parent).text($(id + ' input[type="radio"]:checked').val());
+    });
+    $(document).on('change', 'input[type="radio"]', function() {
+        var parent = $(this).closest( ".details" ).parent();
+        $('.show-detail sup', parent).text($(this).val());
     });
 }
 
