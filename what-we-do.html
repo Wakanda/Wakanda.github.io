@@ -313,7 +313,7 @@ scripts:
                                         </li>
                                     </ul>
                                     <div class="tab-content">
-                                      <div class="tab-pane active" id="basic-cloud" role="tabpanel">
+                                      <div class="tab-pane active" id="basic" role="tabpanel">
                                           <ul>
                                               <li>Dev Support</li>
                                               <li>1 Critical Ticket per year</li>
@@ -368,14 +368,73 @@ scripts:
                             <li>Deploy in Wakanda Cloud</li>
 
                             <li>
-                                Managed Wakanda Server (v1.1.4): <a href="#" class="show-detail"><strong>Size M</strong> <span><i class="icon-chevron-down"></i></span></a>
+                                Managed Wakanda Server (v1.1.4): <a href="#" class="show-detail"><strong>Size</strong> <sup>XS</sup> <span><i class="icon-chevron-down"></i></span></a>
                                 <div class="details"  style="display: none;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore quod neque,
-                                    optio fugit, sed nulla quia unde rem itaque dolor amet cupiditate! Quas voluptate, quasi quaerat accusantium, vitae ut.
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#mws" role="tab" data-price-container="0" style="display: none">Size</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="mws" role="tabpanel" data-target-container>
+                                            <div class="part">
+                                                <p>
+                                                    <strong>Size: </strong>
+                                                </p>
+                                                <ul class="inline-list">
+                                                    <li>
+                                                        <input type="radio" value="XS" id="input-mws-xs" name="mws" data-target="mws-xs" data-price="169" checked />
+                                                        <label for="input-mws-xs">XS</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="S" id="input-mws-s" name="mws" data-target="mws-s" data-price="332" />
+                                                        <label for="input-mws-s">S</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="M" id="input-mws-m" name="mws" data-target="mws-m" data-price="643" />
+                                                        <label for="input-mws-m">M</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="L" id="input-mws-l" name="mws" data-target="mws-l" data-price="1260" />
+                                                        <label for="input-mws-l">L</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="XL" id="input-mws-xl" name="mws" data-target="mws-xl" data-price="3082" />
+                                                        <label for="input-mws-xl">XL</label>
+                                                    </li>
+                                                </ul>
+                                                <p id="mws-xs" class="choose-info" data-target-cible>
+                                                    vCPU: 8 <br/>
+                                                    Memory: 32GB <br/>
+                                                    Performance: moderate
+                                                </p>
+                                                <p id="mws-s" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 16 <br/>
+                                                    Memory: 64GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mws-m" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 32 <br/>
+                                                    Memory: 128GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mws-l" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 64 <br/>
+                                                    Memory: 256GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mws-xl" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 128 <br/>
+                                                    Memory: 512GB <br/>
+                                                    Performance: 10 Gegabit
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li>
-                                Managed Database: <a href="#" class="show-detail"><strong>MySQL Size M</strong>  <span><i class="icon-chevron-down"></i></span></a>
+                                Managed Database: <a href="#" class="show-detail"><strong>MySQL</strong> <sup>XS</sup> <span><i class="icon-chevron-down"></i></span></a>
                                 <div class="details"  style="display: none;">
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
@@ -396,47 +455,47 @@ scripts:
                                                 </p>
                                                 <ul class="inline-list">
                                                     <li>
-                                                        <input type="radio" value="xs" id="input-xs" name="mysql" data-target="mysql-xs" data-price="169" checked>
-                                                        <label for="input-xs">XS</label>
+                                                        <input type="radio" value="XS" id="input-mysql-xs" name="mysql" data-target="mysql-xs" data-price="169" checked />
+                                                        <label for="input-mysql-xs">XS</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="s" id="input-s" name="mysql" data-target="mysql-s" data-price="332">
-                                                        <label for="input-s">S</label>
+                                                        <input type="radio" value="S" id="input-mysql-s" name="mysql" data-target="mysql-s" data-price="332" />
+                                                        <label for="input-mysql-s">S</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="m" id="input-m" name="mysql" data-target="mysql-m" data-price="643">
-                                                        <label for="input-m">M</label>
+                                                        <input type="radio" value="M" id="input-mysql-m" name="mysql" data-target="mysql-m" data-price="643" />
+                                                        <label for="input-mysql-m">M</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="l" id="input-l" name="mysql" data-target="mysql-l" data-price="1260">
-                                                        <label for="input-l">L</label>
+                                                        <input type="radio" value="L" id="input-mysql-l" name="mysql" data-target="mysql-l" data-price="1260" />
+                                                        <label for="input-mysql-l">L</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="xl" id="input-xl" name="mysql" data-target="mysql-xl" data-price="3082">
-                                                        <label for="input-xl">XL</label>
+                                                        <input type="radio" value="XL" id="input-mysql-xl" name="mysql" data-target="mysql-xl" data-price="3082" />
+                                                        <label for="input-mysql-xl">XL</label>
                                                     </li>
                                                 </ul>
-                                                <p id="mssql-xs" class="choose-info" data-target-cible>
+                                                <p id="mysql-xs" class="choose-info" data-target-cible>
                                                     vCPU: 8 <br/>
                                                     Memory: 32GB <br/>
                                                     Performance: moderate
                                                 </p>
-                                                <p id="mssql-s" class="choose-info hidden" data-target-cible>
+                                                <p id="mysql-s" class="choose-info hidden" data-target-cible>
                                                     vCPU: 16 <br/>
                                                     Memory: 64GB <br/>
                                                     Performance: high
                                                 </p>
-                                                <p id="mssql-m" class="choose-info hidden" data-target-cible>
+                                                <p id="mysql-m" class="choose-info hidden" data-target-cible>
                                                     vCPU: 32 <br/>
                                                     Memory: 128GB <br/>
                                                     Performance: high
                                                 </p>
-                                                <p id="mssql-l" class="choose-info hidden" data-target-cible>
+                                                <p id="mysql-l" class="choose-info hidden" data-target-cible>
                                                     vCPU: 64 <br/>
                                                     Memory: 256GB <br/>
                                                     Performance: high
                                                 </p>
-                                                <p id="mssql-xl" class="choose-info hidden" data-target-cible>
+                                                <p id="mysql-xl" class="choose-info hidden" data-target-cible>
                                                     vCPU: 128 <br/>
                                                     Memory: 512GB <br/>
                                                     Performance: 10 Gegabit
@@ -449,16 +508,16 @@ scripts:
                                                 </p>
                                                 <p>
                                                     <select name="storage" data-price>
-                                                      <option value="5">5Go (+$1/month)</option>
-                                                      <option value="10">10Go (+$2/month)</option>
-                                                      <option value="25">25Go (+$5/month)</option>
-                                                      <option value="50">50Go (+$10/month)</option>
-                                                      <option value="100">100Go (+$20/month)</option>
-                                                      <option value="250">250Go (+$50/month)</option>
-                                                      <option value="500">500Go (+$100/month)</option>
-                                                      <option value="1000">1000Go (+$195/month)</option>
-                                                      <option value="2000">2000Go (+$390/month)</option>
-                                                      <option value="6000">6000Go (+$1170/month)</option>
+                                                      <option value="1">5Go (+$1/month)</option>
+                                                      <option value="2">10Go (+$2/month)</option>
+                                                      <option value="5">25Go (+$5/month)</option>
+                                                      <option value="10">50Go (+$10/month)</option>
+                                                      <option value="20">100Go (+$20/month)</option>
+                                                      <option value="50">250Go (+$50/month)</option>
+                                                      <option value="100">500Go (+$100/month)</option>
+                                                      <option value="195">1000Go (+$195/month)</option>
+                                                      <option value="390">2000Go (+$390/month)</option>
+                                                      <option value="1170">6000Go (+$1170/month)</option>
                                                     </select>
                                                 </p>
                                             </div>
@@ -470,24 +529,24 @@ scripts:
                                                 </p>
                                                 <ul class="inline-list">
                                                     <li>
-                                                        <input type="radio" value="xs" id="input-xs" name="mssql" data-target="mssql-xs" data-price="292" checked>
-                                                        <label for="input-xs">XS</label>
+                                                        <input type="radio" value="XS" id="input-mssql-xs" name="mssql" data-target="mssql-xs" data-price="292" checked />
+                                                        <label for="input-mssql-xs">XS</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="s" id="input-s" name="mssql" data-target="mssql-s" data-price="573">
-                                                        <label for="input-s">S</label>
+                                                        <input type="radio" value="S" id="input-mssql-s" name="mssql" data-target="mssql-s" data-price="573" />
+                                                        <label for="input-mssql-s">S</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="m" id="input-m" name="mssql" data-target="mssql-m" data-price="1112">
-                                                        <label for="input-m">M</label>
+                                                        <input type="radio" value="M" id="input-mssql-m" name="mssql" data-target="mssql-m" data-price="1112" />
+                                                        <label for="input-mssql-m">M</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="l" id="input-l" name="mssql" data-target="mssql-l" data-price="2176">
-                                                        <label for="input-l">L</label>
+                                                        <input type="radio" value="L" id="input-mssql-l" name="mssql" data-target="mssql-l" data-price="2176" />
+                                                        <label for="input-mssql-l">L</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="xl" id="input-xl" name="mssql" data-target="mssql-xl" data-price="5323">
-                                                        <label for="input-xl">XL</label>
+                                                        <input type="radio" value="XL" id="input-mssql-xl" name="mssql" data-target="mssql-xl" data-price="5323" />
+                                                        <label for="input-mssql-xl">XL</label>
                                                     </li>
                                                 </ul>
                                                 <p id="mssql-xs" class="choose-info" data-target-cible>
@@ -523,16 +582,16 @@ scripts:
                                                 </p>
                                                 <p>
                                                     <select name="storage" data-price>
-                                                        <option value="5">5Go (+$1/month)</option>
-                                                        <option value="10">10Go (+$2/month)</option>
-                                                        <option value="25">25Go (+$5/month)</option>
-                                                        <option value="50">50Go (+$10/month)</option>
-                                                        <option value="100">100Go (+$20/month)</option>
-                                                        <option value="250">250Go (+$50/month)</option>
-                                                        <option value="500">500Go (+$100/month)</option>
-                                                        <option value="1000">1000Go (+$195/month)</option>
-                                                        <option value="2000">2000Go (+$390/month)</option>
-                                                        <option value="6000">6000Go (+$1170/month)</option>
+                                                        <option value="1">5Go (+$1/month)</option>
+                                                        <option value="2">10Go (+$2/month)</option>
+                                                        <option value="5">25Go (+$5/month)</option>
+                                                        <option value="10">50Go (+$10/month)</option>
+                                                        <option value="20">100Go (+$20/month)</option>
+                                                        <option value="50">250Go (+$50/month)</option>
+                                                        <option value="100">500Go (+$100/month)</option>
+                                                        <option value="195">1000Go (+$195/month)</option>
+                                                        <option value="390">2000Go (+$390/month)</option>
+                                                        <option value="1170">6000Go (+$1170/month)</option>
                                                     </select>
                                                 </p>
                                             </div>
@@ -545,24 +604,24 @@ scripts:
                                                 </p>
                                                 <ul class="inline-list">
                                                     <li>
-                                                        <input type="radio" value="xs" id="input-xs" name="mariadb" data-target="mssql-xs" data-price="169" checked>
-                                                        <label for="input-xs">XS</label>
+                                                        <input type="radio" value="XS" id="input-mariadb-xs" name="mariadb" data-target="mariadb-xs" data-price="169" checked />
+                                                        <label for="input-mariadb-xs">XS</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="s" id="input-s" name="mariadb" data-target="mssql-s" data-price="332">
-                                                        <label for="input-s">S</label>
+                                                        <input type="radio" value="S" id="input-mariadb-s" name="mariadb" data-target="mariadb-s" data-price="332" />
+                                                        <label for="input-mariadb-s">S</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="m" id="input-m" name="mariadb" data-target="mssql-m" data-price="643">
-                                                        <label for="input-m">M</label>
+                                                        <input type="radio" value="M" id="input-mariadb-m" name="mariadb" data-target="mariadb-m" data-price="643" />
+                                                        <label for="input-mariadb-m">M</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="l" id="input-l" name="mariadb" data-target="mssql-l" data-price="1260">
-                                                        <label for="input-l">L</label>
+                                                        <input type="radio" value="L" id="input-mariadb-l" name="mariadb" data-target="mariadb-l" data-price="1260" />
+                                                        <label for="input-mariadb-l">L</label>
                                                     </li>
                                                     <li>
-                                                        <input type="radio" value="xl" id="input-xl" name="mariadb" data-target="mssql-xl" data-price="3082">
-                                                        <label for="input-xl">XL</label>
+                                                        <input type="radio" value="XL" id="input-mariadb-xl" name="mariadb" data-target="mariadb-xl" data-price="3082" />
+                                                        <label for="input-mariadb-xl">XL</label>
                                                     </li>
                                                 </ul>
                                                 <p id="mariadb-xs" class="choose-info" data-target-cible>
@@ -598,16 +657,16 @@ scripts:
                                                 </p>
                                                 <p>
                                                     <select name="storage" data-price>
-                                                        <option value="5">5Go (+$1/month)</option>
-                                                        <option value="10">10Go (+$2/month)</option>
-                                                        <option value="25">25Go (+$5/month)</option>
-                                                        <option value="50">50Go (+$10/month)</option>
-                                                        <option value="100">100Go (+$20/month)</option>
-                                                        <option value="250">250Go (+$50/month)</option>
-                                                        <option value="500">500Go (+$100/month)</option>
-                                                        <option value="1000">1000Go (+$195/month)</option>
-                                                        <option value="2000">2000Go (+$390/month)</option>
-                                                        <option value="6000">6000Go (+$1170/month)</option>
+                                                        <option value="1">5Go (+$1/month)</option>
+                                                        <option value="2">10Go (+$2/month)</option>
+                                                        <option value="5">25Go (+$5/month)</option>
+                                                        <option value="10">50Go (+$10/month)</option>
+                                                        <option value="20">100Go (+$20/month)</option>
+                                                        <option value="50">250Go (+$50/month)</option>
+                                                        <option value="100">500Go (+$100/month)</option>
+                                                        <option value="195">1000Go (+$195/month)</option>
+                                                        <option value="390">2000Go (+$390/month)</option>
+                                                        <option value="1170">6000Go (+$1170/month)</option>
                                                     </select>
                                                 </p>
                                             </div>

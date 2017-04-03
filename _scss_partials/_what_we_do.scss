@@ -54,6 +54,7 @@
     }
     .details {
         padding: 15px 20px;
+        text-align: left;
     }
     h3{
         @include font-size(28px);
@@ -328,6 +329,10 @@
                     @include transform(rotate(180deg));
                     display: inline-block;
                 }
+            }
+            sup{
+                top: 0;
+                font-size: 100%;
             }
         }
         .nav-tabs{
