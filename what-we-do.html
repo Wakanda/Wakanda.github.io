@@ -267,7 +267,10 @@ scripts:
                                 Support: <a href="#" class="show-detail"><strong>Dev only</strong><span><i class="icon-chevron-down"></i></span></a>
                                 <div class="details"  style="display: none;">
                                     <p data-price-container="99" class="active">
-                                        Unlimited General Tickets, Best Effort Response Time
+                                      <ul>
+                                        <li>Unlimited General Tickets </li>
+                                        <li>Best Effort Response Time </li>
+                                      </ul>
                                     </p>
                                 </div>
                             </li>
@@ -308,19 +311,30 @@ scripts:
                                         </li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div class="tab-pane active" id="basic" role="tabpanel">
-                                            <ul>
-                                                <li>Dev Support</li>
-                                                <li>1 Critical Ticket per year</li>
-                                                <li>Max response time: 48h</li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane" id="silver" role="tabpanel">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quia tempore doloribus modi rerum quaerat culpa laudantium!
-                                        </div>
-                                        <div class="tab-pane" id="gold" role="tabpanel">
-                                            Perferendis itaque facilis distinctio ad saepe, maiores dolores, numquam, unde delectus dolorem quos.
-                                        </div>
+                                      <div class="tab-pane active" id="basic-cloud" role="tabpanel">
+                                          <ul>
+                                              <li>Dev Support</li>
+                                              <li>1 Critical Ticket per year</li>
+                                              <li>Max response time: 48h</li>
+                                          </ul>
+                                      </div>
+                                      <div class="tab-pane" id="silver" role="tabpanel">
+                                        <ul>
+                                            <li>Dev Support</li>
+                                            <li>2 Critical Ticket per year</li>
+                                            <li>Max response time: 24h</li>
+                                            <li>1 advisory hour</li>
+                                        </ul>
+                                      </div>
+                                      <div class="tab-pane" id="gold" role="tabpanel">
+                                        <ul>
+                                            <li>Dev Support</li>
+                                            <li>4 Critical Ticket per year</li>
+                                            <li>Max response time: 48h</li>
+                                            <li>2 advisory hour</li>
+                                            <li>skype support</li>
+                                        </ul>
+                                      </div>
                                     </div>
                                 </div>
                             </li>
@@ -360,10 +374,13 @@ scripts:
                                 <div class="details"  style="display: none;">
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#mysql" role="tab" data-price-container="199">MYSQL M</a>
+                                            <a class="nav-link active" data-toggle="tab" href="#mysql" role="tab" data-price-container="199">MySQL M</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#mssql" role="tab" data-price-container="300">MSSQL</a>
+                                            <a class="nav-link" data-toggle="tab" href="#mssql" role="tab" data-price-container="300">SQL Server</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#mariadb" role="tab" data-price-container="300">MariaDB</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
@@ -394,30 +411,30 @@ scripts:
                                                         <label for="input-xl">XL</label>
                                                     </li>
                                                 </ul>
-                                                <p id="mysql-xs" class="choose-info" data-target-cible>
+                                                <p id="mssql-xs" class="choose-info" data-target-cible>
                                                     vCPU: 8 <br/>
                                                     Memory: 32GB <br/>
-                                                    Performance: high
+                                                    Performance: moderate
                                                 </p>
-                                                <p id="mysql-s" class="choose-info hidden" data-target-cible>
+                                                <p id="mssql-s" class="choose-info hidden" data-target-cible>
                                                     vCPU: 16 <br/>
                                                     Memory: 64GB <br/>
                                                     Performance: high
                                                 </p>
-                                                <p id="mysql-m" class="choose-info hidden" data-target-cible>
+                                                <p id="mssql-m" class="choose-info hidden" data-target-cible>
                                                     vCPU: 32 <br/>
                                                     Memory: 128GB <br/>
-                                                    Performance: pro
+                                                    Performance: high
                                                 </p>
-                                                <p id="mysql-l" class="choose-info hidden" data-target-cible>
+                                                <p id="mssql-l" class="choose-info hidden" data-target-cible>
                                                     vCPU: 64 <br/>
                                                     Memory: 256GB <br/>
-                                                    Performance: pro
+                                                    Performance: high
                                                 </p>
-                                                <p id="mysql-xl" class="choose-info hidden" data-target-cible>
+                                                <p id="mssql-xl" class="choose-info hidden" data-target-cible>
                                                     vCPU: 128 <br/>
                                                     Memory: 512GB <br/>
-                                                    Performance: top
+                                                    Performance: 10 Gegabit
                                                 </p>
                                             </div>
 
@@ -427,9 +444,16 @@ scripts:
                                                 </p>
                                                 <p>
                                                     <select name="storage" data-price>
-                                                        <option value="800">4000Go (+$800/month)</option>
-                                                        <option value="1600">8000Go (+$1600/month)</option>
-                                                        <option value="2400">12000Go (+$2400/month)</option>
+                                                      <option value="5">5Go (+$1/month)</option>
+                                                      <option value="10">10Go (+$2/month)</option>
+                                                      <option value="25">25Go (+$5/month)</option>
+                                                      <option value="50">50Go (+$10/month)</option>
+                                                      <option value="100">100Go (+$20/month)</option>
+                                                      <option value="250">250Go (+$50/month)</option>
+                                                      <option value="500">500Go (+$100/month)</option>
+                                                      <option value="1000">1000Go (+$195/month)</option>
+                                                      <option value="2000">2000Go (+$390/month)</option>
+                                                      <option value="6000">6000Go (+$1170/month)</option>
                                                     </select>
                                                 </p>
                                             </div>
@@ -464,7 +488,7 @@ scripts:
                                                 <p id="mssql-xs" class="choose-info" data-target-cible>
                                                     vCPU: 8 <br/>
                                                     Memory: 32GB <br/>
-                                                    Performance: high
+                                                    Performance: moderate
                                                 </p>
                                                 <p id="mssql-s" class="choose-info hidden" data-target-cible>
                                                     vCPU: 16 <br/>
@@ -474,36 +498,116 @@ scripts:
                                                 <p id="mssql-m" class="choose-info hidden" data-target-cible>
                                                     vCPU: 32 <br/>
                                                     Memory: 128GB <br/>
-                                                    Performance: pro
+                                                    Performance: high
                                                 </p>
                                                 <p id="mssql-l" class="choose-info hidden" data-target-cible>
                                                     vCPU: 64 <br/>
                                                     Memory: 256GB <br/>
-                                                    Performance: pro
+                                                    Performance: high
                                                 </p>
                                                 <p id="mssql-xl" class="choose-info hidden" data-target-cible>
                                                     vCPU: 128 <br/>
                                                     Memory: 512GB <br/>
-                                                    Performance: top
+                                                    Performance: 10 Gegabit
                                                 </p>
                                             </div>
 
                                             <div class="part">
                                                 <p>
-                                                    <strong>strong : </strong>
+                                                    <strong>strong: </strong>
                                                 </p>
                                                 <p>
                                                     <select name="storage" data-price>
-                                                        <option value="800">4000Go (+$800/month)</option>
-                                                        <option value="1600">8000Go (+$1600/month)</option>
-                                                        <option value="2400">12000Go (+$2400/month)</option>
+                                                        <option value="5">5Go (+$1/month)</option>
+                                                        <option value="10">10Go (+$2/month)</option>
+                                                        <option value="25">25Go (+$5/month)</option>
+                                                        <option value="50">50Go (+$10/month)</option>
+                                                        <option value="100">100Go (+$20/month)</option>
+                                                        <option value="250">250Go (+$50/month)</option>
+                                                        <option value="500">500Go (+$100/month)</option>
+                                                        <option value="1000">1000Go (+$195/month)</option>
+                                                        <option value="2000">2000Go (+$390/month)</option>
+                                                        <option value="6000">6000Go (+$1170/month)</option>
                                                     </select>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="mssql" role="tabpanel">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quia tempore doloribus modi rerum quaerat culpa laudantium!
+
+                                        <div class="tab-pane" id="mariadb" role="tabpanel" data-target-container>
+                                            <div class="part">
+                                                <p>
+                                                    <strong>Size : </strong>
+                                                </p>
+                                                <ul class="inline-list">
+                                                    <li>
+                                                        <input type="radio" value="xs" id="input-xs" name="mariadb" data-target="mssql-xs" data-price="10" checked>
+                                                        <label for="input-xs">XS</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="s" id="input-s" name="mariadb" data-target="mssql-s" data-price="20">
+                                                        <label for="input-s">S</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="m" id="input-m" name="mariadb" data-target="mssql-m" data-price="30">
+                                                        <label for="input-m">M</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="l" id="input-l" name="mariadb" data-target="mssql-l" data-price="40">
+                                                        <label for="input-l">L</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="xl" id="input-xl" name="mariadb" data-target="mssql-xl" data-price="50">
+                                                        <label for="input-xl">XL</label>
+                                                    </li>
+                                                </ul>
+                                                <p id="mariadb-xs" class="choose-info" data-target-cible>
+                                                    vCPU: 8 <br/>
+                                                    Memory: 32GB <br/>
+                                                    Performance: moderate
+                                                </p>
+                                                <p id="mariadb-s" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 16 <br/>
+                                                    Memory: 64GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mariadb-m" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 32 <br/>
+                                                    Memory: 128GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mariadb-l" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 64 <br/>
+                                                    Memory: 256GB <br/>
+                                                    Performance: high
+                                                </p>
+                                                <p id="mariadb-xl" class="choose-info hidden" data-target-cible>
+                                                    vCPU: 128 <br/>
+                                                    Memory: 512GB <br/>
+                                                    Performance: 10 Gegabit
+                                                </p>
+                                            </div>
+
+                                            <div class="part">
+                                                <p>
+                                                    <strong>strong: </strong>
+                                                </p>
+                                                <p>
+                                                    <select name="storage" data-price>
+                                                        <option value="5">5Go (+$1/month)</option>
+                                                        <option value="10">10Go (+$2/month)</option>
+                                                        <option value="25">25Go (+$5/month)</option>
+                                                        <option value="50">50Go (+$10/month)</option>
+                                                        <option value="100">100Go (+$20/month)</option>
+                                                        <option value="250">250Go (+$50/month)</option>
+                                                        <option value="500">500Go (+$100/month)</option>
+                                                        <option value="1000">1000Go (+$195/month)</option>
+                                                        <option value="2000">2000Go (+$390/month)</option>
+                                                        <option value="6000">6000Go (+$1170/month)</option>
+                                                    </select>
+                                                </p>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </li>
@@ -515,10 +619,10 @@ scripts:
                                             <a class="nav-link active" data-toggle="tab" href="#basic-cloud" role="tab" data-price-container="99">Basic</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#silver" role="tab" data-price-container="199">Silver</a>
+                                            <a class="nav-link" data-toggle="tab" href="#silver-cloud" role="tab" data-price-container="199">Silver</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#gold" role="tab" data-price-container="399">Gold</a>
+                                            <a class="nav-link" data-toggle="tab" href="#gold-cloud" role="tab" data-price-container="399">Gold</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
@@ -529,11 +633,22 @@ scripts:
                                                 <li>Max response time: 48h</li>
                                             </ul>
                                         </div>
-                                        <div class="tab-pane" id="silver" role="tabpanel">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quia tempore doloribus modi rerum quaerat culpa laudantium!
+                                        <div class="tab-pane" id="silver-cloud" role="tabpanel">
+                                          <ul>
+                                              <li>Dev Support</li>
+                                              <li>2 Critical Ticket per year</li>
+                                              <li>Max response time: 24h</li>
+                                              <li>1 advisory hour</li>
+                                          </ul>
                                         </div>
-                                        <div class="tab-pane" id="gold" role="tabpanel">
-                                            Perferendis itaque facilis distinctio ad saepe, maiores dolores, numquam, unde delectus dolorem quos.
+                                        <div class="tab-pane" id="gold-cloud" role="tabpanel">
+                                          <ul>
+                                              <li>Dev Support</li>
+                                              <li>4 Critical Ticket per year</li>
+                                              <li>Max response time: 48h</li>
+                                              <li>2 advisory hour</li>
+                                              <li>skype support</li>
+                                          </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -544,7 +659,7 @@ scripts:
                                 Starting at <strong>$39</strong>/server/month
                             </p>
                             <p class="desc">30-Day Free Trial:</p>
-                            <a href="#" class="btn btn-transparent btn-small">Subscribe</a>
+                            <a href="https://console.wakanda.io/#/subscriptions/new" class="btn btn-transparent btn-small">Subscribe</a>
                         </div>
                     </div>
                 </div>
