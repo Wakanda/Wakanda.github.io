@@ -46,7 +46,7 @@ In your **Mobile:** folder, you can find the classical Ionic2 project file struc
 
 That's where we are going to work for this **Hello World**
 
-<img src="../img/hw-file-structure.png"/>  
+<img src="../img/hwm2-file-structure.png"/>  
 
 
 ## Step 3: Check for dependencies
@@ -68,13 +68,16 @@ Once all your dependencies are checked you can preview your app.
 Just click on your project, and then on **"Run"**.
 
 > **TIPS**:
-> - The first click on **Run** on a project with a mobile front opens the mobile settings.
+> - The first click on **Run** opens the mobile preferences. You can access it later in (_Run_>_Mobile_Preferences)
 > - You can choose on which OS you want to run your mobile app, and the way you want to visualise it: **Preview**, **Emulator** or **Device** 
 
+<img src="../img/hwm2-mobile-preferences.png"/>
 
-Let's have a look at the project's structure : the src folder is the classical ionic2 project structure.
+In the`mobile`folder, `src`is the classical ionic2 project's structure.
 
-In `mobile/src/pages/home/home.html`, replace:
+Let's add a change in the home page for this **HelloWorld** :
+
+- In `mobile/src/pages/home/home.html`,replace:
 
 ```html
 <h2>Welcome to Ionic!</h2>
@@ -84,20 +87,22 @@ with:
 <h2>Hello Wakanda newbie!</h2>
 ```
 
-To make it more visual, you can change the home page background color in its scss file `mobile/src/pages/home/home.scss` by adding:
+- To make it more visual, change the home page background color in its style's file `mobile/src/pages/home/home.scss` by adding:
 
 ```css
 .scroll-content {
-  background-color:#f0f8ff
+  background-color::#00d5ac
 } 
 ```
+<img src="../img/hwm2-screen-split.png"/>
+
+> **TIPS**:
+> - You can split your screen, and moove tabs to make it easier to work with.
 
 The preview is automatically reloaded after each saving.
 
-<img src="../img/hw-colored-preview.png"/>
+<img src="../img/hwm2-colored-preview.png"/>
 
-
-<img src="../img/hw-final-preview.png"/>
 
 
 ## Step 5: Run on emulator  
@@ -105,9 +110,8 @@ The preview is automatically reloaded after each saving.
 Now you can run your app on the [Android emulator](https://developer.android.com/studio/run/emulator.html "check documentation").
 
 In Run dropdown, go in mobile preferences, select Emulate, for Android.
-<img src="../img/hw-run-emulator.png"/>
 
-<img src="../img/hw-emulator-view.png"/>
+<img src="../img/hwm2-run-emulator.png"/>
 
 ## Step 6: Run on device  
 
@@ -115,9 +119,9 @@ In Run dropdown, go in mobile preferences, select Emulate, for Android.
 Make sure you have [USB debugging enabled](http://developer.android.com/tools/device.html).
 
 Wakanda Studio automatically detects supported device when connected to the USB port.
-In Run dropdown, go in mobile preferences, select Emulate, for Android.
+In Run dropdown, go in mobile preferences, select Device, for Android.
 
-<img src="../img/mobile-run-devices.png" />
+<img src="../img/hwm2-run-device.png" />
 
 <div class="navigation-step">
   <a class="btn next-button" href="create-web-app-ng1.html">Next: Create a web app in Angular<i class="icon-chevron-right"></i></a>
