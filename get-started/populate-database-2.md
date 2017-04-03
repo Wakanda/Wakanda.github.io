@@ -94,5 +94,5 @@ Your three favorite superheroes are now saved in the datastore !
 
 
 <div class="navigation-step">
-  <a class="btn next-button" href="display-data-in-webapp-2.html">Next: Display your data <i class="icon-chevron-right"></i></a>
+  <a class="btn next-button" href="bind-data-in-webapp-2.html">Next: Display your data <i class="icon-chevron-right"></i></a>
 </div>
