@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # SASS precompilation
@@ -230,14 +231,14 @@ In order:
 
 1 - Add to the `package.json` inside your `mobile` folder any Gulp dependency you may need. Following the example above we will need to add only `gulp-sourcemaps` to the dependencies already provided:
     
-    <img src="../img/mobile-scss-json-sourcemaps.png" />
+    <img src="/img/mobile-scss-json-sourcemaps.png" />
     
   
 2 - Run in the terminal `npm install` while inside your `mobile` folder to install all the Gulp and SASS dependencies defined in the `package.json` file.
 
 3 - Create a `scss` folder inside the `mobile` folder and put our sass sources inside:
   
-   <img src="../img/mobile-scss-folder.png" />  
+   <img src="/img/mobile-scss-folder.png" />  
   
 Being outside of the `www` folder, SASS sources won't included in the final application package.
   
@@ -280,11 +281,11 @@ gulp.task('watch', function() {
 
 6 - Now click on any mobile action button (for instance Preview). If the configuration is correct you should see the following output in the console:
 
-  <img src="../img/mobile-scss-working.png">
+  <img src="/img/mobile-scss-working.png">
     
   and when saving your sass sources:
     
-  <img src="../img/mobile-scss-reload.png">
+  <img src="/img/mobile-scss-reload.png">
        
 **Note:** If a Ionic process was already running you must close and re-open your solution to reload the configuration.
 

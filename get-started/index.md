@@ -1,6 +1,7 @@
 ---
 id: index
 layout: get-started-default
+version: 2
 ---
 
 <h1 id="next-steps">Getting Started with Wakanda</h1>

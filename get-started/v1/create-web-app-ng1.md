@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Hello World: your first Web App with Angular
@@ -20,13 +21,13 @@ We can choose the kind of app we want to create : mobile, web or both.
 
 Here we want to create an *Angular web app*.
 
-To do that, we're going to open the studio <img src="../img/iconWakanda.png"/> , and click on **"Create a new solution"**:
+To do that, we're going to open the studio <img src="/img/iconWakanda.png"/> , and click on **"Create a new solution"**:
 
-<img src="../img/hp-initial.png"/>
+<img src="/img/hp-initial.png"/>
 
 Which opens the template selection page:  
 
-<img src="../img/hww-template-selection-ng1.png"/>
+<img src="/img/hww-template-selection-ng1.png"/>
 
 Now, a solution and a project structure have been created. A solution, represent your whole app and can contain multiple projects. The first one is created by default. 
 
@@ -38,7 +39,7 @@ There, you can name your app *- without spaces -* and select the **Angular basic
 
 Now, in your **HelloWorldWeb** project, you can find the Angular web app file structure :
 
-<img src="../img/hww-file-structure-ng1.png"/>  
+<img src="/img/hww-file-structure-ng1.png"/>  
 
 You have 3 folders at the root of your project:
 
@@ -61,7 +62,7 @@ For our **HelloWorldWeb** we’re going to work first in the `web` folder.
 First let's have a look to our web template.
 
 Click on the _Run Page_ toolbar button:
-<img src="../img/web-run-page-ng1.png"/>
+<img src="/img/web-run-page-ng1.png"/>
 
 
 > **TIPS**:  
@@ -71,10 +72,10 @@ Click on the _Run Page_ toolbar button:
 > 3. You can move the web preview on the right panel
 
 
-<img src="../img/web-app-creation-ng1.png" />
+<img src="/img/web-app-creation-ng1.png" />
 
 
-<img src="../img/hww-run-template-ng1.png" />
+<img src="/img/hww-run-template-ng1.png" />
 
 
 ## Step 4: Code your Angular application
@@ -104,7 +105,7 @@ p {
 
 The preview is automatically reloaded after each saving.
 
-<img src="../img/hww-run-helloworld-ng1.png"/>
+<img src="/img/hww-run-helloworld-ng1.png"/>
 
 
 <div class="navigation-step">

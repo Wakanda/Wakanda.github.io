@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Hello World: your first Web App with Angular2
@@ -22,11 +23,11 @@ Here we want to create an *Angular2 web app*.
 
 To do that, we're going to open the studio, (add studio icon here) and click on **"Create a new solution"**:
 
-<img src="../img/hp-initial.png"/>
+<img src="/img/hp-initial.png"/>
 
 Which opens the template selection page:  
 
-<img src="../img/hww-template-selection.png"/>
+<img src="/img/hww-template-selection.png"/>
 
 
 The structure of your future projects depends of the template you choose.
@@ -37,7 +38,7 @@ There, you can name your app and select the **Angular basic template**.
 
 Now, in your **HelloWorldWeb** project, you can find the Angular web app file structure :
 
-<img src="../img/hww-file-structure.png"/>  
+<img src="/img/hww-file-structure.png"/>  
 
 You have 3 folders at the root of your project:
 
@@ -61,7 +62,7 @@ First let's have a look to our web template.
 
 Click on the _Run Page_ toolbar button:
 
-<img src="../img/web-run-page.png"/>
+<img src="/img/web-run-page.png"/>
 
 
 > **TIPS**:  
@@ -71,10 +72,10 @@ Click on the _Run Page_ toolbar button:
 > 3. You can move the web preview on the right panel
 
 
-<img src="../img/web-app-creation.png" />
+<img src="/img/web-app-creation.png" />
 
 
-<img src="../img/hww-run-template.png" />
+<img src="/img/hww-run-template.png" />
 
 
 ## Step 4: Code your Angular2 application
@@ -94,7 +95,7 @@ body{
 
 The preview is automatically reloaded after each saving.
 
-<img src="../img/hww-run-helloworld.png"/>
+<img src="/img/hww-run-helloworld.png"/>
 
 
 <!-- <div class="navigation-step">

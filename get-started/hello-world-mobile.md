@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 2
 ---
 
 # Hello World: your first Mobile hybrid App

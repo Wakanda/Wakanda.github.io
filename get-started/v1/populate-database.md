@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Populate the built-in DataBase
@@ -18,13 +19,13 @@ To manage your data easily and quickly, Wakanda provides a **Visual Data Editor*
 
 It will allow you to create your classes, and their properties visually.
 
-<img src="../img/hw-access-data-model.png" />
+<img src="/img/hw-access-data-model.png" />
 
 1 - Create a `Superhero` and a `Movie`dataclasses. 
 
 Give them respectively the attribute `name` and `title` of type `string` and save.
 
-<img src="../img/model-designer-newdataclass1.png" />
+<img src="/img/model-designer-newdataclass1.png" />
 
 > **TIPS**:  
 > - The attribute `ID` is given by default to all dataclasses created. The classes instantiation are named "Entity" in Wakanda. 
@@ -33,9 +34,9 @@ Give them respectively the attribute `name` and `title` of type `string` and sav
 2 - Add an attribute `movie` to `Superhero`dataclass and give it the type `Movie`.
 The relationship between the two classes is automatically displayed in the model
 
-<img src="../img/model-designer-newdataclass.png" />
+<img src="/img/model-designer-newdataclass.png" />
 
-<img src="../img/model-designer-addrelationship.png" />
+<img src="/img/model-designer-addrelationship.png" />
 
 The JSON file of your datamodel is automatically updated each time you save.
 
@@ -44,7 +45,7 @@ The JSON file of your datamodel is automatically updated each time you save.
 > - You can click on "source" button to see the JSON file generated 
 > - `ds` is the object representing the whole datamodel, corresponding to this JSON file.
 
-<img src="../img/model-designer-json.png" />
+<img src="/img/model-designer-json.png" />
 
 ## Step 2 : Generate data
 
@@ -71,7 +72,7 @@ Run your file. Then go to the databrowser to see the result in the main menu (Ba
 
 Your three favorite superheroes are now saved in the datastore !
 
-<img src="../img/model-designer-databrowser.png" />
+<img src="/img/model-designer-databrowser.png" />
 
 
 <div class="navigation-step">

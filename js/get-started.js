@@ -50,7 +50,7 @@ $(document).ready(function(){
         });
     }
 
-    $window.scroll(function () {
+    window.scroll(function () {
         var $blah = $(".main-nav"),
         $window = $(window),
         offset = $blah.offset();
@@ -69,6 +69,10 @@ $(document).ready(function(){
 
     
 
+
+    $(document).on('change', '#guide-switcher', function() {
+        window.location.href = $(this).find(":selected").attr('data-href');
+    });
 
 
 
