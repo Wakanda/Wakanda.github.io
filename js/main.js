@@ -496,6 +496,10 @@ if($('.what-we-do').length) {
         var parent = $(this).closest( ".tab-pane" ).attr('id');
         calculate($('#'+parent).closest( ".block-comp" ));
     } );
+    $(document).on( "change", "[data-price]", function () {
+        var parent = $(this).closest( ".tab-pane" ).attr('id');
+        calculate($('#'+parent).closest( ".block-comp" ));
+    } );
 
     // calculate price function
     function calculate(data_price_container) {
