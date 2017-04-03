@@ -341,3 +341,29 @@ a.top-title {
 		text-align: center;
 	}
 }
+
+.page-no-title{
+	margin-top: 100px;
+}
+
+section#get-started{
+	background-color: $secondary-color;
+	color: $white-color;
+	text-align: center;
+	padding: 20px 0;
+	h3{
+		font-family: Roboto;
+		@include font-size(42px);
+		font-weight: bold;
+		line-height: 1.57;
+	}
+	a{
+		font-family: Roboto;
+		@include font-size(20px);
+		font-weight: bold;
+		padding: 20px 60px;
+		&:hover{
+			color: $secondary-color;
+		}
+	}
+}
