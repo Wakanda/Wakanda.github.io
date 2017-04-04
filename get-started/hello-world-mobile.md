@@ -68,11 +68,16 @@ Once all your dependencies are checked you can preview your app.
 
 Just click on your project, and then on **"Run"**.
 
+<img src="../img/hwm2-mobile-preferences.png"/>
+
+<img src="../img/hwm2-preview.png"/>
+
+
 > **TIPS**:
 > - The first click on **Run** opens the mobile preferences. You can access it later in (_Run_>_Mobile_Preferences)
 > - You can choose on which OS you want to run your mobile app, and the way you want to visualise it: **Preview**, **Emulator** or **Device** 
 
-<img src="../img/hwm2-mobile-preferences.png"/>
+
 
 In the`mobile`folder, `src`is the classical ionic2 project's structure.
 
