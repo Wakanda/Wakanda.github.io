@@ -83,7 +83,7 @@ nav {
   background-position: 80%;
   background-repeat: no-repeat;
   a, p, strong{
-    color: white;
+    //color: white;
   }
   strong{
     margin-right: 1px;
@@ -564,7 +564,6 @@ h2{
   label{
     margin: 0;
     font-weight: bold;
-    color: $white-color;
   }
   select{
     min-width: 30%;
