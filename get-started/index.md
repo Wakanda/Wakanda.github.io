@@ -158,7 +158,7 @@ version: 2
 <h2 id="go-further">Step 4: Go further </h2>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="/get-started/create-mobile-app.html#build-your-app">
+    <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">
       <div class="head small"><span class="label">JavaScript Backend</span></div>
       <div class="content">
         <i class="icon-logic-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -201,7 +201,7 @@ version: 2
 </div>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="http://wakanda.github.io/wakanda-server-doc/#/doc/authentication/custom-session-management" target="_blank">
+    <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-auth-csm" target="_blank">
       <div class="head small"><span class="label">Enterprise  Edition</span></div>
       <div class="content">
         <i class="icon-scalability-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -217,7 +217,7 @@ version: 2
       It ensures the creation and in-memory persistence of session information,
        the auto-removal of expired sessions, the handling of SSJS session APIs
      </p>
-    <p><a class="btn" href="http://wakanda.github.io/wakanda-server-doc/#/doc/authentication/custom-session-management" target="_blank">Learn how</a>
+    <p><a class="btn" href="https://wakanda.github.io/doc/#/guide?section=main-auth-csm" target="_blank">Learn how</a>
     </p>
   </div>
 </div>
