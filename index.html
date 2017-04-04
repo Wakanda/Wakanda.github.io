@@ -183,6 +183,18 @@ scripts:
   </div>
 </section>
 
+<section id="event-upcomming">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/img/logo-ngconf_2x.png" alt="">
+        <h2>Meet our team at <br/> <strong>The World's Original Angular Conference</strong></h2>
+        <p>on April 5th-7th 2017, Salt Lake City, UT</p>
+        <a href="https://twitter.com/wakandasoft" class="btn btn-inverted">Follow us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% for service in site.data.content.services %}
 <section class="wakanda-service" id="{{ service.id }}">
@@ -202,7 +214,7 @@ scripts:
           <div class="content-container">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a href="/what-we-do.html">Learn more</a>
+            <a href="/pricing.html">Learn more</a>
           </div>
         </div>
         {% if item.orientation == 'right' %}
@@ -223,7 +235,7 @@ scripts:
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <a href="/what-we-do/" class="btn btn-transparent">Learn more</a>
+        <a href="/get-started/" class="btn btn-transparent">Get Started</a>
       </div>
     </div>
   </div>
@@ -241,9 +253,9 @@ scripts:
           <thead>
             <tr>
               <td >&nbsp;</td>
-              <td class="community"><b>Community</b>
+              <td class="community"><b>Community</b> <sup class="version-community"></sup>
               </td>
-              <td class="enterprise"><span><b>Enterprise</b></span>
+              <td class="enterprise"><span><b>Enterprise</b></span>  <sup class="version-enterprise"></sup>
               </td>
             </tr>
           </thead>

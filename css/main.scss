@@ -368,3 +368,36 @@ section#get-started{
 		}
 	}
 }
+.version-community, .version-enterprise{
+	top: 0;
+	font-size: 100%;
+}
+
+#event-upcomming{
+	background-image: url('../img/background-ngconf.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	background-size:  100% 100%;
+	text-align: center;
+	padding: 20px 0;
+	h2{
+		font-family: Roboto;
+		@include font-size(32px);
+		color: #ffffff;
+		margin-bottom: 10px;
+		font-weight: 300;
+	}
+	img {
+    	max-width: 84px;
+		margin-bottom: 20px;
+	}
+	p{
+		font-family: Roboto;
+		@include font-size(24px);
+		color: #ffffff;
+	}
+	a{
+		padding: 10px 40px;
+	}
+}

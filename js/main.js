@@ -36,8 +36,9 @@ $('.scroll-to').click(function(){
  */
 
 var versionCommunityLink = { 
-    stable: "1.1.4",
-    preview: "2.0.1"
+    stable: "2.0.0",
+    preview: "2.0.1",
+    enterprise: "1.1.4"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
@@ -49,7 +50,7 @@ function partialCommunityLink(stableOrPreview, allOrServer) {
 function communityLinks(stableOrPreview) {
     return {
         macOS: partialCommunityLink(stableOrPreview,"all")+"x64.dmg",
-        win32: partialCommunityLink(stableOrPreview,"all")+"x86.msi",
+        //win32: partialCommunityLink(stableOrPreview,"all")+"x86.msi",
         win64: partialCommunityLink(stableOrPreview,"all")+"x64.msi",
         linux32: partialCommunityLink(stableOrPreview,"server")+"i386.deb",
         linux64: partialCommunityLink(stableOrPreview,"server")+"amd64.deb"
@@ -86,9 +87,9 @@ function getPlatform() {
     var OS = "";
     if (/Windows|Win32|WOW64|Win64/.test(navigator.userAgent)) {
         OS = "win64"
-        if (/Win32/.test(navigator.appVersion + navigator.userAgent)) {
+        /*if (/Win32/.test(navigator.appVersion + navigator.userAgent)) {
             OS = "win32";
-        }
+        }*/
     } else if (/Mac/.test(navigator.userAgent)) {
         OS = "macOS";
     } else if (/Linux|X11/.test(navigator.userAgent)) {
@@ -103,7 +104,7 @@ function getPlatform() {
 var platformNames = {
     macOS: "macOS",
     win64: "Windows (64 bits)",
-    win32: "Windows (32 bits)",
+    //win32: "Windows (32 bits)",
     linux32: "Linux 32bits (Server only)",
     linux64: "Linux 64bits (Server only)",
 };
@@ -134,6 +135,8 @@ var entrepriseLink = {
 
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);
 $("#version-stable").append(versionCommunityLink.stable);
+$("sup.version-community").append(versionCommunityLink.stable);
+$("sup.version-enterprise").append(versionCommunityLink.enterprise);
 //$("#version-preview").append(versionCommunityLink.preview);
 $("#community-dl").attr('href', stableLinks[platform]);
 $(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
