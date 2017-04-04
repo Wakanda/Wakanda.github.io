@@ -351,6 +351,7 @@ section#get-started{
 	color: $white-color;
 	text-align: center;
 	padding: 20px 0;
+	min-height: initial;
 	h3{
 		font-family: Roboto;
 		@include font-size(42px);
