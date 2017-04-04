@@ -4,3 +4,5 @@ _site
 .DS_Store
 .idea
 .asset-cache
+Gemfile.lock
+
