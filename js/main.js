@@ -21,7 +21,7 @@ $('#navbarmenu-toggle').click(function () {
 });
 /** End Fixed Menu **/
 
-$('#section-feature-highlights a[href^="#"]').click(function(){
+$('.scroll-to').click(function(){
 	var the_id = $(this).attr("href");
 
 	$('html, body').animate({
