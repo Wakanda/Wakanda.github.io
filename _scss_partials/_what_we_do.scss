@@ -480,7 +480,12 @@
                 }
             }
             .tab-content{
-                border-color: $orange;
+                border: none;
+                padding: 0;
+                .tab-pane{
+                    border: 1px solid $orange;
+                    padding: 10px;
+                }
             }
         }
     }

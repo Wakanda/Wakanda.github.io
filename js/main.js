@@ -547,8 +547,23 @@ if($('.what-we-do').length) {
     $(document).on('click', '.block-comp .nav-link', function(){
         var parent = $(this).closest( ".details" ).parent();
         var id = $(this).attr('href');
+        var close = $('.remove-plan', parent);
         $('.show-detail strong', parent).text($(this).text());
         $('.show-detail sup', parent).text($(id + ' input[type="radio"]:checked').val());
+        if(close.length) {
+            if($(close).hasClass('hidden')) {
+                $(close).removeClass('hidden');
+            }
+        }
+    });
+    $(document).on('click', '.remove-plan', function(){
+        var container = $(this).parent();
+        $('.tab-pane', container).removeClass('active');
+        $('.nav-link', container).removeClass('active');
+        $('strong', container).html('Choose');
+        $('sup', container).html(' ');
+        $(this).addClass('hidden');
+        calculate($(container).closest( ".block-comp" ));
     });
     
     $(document).on('change', 'input[type="radio"]', function() {
