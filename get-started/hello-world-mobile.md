@@ -9,8 +9,8 @@ version: 2
 
 First, download and install **Wakanda Community Edition**
 
-- On Windows, [x86](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x86.msi "download") or [x64](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.msi "download")
-- On Mac OS X, [x64](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.dmg "download")
+- On [Windows](wakanda-community-all_2.0.0_x64.msi "download")
+- On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.0/wakanda-community-all_2.0.0_x64.dmg "download")
 
 
 Now we can start our **HelloWorld** project.  

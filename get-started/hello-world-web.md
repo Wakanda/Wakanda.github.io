@@ -9,8 +9,8 @@ version: 2
 
 First, download and install **Wakanda Community Edition**
 
-- On Windows, [x86](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x86.msi "download") or [x64](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.msi "download")
-- On Mac OS X, [x64](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v1.1.3/wakanda-community-all_1.1.3_x64.dmg "download")
+- On [Windows](wakanda-community-all_2.0.0_x64.msi "download")
+- On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.0/wakanda-community-all_2.0.0_x64.dmg "download")
 
 
 Now we can start our **HelloWorldWeb** project.  
@@ -21,9 +21,10 @@ We can choose the kind of app we want to create : mobile, web or both.
 
 Here we want to create an *Angular web app*.
 
-To do that: 
+To do this: 
 
 - open the studio <img src="../img/iconWakanda.png"/>
+
 - click on **"Create a new solution"**:
 
 <img src="../img/hp2-initial.png"/>

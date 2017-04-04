@@ -5,7 +5,7 @@ version: 2
 
 # Version control your code
 
-## Step 1: Create a repository
+## Step 1: Create a local repository
 
 From the solution explorer, click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
 Then, click on _Create Git Repository_.
@@ -21,7 +21,11 @@ Add changes to your stage and commit:
 Retrieve your remote repository URL from [Wakanda Cloud](https://console.wakanda.io){:target="_blank"} or Github:
 
 
-## Step 3: Setup
+## Step 3: Setup a remote repository
+
+First create a remote repository, for exemple on Github.
+
+<img src="/img/hww2-create-remote-github.png" />
 
 Click on the Git menu icon <img class="inline" src="/img/git-remote-repositories.png" /> and then _Add a remote_ to open the **Remote Repositories** panel.
 
