@@ -190,6 +190,10 @@ if($("#community-download form").length) {
             var link = entrepriseLink[selectedPlateform];
             $('#download-community').attr('href', link);
             $('#download-community')[0].click();
+            setTimeout(function() {
+                window.location.href = "//wakanda.io/get-started";
+                console.log('LINK');
+            }, 1000)
         }
     });
 
