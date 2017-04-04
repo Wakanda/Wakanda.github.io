@@ -17,8 +17,6 @@
 <script>
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
-  "position": "top",
-  "static": true,
   "content": {
     "message": "Click I Agree to accept cookies and go directly to the site or click on More Information to see detailed descriptions of the types of cookies and choose whether to accept certain cookies while on the site.",
     "dismiss": "I agree",
@@ -28,11 +26,14 @@ window.cookieconsent.initialise({
   onStatusChange: function(status) {
   },
   onPopupOpen: function() {
-      $('.fixed-top').css('top', 70);
-
+    
+  setTimeout(
+    function() {
+      $('.olark-launch-button', document).attr('style', 'z-index: 100 !important');
+    }, 1000);
+    
   },
   onPopupClose: function() {
-      $('.fixed-top').css('top', 0);
 
   }
 })});

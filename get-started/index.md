@@ -90,7 +90,7 @@ version: 2
 <h2 id="publish-app">Step 3: Publish your App</h2>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="/get-started/create-mobile-app.html#build-your-app">
+    <a class="square" href="/get-started/hello-world-mobile.html#build-your-app">
       <div class="head small"><span class="label">Cordova</span></div>
       <div class="content">
         <i class="icon-build-mobile-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -158,7 +158,13 @@ version: 2
 <h2 id="go-further">Step 4: Go further </h2>
 <div class="row item">
   <div class="col-md-4">
+<<<<<<< HEAD
     <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">
+||||||| merged common ancestors
+    <a class="square" href="/get-started/create-mobile-app.html#build-your-app">
+=======
+    <a class="square" href="/get-started/hello-world-mobile.html#build-your-app">
+>>>>>>> master
       <div class="head small"><span class="label">JavaScript Backend</span></div>
       <div class="content">
         <i class="icon-logic-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>

@@ -157,7 +157,7 @@ items:
             code: AU
       description: "For over thirty years, the combined minds behind IP Ventures have been delivering industry-leading technology solutions to large enterprises and government agencies. IP Ventures has built a reputation within the global financial industry by delivering quality work, deployed fast. we create Fintech applications and platforms that drive positive, quantifiable business results."
       date: 2017-02-07 17:40:00
-      logo: img/marketplace/consultant/ip.png
+      logo: img/marketplace/consultant/ipv.svg
       external_url: http://ipventures.com.au
       email: steve@ipventures.com.au
     - title: Kagiso Interactive
@@ -242,7 +242,7 @@ items:
             code: GB
       description: "Slate Apps live and breath web technologies.  We create and deploy solutions from servers through to 'Internet of Things' devices using the most powerful programming language on the planet - JavaScript."
       date: 2017-02-07 17:40:00
-      logo: img/marketplace/consultant/large_Slate_App_Logo.png
+      logo: img/marketplace/consultant/Slate_App_Logo.svg
       external_url: http://www.slateapps.com
       email: ashley.coker@slateapps.com
     - title: Tolmai
