@@ -124,7 +124,30 @@ scripts:
             </div>
             <div class="row">
                 <div class="col-md-12 footer-section">
-                    <a href="#" class="btn btn-success btn-lg">Download Community Edition</a>
+                    <div class="btn-group download-community">
+                        <a id="community-dl" href="#" class="btn btn-success btn-lg">Download Community Edition for <span class="platform-name"></span></a>
+                        <a class="btn btn-lg btn-success btn-dl dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <table>
+                            <colgroup>
+                                <col>
+                                <col class="insiders-column">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                <th>&nbsp;</th>
+                                <th class="build-header" scope="col">Stable <code id="version-stable" class="hidden-md-down"></code></th>
+                                <th class="build-header" scope="col" style="display: none;">Preview <code id="version-preview"  class="hidden-md-down"></code></th>
+                                </tr>
+                            </thead>
+                            <tbody id="all-downloads" class="os-group">
+
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,7 +216,7 @@ scripts:
             </div>
             <div class="row footer-section">
                 <div class="col-md-12">
-                    <a href="#" class="btn btn-inverted">Donwload Enterprise Edition</a>
+                    <a href="#download-entreprise" class="btn btn-inverted">Donwload Enterprise Edition</a>
                 </div>
                 <div class="col-md-12">
                     <a href="#price" class="simple-link">Pricing</a>
@@ -730,3 +753,7 @@ scripts:
         </div>
     </section>
 </div>
+
+
+{% include community-mailchimp.html %}
+  
