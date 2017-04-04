@@ -85,6 +85,9 @@ nav {
   a, p, strong{
     color: white;
   }
+  strong{
+    margin-right: 1px;
+  }
 }
 .col-lg-2.page .main-nav{
   position: fixed !important;
