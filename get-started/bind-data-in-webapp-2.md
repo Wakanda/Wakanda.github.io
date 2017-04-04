@@ -46,7 +46,7 @@ Here [$query()](https://wakanda.github.io/angular-wakanda/#/doc/api-reference/da
 
 Here I used it to retrieve only the last 3 superheroes created through a promise.
 
-`$scope.favoriteSuperheores = reponse.result` create a variable `favoriteSupereroes`in the app controller , and bind the server's response to it. [More info on $scope here](https://www.w3schools.com/angular/angular_scopes.asp)
+`$scope.favoriteSuperheores = reponse.result` create a variable `favoriteSupereroes`in the app controller , and bind the server's response to it. [More info on $scope here](https://docs.angularjs.org/guide/scope)
 
 
 ## 3 - Display the data in your front
