@@ -27,7 +27,7 @@ To manage your data easily and quickly, Wakanda provides a **Visual Data Editor*
 
 It allows you to create your classes, and their properties visually.
 
-<img src="../img/hww2-access-data-model.png" />
+<img src="../img/hww2-access-datamodel.png" />
 
 1 - Create a `Superhero` and a `Movie`dataclasses. 
 
