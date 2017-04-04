@@ -18,14 +18,14 @@ version: 2
       </div>
     </div>
   </div>
-  <div class="col-md-4" style="cursor: pointer" onclick="window.location='create-web-app-ng1.html#web-app-creation';">
+  <div class="col-md-4" style="cursor: pointer" onclick="window.location='hello-world-web.html';">
     <div class="square">
       <div class="head small"><span class="label">Angular 1 or 2</span></div>
       <div class="content">
         <i class="icon-web-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
         <h3>Web App</h3>
         <p>Discover Wakanda workflow for web apps</p>
-        <a href="create-web-app-ng1.html#web-app-creation" class="btn btn-default">Code your first Web App</a>
+        <a href="hello-world-web.html" class="btn btn-default">Code your first Web App</a>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@ version: 2
 <h2 id="go-further">Step 4: Go further </h2>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="/get-started/hello-world-mobile.html#build-your-app">
+    <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">
       <div class="head small"><span class="label">JavaScript Backend</span></div>
       <div class="content">
         <i class="icon-logic-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -173,13 +173,13 @@ version: 2
     <p>You code your own business logic in modules and reuse them later. Your productivity is increased.
     </p>
     <p>
-      <a class="btn" href="http://wakanda.github.io/wakanda-server-doc/#/doc/data/server-side">Learn more</a>
+      <a class="btn" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">Learn more</a>
     </p>
   </div>
 </div>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="http://doc.wakanda.org/home2.en.html#/MySQL-Connector-Pro/MySQL-Connector-Pro.100-1168858.en.html" target="_blank">
+    <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-external" target="_blank">
       <div class="head"><span class="label">Enterprise  Edition</span></div>
       <div class="content">
         <i class="icon-mysql-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -195,13 +195,13 @@ version: 2
       A JavaScript Abstract Layer to interact with MySQL DB in JavaScript (No SQL) and all the data exposed via REST API.
     </p>
     <p>
-      <a class="btn" href="http://doc.wakanda.org/home2.en.html#/MySQL-Connector-Pro/MySQL-Connector-Pro.100-1168858.en.html">Learn more</a>
+      <a class="btn" href="https://wakanda.github.io/doc/#/guide?section=main-data-external">Learn more</a>
     </p>
   </div>
 </div>
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="http://wakanda.github.io/wakanda-server-doc/#/doc/authentication/custom-session-management" target="_blank">
+    <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-auth-csm" target="_blank">
       <div class="head small"><span class="label">Enterprise  Edition</span></div>
       <div class="content">
         <i class="icon-scalability-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -217,7 +217,7 @@ version: 2
       It ensures the creation and in-memory persistence of session information,
        the auto-removal of expired sessions, the handling of SSJS session APIs
      </p>
-    <p><a class="btn" href="http://wakanda.github.io/wakanda-server-doc/#/doc/authentication/custom-session-management" target="_blank">Learn how</a>
+    <p><a class="btn" href="https://wakanda.github.io/doc/#/guide?section=main-auth-csm" target="_blank">Learn how</a>
     </p>
   </div>
 </div>
