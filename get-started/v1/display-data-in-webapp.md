@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Display your data in your web app via AngularJS
@@ -52,7 +53,7 @@ Open `web/index.html` and add the following code into the body to display the li
            <p ng-repeat= "superhero in favoriteSuperheroes">Hello {{superhero.name}} !</p>
         </div>
 ```
-<img src="../img/display-data-final.png" />
+<img src="/img/display-data-final.png" />
 
 <!-- <div class="navigation-step">
   <a class="btn next-button" href="build-mobile-app.html">Step 5: Build your mobile app <i class="icon-chevron-right"></i></a>

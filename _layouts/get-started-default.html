@@ -15,8 +15,20 @@
                     <div class="sidebar-left col-lg-2 col-md-3 col-sm-12">
                         {% include get-started/search.html %}
                     </div>
-                    <div class="sidebar-rigth col-lg-8 col-md-9 col-sm-12">
+                    <div class="sidebar-rigth col-lg-8 col-md-6 col-sm-12">
                         {% include get-started/announcement.html %}
+                    </div>
+                    <div class="sidebar-rigth col-lg-2 col-md-3 col-sm-12" id="guide-switcher-container">
+                        <label for="guide-switcher">Guide : </label>
+                        <select name="guide-switcher" id="guide-switcher">
+                            {% for version in site.data.get_started.menu reversed %}
+                                {% assign version_url = 'v' | append: version.version | append: '/' %}
+                                {% if version.latest %}
+                                    {% assign version_url = '' %}
+                                {% endif %}
+                                <option data-href="{{site.url}}/get-started/{{version_url}}" value="{{ version.version }}" {% if version.version == page.version %} selected {%endif%} >v{{ version.version }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
             </div>

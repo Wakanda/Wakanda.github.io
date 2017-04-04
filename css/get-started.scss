@@ -556,3 +556,14 @@ h2{
     }
   }
 }
+#guide-switcher-container{
+  padding: 5px 0;
+  label{
+    margin: 0;
+    font-weight: bold;
+  }
+  select{
+    min-width: 30%;
+    text-align-last: center;
+  }
+}

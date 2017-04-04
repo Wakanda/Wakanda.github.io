@@ -1,38 +1,43 @@
 ---
 layout: get-started-default
-version: 2
+version: 1
 ---
 
 # Version control your code
 
-## Step 1: Create a local repository
+## Create a repository
 
 From the solution explorer, click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
 Then, click on _Create Git Repository_.
 
-## Step 2: Initial commit
+## Commit your changes
 
 Add changes to your stage and commit:
 
-<img src="/img/hww2-git-commit.png" />
+<img src="/img/git-commit.png" />
 
+<h2 id="remote">Add a remote repository</h2>
 
-## Step 3: Setup a remote repository
+Retrieve your remote repository URL from [Wakanda Cloud](https://console.wakanda.io){:target="_blank"} or Github:
 
-First create a remote repository, for exemple on Github. (Or retrieve an existing remote repository URL)
+### Wakanda Cloud
 
-<img src="/img/hww2-create-remote-github.png" />
+[Create a new cloud server instance](http://docs.wakcloud.com/en/latest/getting_started.html){:target="_blank"} and copy the Git repository URL:
 
-Click on the Git menu icon <img class="inline" src="/img/git-remote-repositories.png" /> and then _Add a remote_ to open the **Remote Repositories** panel.
+<img src="/img/git-wakanda-cloud.png" />
 
+### Github
 
-Setup your remote repository:
+<img src="/img/git-github.png" />
 
-<img src="/img/hww2-add-remote.png" />
+### Setup
 
+Click on <img class="inline" src="/img/git-remote-repositories.png" /> to open the remote repositories panel.
 
+And setup your remote settings:
 
-If you're new with Github, https://help.github.com/articles/set-up-git/
+<img src="/img/git-add-remote.png" />
+
 
 **IMPORTANT**: the password will be saved as plain text in the `.git/config` file.
 You can however leave the Username and Password fields empty and cache your password in Git.

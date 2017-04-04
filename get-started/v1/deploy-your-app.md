@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Deploy your app
@@ -13,11 +14,11 @@ layout: get-started-default
 
 Click on Deploy from the Studio toolbar:
 
-<img src="../img/toolbar-deploy.png" />
+<img src="/img/toolbar-deploy.png" />
 
 You can now push, for example, on your `production` branch:
 
-<img src="../img/deploy-your-project.png" />
+<img src="/img/deploy-your-project.png" />
 
 ---
 
