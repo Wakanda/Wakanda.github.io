@@ -496,6 +496,10 @@ if($('.what-we-do').length) {
         var parent = $(this).closest( ".tab-pane" ).attr('id');
         calculate($('#'+parent).closest( ".block-comp" ));
     } );
+    $(document).on( "change", "[data-price]", function () {
+        var parent = $(this).closest( ".tab-pane" ).attr('id');
+        calculate($('#'+parent).closest( ".block-comp" ));
+    } );
 
     // calculate price function
     function calculate(data_price_container) {
@@ -504,7 +508,7 @@ if($('.what-we-do').length) {
             if($(this).hasClass('active')){
                 sum += parseFloat($(this).attr('data-price-container'));
                 var id = $(this).attr('href');
-                console.log('ID'); console.log(id);
+                //console.log('ID'); console.log(id);
                 if(id) {
                     $('[data-price]', id).each(function() {
                         if($(this).hasClass('active') || $(this).is(':checked')) {
@@ -535,7 +539,14 @@ if($('.what-we-do').length) {
     // on change tab change plan
     $(document).on('click', '.block-comp .nav-link', function(){
         var parent = $(this).closest( ".details" ).parent();
+        var id = $(this).attr('href');
         $('.show-detail strong', parent).text($(this).text());
+        $('.show-detail sup', parent).text($(id + ' input[type="radio"]:checked').val());
+    });
+    
+    $(document).on('change', 'input[type="radio"]', function() {
+        var parent = $(this).closest( ".details" ).parent();
+        $('.show-detail sup', parent).text($(this).val());
     });
 }
 
