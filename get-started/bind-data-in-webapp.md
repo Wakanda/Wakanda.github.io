@@ -60,6 +60,6 @@ Open `web/index.html` and add the following code into the body to display the li
 ```
 <img src="../img/hww2-display-data-final.png" />
 
-<!-- <div class="navigation-step">
-  <a class="btn next-button" href="build-mobile-app.html">Step 5: Build your mobile app <i class="icon-chevron-right"></i></a>
-</div> -->
+<div class="navigation-step">
+  <a class="btn next-button" href="version-control.html">Next Step: Commit your mobile app <i class="icon-chevron-right"></i></a>
+</div>

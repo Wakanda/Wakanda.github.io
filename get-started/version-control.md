@@ -1,6 +1,6 @@
 ---
 layout: get-started-default
-version: 1
+version: 2
 ---
 
 # Version control your code
