@@ -156,7 +156,7 @@ scripts:
 
 <section id="section-slideshow">
   <div class="container">
-    <h2>Wakanda 2.0 is coming soon</h2>
+    <h2>What's new in Wakanda 2.0</h2>
     <div class="row">
       <div class="col-md-4 item">
         <div class="img-container">
@@ -183,9 +183,6 @@ scripts:
   </div>
 </section>
 
-<div id="section-newsletter">
-  {% include newsletter-mailchimp.html %}
-</div>
 
 {% for service in site.data.content.services %}
 <section class="wakanda-service" id="{{ service.id }}">
@@ -205,7 +202,7 @@ scripts:
           <div class="content-container">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a href="/get-started">Get Started</a>
+            <a href="/what-we-do.html">Learn more</a>
           </div>
         </div>
         {% if item.orientation == 'right' %}
@@ -226,7 +223,7 @@ scripts:
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <a href="/get-started/" class="btn btn-transparent">Get Started</a>
+        <a href="/what-we-do/" class="btn btn-transparent">Learn more</a>
       </div>
     </div>
   </div>
@@ -430,4 +427,3 @@ scripts:
 </section>
 
 {% include community-mailchimp.html %}
-  
