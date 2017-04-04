@@ -57,7 +57,7 @@ scripts:
     <div class="row">
       <div class="col-lg-6 col-md-12 left">
           <div class="row hidden-lg-up">
-            <a class="bottom-text" href="#server">
+            <a class="bottom-text scroll-to" href="#server">
               <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
               <h4>Server</h4>
             </a>
@@ -65,7 +65,7 @@ scripts:
           <div class="row container-item">
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <a class="item" href="#db-3rd-party">
+                <a class="item scroll-to" href="#db-3rd-party">
                   <img src="img/DB_2x.png" alt="Database">
                   <p>Built-in DB & 3rd party DBs</p>
                 </a>
@@ -73,7 +73,7 @@ scripts:
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <a class="item" href="#js-a-z">
+                <a class="item scroll-to" href="#js-a-z">
                   <img src="img/JS_2x.png" alt="JavaScript">
                   <p>Server-Side JavaScript</p>
                 </a>
@@ -81,7 +81,7 @@ scripts:
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <a class="item" href="#rest-api">
+                <a class="item scroll-to" href="#rest-api">
                   <img src="img/Angular_2x.png" alt="Angular">
                   <p>Angular 1&2, Ionic, Cordova</p>
                 </a>
@@ -89,7 +89,7 @@ scripts:
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
               <div class="row">
-                <a class="item" href="#front-end">
+                <a class="item scroll-to" href="#front-end">
                   <img src="img/RESTful_2x.png" alt="RESTful">
                   <p>RESTful API</p>
                 </a>
@@ -97,7 +97,7 @@ scripts:
             </div>
           </div>
           <div class="row hidden-md-down">
-            <a class="bottom-text" href="#server">
+            <a class="bottom-text scroll-to" href="#server">
               <img src="img/serverLogo_2x.png" alt="Wakanda Server logo" class="logo-pack">
               <h4>Server</h4>
             </a>
@@ -110,7 +110,7 @@ scripts:
             </div>
             <div class="col-lg-10">
               <div class="row  hidden-lg-up">
-                <a class="bottom-text" href="#studio">
+                <a class="bottom-text scroll-to" href="#studio">
                   <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
                   <h4>Studio</h4>
                 </a>
@@ -118,7 +118,7 @@ scripts:
               <div class="row container-item">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                    <a class="item" href="#all-ide">
+                    <a class="item scroll-to" href="#all-ide">
                       <img src="img/IDE_2x.png" alt="IDE">
                       <p>All-in-One IDE</p>
                     </a>
@@ -126,7 +126,7 @@ scripts:
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                    <a class="item" href="#visual-data">
+                    <a class="item scroll-to" href="#visual-data">
                       <img src="img/Datamodel_2x.png" alt="Datamodel">
                       <p>Visual Data Modeling</p>
                     </a>
@@ -134,7 +134,7 @@ scripts:
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="row">
-                    <a class="item" href="#mobile-web">
+                    <a class="item scroll-to" href="#mobile-web">
                       <img src="img/Web-new_2x.png" alt="Web">
                       <p>Shaped for Web Apps</p>
                     </a>
@@ -142,7 +142,7 @@ scripts:
                 </div>
               </div>
               <div class="row  hidden-md-down">
-                <a class="bottom-text" href="#studio">
+                <a class="bottom-text scroll-to" href="#studio">
                   <img src="img/studioLogo_2x.png" alt="Wakanda Studio Logo" class="logo-pack">
                   <h4>Studio</h4>
                 </a>
@@ -156,7 +156,7 @@ scripts:
 
 <section id="section-slideshow">
   <div class="container">
-    <h2>Wakanda 2.0 is coming soon</h2>
+    <h2>What's new in Wakanda 2.0</h2>
     <div class="row">
       <div class="col-md-4 item">
         <div class="img-container">
@@ -183,9 +183,18 @@ scripts:
   </div>
 </section>
 
-<div id="section-newsletter">
-  {% include newsletter-mailchimp.html %}
-</div>
+<section id="event-upcomming">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/img/logo-ngconf_2x.png" alt="">
+        <h2>Meet our team at <br/> <strong>The World's Original Angular Conference</strong></h2>
+        <p>on April 5th-7th 2017, Salt Lake City, UT</p>
+        <a href="https://twitter.com/wakandasoft" class="btn btn-inverted">Follow us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% for service in site.data.content.services %}
 <section class="wakanda-service" id="{{ service.id }}">
@@ -205,7 +214,7 @@ scripts:
           <div class="content-container">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
-            <a href="/get-started">Get Started</a>
+            <a href="/pricing.html">Learn more</a>
           </div>
         </div>
         {% if item.orientation == 'right' %}
@@ -244,9 +253,9 @@ scripts:
           <thead>
             <tr>
               <td >&nbsp;</td>
-              <td class="community"><b>Community</b>
+              <td class="community"><b>Community</b> <sup class="version-community"></sup>
               </td>
-              <td class="enterprise"><span><b>Enterprise</b></span>
+              <td class="enterprise"><span><b>Enterprise</b></span>  <sup class="version-enterprise"></sup>
               </td>
             </tr>
           </thead>
@@ -430,4 +439,3 @@ scripts:
 </section>
 
 {% include community-mailchimp.html %}
-  

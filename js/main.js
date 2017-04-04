@@ -21,7 +21,7 @@ $('#navbarmenu-toggle').click(function () {
 });
 /** End Fixed Menu **/
 
-$('#section-feature-highlights a[href^="#"]').click(function(){
+$('.scroll-to').click(function(){
 	var the_id = $(this).attr("href");
 
 	$('html, body').animate({
@@ -36,8 +36,9 @@ $('#section-feature-highlights a[href^="#"]').click(function(){
  */
 
 var versionCommunityLink = { 
-    stable: "1.1.4",
-    preview: "2.0.1"
+    stable: "2.0.0",
+    preview: "2.0.1",
+    enterprise: "1.1.4"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
@@ -49,7 +50,7 @@ function partialCommunityLink(stableOrPreview, allOrServer) {
 function communityLinks(stableOrPreview) {
     return {
         macOS: partialCommunityLink(stableOrPreview,"all")+"x64.dmg",
-        win32: partialCommunityLink(stableOrPreview,"all")+"x86.msi",
+        //win32: partialCommunityLink(stableOrPreview,"all")+"x86.msi",
         win64: partialCommunityLink(stableOrPreview,"all")+"x64.msi",
         linux32: partialCommunityLink(stableOrPreview,"server")+"i386.deb",
         linux64: partialCommunityLink(stableOrPreview,"server")+"amd64.deb"
@@ -86,9 +87,9 @@ function getPlatform() {
     var OS = "";
     if (/Windows|Win32|WOW64|Win64/.test(navigator.userAgent)) {
         OS = "win64"
-        if (/Win32/.test(navigator.appVersion + navigator.userAgent)) {
+        /*if (/Win32/.test(navigator.appVersion + navigator.userAgent)) {
             OS = "win32";
-        }
+        }*/
     } else if (/Mac/.test(navigator.userAgent)) {
         OS = "macOS";
     } else if (/Linux|X11/.test(navigator.userAgent)) {
@@ -103,7 +104,7 @@ function getPlatform() {
 var platformNames = {
     macOS: "macOS",
     win64: "Windows (64 bits)",
-    win32: "Windows (32 bits)",
+    //win32: "Windows (32 bits)",
     linux32: "Linux 32bits (Server only)",
     linux64: "Linux 64bits (Server only)",
 };
@@ -134,6 +135,8 @@ var entrepriseLink = {
 
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);
 $("#version-stable").append(versionCommunityLink.stable);
+$("sup.version-community").append(versionCommunityLink.stable);
+$("sup.version-enterprise").append(versionCommunityLink.enterprise);
 //$("#version-preview").append(versionCommunityLink.preview);
 $("#community-dl").attr('href', stableLinks[platform]);
 $(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
@@ -190,6 +193,10 @@ if($("#community-download form").length) {
             var link = entrepriseLink[selectedPlateform];
             $('#download-community').attr('href', link);
             $('#download-community')[0].click();
+            setTimeout(function() {
+                window.location.href = "//wakanda.io/get-started";
+                console.log('LINK');
+            }, 1000)
         }
     });
 
@@ -496,6 +503,10 @@ if($('.what-we-do').length) {
         var parent = $(this).closest( ".tab-pane" ).attr('id');
         calculate($('#'+parent).closest( ".block-comp" ));
     } );
+    $(document).on( "change", "[data-price]", function () {
+        var parent = $(this).closest( ".tab-pane" ).attr('id');
+        calculate($('#'+parent).closest( ".block-comp" ));
+    } );
 
     // calculate price function
     function calculate(data_price_container) {
@@ -504,7 +515,7 @@ if($('.what-we-do').length) {
             if($(this).hasClass('active')){
                 sum += parseFloat($(this).attr('data-price-container'));
                 var id = $(this).attr('href');
-                console.log('ID'); console.log(id);
+                //console.log('ID'); console.log(id);
                 if(id) {
                     $('[data-price]', id).each(function() {
                         if($(this).hasClass('active') || $(this).is(':checked')) {
@@ -535,7 +546,14 @@ if($('.what-we-do').length) {
     // on change tab change plan
     $(document).on('click', '.block-comp .nav-link', function(){
         var parent = $(this).closest( ".details" ).parent();
+        var id = $(this).attr('href');
         $('.show-detail strong', parent).text($(this).text());
+        $('.show-detail sup', parent).text($(id + ' input[type="radio"]:checked').val());
+    });
+    
+    $(document).on('change', 'input[type="radio"]', function() {
+        var parent = $(this).closest( ".details" ).parent();
+        $('.show-detail sup', parent).text($(this).val());
     });
 }
 

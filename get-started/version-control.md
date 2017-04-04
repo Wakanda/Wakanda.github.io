@@ -1,57 +1,51 @@
 ---
 layout: get-started-default
+version: 2
 ---
 
 # Version control your code
 
-## Create a repository
+## Step 1: Create a local repository
 
-From the solution explorer, click on <img class="inline" src="../img/git-shortcut.png" /> to open Git.
+From the solution explorer, click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
 Then, click on _Create Git Repository_.
 
-## Commit your changes
+## Step 2: Initial commit
 
 Add changes to your stage and commit:
 
-<img src="../img/git-commit.png" />
-
-<h2 id="remote">Add a remote repository</h2>
-
-Retrieve your remote repository URL from [Wakanda Cloud](https://console.wakanda.io){:target="_blank"} or Github:
-
-### Wakanda Cloud
-
-[Create a new cloud server instance](http://docs.wakcloud.com/en/latest/getting_started.html){:target="_blank"} and copy the Git repository URL:
-
-<img src="../img/git-wakanda-cloud.png" />
-
-### Github
-
-<img src="../img/git-github.png" />
-
-### Setup
-
-Click on <img class="inline" src="../img/git-remote-repositories.png" /> to open the remote repositories panel.
-
-And setup your remote settings:
-
-<img src="../img/git-add-remote.png" />
+<img src="/img/hww2-git-commit.png" />
 
 
-**IMPORTANT**: the password will be saved as plain text in the `.git/config` file.
-You can however leave the Username and Password fields empty and cache your password in Git.
+## Step 3: Setup a remote repository
 
-### Cache your password in Git
+First create a remote repository, "Wakanda-Hello-World" on your Github account. (Or retrieve an existing remote repository URL)
 
-**Mac OS X**
+<img src="/img/hww2-create-remote-github.png" />
 
-    git config --global credential.helper osxkeychain
+Click on the Git menu icon and then _Add a remote_ to open the **Remote Repositories** panel.
+
+
+Setup your remote repository:
+
+<img src="/img/hww2-add-remote.png" />
+
+And now you can commit your Hello World ! Let us now with a _Wakanda_ tag !
+
+
+If you're new with Github, [more info here](https://help.github.com/articles/set-up-git/).
+
+> **Warning:** 
+> - The password will be saved as plain text in the `.git/config` file.
+> - You can however leave the Username and Password fields empty and cache your password in Git.
+
+> **Tips: Cache your password in Git** 
+
+> - **Mac OS X:** `git config --global credential.helper osxkeychain`
     
 [More info  »](https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac){:target="_blank"}
 
-**Windows**
-
-    git config --global credential.helper wincred
+> - **Windows:** `git config --global credential.helper wincred`
     
 [More info  »](https://help.github.com/articles/caching-your-github-password-in-git/#platform-windows){:target="_blank"}
 

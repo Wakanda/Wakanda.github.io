@@ -2,6 +2,9 @@
     h2, h3, h4, p, a, strong{
         font-family: 'Roboto';
     }
+    a.fa{
+        font-family: 'FontAwesome';
+    }
     section{
         padding: 50px 0;
     }
@@ -54,6 +57,56 @@
     }
     .details {
         padding: 15px 20px;
+        text-align: left;
+    }
+    h3{
+        @include font-size(28px);
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 10px 0 30px;
+    }
+    .download-community{
+         .dropdown-menu {
+            padding: 0;
+             table {
+                min-width: 290px;
+                thead th {
+                    vertical-align: bottom;
+                    border: none;
+                    padding: .75rem;
+                     code {
+                        display: block;
+                        color: white;
+                        background-color: #232A33;
+                        font-size: 60%;
+                        min-width: 65px;
+                        padding: .2rem .4rem;
+                        border-radius: .25rem;
+                        font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+                    }
+                }
+                td {
+                    text-align: center;
+                    padding: .75rem;
+                    vertical-align: top;
+                    .fa.stable {
+                        color: #00D5AC;
+                        margin-right: 8px;
+                    }
+                }
+                td.os {
+                    font-weight: 300;
+                    font-size: 80%;
+                    text-align: right;
+                    min-width: 130px;
+                }
+                 tr:nth-of-type(odd) {
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+                
+            }
+        }
     }
     #were-lazy{
         h2{
@@ -89,13 +142,6 @@
     #server-studio{
         .title{
             margin-bottom: 30px;
-            h3{
-                @include font-size(24px);
-                font-weight: 300;
-                line-height: 1.46;
-                letter-spacing: 1px;
-                text-align: center;
-            }
             p{
                 @include font-size(15px);
                 font-weight: 300;
@@ -158,14 +204,6 @@
         }
     }
     #edition-business{
-        h3{
-            @include font-size(24px);
-            font-weight: 300;
-            line-height: 1.5;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 10px 0 30px;
-        }
         .block-comp {
             width: 80%;
             margin: 0 auto;
@@ -243,13 +281,6 @@
         }
     }
     #pro-service{
-        h3{
-            @include font-size(28px);
-            line-height: 1.5;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 10px 0 30px;
-        }
         .block-comp {
             width: 80%;
             margin: 0 auto;
@@ -343,6 +374,10 @@
                     @include transform(rotate(180deg));
                     display: inline-block;
                 }
+            }
+            sup{
+                top: 0;
+                font-size: 100%;
             }
         }
         .nav-tabs{

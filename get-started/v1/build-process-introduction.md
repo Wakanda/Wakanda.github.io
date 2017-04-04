@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
 # Build process introduction

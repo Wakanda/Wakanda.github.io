@@ -1,8 +1,9 @@
 ---
 layout: get-started-default
+version: 1
 ---
 
-# Hello World: your first Web App with Angular2
+# Hello World: your first Web App with Angular
 
 ## Step 1 : Install Wakanda
 
@@ -18,26 +19,27 @@ Now we can start our **HelloWorldWeb** project.
 
 We can choose the kind of app we want to create : mobile, web or both.
 
-Here we want to create an *Angular2 web app*.
+Here we want to create an *Angular web app*.
 
-To do that, we're going to open the studio, (add studio icon here) and click on **"Create a new solution"**:
+To do that, we're going to open the studio <img src="/img/iconWakanda.png"/> , and click on **"Create a new solution"**:
 
-<img src="../img/hp-initial.png"/>
+<img src="/img/hp-initial.png"/>
 
 Which opens the template selection page:  
 
-<img src="../img/hww-template-selection.png"/>
+<img src="/img/hww-template-selection-ng1.png"/>
 
+Now, a solution and a project structure have been created. A solution, represent your whole app and can contain multiple projects. The first one is created by default. 
 
-The structure of your future projects depends of the template you choose.
+The structure of your project depends of the template you choose.
 
-You'll always have the **same back end strcture**, but you can choose to have a **web front-end and/or mobile front-end**.
+You'll always have the **same back end structure**, but you can choose to have a **web front-end and/or mobile front-end**.
 
-There, you can name your app and select the **Angular basic template**.
+There, you can name your app *- without spaces -* and select the **Angular basic template**.
 
 Now, in your **HelloWorldWeb** project, you can find the Angular web app file structure :
 
-<img src="../img/hww-file-structure.png"/>  
+<img src="/img/hww-file-structure-ng1.png"/>  
 
 You have 3 folders at the root of your project:
 
@@ -50,8 +52,8 @@ You have 3 folders at the root of your project:
 > - A mobile and a web front-end, for the same back-end.
 
 
-> **NOTE**: 
-> - `prototyper` folder in the Web Project is a prototyper tool to create quickly Web UI based on widgets architecture. But it is deprecated and will be excluded from the platform in our next major release!
+**Note** : `Prototyper` folder in the Web Project is a prototyper tool to create quickly Web UI based on widgets architecture. But it is deprecated and will be excluded from the platform in our next major release.
+
 For our **HelloWorldWeb** we’re going to work first in the `web` folder.
 
 
@@ -60,8 +62,7 @@ For our **HelloWorldWeb** we’re going to work first in the `web` folder.
 First let's have a look to our web template.
 
 Click on the _Run Page_ toolbar button:
-
-<img src="../img/web-run-page.png"/>
+<img src="/img/web-run-page-ng1.png"/>
 
 
 > **TIPS**:  
@@ -71,35 +72,45 @@ Click on the _Run Page_ toolbar button:
 > 3. You can move the web preview on the right panel
 
 
-<img src="../img/web-app-creation.png" />
+<img src="/img/web-app-creation-ng1.png" />
 
 
-<img src="../img/hww-run-template.png" />
+<img src="/img/hww-run-template-ng1.png" />
 
 
-## Step 4: Code your Angular2 application
+## Step 4: Code your Angular application
 
-Let's have a look to our project structure : the src folder is the classical Angular2 project structure. [More info here](https://angular.io/docs/ts/latest/cli-quickstart.html "Angular CLI").
+Let's have a look to our project structure : in the `web` folder, as for a classical Angular app file structure, you have the `index.html` file and folders `app` and `assets` at the root.
 
-A simple change in `web/src/app/app.component.html` and I have my **HelloWorld** done.
+`index.html` handles loading in all the libraries and Angular elements
+`assets` is very standard: it contains all the shared assets as css, images, libs
+`app` is the core of your app. It contains all your controllers.
 
-To make it more visual, you can change the background color in its scss file `web/src/app.scss`:
+A simple change in `web/index.html` and I have my **HelloWorld** done.
+To make it more visual, you can change the background color in its css file `web/assets/css/style.scss`:
 
 ```css
-body{
-  background:#51D8C6
-  color:#fff;
-} 
+body {
+    background-color: #51D8C6;
+}
+p {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+  font-size: 200%;
+}
 ```
 
 The preview is automatically reloaded after each saving.
 
-<img src="../img/hww-run-helloworld.png"/>
+<img src="/img/hww-run-helloworld-ng1.png"/>
 
 
-<!-- <div class="navigation-step">
+<div class="navigation-step">
   <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
-</div> -->
+</div>
 
 ---
 

@@ -85,6 +85,9 @@ nav {
   a, p, strong{
     color: white;
   }
+  strong{
+    margin-right: 1px;
+  }
 }
 .col-lg-2.page .main-nav{
   position: fixed !important;
@@ -554,5 +557,16 @@ h2{
       font-weight: 200 !important;
       margin: 0 !important;
     }
+  }
+}
+#guide-switcher-container{
+  padding: 5px 0;
+  label{
+    margin: 0;
+    font-weight: bold;
+  }
+  select{
+    min-width: 30%;
+    text-align-last: center;
   }
 }

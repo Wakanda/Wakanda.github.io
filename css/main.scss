@@ -347,7 +347,7 @@ a.top-title {
 }
 
 section#get-started{
-	background-color: $secondary-color;
+	background-color: $highlighted-color-transition;
 	color: $white-color;
 	text-align: center;
 	padding: 20px 0;
@@ -364,7 +364,39 @@ section#get-started{
 		font-weight: bold;
 		padding: 20px 60px;
 		&:hover{
-			color: $secondary-color;
+			color: $highlighted-color-transition;
 		}
+	}
+}
+.version-community, .version-enterprise{
+	top: 0;
+	font-size: 100%;
+}
+
+#event-upcomming{
+	background-image: url('../img/background-ngconf.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+	background-size:  100% 100%;
+	text-align: center;
+	padding: 20px 0;
+	h2{
+		font-family: Roboto;
+		@include font-size(32px);
+		color: #ffffff;
+		margin-bottom: 10px;
+		font-weight: 300;
+	}
+	img {
+    	max-width: 84px;
+		margin-bottom: 20px;
+	}
+	p{
+		font-family: Roboto;
+		@include font-size(24px);
+		color: #ffffff;
+	}
+	a{
+		padding: 10px 40px;
 	}
 }
