@@ -55,17 +55,17 @@ menu:
         - title: "Client-Side: Bind your data"
           url: bind-data-in-webapp.html
 
-    - title: "Step 3: Publish your App"
-      url: index.html#publish-app
-      pages:
-        - title: "Build your mobile app"
-          url: build-mobile-app.html
-        - title: "Deploy to Your Server"
-          url: deploy-your-app.html
-        - title: Deploy to Wakanda Cloud
-          url: //docs.wakcloud.com/en/latest/getting_started.html
+    # - title: "Step 3: Publish your App"
+    #  url: index.html#publish-app
+     # pages:
+     #   - title: "Build your mobile app"
+     #     url: build-mobile-app.html
+     #   - title: "Deploy to Your Server"
+     #     url: deploy-your-app.html
+     #   - title: Deploy to Wakanda Cloud
+     #     url: //docs.wakcloud.com/en/latest/getting_started.html
 
-    - title: "Step 4: Go further"
+    - title: "Step 3: Go further"
       url: index.html#go-further
       pages:
         - title: "Wakanda Server-Side"
