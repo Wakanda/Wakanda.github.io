@@ -11,10 +11,10 @@
 <meta property="og:url" content="http://www.wakanda.io/">
 <meta property="og:title" content="FullStack JavaScript Platform">
 <meta property="og:description" content="Develop &amp; Run Web &amp; Mobile Apps">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic?{{site.assets_static_version}}" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?{{site.assets_static_version}}" />
 {% if page.show_chat %}
 {% include olark.html %}
 {% endif %}
 {% include tag_manager_head.html %}
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?{{ site.time | date: '%s%N' }}">

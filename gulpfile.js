@@ -4,24 +4,22 @@ var gulp = require('gulp'),
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
 var sass = require('gulp-sass');
 
 var site_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/tether.min.js','_assets/js/lib/bootstrap.min.js', '_assets/js/layout.js', '_assets/js/lib/typed/typed.min.js'
 , '_assets/js/remodal.min.js', '_assets/js/lib/jquery-validate/jquery.validate.js', '_assets/js/lib/recaptcha.js', '_assets/js/isotope.pkgd.js', '_assets/js/select2.min.js'
-, '_assets/js/jquery.flip.min.js', '_assets/js/lib/cookieconsent.min.js', '_assets/js/main.js'];
+, '_assets/js/jquery.flip.min.js', '_assets/js/lib/cookieconsent.min.js', '_assets/js/lib/mc-validate.js', '_assets/js/main.js'];
 
 var site_css = ['_assets/css/slick.css',  '_assets/css/lib/cookieconsent.min.js', '_assets/css/lib/remodal.css', '_assets/css/lib/remodal-default-theme.css', '_assets/css/lib/select2.min.css',
-'_assets/css/lib/flag-icon.min.css',  '_assets/sass/main.scss'];
+'_assets/css/lib/flag-icon.min.css', '_assets/css/lib/classic-10_7.css',  '_assets/sass/main.scss'];
 
-gulp.task('images', function(){
-  gulp.src('_assets/img/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('img/'));
-});
+var getstarted_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/tether.min.js', '_assets/js/lib/bootstrap.min.js', 
+'_assets/js/lib/mc-validate.js', '_assets/js/get-started.js' ];
 
-gulp.task('styles', function(){
+var getstarted_css = ['_assets/sass/get-started.scss'];
+
+gulp.task('site_css', function(){
   gulp.src(site_css)
     .pipe(plumber({
       errorHandler: function (error) {
@@ -33,7 +31,19 @@ gulp.task('styles', function(){
     .pipe(gulp.dest('css/'))
 });
 
-gulp.task('scripts', function(){
+gulp.task('getstarted_css', function(){
+  gulp.src(getstarted_css)
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(concat('get-started.css'))
+    .pipe(gulp.dest('css/'))
+});
+
+gulp.task('site_js', function(){
   return gulp.src(site_js)
     .pipe(plumber({
       errorHandler: function (error) {
@@ -43,12 +53,29 @@ gulp.task('scripts', function(){
     .pipe(concat('main.js'))
     .pipe(gulp.dest('js/'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
+    .pipe(uglify({compress:true}))
     .pipe(gulp.dest('js/'))
 });
 
-gulp.task('default', [], function(){
-  gulp.watch("_assets/scss/*.scss", ['styles']);
-  gulp.watch("_assets/js/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
+gulp.task('getstarted_js', function(){
+  return gulp.src(getstarted_js)
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(concat('get-started.js'))
+    .pipe(gulp.dest('js/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify({compress:true}))
+    .pipe(gulp.dest('js/'))
+});
+
+gulp.task('default', ['site_css', 'getstarted_css', 'site_js', 'getstarted_js']);
+
+gulp.task('watch', [], function(){
+  gulp.watch(site_css, ['site_css']);
+  gulp.watch(getstarted_css, ['getstarted_css']);
+  gulp.watch(site_js, ['site_js']);
+  gulp.watch(getstarted_js, ['getstarted_js']);
 });
