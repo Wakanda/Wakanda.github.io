@@ -87,7 +87,7 @@ version: 2
 
 
 
-<h2 id="publish-app">Step 3: Publish your App</h2>
+<!--  <h2 id="publish-app">Step 3: Publish your App</h2>
 <div class="row item">
   <div class="col-md-4">
     <a class="square" href="/get-started/hello-world-mobile.html#build-your-app">
@@ -153,9 +153,9 @@ version: 2
       <a class="btn" href="http://docs.wakcloud.com/en/latest/getting_started.html">Deploy to Wakanda Cloud</a>
     </p>
   </div>
-</div>
+</div>-->
 
-<h2 id="go-further">Step 4: Go further </h2>
+<h2 id="go-further">Step 3: Go further </h2>
 <div class="row item">
   <div class="col-md-4">
     <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">
