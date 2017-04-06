@@ -11,8 +11,9 @@ encoding: utf-8
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
-sass:
-  sass_dir: _scss_partials
+assets_static_version: 1.0.0
+#sass:
+#  sass_dir: _scss_partials
 defaults:
   -
     values:
@@ -26,7 +27,11 @@ exclude: [
 .git,
 .gitignore,
 README.md,
-LICENSE
+LICENSE,
+_assets,
+'node_modules',
+gulpfile.js,
+package.json
 ]
 collections:
   marketplace:
