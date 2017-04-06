@@ -93,7 +93,7 @@ version: 2
     <a class="square" href="/get-started/version-control.html">
       <div class="head small"><span class="label">Git</span></div>
       <div class="content">
-        <i class="icon-build-mobile-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+        <i class="icon-git icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
       </div>
     </a>
   </div>
