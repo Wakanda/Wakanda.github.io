@@ -1,5 +1,8 @@
 <meta charset="UTF-8">
 {% seo %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
 <meta name="viewport" content="width=device-width">
 <meta name="author" content="{{ site.author }}">
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
