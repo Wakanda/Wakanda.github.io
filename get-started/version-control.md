@@ -10,6 +10,8 @@ version: 2
 Click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
 Then, click on _Create Git Repository_.
 
+<img src="/img/hww2-create-local-repository.png" />
+
 ## Step 2: Initial commit
 
 Add changes to your stage and make a first commit:
@@ -45,7 +47,7 @@ Add changes to your stage and make a first commit:
 > - The password will be saved as plain text in the `.git/config` file.
 > - You can however leave the Username and Password fields empty and cache your password in Git.
 
-> **Tips: Cache your password in Git** 
+> **Cache your password in Git** 
 
 > - **Mac OS X:** `git config --global credential.helper osxkeychain`
     
