@@ -1,11 +1,14 @@
 <meta charset="UTF-8">
 {% seo %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
 <meta name="viewport" content="width=device-width">
 <meta name="author" content="{{ site.author }}">
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet">
-<link rel="stylesheet" href="/css/get-started.css?v=071016">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic?{{site.assets_static_version}}" rel="stylesheet">
+<link rel="stylesheet" href="/css/get-started.css?{{ site.time | date: '%s%N' }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?{{site.assets_static_version}}">
 {% include get-started/analytics.html %}
 <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");

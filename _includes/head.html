@@ -1,24 +1,15 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {% seo %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="canonical" href="http://www.wakanda.io/">
-<link rel="shortlink" href="http://www.wakanda.io/">
 <meta name="viewport" content="width=device-width">
-<meta name="keywords" content="Javascript, mobile applications, Apps, iOS, Android, Windows phone, mobile, develop, code, make Apps, Open Source, full-stack, frontend developer, developer, Angular, Ionic, Cordova">
-<meta property="og:site_name" content="FullStack JavaScript Platform">
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://www.wakanda.io/">
-<meta property="og:title" content="FullStack JavaScript Platform">
-<meta property="og:description" content="Develop &amp; Run Web &amp; Mobile Apps">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic" rel="stylesheet" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-{% for css in page.css %}
-  <link rel="stylesheet" href="{{ css }}">
-{% endfor %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,500italic,700,700italic?{{site.assets_static_version}}" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?{{site.assets_static_version}}" />
 {% if page.show_chat %}
 {% include olark.html %}
 {% endif %}
 {% include tag_manager_head.html %}
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css?{{ site.time | date: '%s%N' }}">
