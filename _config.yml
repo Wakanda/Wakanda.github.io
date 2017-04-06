@@ -29,7 +29,7 @@ exclude: [
 README.md,
 LICENSE,
 _assets,
-node_modules
+'node_modules',
 gulpfile.js,
 package.json
 ]
