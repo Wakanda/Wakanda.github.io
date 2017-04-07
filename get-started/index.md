@@ -90,6 +90,28 @@ version: 2
 <h2 id="publish-app">Step 3: Publish your App</h2>
 <div class="row item">
   <div class="col-md-4">
+    <a class="square" href="/get-started/version-control.html">
+      <div class="head small"><span class="label">Git</span></div>
+      <div class="content">
+        <i class="icon-git icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-8">
+    <h3>Commit and push your app</h3>
+    <p>
+      Now that your are developing your app, you'll have to deploy and push it regularly.
+    </p>
+    <p>
+      Discover our Git integration.
+    </p>
+    <p>
+      <a class="btn" href="version-control.html">Push your app</a>
+    </p>
+  </div>
+<!-- 
+<div class="row item">
+  <div class="col-md-4">
     <a class="square" href="/get-started/hello-world-mobile.html#build-your-app">
       <div class="head small"><span class="label">Cordova</span></div>
       <div class="content">
@@ -153,7 +175,7 @@ version: 2
       <a class="btn" href="http://docs.wakcloud.com/en/latest/getting_started.html">Deploy to Wakanda Cloud</a>
     </p>
   </div>
-</div>
+</div>-->
 
 <h2 id="go-further">Step 4: Go further </h2>
 <div class="row item">

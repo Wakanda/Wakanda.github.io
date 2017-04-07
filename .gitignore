@@ -6,3 +6,4 @@ _site
 .asset-cache
 Gemfile.lock
 
+node_modules

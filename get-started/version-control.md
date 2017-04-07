@@ -7,39 +7,47 @@ version: 2
 
 ## Step 1: Create a local repository
 
-From the solution explorer, click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
+Click on <img class="inline" src="/img/git-shortcut.png" /> to open Git.
 Then, click on _Create Git Repository_.
+
+<img src="/img/hww2-create-local-repository.png" />
 
 ## Step 2: Initial commit
 
-Add changes to your stage and commit:
+Add changes to your stage and make a first commit:
 
 <img src="/img/hww2-git-commit.png" />
 
 
 ## Step 3: Setup a remote repository
 
-First create a remote repository, "Wakanda-Hello-World" on your Github account. (Or retrieve an existing remote repository URL)
+- First create a remote repository, "Wakanda-Hello-World" on your Github account. (Or retrieve an existing remote repository URL)
 
 <img src="/img/hww2-create-remote-github.png" />
 
-Click on the Git menu icon and then _Add a remote_ to open the **Remote Repositories** panel.
+- Copy its html link
+
+<img src="/img/hww2-remote-url.png" />
+
+- Click on the Git menu icon and then _Add a remote_ to open the **Remote Repositories** panel.
 
 
-Setup your remote repository:
+- Setup your remote repository, by pasting your remote repository url:
 
 <img src="/img/hww2-add-remote.png" />
 
-And now you can commit your Hello World ! Let us now with a _Wakanda_ tag !
+- Finally, push your app on your account with a right-click on the git menu. 
 
+ Let us know who your favorite superheroes are with a _Wakanda_ tag on your app! 
 
-If you're new with Github, [more info here](https://help.github.com/articles/set-up-git/).
+ We have a thing with the Black Panther, and you ?
+
 
 > **Warning:** 
 > - The password will be saved as plain text in the `.git/config` file.
 > - You can however leave the Username and Password fields empty and cache your password in Git.
 
-> **Tips: Cache your password in Git** 
+> **Cache your password in Git** 
 
 > - **Mac OS X:** `git config --global credential.helper osxkeychain`
     
@@ -50,7 +58,5 @@ If you're new with Github, [more info here](https://help.github.com/articles/set
 [More info  »](https://help.github.com/articles/caching-your-github-password-in-git/#platform-windows){:target="_blank"}
 
 ---
-
-Now, deploy your app:
 
 [Deploy your app »](deploy-your-app.html){:class="btn"}

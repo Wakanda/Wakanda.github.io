@@ -55,22 +55,18 @@ menu:
         - title: "Client-Side: Bind your data"
           url: bind-data-in-webapp.html
 
-    - title: "Step 3: Publish your App"
-      url: index.html#publish-app
-      pages:
-        - title: "Build your mobile app"
-          url: build-mobile-app.html
-        - title: "Deploy to Your Server"
-          url: deploy-your-app.html
-        - title: Deploy to Wakanda Cloud
-          url: //docs.wakcloud.com/en/latest/getting_started.html
+    # - title: "Step 3: Publish your App"
+    #  url: index.html#publish-app
+     # pages:
+     #   - title: "Build your mobile app"
+     #     url: build-mobile-app.html
+     #   - title: "Deploy to Your Server"
+     #     url: deploy-your-app.html
+     #   - title: Deploy to Wakanda Cloud
+     #     url: //docs.wakcloud.com/en/latest/getting_started.html
 
-    - title: "Step 4: Go further"
-      url: index.html#go-further
+    - title: "Step 3: Publish your App"
+      url: version-control.html
       pages:
-        - title: "Wakanda Server-Side"
-        - url: //wakanda.github.io/doc/#/guide?section=main-data-ss
-        - title: "Connect your MySQL DB"
-          url: //wakanda.github.io/doc/#/guide?section=main-data-external
-        - title: "Manage scalabality"
-          url: //wakanda.github.io/doc/#/guide?section=main-auth-csm
+        - title: "Commit and push your app"
+          url: version-control.html
