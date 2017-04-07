@@ -9,7 +9,7 @@ version: 2
 
 First, download and install **Wakanda Community Edition**
 
-- On [Windows](wakanda-community-all_2.0.0_x64.msi "download")
+- On [Windows](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.1/wakanda-community-all_2.0.1_x64.dmg "download")
 - On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.0/wakanda-community-all_2.0.0_x64.dmg "download")
 
 
