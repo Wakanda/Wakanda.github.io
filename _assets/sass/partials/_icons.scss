@@ -71,6 +71,21 @@
 
 
 
+
+.icon-git .path1:before {
+  content: "\e93f";
+  color: rgb(245, 245, 245);
+}
+.icon-git .path2:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-git .path3:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(85, 85, 85);
+}
 .icon-badge .path1:before {
   content: "\e939";
   color: rgb(243, 243, 243);
@@ -331,4 +346,3 @@
 .icon-wakanda-cloud:before {
   content: "\e909";
 }
-
