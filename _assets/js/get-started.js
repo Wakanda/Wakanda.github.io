@@ -82,7 +82,11 @@ $(document).ready(function(){
 
     var versionCommunityLink = { 
         stable: "2.0.1",
+<<<<<<< HEAD
         preview: "2.0.1",
+=======
+       // preview: "2.0.1",
+>>>>>>> 0c2ae4a8cd746d411ad236e3c6a3087a9bff2b2e
         1: "1.1.4",
         2: "2.0.1"
     };
