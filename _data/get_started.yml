@@ -50,15 +50,15 @@ menu:
     - title: "Step 2: Use the Built-in DB"
       url: index.html#server-side
       pages:
-        - title: "Server-Side: Populate your DB"
+        - title: "Populate your DB"
           url: populate-database.html
-        - title: "Client-Side: Bind your data"
+        - title: "Bind your data"
           url: bind-data-in-webapp.html
 
     - title: "Step 3: Publish your App"
       url: version-control.html
       pages:
-        - title: "Commit and push your app"
+        - title: "Version Control"
           url: version-control.html
      #   - title: "Build your mobile app"
      #     url: build-mobile-app.html

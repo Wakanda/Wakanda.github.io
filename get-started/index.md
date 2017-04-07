@@ -44,7 +44,7 @@ version: 2
     </a>
   </div>
   <div class="col-md-8">
-    <h3>Generate your datamodel visually</h3>
+    <h3>Server-side: Populate the built-in database</h3>
     <p>
       Instead of coding your data class, you can generate them visually.
     </p>
@@ -55,7 +55,7 @@ version: 2
       You always have the full picture right before your eyes and avoid mistakes !
     </p>
     <p>
-      <a class="btn" href="populate-database.html">Design your Data Model</a>
+      <a class="btn" href="populate-database.html">Populate your DB</a>
     </p>
   </div>
 
@@ -71,7 +71,7 @@ version: 2
     </a>
   </div>
   <div class="col-md-8">
-    <h3>Display your data in your angular web app</h3>
+    <h3>Client-side: Bind your data in your angular web app</h3>
     <p>
       You can access your datastore from front easily with our angular-wakanda API.
     </p>
@@ -79,15 +79,14 @@ version: 2
       Learn how to display datastore data in your *Hello World* app in a minute !
     </p>
     <p>
-      <a class="btn" href="display-data-in-webapp.html">Display your data</a>
+      <a class="btn" href="display-data-in-webapp.html">Bind your data</a>
     </p>
   </div>
-
 </div>
 
-
-
 <h2 id="publish-app">Step 3: Publish your App</h2>
+
+
 <div class="row item">
   <div class="col-md-4">
     <a class="square" href="/get-started/version-control.html">
@@ -98,7 +97,7 @@ version: 2
     </a>
   </div>
   <div class="col-md-8">
-    <h3>Commit and push your app</h3>
+    <h3>Version control</h3>
     <p>
       Now that your are developing your app, you'll have to deploy and push it regularly.
     </p>
@@ -174,10 +173,12 @@ version: 2
     <p>
       <a class="btn" href="http://docs.wakcloud.com/en/latest/getting_started.html">Deploy to Wakanda Cloud</a>
     </p>
-  </div>
-</div>-->
+  </div>-->
+</div>
+
 
 <h2 id="go-further">Step 4: Go further </h2>
+
 <div class="row item">
   <div class="col-md-4">
     <a class="square" href="https://wakanda.github.io/doc/#/guide?section=main-data-ss">
