@@ -1655,7 +1655,7 @@ $('.scroll-to').click(function(){
 
 var versionCommunityLink = { 
     stable: "2.0.1",
-    preview: "2.0.1",
+    //preview: "2.0.1",
     enterprise: "1.1.4"
 };
 
