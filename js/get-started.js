@@ -102,8 +102,8 @@ $(document).ready(function(){
     */
 
     var versionCommunityLink = { 
-        stable: "2.0.0",
-        preview: "2.0.1",
+        stable: "2.0.1",
+       // preview: "2.0.1",
         1: "1.1.4",
         2: "2.0.0"
     };
