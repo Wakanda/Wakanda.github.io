@@ -55,7 +55,7 @@ Open `web/index.html` and add the following code into the body to display the li
 
 ```html
   <div class="container" ng-controller="HomeController" >
-           <p ng-repeat= "superhero in favoriteSuperheroes">Hello {{superhero.name}} !</p>
+ {% raw %}<p ng-repeat= "superhero in favoriteSuperheroes">Hello {{superhero.name}} !</p> {% endraw %}
         </div>
 ```
 <img src="../img/hww2-display-data-final.png" />
