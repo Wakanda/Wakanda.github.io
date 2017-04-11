@@ -63,7 +63,7 @@ version: 2
 
 <div class="row item">
   <div class="col-md-4">
-    <a class="square" href="populate-database.html">
+    <a class="square" href="bind-data-in-webapp.html">
       <div class="head small"><span class="label">Angular-Wakanda Connector</span></div>
       <div class="content">
         <i class="icon-angular-o icon-11x"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
@@ -79,7 +79,7 @@ version: 2
       Learn how to display datastore data in your *Hello World* app in a minute !
     </p>
     <p>
-      <a class="btn" href="display-data-in-webapp.html">Bind your data</a>
+      <a class="btn" href="bind-data-in-webapp.html">Bind your data</a>
     </p>
   </div>
 </div>
