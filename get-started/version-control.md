@@ -58,5 +58,3 @@ Add changes to your stage and make a first commit:
 [More info  »](https://help.github.com/articles/caching-your-github-password-in-git/#platform-windows){:target="_blank"}
 
 ---
-
-[Deploy your app »](deploy-your-app.html){:class="btn"}
