@@ -1654,9 +1654,9 @@ $('.scroll-to').click(function(){
  */
 
 var versionCommunityLink = { 
-    stable: "2.0.1",
+    stable: "2.0.2",
     //preview: "2.0.1",
-    enterprise: "2.0.1"
+    enterprise: "2.0.2"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
@@ -1743,11 +1743,11 @@ var stableLinks = communityLinks("stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
 var entrepriseLink = {
-    macOS: "//bo.wakanda.io/productionchannel/2.0.1/mac/wakanda-enterprise-all_2.0.1_x64.dmg",
-    win64: "//bo.wakanda.io/productionchannel/2.0.1/windows/wakanda-enterprise-all_2.0.1_x64.msi",
-    //win32: "//bo.wakanda.io/productionchannel/2.0.1/windows/wakanda-enterprise-all_2.0.1_x86.msi",
-    linux32: "//bo.wakanda.io/productionchannel/2.0.1/linux/wakanda-enterprise-server_2.0.1_i386.deb",
-    linux64: "//bo.wakanda.io/productionchannel/2.0.1/linux/wakanda-enterprise-server_2.0.1_amd64.deb"
+    macOS: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/mac/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x64.dmg",
+    win64: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/windows/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x64.msi",
+    //win32: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/windows/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x86.msi",
+    linux32: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/linux/wakanda-enterprise-server_"+versionCommunityLink.enterprise+"_i386.deb",
+    linux64: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/linux/wakanda-enterprise-server_"+versionCommunityLink.enterprise+"_amd64.deb"
 };
 
 
