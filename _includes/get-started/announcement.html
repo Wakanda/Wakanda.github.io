@@ -44,6 +44,7 @@
     var platformLink = platformLinkCollection[os];
 
     if(typeof platformLink != 'undefined') {
+        console.log('TEST');
         document.getElementById('announcement').innerHTML =
             '<p><i class="fa fa-rocket" aria-hidden="true"></i> Thanks for downloading <strong>' + productName + '</strong> for '+ platformLabel +'! \
             Download not starting? <a href="' + platformLink + '">Try this direct download link.</a> \
