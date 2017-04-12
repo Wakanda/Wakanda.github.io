@@ -1,5 +1,6 @@
 ---
 layout: get-started-default
+version: 2
 ---
 
 # Client-side: Bind your data in your web app via AngularJS

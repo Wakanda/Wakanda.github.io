@@ -2,6 +2,8 @@
 id: index
 layout: get-started-default
 version: 2
+description: Get Started with Wakanda - Hello World with built-in database usage
+keywords: Get Started, Hello World, Built-in database, data binding, publish app, Ionic app, web app
 ---
 
 <h1 id="next-steps">Getting Started with Wakanda</h1>
