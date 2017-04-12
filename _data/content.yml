@@ -106,16 +106,15 @@ community:
 event:
   title: Next Wakanda & JavaScript events
   paragraphs:
-    - Meet our team at <a href="https://www.ng-conf.org/" >The World's Original Angular Conference </a> on April 5th-7th 2017, Salt Lake City, UT
     - We can help you start a new JavaScript Meetup. <a href="javascript:void(0);" onclick="olark('api.box.expand')">Contact us!</a>
   calendar:
   - month: April
-    day: 5
+    day: 19
     title: User testing session
     p: Test the next version. Get a $50 Amazon gift card
     url: http://try.wakanda.io/user-test/
   - month: April
-    day: 12
+    day: 26
     title: User testing session
     p: Test our next version. Get a $50 Amazon gift card
     url: http://try.wakanda.io/user-test/
