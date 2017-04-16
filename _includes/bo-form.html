@@ -1,0 +1,67 @@
+<!-- Begin MailChimp Signup Form -->
+<style type="text/css">
+    #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+    }
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+
+
+
+<div class="remodal" data-remodal-id="download-entreprise" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" id="community-download">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div class="content">
+        <div id="mc_embed_signup">
+            <style>.bowak-center{ text-align:center };form[name="bowak-contact"] .error{ border-color: red } label.error{ color: red; } .success-message{ color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6; padding: 10px 20px;}</style>
+            <div id="success-bowak" class="alert alert-success">You are now subscibed !</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="bowak-center">Subscribe to our form</h2>
+                </div>
+            </div>
+            <form name="bowak-contact" method="POST" action="http://localhost:3000/api/mail-api/add-member" class="form-horizontal"  novalidate >
+            <input type="hidden" value="12" name="list_id">
+            <div class="form-group"><label class="control-label" for="mce-email" >Email</label><input class="form-control" type="email" name="email" id="mce-email" required></div>
+            <div class="form-group"><label for="mce-"FNAME class="control-label">First Name</label><input class="form-control" type="text" name="FNAME" id="mce-FNAME"></div>
+            <div class="form-group"><label for="mce-"LNAME class="control-label">Last Name</label><input class="form-control" type="text" name="LNAME" id="mce-LNAME"></div>
+            <div class="form-group">
+                <label for="mce-"MMERGE3 class="control-label">Untitled</label>
+                <select class="form-control" name="MMERGE3" id="mce-MMERGE3">
+                    <option value="" selected>Select</option>
+                    <option value="First Choice">First Choice</option>
+                    <option value="Second Choice">Second Choice</option>
+                    <option value="Third Choice">Third Choice</option>
+                </select>
+            </div>
+            <input type="submit" value="Send" class="btn btn-primary">
+            </form>
+            <script src="http://localhost:3000/jquery-3.1.1.min.js"></script>
+            <script src="http://localhost:3000/jquery.validate.min.js"></script>
+            <script src="http://localhost:3000/wakanda-form.js"></script>
+            <script>
+                var frm = $('form[name="bowak-contact"]'); 
+                frm.submit(function (ev) {
+                    if(frm.valid()){
+                        console.log('Valid');
+                        $.ajax({
+                            type: frm.attr("method"),
+                            url: frm.attr("action"), 
+                            data: frm.serialize(),
+                            success: function (data) {
+                                $("#success-bowak").show
+                            }
+                        });
+                    }else{console.log('Not Valid');}
+                    ev.preventDefault();
+                    return false;
+                });
+            </script>
+        </div>
+    </div>
+    <br>
+</div>
+
+<!--End mc_embed_signup-->
