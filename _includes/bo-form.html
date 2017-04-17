@@ -24,7 +24,7 @@
             </div>
             </div>
             <form name="bowak-contact" method="POST" action="http://localhost:3000/api/mail-api/add-member" class="form-horizontal"  novalidate >
-            <input type="hidden" value="10" name="list_id">
+            <input type="hidden" value="26" name="list_id">
             <div class="form-group"><label class="control-label" for="mce-email" >Email</label><input class="form-control" type="email" name="email" id="mce-email" required></div>
             <div class="form-group">
                 <label for="mce-"OS class="control-label">Select your OS</label>
@@ -43,7 +43,29 @@
             <div class="form-group"><label for="mce-"MMERGE7 class="control-label">Untitled</label><input class="form-control" type="text" name="MMERGE7" id="mce-MMERGE7"></div>
             <input type="submit" value="Submit" class="btn btn-primary">
             </form>
-            <script src="http://localhost:3000/jquery-3.1.1.min.js"></script><script src="http://localhost:3000/jquery.validate.min.js"></script><script src="http://localhost:3000/wakanda-form.js"></script><script> var frm = $('form[name="bowak-contact"]');  frm.submit(function (ev) { if(frm.valid()){ $.ajax({ type: frm.attr("method"),url: frm.attr("action"), data: frm.serialize(), success: function (data) { $("#success-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#success-bowak").slideUp(500);});},error: function(jqXHR, textStatus) {$("#error-bowak").html(jqXHR.responseText);$("#error-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#error-bowak").slideUp(500);});}});}ev.preventDefault();return false;});</script>
+            <script src="http://localhost:3000/jquery-3.1.1.min.js"></script><script src="http://localhost:3000/jquery.validate.min.js"></script><script src="http://localhost:3000/wakanda-form.js"></script>
+            <script>
+                var frm = $('form[name="bowak-contact"]');
+                frm.submit(function (ev) { 
+                    if(frm.valid()){ 
+                        $.ajax({
+                            type: frm.attr("method"),
+                            url: frm.attr("action"), 
+                            data: frm.serialize(), 
+                            success: function (data) {
+                                console.log('Success');
+                                $("#success-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#success-bowak").slideUp(500);});
+                            },
+                            error: function(jqXHR, textStatus) {
+                                console.log('ERROR');
+                                $("#error-bowak").html(jqXHR.responseText);$("#error-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#error-bowak").slideUp(500);});
+                            }
+                        });
+                    }
+                    ev.preventDefault();
+                    return false;
+                });
+            </script>
         </div>
     </div>
     <br>
