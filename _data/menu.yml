@@ -6,6 +6,10 @@ items:
   - title: Pricing
     url: /pricing.html
 
+  - title: Documentation
+    url: //wakanda.github.io/doc
+    target: _blank
+
   - title: Partners
     url: /marketplace.html
 
