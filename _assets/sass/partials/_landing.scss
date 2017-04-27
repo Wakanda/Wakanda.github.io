@@ -1,4 +1,7 @@
 #beginner{
+    .row{
+        margin: 0;
+    }
     #header{
         display: block;
         background: rgba(255,255,255,0);
@@ -10,7 +13,6 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        width: 100%;
         height: 731px;
         position: relative;
         padding: 40px 0;
@@ -50,6 +52,9 @@
                         padding: 15px 60px;
                         font-family: Roboto;
                     }
+                    @media (max-width: 320px) {
+                        padding: 20px;
+                    }
                 }
             }
         }
@@ -59,8 +64,8 @@
         background-color: white;
         .item{
             .img-container{
-                width: 190px;
-                height: 120px;
+                max-width: 190px;
+                max-height: 120px;
                 margin: 0 auto ;
                 img{
                     width: 100%;
@@ -77,6 +82,10 @@
     }
     #from-a-z{
         padding: 40px 0;
+        .from-container {
+            display: flex;
+            justify-content: center;
+        }
         h3{
             font-family: Roboto;
             @include font-size(36px);
@@ -85,14 +94,18 @@
         }
         ul{
             list-style:none;
-            white-space: nowrap;
+            //white-space: nowrap;
             display: inline-block;
             margin: 0 auto;
+            padding: 0;
             li{
                 margin: 10px 0;
                 span{
                     font-family: Cabin;
                     @include font-size(24px);
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 70%;
                 }
                 .number{
                     margin-right: 30px;
@@ -134,8 +147,8 @@
         padding: 40px 0;
         background-color: white;
         .img-container{
-            height: 80px;
-            width: 80px;
+            max-height: 80px;
+            max-width: 80px;
             border: 10px solid #E9E9E9;
             margin: 0 auto;
             img{
