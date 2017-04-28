@@ -16,6 +16,9 @@
         height: 731px;
         position: relative;
         padding: 40px 0;
+        @media (max-height: 731px){
+            height: 590px;
+        }
         .logo{
             display: block;
             margin: 0 auto;
@@ -51,6 +54,9 @@
                         @include font-size(20px);
                         padding: 15px 60px;
                         font-family: Roboto;
+                        @media (max-width:405px) {
+                            padding: 15px 40px;
+                        }
                     }
                     @media (max-width: 320px) {
                         padding: 20px;
