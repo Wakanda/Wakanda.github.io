@@ -3,8 +3,12 @@ items:
   - title: Get started
     url: /get-started
 
-  - title: Pricing
-    url: /pricing.html
+  - title: What we do
+    url: /what-we-do.html
+
+  - title: Documentation
+    url: //wakanda.github.io/doc
+    target: _blank
 
   - title: Partners
     url: /marketplace.html

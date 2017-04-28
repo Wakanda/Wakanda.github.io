@@ -1654,9 +1654,9 @@ $('.scroll-to').click(function(){
  */
 
 var versionCommunityLink = { 
-    stable: "2.0.2",
+    stable: "2.0.3",
     //preview: "2.0.1",
-    enterprise: "2.0.2"
+    enterprise: "2.0.3"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
