@@ -69,6 +69,14 @@
         color: $btn-default-color;
     }
 }
+.btn-orange {
+    background-color: $secondary-color;
+    color: white;
+    &:hover, &:focus, &:active {
+        background-color: $darken-orange;
+        color: white;
+    }
+}
 .btn-base-blue {
     background-color: $base-blue;
     color: white;
