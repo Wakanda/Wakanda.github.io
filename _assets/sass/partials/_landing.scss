@@ -39,12 +39,12 @@
                         @include font-size(36px);
                         color: $white-color;
                         margin-bottom: 20px;
-                        font-family: Arial, sans-serif;
+                        font-family: Roboto;
                     }
                     p{
                         @include font-size(24px);
                         color: $white-color;
-                        font-family: Cabin;
+                        font-family: Roboto;
                         margin-bottom: 30px;
                     }
                     .btn{
@@ -74,7 +74,7 @@
             h3{
                 text-align: center;
                 @include font-size(20px);
-                font-family: Cabin;
+                font-family: Roboto;
                 color: rgb(33, 33, 33);
                 margin: 20px 0;
             }
@@ -101,7 +101,7 @@
             li{
                 margin: 10px 0;
                 span{
-                    font-family: Cabin;
+                    font-family: Roboto;
                     @include font-size(24px);
                     display: inline-block;
                     vertical-align: top;
@@ -156,7 +156,7 @@
             }
         }
         p{
-            font-family: pt serif;
+            font-family: Roboto;
             @include font-size(16px);
             span{
                 color: #1979AB;
@@ -165,12 +165,12 @@
         .author{
             display: block;
             font-weight: bold;
-            font-family: "pt sans";
+            font-family: Roboto;
             color: #212121;
         }
         .account{
             display: block;
-            font-family: pt serif;
+            font-family: Roboto;
             @include font-size(16px);
             color: #1979AB;
         }
