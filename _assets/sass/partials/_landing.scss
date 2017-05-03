@@ -1,0 +1,195 @@
+#beginner{
+    .row{
+        margin: 0;
+    }
+    #header{
+        display: block;
+        background: rgba(255,255,255,0);
+        background-image: url('/img/bg-beginnger.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 731px;
+        position: relative;
+        padding: 40px 0;
+        @media (max-height: 731px){
+            height: 590px;
+        }
+        .logo{
+            display: block;
+            margin: 0 auto;
+        }
+        > .justify-content-md-center{
+            height: 100%;
+            > div {
+                height: 98%;
+                position: relative;
+                .description{
+                    text-align: center;
+                    background: rgba(0,0,0,0.64);
+                    padding: 50px;
+                    width: 80%;
+                    position: absolute;
+                    bottom: 7%;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                    h2{
+                        @include font-size(36px);
+                        color: $white-color;
+                        margin-bottom: 20px;
+                        font-family: Roboto;
+                    }
+                    p{
+                        @include font-size(24px);
+                        color: $white-color;
+                        font-family: Roboto;
+                        margin-bottom: 30px;
+                    }
+                    .btn{
+                        @include font-size(20px);
+                        padding: 15px 60px;
+                        font-family: Roboto;
+                        @media (max-width:405px) {
+                            padding: 15px 40px;
+                        }
+                    }
+                    @media (max-width: 320px) {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #features{
+        padding: 40px 0;
+        background-color: white;
+        .item{
+            .img-container{
+                max-width: 190px;
+                max-height: 120px;
+                margin: 0 auto ;
+                img{
+                    width: 100%;
+                }
+            }
+            h3{
+                text-align: center;
+                @include font-size(20px);
+                font-family: Roboto;
+                color: rgb(33, 33, 33);
+                margin: 20px 0;
+            }
+        }
+    }
+    #from-a-z{
+        padding: 40px 0;
+        .from-container {
+            display: flex;
+            justify-content: center;
+        }
+        h3{
+            font-family: Roboto;
+            @include font-size(36px);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        ul{
+            list-style:none;
+            //white-space: nowrap;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0;
+            li{
+                margin: 10px 0;
+                span{
+                    font-family: Roboto;
+                    @include font-size(24px);
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 70%;
+                }
+                .number{
+                    margin-right: 30px;
+                    background-color: $secondary-color;
+                    width: 50px;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 10px 0;
+                    font-size: 24px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    #get-started{
+        display: block;
+        background: rgba(255,255,255,0);
+        background-image: url('/img/bg-beginnger.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 130px;
+        position: relative;
+        padding: 40px 0;
+        text-align: center;
+        a{
+            @include font-size(20px);
+            padding: 15px 60px;
+            font-family: Roboto;
+        }
+    }
+    #tweet{
+        padding: 40px 0;
+        background-color: white;
+        .img-container{
+            max-height: 80px;
+            max-width: 80px;
+            border: 10px solid #E9E9E9;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            font-family: Roboto;
+            @include font-size(16px);
+            span{
+                color: #1979AB;
+            }
+        }
+        .author{
+            display: block;
+            font-weight: bold;
+            font-family: Roboto;
+            color: #212121;
+        }
+        .account{
+            display: block;
+            font-family: Roboto;
+            @include font-size(16px);
+            color: #1979AB;
+        }
+    }
+    #footer{
+        background-color: #EBEEFA;
+        padding: 40px 0;
+        .img-container{
+            width: 112px;
+            height: 29px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
