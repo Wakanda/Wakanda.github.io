@@ -17,8 +17,9 @@ class="form-horizontal" novalidate>
         <input class="form-control" type="email" name="email" id="mce-email" required>
     </div>
     <div class="form-group">
-        <label for="mce-" OS class="control-label">Select your OS</label>
-        <select class="form-control" name="OS" id="mce-OS">
+        <label for="mce-" OS class="control-label">Select your OS <span class="bowak-asterisk">*</span>
+        </label>
+        <select class="form-control" name="OS" id="mce-OS" required>
             <option value="" selected>Select</option>
             <option value="Windows 64 bits">Windows 64 bits</option>
             <option value="Mac">Mac</option>
@@ -56,6 +57,30 @@ class="form-horizontal" novalidate>
 <script src="https://backoffice.wakanda.io/js/jquery.validate.min.js"></script>
 <script src="https://backoffice.wakanda.io/js/wakanda-form.js"></script>
 <script>
-    var frm = $('form#bowak-contact-23');  frm.submit(function (ev) { if(frm.valid()){ $.ajax({ type: frm.attr("method"),  headers: { "X-Requested-With": "XMLHttpRequest" },url: frm.attr("action"), data: frm.serialize(), success: function (data) { $("#success-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#success-bowak").slideUp(500);$("#error-bowak").hide();});},error: function(jqXHR, textStatus) {$("#success-bowak").hide(); $("#error-bowak").html(jqXHR.responseText);$("#error-bowak").fadeTo(2000, 500).slideUp(500, function(){$("#error-bowak").slideUp(500);});}});}ev.preventDefault();return false;});
+    var frm = $('form#bowak-contact-23');
+    frm.submit(function(ev) {
+        if (frm.valid()) {
+            download_enterprise_succes();
+            $.ajax({
+                type: frm.attr("method"),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                url: frm.attr("action"),
+                data: frm.serialize(),
+                success: function(data) {
+                    $("#success-bowak").show();
+                    $("#error-bowak").hide();
+                },
+                error: function(jqXHR, textStatus) {
+                    $("#success-bowak").hide();
+                    $("#error-bowak").html(jqXHR.responseText);
+                    $("#error-bowak").show();
+                }
+            });
+        }
+        ev.preventDefault();
+        return false;
+    });
 </script>
                           
