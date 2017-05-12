@@ -60,7 +60,6 @@ class="form-horizontal" novalidate>
     var frm = $('form#bowak-contact-23');
     frm.submit(function(ev) {
         if (frm.valid()) {
-            download_enterprise_succes();
             $.ajax({
                 type: frm.attr("method"),
                 headers: {
@@ -71,6 +70,7 @@ class="form-horizontal" novalidate>
                 success: function(data) {
                     $("#success-bowak").show();
                     $("#error-bowak").hide();
+                    download_enterprise_succes();
                 },
                 error: function(jqXHR, textStatus) {
                     $("#success-bowak").hide();

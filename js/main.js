@@ -1778,14 +1778,20 @@ if($("#community-download form").length) {
 
     //@TODO END REMOVE LINE
     function download_enterprise_succes() {
-        var form = $('#bowak-contact-23');
-        var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
-        var selectedPlateform = os[$( "#mce-OS", form).val()];
-        var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
-        window.open(link,"newwin") 
-        setTimeout(function() {
-            //window.location.href = "//wakanda.io/get-started";
-        }, 1000)
+        $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
+            $('#download-community', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+            $.each(data, function(index, value) {
+                if(needed.indexOf(index) >= 0)
+                $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+            }); 
+            var form = $('#bowak-contact-23');
+            var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+            var selectedPlateform = os[$( "#mce-OS", form).val()];
+            var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
+            $('#download-community').attr('action', link);
+            $('#download-community').submit();
+        });
     }
 
 }
