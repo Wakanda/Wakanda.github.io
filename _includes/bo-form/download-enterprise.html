@@ -46,10 +46,10 @@ class="form-horizontal" novalidate>
         <input class="form-control" type="text" name="COMPANY"
         id="mce-COMPANY">
     </div>
-    <div class="form-group">
-        <label for="mce-" MMERGE7 class="control-label">Untitled</label>
-        <input class="form-control" type="text" name="MMERGE7"
-        id="mce-MMERGE7">
+    
+    <div id="recaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6Ld-KhcUAAAAACtJjfu--O3TtbfDkwmyRGs2KpT7"></div>
+        <div class="error hidden">This field is required</div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary">
 </form>
@@ -59,25 +59,31 @@ class="form-horizontal" novalidate>
 <script>
     var frm = $('form#bowak-contact-23');
     frm.submit(function(ev) {
-        if (frm.valid()) {
-            $.ajax({
-                type: frm.attr("method"),
-                headers: {
-                    "X-Requested-With": "XMLHttpRequest"
-                },
-                url: frm.attr("action"),
-                data: frm.serialize(),
-                success: function(data) {
-                    $("#success-bowak").show();
-                    $("#error-bowak").hide();
-                    download_enterprise_succes();
-                },
-                error: function(jqXHR, textStatus) {
-                    $("#success-bowak").hide();
-                    $("#error-bowak").html(jqXHR.responseText);
-                    $("#error-bowak").show();
-                }
-            });
+        if (grecaptcha.getResponse() == '') {
+            $('#recaptcha-container .error').removeClass('hidden');
+            return false;
+        }else {
+            $('#recaptcha-container .error').addClass('hidden');
+            if (frm.valid()) {
+                $.ajax({
+                    type: frm.attr("method"),
+                    headers: {
+                        "X-Requested-With": "XMLHttpRequest"
+                    },
+                    url: frm.attr("action"),
+                    data: frm.serialize(),
+                    success: function(data) {
+                        $("#success-bowak").show();
+                        $("#error-bowak").hide();
+                        download_enterprise_succes();
+                    },
+                    error: function(jqXHR, textStatus) {
+                        $("#success-bowak").hide();
+                        $("#error-bowak").html(jqXHR.responseText);
+                        $("#error-bowak").show();
+                    }
+                });
+            }
         }
         ev.preventDefault();
         return false;

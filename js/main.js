@@ -1773,9 +1773,18 @@ for (var key in platformNames) {
 /**
  * Home page
  */
-if($("#community-download form").length) {
+if($('#bowak-contact-23').length) {
+    var form = $('#bowak-contact-23');
     //@TODO START REMOVE LINE
-
+    var OS_enterprise = {
+        "macOS": "Mac",
+        "win64": "Windows 64 bits",
+        "win32": "Windows 32 bits",
+        "linux32": "Linux 32bits (Server Only)",
+        "linux64": "Linux 64bits (Server Only)",
+    }
+    console.log();
+    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
     //@TODO END REMOVE LINE
     function download_enterprise_succes() {
         $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
@@ -1785,7 +1794,6 @@ if($("#community-download form").length) {
                 if(needed.indexOf(index) >= 0)
                 $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
             }); 
-            var form = $('#bowak-contact-23');
             var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
             var selectedPlateform = os[$( "#mce-OS", form).val()];
             var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
