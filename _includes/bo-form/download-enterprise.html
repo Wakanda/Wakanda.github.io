@@ -1,0 +1,96 @@
+                            <style>
+    .bowak-center{ text-align:center }; form[name="bowak-contact"] .error{ border-color: red } label.error{ color: red; } .success-message{ color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6; padding: 10px 20px;}.danger-message{ color: #a94442; background-color: #f2dede; border-color: #ebccd1; padding: 10px 20px;} .bowak-asterisk{color: #e85c41;font-size: 150%; font-weight: 400; position: relative; top: 5px;}
+</style>
+<div id="error-bowak" class="alert alert-danger">Response server here</div>
+<div id="success-bowak" class="alert alert-success">The download succeeded. Now, check your email to get your licence key.</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="bowak-center">Entreprise Edition : 30 days trial</h2>
+    </div>
+</div>
+<form name="bowak-contact" id="bowak-contact-23" method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member"
+class="form-horizontal" novalidate>
+    <input type="hidden" value="23" name="list_id">
+    <div class="form-group">
+        <label class="control-label" for="mce-email">Email <span class="bowak-asterisk">*</span>
+        </label>
+        <input class="form-control" type="email" name="email" id="mce-email" required>
+    </div>
+    <div class="form-group">
+        <label for="mce-" OS class="control-label">Select your OS <span class="bowak-asterisk">*</span>
+        </label>
+        <select class="form-control" name="OS" id="mce-OS" required>
+            <option value="" selected>Select</option>
+            <option value="Windows 64 bits">Windows 64 bits</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux 32bits (Server Only)">Linux 32bits (Server Only)</option>
+            <option value="Linux 64bits (Server Only)">Linux 64bits (Server Only)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="mce-" FNAME class="control-label">First Name <span class="bowak-asterisk">*</span>
+        </label>
+        <input class="form-control" type="text" name="FNAME" id="mce-FNAME" required>
+    </div>
+    <div class="form-group">
+        <label for="mce-" LNAME class="control-label">Last Name <span class="bowak-asterisk">*</span>
+        </label>
+        <input class="form-control" type="text" name="LNAME" id="mce-LNAME" required>
+    </div>
+    <div class="form-group">
+        <label for="mce-" PHONE class="control-label">Phone</label>
+        <input class="form-control" type="tel" name="PHONE" id="mce-PHONE">
+    </div>
+    <div class="form-group">
+        <label for="mce-" COMPANY class="control-label">Company name</label>
+        <input class="form-control" type="text" name="COMPANY"
+        id="mce-COMPANY">
+    </div>
+    
+    <div class="mc-field-group input-group float-error">
+        <label for="mce-group[4701]-4701-0">I agree to the <a href="//www.wakanda.io/license-enterprise" target="_blank">Subscription Agreement</a></label>
+        <input type="checkbox" value="1" name="group[4701][1]" id="mce-group[4701]-4701-0" class="required" style="float: left;">
+    </div>
+    <div id="recaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6Ld-KhcUAAAAACtJjfu--O3TtbfDkwmyRGs2KpT7"></div>
+        <div class="error hidden">This field is required</div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
+<script src="https://backoffice.wakanda.io/js/jquery-3.1.1.min.js"></script>
+<script src="https://backoffice.wakanda.io/js/jquery.validate.min.js"></script>
+<script src="https://backoffice.wakanda.io/js/wakanda-form.js"></script>
+<script>
+    var frm = $('form#bowak-contact-23');
+    frm.submit(function(ev) {
+        if (grecaptcha.getResponse() == '') {
+            $('#recaptcha-container .error').removeClass('hidden');
+            return false;
+        }else {
+            $('#recaptcha-container .error').addClass('hidden');
+            if (frm.valid()) {
+                $.ajax({
+                    type: frm.attr("method"),
+                    headers: {
+                        "X-Requested-With": "XMLHttpRequest"
+                    },
+                    url: frm.attr("action"),
+                    data: frm.serialize(),
+                    success: function(data) {
+                        $("#success-bowak").show();
+                        $("#error-bowak").hide();
+                        download_enterprise_succes();
+                    },
+                    error: function(jqXHR, textStatus) {
+                        $("#success-bowak").hide();
+                        $("#error-bowak").html(jqXHR.responseText);
+                        $("#error-bowak").show();
+                    }
+                });
+            }
+        }
+        ev.preventDefault();
+        return false;
+    });
+</script>
+                          

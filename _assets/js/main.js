@@ -56,8 +56,8 @@ $('.scroll-to').click(function(){
  * Download Community Edition links configuration
  */
 
-var versionCommunityLink = { 
-    stable: "2.0.3",
+var versionLinks = { 
+    communiy_stable: "2.0.3",
     //preview: "2.0.1",
     enterprise: "2.0.3"
 };
@@ -65,7 +65,7 @@ var versionCommunityLink = {
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
 
 function partialCommunityLink(stableOrPreview, allOrServer) { 
-    return baseCommunityLink+"v"+versionCommunityLink[stableOrPreview]+"/wakanda-community-"+allOrServer+"_"+versionCommunityLink[stableOrPreview]+"_";
+    return baseCommunityLink+"v"+versionLinks[stableOrPreview]+"/wakanda-community-"+allOrServer+"_"+versionLinks[stableOrPreview]+"_";
 }
 
 function communityLinks(stableOrPreview) {
@@ -146,19 +146,19 @@ var stableLinks = communityLinks("stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
 var entrepriseLink = {
-    macOS: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/mac/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x64.dmg",
-    win64: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/windows/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x64.msi",
-    //win32: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/windows/wakanda-enterprise-all_"+versionCommunityLink.enterprise+"_x86.msi",
-    linux32: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/linux/wakanda-enterprise-server_"+versionCommunityLink.enterprise+"_i386.deb",
-    linux64: "//bo.wakanda.io/productionchannel/"+versionCommunityLink.enterprise+"/linux/wakanda-enterprise-server_"+versionCommunityLink.enterprise+"_amd64.deb"
+    macOS: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/mac/wakanda-enterprise-all_"+versionLinks.enterprise+"_x64.dmg",
+    win64: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/windows/wakanda-enterprise-all_"+versionLinks.enterprise+"_x64.msi",
+    //win32: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/windows/wakanda-enterprise-all_"+versionLinks.enterprise+"_x86.msi",
+    linux32: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/linux/wakanda-enterprise-server_"+versionLinks.enterprise+"_i386.deb",
+    linux64: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/linux/wakanda-enterprise-server_"+versionLinks.enterprise+"_amd64.deb"
 };
 
 
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);
-$("#version-stable").append(versionCommunityLink.stable);
-$("sup.version-community").append(versionCommunityLink.stable);
-$("sup.version-enterprise").append(versionCommunityLink.enterprise);
-//$("#version-preview").append(versionCommunityLink.preview);
+$("#version-stable").append(versionLinks.communiy_stable);
+$("sup.version-community").append(versionLinks.communiy_stable);
+$("sup.version-enterprise").append(versionLinks.enterprise);
+//$("#version-preview").append(versionLinks.preview);
 $("#community-dl").attr('href', stableLinks[platform]);
 $(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
 
@@ -176,50 +176,34 @@ for (var key in platformNames) {
 /**
  * Home page
  */
-if($("#community-download form").length) {
-
-    $("option[data-detected='"+platform+"']" ).attr('selected', 'selected');
-    //$("select, input:checkbox, input:radio, input:file", "#community-download").uniform();
-    $.validator.addMethod('email', function (value, element) {
-        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-        return this.optional(element) || filter.test(value);
-    }, "adresse mail invalide");
-
-    $("#community-download form").validate({
-        rules:{
-            "EMAIL":{
-                required:true,
-                email: true
-            }
-        },
-        errorPlacement: function (error, element) {
-            if (element.attr("type") == "checkbox") {
-                console.log('eeee');
-                //error.insertAfter($(element).parent());
-                $(element).parent().append(error);
-            }else{
-                error.insertAfter($(element));
-            }
-        }
-    });
-    $("#community-download form").submit(function() {
-        if (grecaptcha.getResponse() == '') {
-            $('#recaptcha-container .error').removeClass('hidden');
-            return false;
-        }else {
-            $('#recaptcha-container .error').addClass('hidden');
-        }
-        if($(this).valid()) {
-            var selectedPlateform = $( "#mce-OS option:selected", this).attr("data-detected");
-            var link = entrepriseLink[selectedPlateform];
-            $('#download-community').attr('href', link);
-            $('#download-community')[0].click();
-            setTimeout(function() {
-                window.location.href = "//wakanda.io/get-started";
-                console.log('LINK');
-            }, 1000)
-        }
-    });
+if($('#bowak-contact-23').length) {
+    var form = $('#bowak-contact-23');
+    //@TODO START REMOVE LINE
+    var OS_enterprise = {
+        "macOS": "Mac",
+        "win64": "Windows 64 bits",
+        "win32": "Windows 32 bits",
+        "linux32": "Linux 32bits (Server Only)",
+        "linux64": "Linux 64bits (Server Only)",
+    }
+    console.log();
+    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    //@TODO END REMOVE LINE
+    function download_enterprise_succes() {
+        $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
+            $('#download-community', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+            $.each(data, function(index, value) {
+                if(needed.indexOf(index) >= 0)
+                $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+            }); 
+            var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+            var selectedPlateform = os[$( "#mce-OS", form).val()];
+            var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
+            $('#download-community').attr('action', link);
+            $('#download-community').submit();
+        });
+    }
 
 }
 /**
