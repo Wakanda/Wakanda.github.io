@@ -8,14 +8,14 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 
-var site_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/tether.min.js','_assets/js/lib/bootstrap.min.js', '_assets/js/layout.js', '_assets/js/lib/typed/typed.min.js'
+var site_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js', '_assets/js/lib/tether.min.js','_assets/js/lib/bootstrap.min.js', '_assets/js/layout.js', '_assets/js/lib/typed/typed.min.js'
 , '_assets/js/remodal.min.js', '_assets/js/lib/jquery-validate/jquery.validate.js', '_assets/js/lib/recaptcha.js', '_assets/js/isotope.pkgd.js', '_assets/js/select2.min.js'
 , '_assets/js/jquery.flip.min.js', '_assets/js/lib/cookieconsent.min.js', '_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/main.js'];
 
 var site_css = ['_assets/css/slick.css',  '_assets/css/lib/cookieconsent.min.css', '_assets/css/lib/remodal.css', '_assets/css/lib/remodal-default-theme.css', '_assets/css/lib/select2.min.css',
 '_assets/css/lib/flag-icon.min.css', '_assets/css/lib/classic-10_7.css',  '_assets/sass/main.scss'];
 
-var getstarted_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/tether.min.js', '_assets/js/lib/bootstrap.min.js', 
+var getstarted_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js', '_assets/js/lib/tether.min.js', '_assets/js/lib/bootstrap.min.js', 
 '_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/get-started.js' ];
 
 var getstarted_css = ['_assets/sass/get-started.scss'];
