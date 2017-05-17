@@ -341,3 +341,17 @@ if($('#before-leaving').length) {
     });
 }
 /***  END BEFORE LEAVING ***/
+
+
+
+function redirectAfterDownload(type) {
+    setTimeout(function() {
+        window.location.href = "https://wakanda.github.io/get-started/confirm-download-"+type;
+    }, 2000);
+}
+
+if($(".download a").length) {
+    $(".download a").click(function() {
+        redirectAfterDownload('community');
+    })
+}
