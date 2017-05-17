@@ -578,17 +578,3 @@ if($('.what-we-do').length) {
 }
 
 /*** ================== End What we do Script ================== ***/
-
-/***  START BEFORE LEAVING ***/
-if($('#before-leaving').length) {
-    var modal =  $('#before-leaving').remodal({});
-        $(document).mouseleave(function(){
-            if($.cookie('before_leaving') != 'true') {
-                if(modal.getState() != 'opened') {
-                    modal.open();
-                    $.cookie('before_leaving', 'true', { expires: 7 });
-                }
-            }
-        });
-}
-/***  END BEFORE LEAVING ***/
