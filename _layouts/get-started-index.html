@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include get-started/head.html %}
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJTRHS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% include get-started/header.html %}
+        <div class="announcement">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="sidebar-left col-lg-2 col-md-3 col-sm-12">
+                        {% include get-started/search.html %}
+                    </div>
+                    <div class="sidebar-rigth col-lg-8 col-md-6 col-sm-12">
+                        {% include get-started/announcement.html %}
+                    </div>
+                    <div class="sidebar-rigth col-lg-2 col-md-3 col-sm-12" id="guide-switcher-container">
+                        <label for="guide-switcher">Guide : </label>
+                        <select name="guide-switcher" id="guide-switcher">
+                            {% for version in site.data.get_started.menu reversed %}
+                                {% assign version_url = 'v' | append: version.version | append: '/' %}
+                                {% if version.latest %}
+                                    {% assign version_url = '' %}
+                                {% endif %}
+                                <option data-href="{{site.url}}/get-started/{{version_url}}" value="{{ version.version }}" {% if version.version == page.version %} selected {%endif%} >v{{ version.version }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <section id="{{ page.id }}" class="main-section">
+                        <div id="chapter">
+                            <span>{{ chapter_title }}</span>
+                        </div>
+                        {{ content }}
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <div class="feedback hidden">
+            <span class="desc">Is this page helpful ?</span>
+            <button class="btn">Yes</button>
+            <button class="btn">Non</button>
+        </div>
+        <div class=" disqus_thread hidden">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div id="disqus_thread"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            {% include get-started/footer.html %}
+        </footer>
+        {% include type_form.html %}
+        {% include get-started/sync_scripts.html %}
+        <script>
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'wakandasoft/Lobby'
+        };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    </body>
+</html>

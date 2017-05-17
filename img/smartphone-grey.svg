@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="97" viewBox="0 0 51 97">
+    <defs>
+        <path id="a" d="M4 13h9v9H4z"/>
+        <path id="b" d="M4 27h9v9H4z"/>
+        <path id="c" d="M4 41h9v9H4z"/>
+        <path id="d" d="M4 55h9v9H4z"/>
+        <path id="e" d="M0 0h41v8H0z"/>
+        <filter id="f" width="102.4%" height="112.5%" x="-1.2%" y="-6.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="-1" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0.835294118 0 0 0 0 0.674509804 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F3F3F3" d="M46.275 94.194H4.725C3.221 94.194 2 92.992 2 91.544V4.844c0-1.453 1.227-2.65 2.725-2.65h41.55c1.504 0 2.725 1.203 2.725 2.65v86.702c0 1.462-1.212 2.649-2.725 2.649zM4 10v72h43V10H4z"/>
+        <path fill="#FFF" d="M5 11h41v70H5V11zm20.45 81.408c-2.255 0-4.083-1.79-4.083-3.998 0-2.207 1.828-3.997 4.084-3.997 2.255 0 4.083 1.79 4.083 3.997 0 2.208-1.828 3.998-4.083 3.998z"/>
+        <path fill="#555" fill-rule="nonzero" d="M46.259 96.006H4.725c-2.601 0-4.725-2.09-4.725-4.65V4.844C0 2.274 2.134.193 4.725.193h41.55C48.876.194 51 2.284 51 4.844v86.702c0 2.576-2.132 4.46-4.741 4.46zm.016-1.812c1.513 0 2.725-1.187 2.725-2.65V4.655c0-1.447-1.221-2.649-2.725-2.649H4.725C3.227 2.005 2 3.202 2 4.655v86.89c0 1.447 1.221 2.649 2.725 2.649h41.55zM4 10h43v72H4V10zm1 1v70h41V11H5zm12-4a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2H17zm8.45 86.408c-2.802 0-5.083-2.233-5.083-4.998s2.28-4.997 5.084-4.997c2.802 0 5.083 2.232 5.083 4.997 0 2.765-2.28 4.998-5.083 4.998zm0-1c2.256 0 4.084-1.79 4.084-3.998 0-2.207-1.828-3.997-4.083-3.997-2.256 0-4.084 1.79-4.084 3.997 0 2.208 1.828 3.998 4.084 3.998z"/>
+        <g>
+            <g transform="translate(5 11)">
+                <use fill="#C8F8EF" xlink:href="#a"/>
+                <path stroke="#00D5AC" d="M4.5 13.5h8v8h-8z"/>
+            </g>
+            <path fill="#00D5AC" d="M20 26h15v2H20zM20 30h21v1H20z"/>
+            <g transform="translate(5 11)">
+                <use fill="#C8F8EF" xlink:href="#b"/>
+                <path stroke="#00D5AC" d="M4.5 27.5h8v8h-8z"/>
+            </g>
+            <path fill="#00D5AC" d="M20 40h14.214v2H20zM20 44h21v1H20z"/>
+            <g transform="translate(5 11)">
+                <use fill="#C8F8EF" xlink:href="#c"/>
+                <path stroke="#00D5AC" d="M4.5 41.5h8v8h-8z"/>
+            </g>
+            <path fill="#00D5AC" d="M20 54h14.214v2H20zM20 58h21v1H20z"/>
+            <g transform="translate(5 11)">
+                <use fill="#C8F8EF" xlink:href="#d"/>
+                <path stroke="#00D5AC" d="M4.5 55.5h8v8h-8z"/>
+            </g>
+            <path fill="#00D5AC" d="M20 69h14v2H20zM20 73h21v1H20z"/>
+            <g transform="translate(5 11)">
+                <use fill="#C8F8EF" xlink:href="#e"/>
+                <use fill="#000" filter="url(#f)" xlink:href="#e"/>
+            </g>
+        </g>
+    </g>
+</svg>
