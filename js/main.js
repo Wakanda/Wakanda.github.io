@@ -1853,7 +1853,7 @@ var platformDisplayedNames = {
  * Download button main logic
  */
 
-var stableLinks = communityLinks("stable");
+var stableLinks = communityLinks("communiy_stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
 var entrepriseLink = {
