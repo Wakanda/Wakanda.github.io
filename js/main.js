@@ -2293,13 +2293,17 @@ if($('.what-we-do').length) {
 /***  START BEFORE LEAVING ***/
 if($('#before-leaving').length) {
     var modal =  $('#before-leaving').remodal({});
-        $(window).blur(function(){
-            //if($.cookie('before_leaving') != 'true') {
+    var i = 0;
+        $('html').mouseleave(function(){
+            if(i>0) {
                 if(modal.getState() != 'opened') {
                     modal.open();
-                    //$.cookie('before_leaving', 'true', { expires: 7 });
+                    $.cookie('before_leaving', 'true', { expires: 7 });
                 }
-            //}
+            }
         });
+        $('html').mouseenter(function() {
+            i++;
+        })
 }
 /***  END BEFORE LEAVING ***/
