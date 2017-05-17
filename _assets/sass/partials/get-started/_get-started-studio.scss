@@ -156,6 +156,17 @@ body{
             color: #555555;
             font-weight: normal;
         }
+        a{
+            color: #212121;
+            text-decoration: none;
+            &:hover, &:focus, &:active{
+                color: #212121;
+                text-decoration: none;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
         i, span{
             display: inline-block;
             vertical-align: middle;

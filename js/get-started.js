@@ -151,8 +151,8 @@ var origOffsetY = menu.offset().top;
 
 function scroll() {
     var origOffsetY = menu.offset().top;
-    console.log('window'); console.log($(window).scrollTop());
-    console.log('origOffsetY'); console.log(origOffsetY);
+    //console.log('window'); console.log($(window).scrollTop());
+    //console.log('origOffsetY'); console.log(origOffsetY);
     if ($(window).scrollTop() >= origOffsetY && origOffsetY>0) {
         $('.io-header-container').addClass('sticky');
     } else {
@@ -324,14 +324,14 @@ if($('#before-leaving').length) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {
-        console.log('Loaded');
+        //console.log('Loaded');
         setTimeout(function() {
             i++;
-            console.log('from load ===> i : '+i);
+            //console.log('from load ===> i : '+i);
         }, 1000);
     });
     $('body').mouseleave(function(){
-        console.log('from leave ===> i : '+i);
+        //console.log('from leave ===> i : '+i);
         if($.cookie('before_leaving') != 'true' && i>0) {
             if(modal.getState() != 'opened') {
                 modal.open();
