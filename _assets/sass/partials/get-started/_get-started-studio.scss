@@ -99,6 +99,7 @@ body{
             @include font-size(52px);
             font-weight: bold;
             line-height: 1.27;
+            margin-top: -30px !important;
         }
         h3{
             @include font-size(28px);
@@ -143,6 +144,26 @@ body{
         }
         .no-small h4{
             margin-top: 30px;
+        }
+    }
+    #down-section{
+        padding: 40px 0;
+        text-align: center;
+        h3{
+            @include font-size(18px);
+            line-height: 1.94;
+            text-align: center;
+            color: #555555;
+            font-weight: normal;
+        }
+        i, span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            @include font-size(14px);
+            line-height: 2.5;
+            margin-left: 5px;
         }
     }
 }

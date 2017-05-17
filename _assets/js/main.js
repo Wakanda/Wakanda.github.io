@@ -97,7 +97,7 @@ $(function() {
  */
 
 var platformLinkCollection = {
-    community : communityLinks("stable"),
+    community : communityLinks("communiy_stable"),
     communityPreview : communityLinks("preview")
 };
 
