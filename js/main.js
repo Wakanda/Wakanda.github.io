@@ -1773,8 +1773,8 @@ for (var key in platformNames) {
 /**
  * Home page
  */
-if($('#bowak-contact-23').length) {
-    var form = $('#bowak-contact-23');
+if($('#form-download-enterprise').length) {
+    var form = $('#form-download-enterprise');
     //@TODO START REMOVE LINE
     var OS_enterprise = {
         "macOS": "Mac",
@@ -2174,4 +2174,29 @@ if($('.what-we-do').length) {
     });
 }
 
+
 /*** ================== End What we do Script ================== ***/
+
+/***  START BEFORE LEAVING ***/
+if($('#before-leaving').length) {
+    var modal =  $('#before-leaving').remodal({});
+    var i = 0;
+    $(window).on('load', function(e) {
+        //console.log('Loaded');
+        setTimeout(function() {
+            i++;
+            //console.log('from load ===> i : '+i);
+        }, 1000);
+    });
+    $('body').mouseleave(function(){
+        //console.log('from leave ===> i : '+i);
+        if($.cookie('before_leaving') != 'true' && i>0) {
+            if(modal.getState() != 'opened') {
+                modal.open();
+                $.cookie('before_leaving', 'true', { expires: 7 });
+            }
+        }
+    });
+}
+/***  END BEFORE LEAVING ***/
+

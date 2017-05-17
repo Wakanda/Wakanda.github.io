@@ -8,7 +8,7 @@
         <h2 class="bowak-center">Entreprise Edition : 30 days trial</h2>
     </div>
 </div>
-<form name="bowak-contact" id="bowak-contact-23" method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member"
+<form name="bowak-contact" id="form-download-enterprise" method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member"
 class="form-horizontal" novalidate>
     <input type="hidden" value="23" name="list_id">
     <div class="form-group">
@@ -61,7 +61,7 @@ class="form-horizontal" novalidate>
 <script src="https://backoffice.wakanda.io/js/jquery.validate.min.js"></script>
 <script src="https://backoffice.wakanda.io/js/wakanda-form.js"></script>
 <script>
-    var frm = $('form#bowak-contact-23');
+    var frm = $('form#form-download-enterprise');
     frm.submit(function(ev) {
         if (grecaptcha.getResponse() == '') {
             $('#recaptcha-container .error').removeClass('hidden');
@@ -83,7 +83,7 @@ class="form-horizontal" novalidate>
                     },
                     error: function(jqXHR, textStatus) {
                         $("#success-bowak").hide();
-                        $("#error-bowak").html(jqXHR.responseText);
+                        $("#error-bowak").html('An error handler when saving to our database, please try again !');
                         $("#error-bowak").show();
                     }
                 });
