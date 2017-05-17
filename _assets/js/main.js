@@ -582,13 +582,13 @@ if($('.what-we-do').length) {
 /***  START BEFORE LEAVING ***/
 if($('#before-leaving').length) {
     var modal =  $('#before-leaving').remodal({});
-        $(document).mouseleave(function(){
-            if($.cookie('before_leaving') != 'true') {
+        $(window).blur(function(){
+            //if($.cookie('before_leaving') != 'true') {
                 if(modal.getState() != 'opened') {
                     modal.open();
-                    $.cookie('before_leaving', 'true', { expires: 7 });
+                    //$.cookie('before_leaving', 'true', { expires: 7 });
                 }
-            }
+            //}
         });
 }
 /***  END BEFORE LEAVING ***/
