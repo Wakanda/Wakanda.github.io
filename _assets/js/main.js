@@ -51,7 +51,15 @@ $('.scroll-to').click(function(){
 	return false;
 });
 
+function redirectAfterDownload(type) {
+    setTimeout(function() {
+        window.location.href = "/get-started/confirm-download-"+type;
+    }, 3000);
+}
 
+$("#community-dl").click(function() {
+    redirectAfterDownload("community");
+});
 /*
  * Download Community Edition links configuration
  */
@@ -97,7 +105,7 @@ $(function() {
  */
 
 var platformLinkCollection = {
-    community : communityLinks("stable"),
+    community : communityLinks("communiy_stable"),
     communityPreview : communityLinks("preview")
 };
 
@@ -142,7 +150,7 @@ var platformDisplayedNames = {
  * Download button main logic
  */
 
-var stableLinks = communityLinks("stable");
+var stableLinks = communityLinks("communiy_stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
 var entrepriseLink = {
@@ -176,8 +184,8 @@ for (var key in platformNames) {
 /**
  * Home page
  */
-if($('#bowak-contact-23').length) {
-    var form = $('#bowak-contact-23');
+if($('#form-download-enterprise').length) {
+    var form = $('#form-download-enterprise');
     //@TODO START REMOVE LINE
     var OS_enterprise = {
         "macOS": "Mac",
@@ -186,7 +194,7 @@ if($('#bowak-contact-23').length) {
         "linux32": "Linux 32bits (Server Only)",
         "linux64": "Linux 64bits (Server Only)",
     }
-    console.log();
+    //console.log();
     $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
     //@TODO END REMOVE LINE
     function download_enterprise_succes() {
@@ -202,6 +210,7 @@ if($('#bowak-contact-23').length) {
             var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
             $('#download-community').attr('action', link);
             $('#download-community').submit();
+            redirectAfterDownload("enterprise");
         });
     }
 
@@ -577,4 +586,28 @@ if($('.what-we-do').length) {
     });
 }
 
+
 /*** ================== End What we do Script ================== ***/
+
+/***  START BEFORE LEAVING ***/
+if($('#before-leaving').length) {
+    var modal =  $('#before-leaving').remodal({});
+    var i = 0;
+    $(window).on('load', function(e) {
+        //console.log('Loaded');
+        setTimeout(function() {
+            i++;
+            //console.log('from load ===> i : '+i);
+        }, 2000);
+    });
+    $('body').mouseleave(function(){
+        //console.log('from leave ===> i : '+i);
+        if($.cookie('before_leaving') != 'true' && i>0) {
+            if(modal.getState() != 'opened') {
+                modal.open();
+                $.cookie('before_leaving', 'true', { expires: 7 });
+            }
+        }
+    });
+}
+/***  END BEFORE LEAVING ***/

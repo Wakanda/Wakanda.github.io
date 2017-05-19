@@ -1,11 +1,12 @@
 
 
-@import "partials/get-started/base";
 @import "partials/get-started/lib/bootstrap.min.scss";
 @import "partials/get-started/themes/wakanda/theme.scss";
 @import "partials/get-started/themes/wakanda/overrides.scss";
 @import "partials/get-started/code/github.scss";
 @import "partials/get-started/lib/gifplayer.scss";
+@import "partials/get-started/base";
+
 
 html {
   min-height: 100%;
@@ -568,4 +569,9 @@ h2{
     min-width: 30%;
     text-align-last: center;
   }
+}
+
+
+.menu-active{
+  font-weight: bold !important;
 }
