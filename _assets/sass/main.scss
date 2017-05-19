@@ -293,6 +293,11 @@ a.top-title {
 			@media (max-width: 992px) {
 				padding: 60px 0;
 			}
+			@media (max-width: 576px) {
+				padding: 10px 0;
+				margin-bottom: 0;
+			}
+			
 		}
 	}
 	.download-wakanda{
