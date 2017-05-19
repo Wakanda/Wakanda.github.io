@@ -9,16 +9,19 @@
 
 ### Releases
 
-- to set new releases for the download sections (stable and preview versions), edit `js/main.js`:
+- to set new community releases for the download sections (stable and preview versions), edit `_assets/js/main.js`:
 
 ```
-var versionCommunityLink = { 
-    stable: "1.1.3",
-    preview: "2.0.1"
+var versionLinks = { 
+communiy_stable: "2.0.3",
+//preview: "2.0.1",
+enterprise: "2.0.3"
 };
 ```
+- and update the enterprise version in [back-office] (https://backoffice.wakanda.io/)
 
 > Find advanced configuration options in `js/main.js`.
+
 
 ## Development
 
@@ -26,7 +29,7 @@ var versionCommunityLink = {
 
 This website is based on [Jekyll](https://jekyllrb.com/). It is hosted on Github Pages.
 
-> **Note:** push your changes to the `gh-pages` branch in order to publish the website on Github Pages. 
+> **Note:** push your changes to the `gh-page` branch in order to publish them on preproduction. 
 
 ### Setup
 
@@ -35,11 +38,23 @@ This website is based on [Jekyll](https://jekyllrb.com/). It is hosted on Github
 ```
 $ gem install jekyll bundler
 ```
+#### Install bundle (Jekyll Plugin)
+```
+$ cd wakanda.github.io
+$ bundle install 
+```
 
+#### Install Gulp
+
+```
+$ cd wakanda.github.io
+$ npm install
+$ npm install gulp -g
+```
 #### Run the website
 
 ```
-$ cd wakanda.io
+$ cd wakanda.github.io
 $ bundle exec jekyll serve
 ```
 
@@ -49,32 +64,70 @@ $ bundle exec jekyll serve
 
 - to update the main menu layout, edit `_includes/menu.html`
 - to update the general layout, edit `_layouts/default.html`
+- to update the blank layout, edit `_layouts/blank.html`
+- to update the marketplace layout, edit `_layouts/marketplace.html`
+- to update the intern pages layout, edit `_layouts/page.html`
 
 ### Style 
 
-- to update the Wakanda style, edit `_scss_partials/_*.scss` files and `css/main.scss`
+- to update the Wakanda style, edit `_assets/saas/_*.scss` files and `_assets/saas/main.scss`
 
-The `_scss_partials/_base.scss` file should help finding which file to edit:
+The `_assets/saas/partials/_base.scss` file should help finding which file to edit:
 
 ```
+/** Mixins */
+@import "mixin";
+
 /** General theme */
 @import "variables";
 @import "buttons";
+@import "icons";
+@import "type";
+@import "layout";
+@import "mail_form";
 
 /** Sections **/
 @import "navigation";
 @import "headlines";
+@import "slideshow";
+@import "features";
 @import "download";
+@import "community";
+@import "quotes";
+@import "events";
+@import "footer";
+
+/** Pages **/
+@import "pricing";
+@import "marketplace";
+@import "partners";
+@import "whitepaper";
+@import "what_we_do";
+@import "landing";
 
 /** Effects */
 @import "strips";
 @import "typed";
 ```
-
+- to compile the scss files from the site:
+```
+$ cd wakanda.github.io
+$ gulp site_css
+```
+- to compile the scss files from the site at each changes:
+```
+$ cd wakanda.github.io
+$ gulp watch
+```
 ### Scripts
 
-- to configure Google Analytics or similar services, edit `_includes/analytics.html`
 - to add synchronous scripts (to be executed after page load), edit `_includes/sync_scripts.html`
+- to change js files _assets/js/main.js
+- to uglify js files after a change :
+```
+$ cd wakanda.github.io
+$ gulp site_js
+```
 
 > **Note:** once Jekyll is started with `jekyll serve`, it will look for file changes and automatically compile `scss` files to `css`.
 
