@@ -1762,7 +1762,15 @@ $('.scroll-to').click(function(){
 	return false;
 });
 
+function redirectAfterDownload(type) {
+    setTimeout(function() {
+        window.location.href = "/get-started/confirm-download-"+type;
+    }, 3000);
+}
 
+$("#community-dl").click(function() {
+    redirectAfterDownload("community");
+});
 /*
  * Download Community Edition links configuration
  */
@@ -1913,6 +1921,7 @@ if($('#form-download-enterprise').length) {
             var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
             $('#download-community').attr('action', link);
             $('#download-community').submit();
+            redirectAfterDownload("enterprise");
         });
     }
 

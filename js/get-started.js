@@ -341,3 +341,17 @@ if($('#before-leaving').length) {
     });
 }
 /***  END BEFORE LEAVING ***/
+
+
+
+function redirectAfterDownload(type) {
+    setTimeout(function() {
+        window.location.href = "/get-started/confirm-download-"+type;
+    }, 3000);
+}
+
+if($(".download a").length) {
+    $(".download a").click(function() {
+        redirectAfterDownload('community');
+    })
+}
