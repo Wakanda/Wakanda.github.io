@@ -201,8 +201,8 @@ if($('#before-leaving').length) {
 
 function redirectAfterDownload(type) {
     setTimeout(function() {
-        window.location.href = "https://wakanda.github.io/get-started/confirm-download-"+type;
-    }, 2000);
+        window.location.href = "/get-started/confirm-download-"+type;
+    }, 3000);
 }
 
 if($(".download a").length) {
