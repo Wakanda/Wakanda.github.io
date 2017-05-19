@@ -64,7 +64,15 @@
         line-height: 1.5;
         letter-spacing: 1px;
         text-align: center;
-        margin: 10px 0 30px;
+        margin: 10px 0 0px;
+    }
+    .title{
+        margin-bottom: 30px;
+        p{
+            @include font-size(15px);
+            font-weight: 300;
+            text-align: center;
+        }
     }
     .download-community{
          .dropdown-menu {
@@ -104,7 +112,7 @@
                  tr:nth-of-type(odd) {
                     background-color: rgba(0, 0, 0, 0.05);
                 }
-                
+
             }
         }
     }
@@ -140,14 +148,6 @@
         }
     }
     #server-studio{
-        .title{
-            margin-bottom: 30px;
-            p{
-                @include font-size(15px);
-                font-weight: 300;
-                text-align: center;
-            }
-        }
         .block-comp {
             width: 80%;
             margin: 0 auto;
@@ -179,7 +179,7 @@
                 }
             }
         }
-        
+
         .studio{
             img{
                 @include border-radius(50%);
@@ -266,7 +266,7 @@
             padding: 40px 0;
             text-align: center;
             p{
-                font-family: MyriadPro;
+                font-family: Roboto;
                 font-size: 44px;
                 font-weight: bold;
                 line-height: 1.36;
