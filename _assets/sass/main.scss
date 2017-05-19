@@ -290,6 +290,9 @@ a.top-title {
 			img{
 				width: 100%;
 			}
+			@media (max-width: 992px) {
+				padding: 60px 0;
+			}
 		}
 	}
 	.download-wakanda{
