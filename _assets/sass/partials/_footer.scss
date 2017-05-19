@@ -4,14 +4,14 @@
     font-size: 0.82rem;
     overflow: hidden;
     padding: 3rem 0 0;
-    @media (max-width:768px) {
+    @media (max-width:767px) {
         background-color: #fff;
         color: $base-color;
         padding: 0;
     }
     a {
         color: $base-light-color;
-        @media (max-width:768px) {
+        @media (max-width:767px) {
             color: $base-color;
         }
         &:hover, &:focus, &:active {
@@ -29,7 +29,7 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        @media (max-width:768px) {
+        @media (max-width:767px) {
             & {
                 padding-left: 1.25rem;
             }
@@ -50,7 +50,7 @@
         margin-top: 1rem;
         min-height: 3.125rem;
         overflow: hidden;
-        @media (max-width:768px) {
+        @media (max-width:767px) {
             background-color: $light-bg;
             margin-top: 0;
         }
@@ -68,7 +68,7 @@
         list-style-type: none;
         margin: 15px 0 0 30px;
         padding: 0;
-        @media (min-width:768px) {
+        @media (min-width:767px) {
             margin-right: 8px;
         }
         @media (min-width:992px) {
@@ -88,7 +88,7 @@
             margin-bottom: 20px;
         }
     }
-    @media (max-width:768px) {
+    @media (max-width:767px) {
         .container {
             width: 100%;
         }
@@ -125,7 +125,7 @@
             }
         }
     }
-    @media (min-width:768px) {
+    @media (min-width:767px) {
         #accordion {
             margin: 0 auto;
             max-width: 100%;

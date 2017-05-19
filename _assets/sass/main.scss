@@ -282,6 +282,9 @@ a.top-title {
 				color: $highlighted-color-transition;
 				letter-spacing: 0;
 			}
+			@media (max-width: 768px) {
+				padding: 40px 0;
+			}
 		}
 		.img-container{
 			vertical-align: middle;
