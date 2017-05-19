@@ -598,7 +598,7 @@ if($('#before-leaving').length) {
         setTimeout(function() {
             i++;
             //console.log('from load ===> i : '+i);
-        }, 1000);
+        }, 2000);
     });
     $('body').mouseleave(function(){
         //console.log('from leave ===> i : '+i);

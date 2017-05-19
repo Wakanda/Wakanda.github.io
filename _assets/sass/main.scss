@@ -258,12 +258,12 @@ a.top-title {
 		}
 	}
 	.item{
-		padding: 80px 0;
 		border-bottom: 1px solid $btn-secondary-light-bd;
 		&:last-child{
 			border: none;
 		}
 		.content-container{
+			padding: 80px 0;
 			vertical-align: middle;
 			h3{
 				@include font-size(28px);
@@ -285,7 +285,8 @@ a.top-title {
 		}
 		.img-container{
 			vertical-align: middle;
-			padding: 0 40px;
+			/*padding: 0 40px;*/
+			width: 100%;
 			img{
 				width: 100%;
 			}
