@@ -45,10 +45,10 @@
 }
 
 .btn-success{
-    background-color: $highlighted-color;
+    background-color: $highlighted-color-transition;
     color: $white-color;
     &:hover, &:focus, &:active {
-        background-color: $highlighted-color-transition;
+        background-color: $highlighted-color;
         color: $white-color;
     }
 }

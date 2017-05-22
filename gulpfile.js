@@ -44,7 +44,7 @@ gulp.task('getstarted_css', function(){
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(concat('get-started.css'))
     .pipe(gulp.dest('css/'))
-    .pipe(cleanCSS({compatibility: 'ie7'}))
+    .pipe(cleanCSS({compatibility: 'ie7', rebase: false}))
     .pipe(gulp.dest('css/'));
 });
 
