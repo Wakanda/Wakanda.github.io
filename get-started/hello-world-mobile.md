@@ -12,6 +12,9 @@ First, download and install **Wakanda Community Edition**
 - On [Windows](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.3/wakanda-community-all_2.0.3_x64.msi "download")
 - On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.3/wakanda-community-all_2.0.3_x64.dmg "download")
 
+> **TIPS**: 
+> - Wakanda supports Windows 10, Windows Server 2016, macOS 10.11 or above and Ubuntu 16.04 LTS
+
 Now we can start our **HelloWorld** project.  
 
 ## Step 2: Choose your template
@@ -21,7 +24,7 @@ We can choose the components we want in our app amoung mobile front, web front a
 In this example we are going to create a Hello World for an *Android app with Ionic2*
 
 > **WARNING**:
-> -You need to use Angular2 to create an app with Ionic2, but you don't need any Angular2 knowledge for this **Hello World**. It works the same way with an other template.
+> - You need to use Angular2 to create an app with Ionic2, but you don't need any Angular2 knowledge for this **Hello World**. It works the same way with an other template.
 
 
 To do that, we're going to launch the studio <img src="../img/iconWakanda.png"/> and click on **"Create a new solution"**:
