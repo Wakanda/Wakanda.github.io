@@ -355,3 +355,54 @@ if($(".download a").length) {
         redirectAfterDownload('community');
     })
 }
+
+
+if($(".feedback").length) {
+    var feedback = $('.feedback');
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+        var needed = {ip : "IP",country_code : "Country code", time_zone : "Time zone", latitude : "Latitude", longitude : "Longitude"};
+        feedback.append('<input type="hidden" name="date" value="'+new Date()+'">');
+        var url      = window.location.href;     // Returns full URL
+        feedback.append('<input type="hidden" name="Page link" value="'+url+'">');
+        feedback.append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
+        $.each(data, function(index, value) {
+            if(index in needed)
+                feedback.append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
+        });
+    });
+
+    $('.first-question', feedback).change(function(){
+        if ($(this).val() == 'No') {
+            $('.second-question').slideDown( "slow" );
+        }else {
+            $('.second-question').slideUp( "slow" );
+        }
+        $('input[type="submit"]').fadeIn( "slow" );;
+    });
+
+    $('form', feedback).submit(function(ev) {
+        console.log('Submited');
+        $.ajax({
+            type: $('form', feedback).attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: $('form', feedback).attr("action"),
+            data: $('form', feedback).serialize(),
+            success: function(data) {
+                $('.feedback-message', feedback).addClass('success');
+                $('.feedback-message', feedback).html('Sended with success');
+                $('form', feedback).slideUp( "slow" );
+                $('.feedback-message', feedback).slideDown( "slow" );
+            },
+            error: function(jqXHR, textStatus) {
+                $('.feedback-message', feedback).addClass('error');
+                $('.feedback-message', feedback).html('Error handler when sended');
+                $('form', feedback).slideUp( "slow" );
+                $('.feedback-message', feedback).slideDown( "slow" );
+            }
+        });
+        ev.preventDefault();
+        return false;
+    });
+}
