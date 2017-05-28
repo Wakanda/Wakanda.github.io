@@ -361,13 +361,13 @@ if($(".feedback").length) {
     var feedback = $('.feedback');
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = {ip : "IP",country_code : "Country code", time_zone : "Time zone", latitude : "Latitude", longitude : "Longitude"};
-        feedback.append('<input type="hidden" name="date" value="'+new Date()+'">');
+        //$('form', feedback).append('<input type="hidden" name="date" value="'+new Date()+'">');
         var url      = window.location.href;     // Returns full URL
-        feedback.append('<input type="hidden" name="Page link" value="'+url+'">');
-        feedback.append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
+        $('form', feedback).append('<input type="hidden" name="Page link" value="'+url+'">');
+        $('form', feedback).append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
         $.each(data, function(index, value) {
             if(index in needed)
-                feedback.append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
+                $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
         });
     });
 
