@@ -214,12 +214,11 @@ if($(".download a").length) {
 
 if($(".feedback").length) {
     var feedback = $('.feedback');
+    var url      = window.location.href;     // Returns full URL
+    $('form', feedback).append('<input type="hidden" name="Page link" value="'+url+'">');
+    $('form', feedback).append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = {ip : "IP",country_code : "Country code", time_zone : "Time zone", latitude : "Latitude", longitude : "Longitude"};
-        //$('form', feedback).append('<input type="hidden" name="date" value="'+new Date()+'">');
-        var url      = window.location.href;     // Returns full URL
-        $('form', feedback).append('<input type="hidden" name="Page link" value="'+url+'">');
-        $('form', feedback).append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
         $.each(data, function(index, value) {
             if(index in needed)
                 $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
