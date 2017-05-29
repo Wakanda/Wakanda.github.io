@@ -224,6 +224,7 @@ if($(".feedback").length) {
             if(index in needed)
                 $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
         });
+        $('.feedback').show();
     });
 
     $('.first-question', feedback).change(function(){
@@ -247,13 +248,13 @@ if($(".feedback").length) {
             url: $('form', feedback).attr("action"),
             data: $('form', feedback).serialize(),
             success: function(data) {
-                $('.feedback-message', feedback).addClass('success');
+                //$('.feedback-message', feedback).addClass('success');
                 $('.feedback-message', feedback).html('Thanks for your feedback');
                 $('form', feedback).slideUp( "slow" );
                 $('.feedback-message', feedback).slideDown( "slow" );
             },
             error: function(jqXHR, textStatus) {
-                $('.feedback-message', feedback).addClass('error');
+                //$('.feedback-message', feedback).addClass('error');
                 $('.feedback-message', feedback).html('Error handler when sended');
                 $('form', feedback).slideUp( "slow" );
                 $('.feedback-message', feedback).slideDown( "slow" );
