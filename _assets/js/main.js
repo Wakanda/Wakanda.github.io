@@ -34,6 +34,14 @@ function scroll() {
     } else {
         $('.fixed-top').removeClass('sticky');
     }
+
+    if($('body.has-bg').length) {
+        if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
+            $('.main-nav').removeClass('full-bg-menu');
+        }else {
+            $('.main-nav').addClass('full-bg-menu');
+        }
+    }
 }
 document.onscroll = scroll;
 

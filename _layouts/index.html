@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="default">
+        {% include tag_manager_body.html %}
+        <div>
+           {% include menu.html %} 
+        </div>
+        <div>
+            {{ content }}
+        </div>
+        <footer id="footer">
+            {% include footer.html %}
+        </footer>
+        {% include type_form.html %}
+        {% include sync_scripts.html %}
+    </body>
+</html>
