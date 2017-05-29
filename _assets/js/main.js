@@ -41,7 +41,7 @@ $('#navbarmenu-toggle').click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });
 
-if($('body.full-bg').length) {
+if($('body.has-bg').length) {
     $(document).on('scroll', function() {
         if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
             $('.main-nav').removeClass('full-bg-menu');
