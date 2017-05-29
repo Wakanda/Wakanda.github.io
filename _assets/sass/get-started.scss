@@ -283,6 +283,11 @@ h2{
       font-weight: 300;
       letter-spacing: 1px;
     }
+    p.description, p.feedback-message{
+      @include font-size(16px);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
     .label-inline-item{
       display: inline-block;
       vertical-align: top;
@@ -296,12 +301,6 @@ h2{
     }
     input[type="submit"]{
       margin-bottom: 20px !important;
-    }
-    .feedback-message{
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 300;
     }
     .success{
       color: #5cb85c;
