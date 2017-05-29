@@ -13,6 +13,9 @@ First, download and install **Wakanda Community Edition**
 - On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.3/wakanda-community-all_2.0.3_x64.dmg "download")
 
 
+> **TIPS**: 
+> - Wakanda supports Windows 10, Windows Server 2016, macOS 10.11 or above and Ubuntu 16.04 LTS
+
 Now we can start our **HelloWorldWeb** project.  
 
 ## Step 2: Choose : mobile or web app, angular or angular2 ?

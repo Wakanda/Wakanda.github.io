@@ -21,7 +21,7 @@ img.inline {
 }
 
 nav {
-  background: #fff;
+  //background: #fff;
 
   .fa {
     font-size: 14px;
@@ -259,14 +259,10 @@ h2{
     text-align: center;
     background-color: $square-desc;
     color: white;
-    padding: 20px;
+    padding: 25px 0 0px;
     margin-bottom: 20px;
-    .desc{
-      margin-right: 10px;
-      @include font-size(16px);
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+    width: 100%;
+    z-index: 10000;
     .btn{
       color: white !important;
       background-color: transparent !important;
@@ -278,6 +274,42 @@ h2{
         background-color: white !important;
         color: $square-desc !important;
       }
+    }
+    .form-inline-item{
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      @include font-size(16px);
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    p.description, p.feedback-message{
+      @include font-size(16px);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .label-inline-item{
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      @include font-size(16px);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .radio {
+      margin-right: 20px;
+    }
+    input[type="submit"]{
+      margin-bottom: 20px !important;
+    }
+    .success{
+      color: #5cb85c;
+    }
+    .error{
+      color: #d9534f;
     }
 }
 
