@@ -1,10 +1,13 @@
 <div class="container">
-  <nav class="navbar main-nav fixed-top navbar-light bg-faded">
+  <nav class="navbar main-nav fixed-top navbar-light bg-faded full-bg-menu">
     <div class="row">
       <div class="container">
         <div class="">
-          <a class="logo"  href="/">
+          <a class="logo default-logo"  href="/">
             <img src="/img/logo-wakanda-2x.png" alt="Wakanda Logo" />
+          </a>
+          <a class="logo inversed-logo"  href="/">
+            <img src="/img/logo-wakanda-white.png" alt="Wakanda Logo" />
           </a>
           {% if page.top_title %}
               <a class="top-title" href="{{ page.url }}" style="display: none">{{ page.title }}</a>
