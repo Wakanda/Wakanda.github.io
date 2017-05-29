@@ -372,10 +372,12 @@ if($(".feedback").length) {
     });
 
     $('.first-question', feedback).change(function(){
+        $('.first-question-container', feedback).slideUp("slow");
         if ($(this).val() == 'No') {
             $('.second-question').slideDown( "slow" );
         }else {
             $('.second-question').slideUp( "slow" );
+            $('form', feedback).submit();
         }
         $('input[type="submit"]').fadeIn( "slow" );;
     });
@@ -391,7 +393,7 @@ if($(".feedback").length) {
             data: $('form', feedback).serialize(),
             success: function(data) {
                 $('.feedback-message', feedback).addClass('success');
-                $('.feedback-message', feedback).html('Sended with success');
+                $('.feedback-message', feedback).html('Thanks for your feedback');
                 $('form', feedback).slideUp( "slow" );
                 $('.feedback-message', feedback).slideDown( "slow" );
             },

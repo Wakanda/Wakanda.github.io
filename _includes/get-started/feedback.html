@@ -3,8 +3,8 @@
         <p class="hidden feedback-message"></p>
         <form class="form-horizontal" method="post" action="https://backoffice.wakanda.io/api/feedback/value">
             <input type="hidden" name="type" value="0">
-            <div class="form-group">
-                <label class="label-control label-inline-item">Do you think this page is helpful ? <span class="bowak-asterisk">*</span>
+            <div class="form-group first-question-container">
+                <label class="label-control label-inline-item">Has this page been useful ? <span class="bowak-asterisk">*</span>
                 </label>
                 <div class="form-inline-item">
                     <div class="radio">
@@ -21,25 +21,15 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group  second-question hidden">
-                <label for="" class="label-control label-inline-item">Why not ?</label>
-
-                <div class="form-inline-item">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="TXO36VbG" id="TXO36VbG-0" value="Content isn't clear">Content isn't clear</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="TXO36VbG" id="TXO36VbG-1" value="Didn't understand">Didn't understand</label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="TXO36VbG" id="TXO36VbG-2" value="Don't love it">Don't love it</label>
-                    </div>
+            <div class="second-question hidden">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <p style="margin-bottom: 15px;">Sorry about that</p>
+                    <label for="" class="label-control label-inline-item">Which information were you looking for ?</label>
+                    <textarea row="4" class="form-control"  style="width: 350px; margin: 0 auto;"
+                    name="7Z29ALZk" id="7Z29ALZk"></textarea>
                 </div>
+                <input type="submit" value="Send" class="btn btn-success hidden">
             </div>
-            <input type="submit" value="Send" class="btn btn-success hidden">
         </form>
         
     </div>
