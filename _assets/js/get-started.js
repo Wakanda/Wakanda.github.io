@@ -224,7 +224,7 @@ if($(".feedback").length) {
             if(index in needed)
                 $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
         });
-        $('.feedback').show();
+        //$('.feedback').show();
     });
 
     $('.first-question', feedback).change(function(){
