@@ -34,22 +34,20 @@ function scroll() {
     } else {
         $('.fixed-top').removeClass('sticky');
     }
+
+    if($('body.has-bg').length) {
+        if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
+            $('.main-nav').removeClass('full-bg-menu');
+        }else {
+            $('.main-nav').addClass('full-bg-menu');
+        }
+    }
 }
 document.onscroll = scroll;
 
 $('#navbarmenu-toggle').click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });
-
-if($('body.has-bg').length) {
-    $(document).on('scroll', function() {
-        if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
-            $('.main-nav').removeClass('full-bg-menu');
-        }else {
-            $('.main-nav').addClass('full-bg-menu');
-        }
-    })
-}
 /** End Fixed Menu **/
 
 $('.scroll-to').click(function(){
