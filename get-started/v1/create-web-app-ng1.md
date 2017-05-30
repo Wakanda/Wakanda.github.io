@@ -21,7 +21,7 @@ We can choose the kind of app we want to create : mobile, web or both.
 
 Here we want to create an *Angular web app*.
 
-To do that, we're going to open the studio <img src="/img/iconWakanda.png"/> , and click on **"Create a new solution"**:
+To do that, we're going to open the studio <img src="/img/logo/wakandaio_pic.png"/> , and click on **"Create a new solution"**:
 
 <img src="/img/hp-initial.png"/>
 
