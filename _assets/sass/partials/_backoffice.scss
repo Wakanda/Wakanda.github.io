@@ -1,0 +1,29 @@
+    .bowak-center {
+        text-align: center
+    }
+    ;
+    form[name="bowak-contact"] .error {
+        border-color: red
+    }
+    label.error {
+        color: red;
+    }
+    .success-message {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        padding: 10px 20px;
+    }
+    .danger-message {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        padding: 10px 20px;
+    }
+    .bowak-asterisk {
+        color: #e85c41;
+        font-size: 150%;
+        font-weight: 400;
+        position: relative;
+        top: 5px;
+    }

@@ -1,6 +1,4 @@
-                            <style>
-    .bowak-center{ text-align:center }; form[name="bowak-contact"] .error{ border-color: red } label.error{ color: red; } .success-message{ color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6; padding: 10px 20px;}.danger-message{ color: #a94442; background-color: #f2dede; border-color: #ebccd1; padding: 10px 20px;} .bowak-asterisk{color: #e85c41;font-size: 150%; font-weight: 400; position: relative; top: 5px;}
-</style>
+
 <div id="error-bowak" class="alert alert-danger">Response server here</div>
 <div id="success-bowak" class="alert alert-success">The download succeeded. Now, check your email to get your licence key.</div>
 <div class="row">
@@ -56,40 +54,4 @@ class="form-horizontal" novalidate>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary">
 </form>
-<script src="https://backoffice.wakanda.io/js/jquery-3.1.1.min.js"></script>
-<script src="https://backoffice.wakanda.io/js/jquery.validate.min.js"></script>
-<script src="https://backoffice.wakanda.io/js/wakanda-form.js"></script>
-<script>
-    var frm = $('form#form-download-enterprise');
-    frm.submit(function(ev) {
-        if (grecaptcha.getResponse() == '') {
-            $('#recaptcha-container .error').removeClass('hidden');
-            return false;
-        }else {
-            $('#recaptcha-container .error').addClass('hidden');
-            if (frm.valid()) {
-                $.ajax({
-                    type: frm.attr("method"),
-                    headers: {
-                        "X-Requested-With": "XMLHttpRequest"
-                    },
-                    url: frm.attr("action"),
-                    data: frm.serialize(),
-                    success: function(data) {
-                        //$("#success-bowak").show();
-                        $("#error-bowak").hide();
-                        download_enterprise_succes();
-                    },
-                    error: function(jqXHR, textStatus) {
-                        $("#success-bowak").hide();
-                        $("#error-bowak").html('An error handler when saving to our database, please try again !');
-                        $("#error-bowak").show();
-                    }
-                });
-            }
-        }
-        ev.preventDefault();
-        return false;
-    });
-</script>
                           

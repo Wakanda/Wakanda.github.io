@@ -217,14 +217,6 @@ if($(".feedback").length) {
     var url      = window.location.href;     // Returns full URL
     $('form', feedback).append('<input type="hidden" name="Page link" value="'+url+'">');
     $('form', feedback).append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
-    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-        var needed = {ip : "IP",country_code : "Country code", time_zone : "Time zone", latitude : "Latitude", longitude : "Longitude"};
-        $.each(data, function(index, value) {
-            if(index in needed)
-                $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
-        });
-        //$('.feedback').show();
-    });
 
     $('.first-question', feedback).change(function(){
         $('.first-question-container', feedback).slideUp("slow");
