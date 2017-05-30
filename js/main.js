@@ -1912,9 +1912,17 @@ if($('#form-download-enterprise').length) {
         "win32": "Windows 32 bits",
         "linux32": "Linux 32bits (Server Only)",
         "linux64": "Linux 64bits (Server Only)",
+    };
+    var wakanda_support = {
+        "macOS": "MacOS 10.11 or above",
+        "win64": "Windows 10, Windows Server 2016",
+        "win32": "Windows 10, Windows Server 2016",
+        "linux32": "Ubuntu 16.04 LTS",
+        "linux64": "Ubuntu 16.04 LTS",
     }
     //console.log();
     $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    $('#wakanda-support').html("Wakanda supports " + wakanda_support[getPlatform()]);
     //@TODO END REMOVE LINE
     function download_enterprise_succes() {
         $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
