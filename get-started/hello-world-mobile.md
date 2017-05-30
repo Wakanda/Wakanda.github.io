@@ -27,7 +27,7 @@ In this example we are going to create a Hello World for an *Android app with Io
 > - You need to use Angular2 to create an app with Ionic2, but you don't need any Angular2 knowledge for this **Hello World**. It works the same way with an other template.
 
 
-To do that, we're going to launch the studio <img src="../img/iconWakanda.png"/> and click on **"Create a new solution"**:
+To do that, we're going to launch the studio <img src="../img/logo/wakandaio_pic.png"/> and click on **"Create a new solution"**:
 
 <img src="../img/hp2-initial.png"/>
 

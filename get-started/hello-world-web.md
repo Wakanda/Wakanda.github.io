@@ -26,7 +26,7 @@ Here we want to create an *Angular web app*.
 
 To do this: 
 
-- open the studio <img src="../img/iconWakanda.png"/>
+- open the studio <img src="../img/logo/wakandaio_pic.png"/>
 
 - click on **"Create a new solution"**:
 
