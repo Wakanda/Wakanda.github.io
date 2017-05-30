@@ -491,22 +491,49 @@ body.full-bg{
 body.mobile-bg{
 	#section-headline {
 		background-image: url('/img/home-mobile-bg.png');
+		@media (max-width: 1024px) {
+			background-image: url('/img/home-mobile-bg-1024.jpg');
+		}
+		@media (max-width: 768px) {
+			background-image: url('/img/home-mobile-bg-768.jpg');
+		}
+		@media (max-width: 576px)
+		{
+			background-image: none;
+		}
 	}
 	#section-headline{
 		padding: 120px 0 60px;
-		@media (min-width: 768px)
+		.col-md-12 {
+			max-width: 44%;
+		}
+		h1, .h2{
+			text-align: left;
+		}
+		.h2{
+			margin-top: 10px;
+			strong{
+				display: none;
+			}
+		}
+		p.text-center{
+			text-align: left !important;
+		}
+		@media (max-width: 768px) {
+			.col-md-12 {
+				max-width: 60%;
+			}
+		}
+		@media (max-width: 576px)
 		{
 			.col-md-12 {
-				max-width: 44%;
+				max-width: 100%;
 			}
 			h1, .h2{
-				text-align: left;
+				text-align: center;
 			}
-			.h2{
-				margin-top: 10px;
-				strong{
-					display: none;
-				}
+			p.text-center{
+				text-align: center !important;
 			}
 		}
 		.btn-inverted{
@@ -517,9 +544,6 @@ body.mobile-bg{
 			&:hover, &:visited, &:focus{
 				background-color: $main-color-transition;
 			}
-		}
-		p.text-center{
-			text-align: left !important;
 		}
 
 		.btn{
