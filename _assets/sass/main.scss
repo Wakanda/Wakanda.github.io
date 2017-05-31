@@ -473,7 +473,7 @@ body.full-bg{
 			background-color: $main-color;
 			color: $darken-dark-bg;
 			font-weight: 700;
-			&:hover, &:visited, &:focus{
+			&:hover{
 				background-color: #FFD93C;
 			}
 		}
