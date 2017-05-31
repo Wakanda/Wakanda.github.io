@@ -479,7 +479,8 @@ body.full-bg{
 		}
 		.btn-default{
 			background-color: $white-color;
-			border-color: $white-color;
+			border: none;
+			box-shadow: 0 0 0 1px #ffffff inset;
 			&:hover{
 				background-color: transparent;
 			}
