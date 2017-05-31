@@ -99,7 +99,7 @@ $bg-color-7: #2EBCA1;
 
 #section-feature-highlights{
     @media (max-width: 991px) { 
-        h4{
+        h2{
             display: inline-block;
             margin-left: 10px;
         }
@@ -198,9 +198,10 @@ $bg-color-7: #2EBCA1;
             max-height: 100%;
             margin-bottom: 10px;
         }
-        h4{
+        h2{
             @include font-size(34px);
             font-weight: 700;
+            font-family: Roboto,sans-serif;
         }
     }
 }

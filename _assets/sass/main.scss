@@ -50,15 +50,19 @@ body{
 	//padding: 30px;
 }
 
+
 #page-header{
 	margin-top: 120px;
-	h2{
+	h1, h2{
+        font-family: 'Roboto';
+    }
+	h1{
 		margin-bottom: 10px;
 		@include font-size(64px);
 	}
 	.title-page{
 		margin-bottom: 40px;
-		h3{
+		h2{
 			display: block;
 			@include font-size(24px);
 			text-transform: uppercase;
@@ -571,3 +575,11 @@ body.mobile-bg{
   font-style: italic;
   font-size: 13px;
 }
+
+.legal-center{
+	@include font-size(16px);
+	text-align: center;
+	margin: 0 0 16px 0;
+	font-weight: 500;
+}
+
