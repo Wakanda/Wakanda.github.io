@@ -481,10 +481,16 @@ body.full-bg{
 	.full-bg-menu{
 		li a{
 			color: #cdced0;
-			text-transform: uppercase;
-			font-size: 14px;
+			//text-transform: uppercase;
+			//font-size: 14px;
 			&:hover{
 				color: $main-color;
+			}
+		}
+		li.highlighted-item>a {
+			box-shadow: 0 0 0 1px #ffffff inset;
+			&:hover{
+				box-shadow: 0 0 0 1px  $main-color inset;
 			}
 		}
 		.default-logo{
