@@ -433,6 +433,7 @@ body.has-bg{
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+		background-position: center;
 		#strips{
 			display: none;
 		}
@@ -490,12 +491,22 @@ body.full-bg{
 
 body.mobile-bg{
 	#section-headline {
-		background-image: url('/img/home-mobile-bg.png');
-		@media (max-width: 1024px) {
-			background-image: url('/img/home-mobile-bg-1024.jpg');
+		background-color: #f0f0f0;
+		background-size: contain;
+		background-attachment: scroll;
+		background-image: url('/img/home-mobile-not-copped.jpg');
+		//background-position: 100% 100%;
+		//background-position: center center;
+		//background-position: bottom -35px right -26%;
+		background-position: calc(100% - 100px) calc(100% + 60px);
+		@media (max-width: 1440px) {
+			background-position: calc(100% + 200px) calc(100% + 60px);
+		}
+		@media (max-width: 992px) {
+			background-position: calc(100% + 300px) calc(100% + 60px);
 		}
 		@media (max-width: 768px) {
-			background-image: url('/img/home-mobile-bg-768.jpg');
+			background-position: calc(100% + 240px) calc(100% + 10px);
 		}
 		@media (max-width: 576px)
 		{
@@ -503,7 +514,7 @@ body.mobile-bg{
 		}
 	}
 	#section-headline{
-		padding: 120px 0 60px;
+		padding: 120px 0 0;
 		.col-md-12 {
 			max-width: 44%;
 		}
@@ -519,7 +530,8 @@ body.mobile-bg{
 		p.text-center{
 			text-align: left !important;
 		}
-		@media (max-width: 768px) {
+		@media (max-width: 992px) {
+			padding: 120px 0 0;
 			.col-md-12 {
 				max-width: 60%;
 			}
