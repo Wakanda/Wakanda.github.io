@@ -435,7 +435,7 @@ body.has-bg{
 		margin-top: 0;
 		padding: 200px 0 60px;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
+		//background-attachment: fixed;
 		background-size: cover;
 		background-position: center;
 		#strips{
@@ -473,16 +473,32 @@ body.full-bg{
 			background-color: $main-color;
 			color: $darken-dark-bg;
 			font-weight: 700;
-			&:hover, &:visited, &:focus{
-				background-color: $main-color-transition;
+			&:hover{
+				background-color: #FFD93C;
+			}
+		}
+		.btn-default{
+			background-color: $white-color;
+			border-color: $white-color;
+			&:hover{
+				background-color: transparent;
 			}
 		}
 	}
 	.full-bg-menu{
 		li a{
 			color: #cdced0;
-			text-transform: uppercase;
-			font-size: 14px;
+			//text-transform: uppercase;
+			//font-size: 14px;
+			&:hover{
+				color: $main-color;
+			}
+		}
+		li.highlighted-item>a {
+			box-shadow: 0 0 0 1px #ffffff inset;
+			&:hover{
+				box-shadow: 0 0 0 1px  $main-color inset;
+			}
 		}
 		.default-logo{
 			display: none;
@@ -556,10 +572,12 @@ body.mobile-bg{
 			background-color: $main-color;
 			color: $darken-dark-bg;
 			font-weight: 700;
-			margin-right: 10px;
-			&:hover, &:visited, &:focus{
-				background-color: $main-color-transition;
+			&:hover{
+				background-color: #FFD93C;
 			}
+		}
+		.btn-default{
+			border: none;
 		}
 
 		.btn{
