@@ -9,8 +9,11 @@
     a {
         color: $main-color;
     }
-    h3 {
-        margin-top: 20px;
+    h2 {
+        margin-top: 0;
+        color: #fff;
+        @include font-size(24px);
+        margin-bottom: 6px;
     }
     .btn-success {
         text-align: left;

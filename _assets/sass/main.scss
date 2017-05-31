@@ -50,15 +50,19 @@ body{
 	//padding: 30px;
 }
 
+
 #page-header{
 	margin-top: 120px;
-	h2{
+	h1, h2{
+        font-family: 'Roboto';
+    }
+	h1{
 		margin-bottom: 10px;
 		@include font-size(64px);
 	}
 	.title-page{
 		margin-bottom: 40px;
-		h3{
+		h2{
 			display: block;
 			@include font-size(24px);
 			text-transform: uppercase;
@@ -433,6 +437,7 @@ body.has-bg{
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
+		background-position: center;
 		#strips{
 			display: none;
 		}
@@ -490,23 +495,61 @@ body.full-bg{
 
 body.mobile-bg{
 	#section-headline {
-		background-image: url('/img/home-mobile-bg.png');
+		background-color: #f0f0f0;
+		background-size: contain;
+		background-attachment: scroll;
+		background-image: url('/img/home-mobile-not-copped.jpg');
+		//background-position: 100% 100%;
+		//background-position: center center;
+		//background-position: bottom -35px right -26%;
+		background-position: calc(100% - 100px) calc(100% + 60px);
+		@media (max-width: 1440px) {
+			background-position: calc(100% + 200px) calc(100% + 60px);
+		}
+		@media (max-width: 992px) {
+			background-position: calc(100% + 300px) calc(100% + 60px);
+		}
+		@media (max-width: 768px) {
+			background-position: calc(100% + 240px) calc(100% + 10px);
+		}
+		@media (max-width: 576px)
+		{
+			background-image: none;
+		}
 	}
 	#section-headline{
-		padding: 120px 0 60px;
-		@media (min-width: 768px)
+		padding: 120px 0 0;
+		.col-md-12 {
+			max-width: 44%;
+		}
+		h1, .h2{
+			text-align: left;
+		}
+		.h2{
+			margin-top: 10px;
+			strong{
+				display: none;
+			}
+		}
+		p.text-center{
+			text-align: left !important;
+		}
+		@media (max-width: 992px) {
+			padding: 120px 0 0;
+			.col-md-12 {
+				max-width: 60%;
+			}
+		}
+		@media (max-width: 576px)
 		{
 			.col-md-12 {
-				max-width: 44%;
+				max-width: 100%;
 			}
 			h1, .h2{
-				text-align: left;
+				text-align: center;
 			}
-			.h2{
-				margin-top: 10px;
-				strong{
-					display: none;
-				}
+			p.text-center{
+				text-align: center !important;
 			}
 		}
 		.btn-inverted{
@@ -517,9 +560,6 @@ body.mobile-bg{
 			&:hover, &:visited, &:focus{
 				background-color: $main-color-transition;
 			}
-		}
-		p.text-center{
-			text-align: left !important;
 		}
 
 		.btn{
@@ -535,3 +575,11 @@ body.mobile-bg{
   font-style: italic;
   font-size: 13px;
 }
+
+.legal-center{
+	@include font-size(16px);
+	text-align: center;
+	margin: 0 0 16px 0;
+	font-weight: 500;
+}
+
