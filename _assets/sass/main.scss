@@ -483,6 +483,9 @@ body.full-bg{
 			color: #cdced0;
 			text-transform: uppercase;
 			font-size: 14px;
+			&:hover{
+				color: $main-color;
+			}
 		}
 		.default-logo{
 			display: none;
