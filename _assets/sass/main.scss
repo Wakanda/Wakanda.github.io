@@ -573,9 +573,12 @@ body.mobile-bg{
 			color: $darken-dark-bg;
 			font-weight: 700;
 			margin-right: 10px;
-			&:hover, &:visited, &:focus{
+			&:hover{
 				background-color: $main-color-transition;
 			}
+		}
+		.btn-default{
+			border: none;
 		}
 
 		.btn{
