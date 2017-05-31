@@ -477,6 +477,13 @@ body.full-bg{
 				background-color: #FFD93C;
 			}
 		}
+		.btn-default{
+			background-color: $white-color;
+			border-color: $white-color;
+			&:hover{
+				background-color: transparent;
+			}
+		}
 	}
 	.full-bg-menu{
 		li a{
