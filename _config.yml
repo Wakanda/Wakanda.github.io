@@ -1,7 +1,7 @@
 full_rebuild: true
 name: Wakanda FullStack JavaScript Platform
 author: Wakanda SAS
-url: http://wakanda.io
+url: https://wakanda.github.io
 version: 0.1
 repository: https://github.com/Wakanda/wakanda.io
 branch: gh-pages
