@@ -479,7 +479,8 @@ body.full-bg{
 		}
 		.btn-default{
 			background-color: $white-color;
-			border-color: $white-color;
+			border: none;
+			@include box-shadow(0 0 0 1px #ffffff inset);
 			&:hover{
 				background-color: transparent;
 			}
@@ -495,9 +496,9 @@ body.full-bg{
 			}
 		}
 		li.highlighted-item>a {
-			box-shadow: 0 0 0 1px #ffffff inset;
+			@include box-shadow(0 0 0 1px #ffffff inset);
 			&:hover{
-				box-shadow: 0 0 0 1px  $main-color inset;
+				@include  box-shadow(0 0 0 1px  $main-color inset);
 			}
 		}
 		.default-logo{
