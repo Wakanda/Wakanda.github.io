@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include get-started/head.html %}
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLJTRHS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% include get-started/header.html %}
+        <div class="container-fluid no-left-menu">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                    <section id="{{ page.id }}" class="main-section">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/get-started">Get Started</a></li>
+                            <li class="breadcrumb-item"><a href="/learn-javascript/">Learn JavaScript with Wakanda</a></li>
+                            <li class="breadcrumb-item active">{{page.chapter}}</li>
+                        </ol>
+                        <div id="chapter">
+                            <span>{{ chapter_title }}</span>
+                        </div>
+                        {{ content }}
+                    </section>
+                </div>
+                <div data-spy="scroll" data-target=".navbar " class="col-lg-2 col-md-12 col-sm-12 page">
+                    <nav class="navbar social-media">
+                        <div class="scroll">
+                            {% include get-started/subnav.html %}
+                            {% include get-started/mailing.html %}
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        {% include get-started/feedback.html %}
+        <footer id="footer">
+            {% include get-started/footer.html %}
+        </footer>
+        {% include type_form.html %}
+        {% include get-started/sync_scripts.html %}
+        <script>
+        ((window.gitter = {}).chat = {}).options = {
+            room: 'wakandasoft/Lobby'
+        };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    </body>
+</html>

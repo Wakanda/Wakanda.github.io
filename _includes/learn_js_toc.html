@@ -1,0 +1,25 @@
+<h2>Select your next lesson</h2>
+{% for chapter in site.data.learn_javascript.chapters %}
+<h3 class="chapter">{{ chapter.title }}</h3>
+{% assign chapter_index = forloop.index %}
+<div class="list-group">
+    {% for lesson in chapter.lessons %}
+    {% assign progress = (chapter_index | times: 10 | plus: forloop.index) %}
+    <a href="{{lesson.url}}" class="list-group-item list-group-item-action justify-content-between {{lesson.class}}">
+        <span>
+        {% if progress <= include.progress %}
+        <i class="fa fa-check-square" aria-hidden="true"></i>
+        {% else %}
+        <i class="fa fa-square-o" aria-hidden="true"></i>
+        {% endif %}  
+        {{ lesson.title }}
+        </span>
+        {% if lesson.class == "disabled" %}
+            <span class="badge badge-default badge-pill badge-warning">Coming soon</span>
+        {% else %}
+            {% if progress != include.progress %}<i class="fa fa-chevron-right"></i>{% endif %}
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+{% endfor %}

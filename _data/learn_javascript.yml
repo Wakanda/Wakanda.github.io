@@ -1,0 +1,18 @@
+chapters:
+  - title: Chapter 1 - Variables and values
+    lessons:
+      - title: Data types
+        url: data-types.html
+      - title: Declare and initialize variables
+        url: declare-initialize-variables.html
+      - title: Assign primitive values
+        class: disabled
+  - title: Chapter 2 - Object properties
+    lessons:
+      - title: Set properties
+        class: disabled
+      - title: Use bracket notation with variables
+        class: disabled
+      - title: Access properties
+        class: disabled
+
