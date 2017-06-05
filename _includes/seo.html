@@ -1,0 +1,5 @@
+{% if page.seo_custom %}
+  <link rel="canonical" href="{{ page.seo_custom.canonical }}">
+{% else %}
+  {% seo %}
+{% endif %}
