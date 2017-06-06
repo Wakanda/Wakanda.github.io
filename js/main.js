@@ -1935,13 +1935,6 @@ var platformDisplayedNames = {
 var stableLinks = communityLinks("communiy_stable");
 var previewLinks = communityLinks("preview");
 var platform = getPlatform();
-var entrepriseLink = {
-    macOS: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/mac/wakanda-enterprise-all_"+versionLinks.enterprise+"_x64.dmg",
-    win64: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/windows/wakanda-enterprise-all_"+versionLinks.enterprise+"_x64.msi",
-    //win32: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/windows/wakanda-enterprise-all_"+versionLinks.enterprise+"_x86.msi",
-    linux32: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/linux/wakanda-enterprise-server_"+versionLinks.enterprise+"_i386.deb",
-    linux64: "//bo.wakanda.io/productionchannel/"+versionLinks.enterprise+"/linux/wakanda-enterprise-server_"+versionLinks.enterprise+"_amd64.deb"
-};
 
 
 $(".platform-name").append(platformDisplayedNames[getPlatform()]);
@@ -1987,10 +1980,20 @@ if($('#form-download-enterprise').length) {
     $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
     $('#wakanda-support').html("Wakanda supports " + wakanda_support[getPlatform()]);
     //@TODO END REMOVE LINE
+    
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+        var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
+        $('#download-community', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+        $.each(data, function(index, value) {
+            if(needed.indexOf(index) >= 0)
+            $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+        }); 
+    });
     function download_enterprise_succes() {
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
         var selectedPlateform = os[$( "#mce-OS", form).val()];
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
+        $('#download-community').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
         $('#download-community').attr('action', link);
         $('#download-community').submit();
         redirectAfterDownload("enterprise");

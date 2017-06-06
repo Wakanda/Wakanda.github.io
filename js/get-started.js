@@ -363,17 +363,10 @@ if($(".feedback").length) {
     $('form', feedback).append('<input type="hidden" name="Page link" value="'+url+'">');
     $('form', feedback).append('<input type="hidden" name="Page Title" value="'+$('h1').html()+'">');
 
-    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
-        var needed = {ip : "IP",country_code : "Country code", time_zone : "Time zone", latitude : "Latitude", longitude : "Longitude"};
-        $.each(data, function(index, value) {
-            if(index in needed)
-                $('form', feedback).append('<input type="hidden" name="'+needed[index]+'" value="'+value+'">');
-        });
-        //$('.feedback').show();
-    });
     $('.first-question', feedback).change(function(){
         $('.first-question-container', feedback).slideUp("slow");
         if ($(this).val() == 'No') {
+            submitFeedback(false);
             $('.second-question').slideDown( "slow" );
         }else {
             $('.second-question').slideUp( "slow" );
@@ -383,7 +376,12 @@ if($(".feedback").length) {
     });
 
     $('form', feedback).submit(function(ev) {
-        console.log('Submited');
+        submitFeedback(true);
+        ev.preventDefault();
+        return false;
+    });
+
+    function submitFeedback(final) {
         $.ajax({
             type: $('form', feedback).attr("method"),
             headers: {
@@ -392,19 +390,19 @@ if($(".feedback").length) {
             url: $('form', feedback).attr("action"),
             data: $('form', feedback).serialize(),
             success: function(data) {
-                //$('.feedback-message', feedback).addClass('success');
-                $('.feedback-message', feedback).html('Thanks for your feedback');
-                $('form', feedback).slideUp( "slow" );
-                $('.feedback-message', feedback).slideDown( "slow" );
+                if(final) {
+                    $('.feedback-message', feedback).html('Thanks for your feedback');
+                    $('form', feedback).slideUp( "slow" );
+                    $('.feedback-message', feedback).slideDown( "slow" );
+                }
             },
             error: function(jqXHR, textStatus) {
-                //$('.feedback-message', feedback).addClass('error');
-                $('.feedback-message', feedback).html('Error handler when sended');
-                $('form', feedback).slideUp( "slow" );
-                $('.feedback-message', feedback).slideDown( "slow" );
+                if(final) {
+                    $('.feedback-message', feedback).html('Error handler when sended');
+                    $('form', feedback).slideUp( "slow" );
+                    $('.feedback-message', feedback).slideDown( "slow" );
+                }
             }
         });
-        ev.preventDefault();
-        return false;
-    });
+    }
 }
