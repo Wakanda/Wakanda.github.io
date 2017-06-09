@@ -60,6 +60,6 @@ Your new web application is automatically generated:
 
 The console checks that `node` is installed. If you read "not found", please [install node](https://nodejs.org/en/){:target="_blank"} (it only takes a minute).
 
-The next lesson is coming soon! Follow us on [@WakandaSoft](https://twitter.com/wakandasoft){:target="_blank"} to catch it!
+Let's have a look at the main application files with the [next lesson](assign-primitive-values.html).
 
 {% include learn_js_toc.html progress=12 %}
