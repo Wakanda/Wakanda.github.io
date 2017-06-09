@@ -11,13 +11,19 @@
         <i class="fa fa-check-square" aria-hidden="true"></i>
         {% else %}
         <i class="fa fa-square-o" aria-hidden="true"></i>
-        {% endif %}  
+        {% endif %}
+        {% if progress == include.progress %}
+        <b>{{ lesson.title }}</b>
+        {% else %}
         {{ lesson.title }}
+        {% endif %}
         </span>
         {% if lesson.class == "disabled" %}
-            <span class="badge badge-default badge-pill badge-warning">Coming soon</span>
+            <span class="badge badge-pill badge-warning">Coming soon</span>
         {% else %}
-            {% if progress != include.progress %}<i class="fa fa-chevron-right"></i>{% endif %}
+            {% if progress != include.progress %}
+                <i class="fa fa-chevron-right"></i>
+            {% endif %}
         {% endif %}
     </a>
     {% endfor %}
