@@ -4,9 +4,9 @@ version: 2
 chapter: Chapter 1 - Variables and values
 ---
 
-# Data types
+### JavaScript Principles
 
-## Discover JavaScript data types
+# Discover JavaScript data types
 
 JavaScript has seven data types:
 
@@ -27,7 +27,11 @@ Watch the answer on this video:
 </div>
 </div>
 
-## Discover Wakanda Studio
+<br/>
+
+### Learn with Wakanda
+
+# Discover Wakanda Studio
 
 To practice writing and running JavaScript, you'll only need `node` and Wakanda:
 

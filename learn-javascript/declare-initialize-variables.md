@@ -4,9 +4,9 @@ version: 2
 chapter: Chapter 1 - Variables and values
 ---
 
-# Declare and initialize variables
+### JavaScript Principles
 
-## Declare variables, initialize with primitive values
+# Declare variables, initialize with primitive values
 
 The `var` statement declares a variable, optionally initialized to a value.
 
@@ -23,7 +23,7 @@ Watch the answer on this video:
 </div>
 </div>
 
-## Initialize a variable with an object
+# Initialize a variable with an object
 
 Do you know what _value_ `carol` holds?
 
@@ -37,20 +37,20 @@ This is not as obvious as it may seem:
 </div>
 </div>
 
-<hr/>
-
 **You have learned**:
 
 *   **Primitive values** (`Number`, `String`, `Boolean`…) are held directly by variables
 *   **Non-primitive values** (objects) are held by references, not by variables
 
-<hr/>
+<br/>
 
-## Create a new solution
+### Learn with Wakanda
+
+# Create a new solution
 
 In the [first lesson](data-types.html), you discovered data types and started Wakanda Studio. With this second lesson, you have now learned the concept of values and variables in JavaScript. You are now ready to create a new application to start playing with JavaScript.
 
-Click on "Create a new Solution". We'll focus on a **web** application with an _Angular basic template_:
+Click on "Create a new solution". We'll focus on a **web** application with an _Angular basic template_:
 
 <img src="../img/wakanda-studio-select-template.png"/>
 
