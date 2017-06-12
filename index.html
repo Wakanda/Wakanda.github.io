@@ -181,6 +181,12 @@ scripts:
   </div>
 </section>
 
+
+<div id="section-newsletter">
+  {% include newsletter-mailchimp.html %}
+</div>
+
+
 {% for service in site.data.content.services %}
 <section class="wakanda-service" id="{{ service.id }}">
   <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>

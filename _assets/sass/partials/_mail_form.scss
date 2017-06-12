@@ -218,7 +218,7 @@
                 text-align: center;
                 padding: 10px 0 10px 0;
                 input.email {
-                    width: 65%;
+                    width: 100%;
                     height: 45px;
                     border: none;
                     @include border-radius(5px);
@@ -231,7 +231,10 @@
                     text-transform: uppercase;
                     font-size: 15px;
                     text-align: center;
-                    width: 146px;
+                    //width: 146px;
+                    cursor: pointer;
+                    padding: 0 50px;
+                    margin: 0;
                     height: 45px;
                     border: 1px solid #fff;
                     @include border-radius(5px);
@@ -239,6 +242,15 @@
                     @include font-size(14px);
                     font-weight: 500;
                     font-family: Roboto;
+                }
+                label.error{
+                    float: left;
+                    margin-top: 5px;
+                }
+                label.success{
+                    float: left;
+                    margin-top: 5px;
+                    color: white;
                 }
             }
         }
