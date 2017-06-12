@@ -1711,8 +1711,8 @@ $(function() {
 });
 /** Start Source file "https://backoffice.wakanda.io/js/wakanda-form.js" */
 jQuery.validator.addMethod("email",function(a,b){var c=/^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;return this.optional(b)||c.test(a)},"Please enter a valid email address.");
-$('#success-bowak').hide();$('#error-bowak').hide();$('#error-bowak').html('');
-$('form[name="bowak-contact"]').validate();
+$('.success-bowak').hide();$('.error-bowak').hide();$('.error-bowak').html('');
+$('.bowak-contact').validate();
 (function info_user(selector) {
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
@@ -1722,7 +1722,7 @@ $('form[name="bowak-contact"]').validate();
             $(selector, document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
         }); 
     });
-})('form[name="bowak-contact"]');
+})('.bowak-contact');
 
 
 if($('#download-timing').length) {
@@ -1732,7 +1732,7 @@ if($('#download-timing').length) {
             $('#download-timing').html(count - 1);
         }else{
             $('#download-timing').removeAttr('id');
-            $('form[name="bowak-contact"]').submit();
+            $('.bowak-contact').submit();
         }
     }, 1000);
 }
@@ -1757,13 +1757,13 @@ if($('#download-timing').length) {
                     data: frm.serialize(),
                     success: function(data) {
                         //$("#success-bowak").show();
-                        $("#error-bowak").hide();
+                        $(".error-bowak", frm).hide();
                         download_enterprise_succes();
                     },
                     error: function(jqXHR, textStatus) {
-                        $("#success-bowak").hide();
-                        $("#error-bowak").html('An error handler when saving to our database, please try again !');
-                        $("#error-bowak").show();
+                        $(".success-bowak", frm).hide();
+                        $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                        $(".error-bowak", frm).show();
                     }
                 });
             }
@@ -2396,3 +2396,29 @@ if($('#before-leaving').length) {
     });
 }
 /***  END BEFORE LEAVING ***/
+
+
+
+/** Start newsletter form **/
+var form_newsletter = $('form#bowak-contact-22');
+form_newsletter.submit(function(ev) {
+    if (form_newsletter.valid()) {
+        $.ajax({
+            type: form_newsletter.attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: form_newsletter.attr("action"),
+            data: form_newsletter.serialize(),
+            success: function(data) {
+                $(".success-bowak", form_newsletter).show();
+                $(".error-bowak", form_newsletter).hide();
+            },
+            error: function(jqXHR, textStatus) {
+            }
+        });
+    }
+    ev.preventDefault();
+    return false;
+});
+/** End newsletter form **/

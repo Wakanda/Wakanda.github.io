@@ -622,3 +622,29 @@ if($('#before-leaving').length) {
     });
 }
 /***  END BEFORE LEAVING ***/
+
+
+
+/** Start newsletter form **/
+var form_newsletter = $('form#bowak-contact-22');
+form_newsletter.submit(function(ev) {
+    if (form_newsletter.valid()) {
+        $.ajax({
+            type: form_newsletter.attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: form_newsletter.attr("action"),
+            data: form_newsletter.serialize(),
+            success: function(data) {
+                $(".success-bowak", form_newsletter).show();
+                $(".error-bowak", form_newsletter).hide();
+            },
+            error: function(jqXHR, textStatus) {
+            }
+        });
+    }
+    ev.preventDefault();
+    return false;
+});
+/** End newsletter form **/
