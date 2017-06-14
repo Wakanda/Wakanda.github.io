@@ -48,13 +48,17 @@ This is not as obvious as it may seem:
 
 # Create a new solution
 
-In the [first lesson](data-types.html), you discovered data types and started Wakanda Studio. With this second lesson, you have now learned the concept of values and variables in JavaScript. You are now ready to create a new application to start playing with JavaScript.
+In the [first lesson](data-types.html), you have discovered data types and started Wakanda Studio. With this second lesson, you have now learned the concept of values and variables in JavaScript. You are now ready to create a new application to start playing with JavaScript.
 
-Click on "Create a new solution". We'll focus on a **web** application with an _Angular basic template_:
+You can create one _Wakanda solution_ containing a _web app_, a _mobile app_ or both.
+
+Click on "Create a new solution". 
+
+As you can see, Wakanda comes with preconfigured web and mobile templates. We'll focus on a **web** application with an _Angular basic template_:
 
 <img src="../img/wakanda-studio-select-template.png"/>
 
-Your new web application is automatically generated:
+Click on "Create". Your new web application is automatically generated:
 
 <img src="../img/wakanda-studio-new-web-app.png"/>
 
