@@ -54,16 +54,16 @@ Click on _Run_:
 
 <img src="../img/wakanda-studio-run-button.png"/>
 
-Wakanda automatically setup your application:
+Wakanda automatically setups your application:
 
 <img src="../img/wakanda-studio-run-in-progress.png"/>
+
+The _Tasks_ panel manages and centralizes all the processes running for your web and mobile applications. You can inspect their output and control their lifecycle.
 
 After a few seconds, your application opens in your browser:
 
 <img src="../img/wakanda-studio-web-page-0.png"/>
 
-For now, `alice`, `bob` and `carol` are `undefined`. In the next lessons, we'll edit `home.js` and try different values.
-
-The next lesson is coming soon! Follow us on [@WakandaSoft](https://twitter.com/wakandasoft){:target="_blank"} to catch it!
+For now, `alice`, `bob` and `carol` are `undefined`. In the [next lesson](assign-object-values.html), we'll edit `home.js` and try different values.
 
 {% include learn_js_toc.html progress=21 %}
