@@ -23,6 +23,28 @@ Can you guess what the last line returns?
 </div>
 </div>
 
+
+## Use `[]` with a variable
+
+This challenge starts where the previous exercise ends. Can you guess what the last line returns?
+
+    var alice = {foo: 42};
+    var bar = 'foo';
+    alice[bar] = 'wat'
+    alice;
+
+<div class="player">
+<div class="embed-video">
+<iframe src="https://player.vimeo.com/video/210588506" width="1170" height="658" allowtransparency="true" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+</div>
+</div>
+
+**You have learned:**
+
+*   Object properties can be set with the _bracket notation_ (`alice['foo']`) or the shorter _dot notation_ (`alice.foo`).
+*   The _bracket notation_ accepts string literals (`'foo'` or `"foo"`). It also accepts a variable (`bar`), which is useful when the name of the property is dynamic and held by a variable.
+
+
 <br/>
 
 ### Learn with Wakanda
