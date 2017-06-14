@@ -34,6 +34,13 @@ In JavaScript, you can’t have a variable `alice` pointing to another variable 
 
 What if you could try the challenges of this course yourself? Let's create an app for that!
 
+In the left panel, you can find two folders:
+
+- one with your solution name, which groups your solution configuration files
+- and `web`, which contains all the files for your front-end web project
+
+In this course, we are going to work on the `web` folder.
+
 Open the `app/controllers/home.js` file. Replace its content with the following code:
 
 <script src="https://gist.github.com/cedricss/b646c5309ff4ba41c16412e9435c10f5.js?file=home.js"></script>
@@ -43,7 +50,6 @@ Open the `app/controllers/home.js` file. Replace its content with the following 
 **TIPS**: close the bottom panel with the third toggle (in the upper-right corner):
 
 <img src="../img/wakanda-studio-toggle-panels.png"/>
-
 
 ## HTML/CSS View
 
