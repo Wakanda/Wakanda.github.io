@@ -11,10 +11,10 @@ chapters:
     lessons:
       - title: Set properties
         url: set-properties.html
-      - title: Use bracket notation with variables
-        class: disabled
+      - title: Assign object values
+        url: assign-object-values.html
       - title: Access properties
-        class: disabled
+        url: access-properties-nested-objects.html
   - title: Chapter 3 - Exercises
     lessons:
       - title: Variables
