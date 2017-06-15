@@ -121,7 +121,7 @@ event:
 
 services:
   - title: Server
-    image: img/serverLogo@2x.png
+    image: img/serverLogo_2x.png
     id: server
     items:
       - orientation: right
@@ -149,7 +149,7 @@ services:
         link: "#"
         image: "/img/illu_angularionic.svg"
   - title: Studio
-    image: img/studioLogo@2x.png
+    image: img/studioLogo_2x.png
     id: studio
     items:
       - orientation: right
