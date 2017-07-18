@@ -28,7 +28,7 @@
                     {% if version.version == page.version %}
                         {% for entry in version.entries %}
                         <li class="nav-group col-lg-12 col-md-4 menu-expanded {% if chapter_title == entry.title %} parentActive {% endif %}">
-                            <a>
+                            <a href="{{ entry.url }}">
                                 {{ entry.title }}
                             </a>
                             <ul class="aside-nav {{ entry.class }} menu" style="display: none;">

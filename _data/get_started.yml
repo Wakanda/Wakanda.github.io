@@ -47,7 +47,7 @@ menu:
     #    - title: "Hello World web app"
     #      url: hello-world-web.html
 
-    - title: "Step 2: Use the Built-in DB"
+    - title: "Use the Built-in DB"
       url: index.html#server-side
       pages:
         - title: "Populate your DB"
@@ -55,7 +55,7 @@ menu:
         - title: "Bind your data"
           url: bind-data-in-webapp.html
 
-    - title: "Step 3: Publish your App"
+    - title: "Publish your App"
       url: version-control.html
       pages:
         - title: "Version Control"
@@ -67,7 +67,7 @@ menu:
      #   - title: Deploy to Wakanda Cloud
      #     url: //docs.wakcloud.com/en/latest/getting_started.html
 
-    - title: "Step 4: Go further"
+    - title: "Go further"
       url: index.html#go-further     
       pages:
       - title: "Wakanda Server-Side"
@@ -75,4 +75,6 @@ menu:
       - title: "Connect your MySQL DB"    
         url: //wakanda.github.io/doc/#/guide?section=main-data-external   
       - title: "Manage scalabality"   
-        url: //wakanda.github.io/doc/#/guide?section=main-auth-csm    
+        url: //wakanda.github.io/doc/#/guide?section=main-auth-csm
+    - title: "Build a todo app"
+      url : https://wakanda.github.io/doc/#/tutorial?section=main
