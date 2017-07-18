@@ -322,7 +322,7 @@ $(document).ready(function(){
 
 
 /***  START BEFORE LEAVING ***/
-if($('#before-leaving').length) {
+if(false && $('#before-leaving').length) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {

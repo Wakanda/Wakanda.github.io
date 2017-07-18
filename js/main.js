@@ -2375,7 +2375,7 @@ if($('.what-we-do').length) {
 /*** ================== End What we do Script ================== ***/
 
 /***  START BEFORE LEAVING ***/
-if($('#before-leaving').length) {
+if(false && $('#before-leaving').length) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {
