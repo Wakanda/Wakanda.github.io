@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 1
+page_step: false
 ---
 
 # Hello World: your first Mobile hybrid App

@@ -22,27 +22,31 @@
                 {% endfor %}
             {% endif %}
         {% endfor %}
+        {% if page.page_step == false %}
         <ul class="nav-list row">
-            
-            {% for version in site.data.get_started.menu %}
-                {% if version.version == page.version %}
-                    {% for entry in version.entries %}
-                    <li class="nav-group col-lg-12 col-md-4 menu-expanded {% if chapter_title == entry.title %} parentActive {% endif %}">
-                        <a>
-                            {{ entry.title }}
-                        </a>
-                        <ul class="aside-nav {{ entry.class }} menu" style="display: none;">
-                            {% for node in entry.pages %}
-                            <li {% if page.url contains node.url %} class="active" {% endif %}>
-                                <a href="{{ node.url }}" target="{{ node.target }}">{{ node.title }}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    {% endfor %}
-                {% endif %}
-            {% endfor %}
+                {% for version in site.data.get_started.menu %}
+                    {% if version.version == page.version %}
+                        {% for entry in version.entries %}
+                        <li class="nav-group col-lg-12 col-md-4 menu-expanded {% if chapter_title == entry.title %} parentActive {% endif %}">
+                            <a>
+                                {{ entry.title }}
+                            </a>
+                            <ul class="aside-nav {{ entry.class }} menu" style="display: none;">
+                                {% for node in entry.pages %}
+                                <li {% if page.url contains node.url %} class="active" {% endif %}>
+                                    <a href="{{ node.url }}" target="{{ node.target }}">{{ node.title }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
         </ul>
+        {% else %}
+        <ul class="nav-list row page-has-step">
+        </ul>
+        {% endif %}
     </div>
     <div class="download">
         <a href="#" class="btn btn-lg btn-default btn-dl download-version">

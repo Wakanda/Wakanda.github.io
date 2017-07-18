@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 2
+page_step: false
 ---
 
 # Populate the built-in DataBase

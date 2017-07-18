@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 2
+page_step: true
 ---
 
 # Hello World: your first Web App with Angular

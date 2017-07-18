@@ -406,3 +406,20 @@ if($(".feedback").length) {
         });
     }
 }
+
+
+/** Start Sidebar Navigation */
+if($('.page-has-step').length) {
+    console.log('Has step');
+    $('.main-section h2[id]').each(function() {
+        console.log('In loop');
+        $('.page-has-step').append('<li class="nav-group col-lg-12 col-md-4"><a href="#'+$(this).attr('id')+'">'+$(this).html()+'</a></li>');
+    });
+    $(document).on('click', '.page-has-step a', function() {
+        console.log('Clicked');
+        $('html, body').animate({
+            scrollTop:$($(this).attr('href')).offset().top - 80
+        }, 'slow');
+    })
+}
+/** End Sidebar Navigation */

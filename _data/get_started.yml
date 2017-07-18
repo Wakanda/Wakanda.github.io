@@ -39,13 +39,13 @@ menu:
   - version : 2
     latest: true
     entries:
-    - title: "Step 1: Hello World"
-      url: index.html#hello-world
-      pages:
-        - title: "Hello World mobile app"
-          url: hello-world-mobile.html
-        - title: "Hello World web app"
-          url: hello-world-web.html
+    #- title: "Step 1: Hello World"
+    #  url: index.html#hello-world
+    #  pages:
+    #    - title: "Hello World mobile app"
+    #      url: hello-world-mobile.html
+    #    - title: "Hello World web app"
+    #      url: hello-world-web.html
 
     - title: "Step 2: Use the Built-in DB"
       url: index.html#server-side
