@@ -75,7 +75,3 @@ Your three favorite superheroes are now saved in the datastore !
 
 <img src="/img/model-designer-databrowser.png" />
 
-
-<div class="navigation-step">
-  <a class="btn next-button" href="display-data-in-webapp.html">Next: Display your data <i class="icon-chevron-right"></i></a>
-</div>

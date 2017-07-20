@@ -1,0 +1,112 @@
+#business{
+    background-color: $white-color;
+    #section-headline{
+        &:before{
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            background-color: $light-bg;
+            top: 0;
+            border-bottom: 4px solid $btn-default-bg;
+        }
+        .caroussel-body{
+            margin: 0 auto;
+            text-align: center;
+            h2{
+                @include font-size(54px);
+                font-weight: bold;
+                line-height: 1.04;
+                color: $dark-bg;
+                margin-bottom: 25px;
+                font-family: Roboto;
+            }
+            p{
+                font-family: Roboto;
+                @include font-size(38px);
+                font-weight: 300;
+                line-height: 1.47;
+                text-align: center;
+                color: $dark-bg;
+            }
+            .media{
+                max-height: 500px;
+                max-width: 85%;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .carousel-indicators  {
+            margin-top: 20px;
+            position: relative;
+            li{
+                height: 12px;
+                max-width: 12px;
+                @include border-radius(50%);
+                background-color: $btn-secondary-light-bd;
+                &.active{
+                    background-color: $secondary-link-color;
+                }
+            }
+        }
+    }
+    #services{
+        padding-top: 10px;
+        .row{
+            border: 1px solid $btn-secondary-light-bd;
+            @include border-radius(4px);
+            .col-md-4 {
+                border-right: 1px solid $btn-secondary-light-bd;
+                padding: 0;
+                @media (max-width: 767px) {
+                    border-right: none;
+                    border-bottom: 1px solid $btn-secondary-light-bd;
+                    &:last-child{
+                        border: none;
+                    }
+                }
+                &:last-child{
+                    border-right: none;
+                }
+                .item{
+                    padding: 3% 6% 90px;
+                    img{
+                        margin: 0 auto;
+                        max-height: 128px;
+                        display: block;
+                    }
+                    h2{
+                        font-family: Roboto;
+                        @include font-size(36px);
+                        line-height: 1.28;
+                        text-align: center;
+                        color: $btn-secondary-dark-bd;
+                    }
+                    ul{
+                        font-family: Roboto;
+                        @include font-size(15px);
+                        line-height: 1.47;
+                        color: $secondary-light-bg-color;
+                        li{
+                            margin: 7px 0;
+                        }
+                    }
+                    .bottom{
+                        position: absolute;
+                        bottom: 30px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        a.btn{
+                            padding: 10px 30px;
+                            color: $gray-bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -131,7 +131,3 @@ Wakanda Studio automatically detects supported device when connected to the USB 
 In Run dropdown, go in mobile preferences, select Device, for Android.
 
 <img src="../img/hwm2-run-device.png" />
-
-<div class="navigation-step">
-  <a class="btn next-button" href="hello-world-web.html">Next: Create a web app in Angular<i class="icon-chevron-right"></i></a>
-</div>
