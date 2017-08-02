@@ -81,10 +81,10 @@ $(document).ready(function(){
     */
 
     var versionCommunityLink = { 
-        stable: "2.0.3",
+        stable: "2.1.0",
        // preview: "2.0.1",
         1: "1.1.4",
-        2: "2.0.3"
+        2: "2.1.0"
     };
 
     var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
@@ -175,7 +175,7 @@ $(document).ready(function(){
 
 
 /***  START BEFORE LEAVING ***/
-if($('#before-leaving').length) {
+if($('#before-leaving').length && false) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {
