@@ -73,9 +73,9 @@ $("#community-dl").click(function() {
  */
 
 var versionLinks = { 
-    communiy_stable: "2.0.3",
+    communiy_stable: "2.1.0",
     //preview: "2.0.1",
-    enterprise: "2.0.3"
+    enterprise: "2.1.0"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
@@ -224,8 +224,8 @@ if($('#form-download-enterprise').length) {
         $('#download-community').submit();
         redirectAfterDownload("enterprise");
     }
-
 }
+
 /**
  * Pricing Page
  */
@@ -601,7 +601,7 @@ if($('.what-we-do').length) {
 /*** ================== End What we do Script ================== ***/
 
 /***  START BEFORE LEAVING ***/
-if($('#before-leaving').length) {
+if($('#before-leaving').length && false) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {
