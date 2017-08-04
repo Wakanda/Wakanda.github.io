@@ -17,10 +17,8 @@ window.cookieconsent.initialise({
     
   },
   onPopupClose: function() {
-
   }
 })});
-
 /** Start Fixed Menu **/
 var menu = $('.main-nav');
 var origOffsetY = menu.offset().top;
@@ -36,7 +34,7 @@ function scroll() {
     }
 
     if($('body.has-bg').length) {
-        if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
+        if($(this).scrollTop()>=$('#section-headline .h2').position().top){
             $('.main-nav').removeClass('full-bg-menu');
         }else {
             $('.main-nav').addClass('full-bg-menu');

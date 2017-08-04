@@ -1,0 +1,195 @@
+#business{
+    background-color: $white-color;
+    #section-headline{
+        &:before{
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            background-color: $light-bg;
+            top: 0;
+            border-bottom: 4px solid $btn-default-bg;
+        }
+        .caroussel-body{
+            margin: 0 auto;
+            text-align: center;
+            h2{
+                @include font-size(54px);
+                font-weight: bold;
+                line-height: 1.04;
+                color: $dark-bg;
+                margin-bottom: 25px;
+                font-family: Roboto;
+            }
+            p{
+                font-family: Roboto;
+                @include font-size(38px);
+                font-weight: 300;
+                line-height: 1.47;
+                text-align: center;
+                color: $dark-bg;
+            }
+            .media{
+                max-height: 500px;
+                max-width: 85%;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .carousel-indicators  {
+            margin-top: 20px;
+            position: relative;
+            li{
+                height: 12px;
+                max-width: 12px;
+                @include border-radius(50%);
+                background-color: $btn-secondary-light-bd;
+                &.active{
+                    background-color: $secondary-link-color;
+                }
+            }
+        }
+    }
+    #services{
+        padding-top: 10px;
+        .row{
+            border: 1px solid $btn-secondary-light-bd;
+            @include border-radius(4px);
+            .col-md-4 {
+                border-right: 1px solid $btn-secondary-light-bd;
+                padding: 0;
+                @media (max-width: 767px) {
+                    border-right: none;
+                    border-bottom: 1px solid $btn-secondary-light-bd;
+                    &:last-child{
+                        border: none;
+                    }
+                }
+                &:last-child{
+                    border-right: none;
+                }
+                .item{
+                    padding: 3% 6% 90px;
+                    img{
+                        margin: 0 auto;
+                        max-height: 128px;
+                        display: block;
+                    }
+                    h2{
+                        font-family: Roboto;
+                        @include font-size(36px);
+                        line-height: 1.28;
+                        text-align: center;
+                        color: $btn-secondary-dark-bd;
+                    }
+                    ul{
+                        font-family: Roboto;
+                        @include font-size(15px);
+                        line-height: 1.47;
+                        color: $secondary-light-bg-color;
+                        li{
+                            margin: 7px 0;
+                        }
+                    }
+                    .bottom{
+                        position: absolute;
+                        bottom: 30px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        a.btn{
+                            padding: 10px 30px;
+                            color: $gray-bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#business-layout{
+    #section-headline{
+        padding: 120px 0 60px;
+    }
+    #section-content{
+        background-color: $white-color;
+        .item{
+            .content-left, .content-right{
+                max-width: 80%;
+                margin-top: 50px;
+            }
+            .content-left{
+                max-width: 80%;
+                float: left;
+            }
+            .content-right{
+                float: right;
+            }
+            .strong{
+                font-family: SourceSansPro-Regular;
+                @include font-size(22px);
+                color: $btn-secondary-dark-bd;
+                letter-spacing: 0;
+                line-height: 33px;
+            }
+            p{
+                font-family: SourceSansPro-Regular;
+                @include font-size(18px);
+                font-size: 18px;
+                color: $secondary-light-bg-color;
+                letter-spacing: 0;
+                line-height: 27px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #mentor{
+        p{
+            margin-bottom: 20px;
+            font-family: SourceSansPro-Regular;
+            @include font-size(18px);
+            color: $secondary-light-bg-color;
+            letter-spacing: 0;
+            line-height: 27px;
+            strong{
+                font-weight: bold;
+            }
+        }
+        .boxed{
+            border-width: 3px;
+            border-top-width: 50px;
+            border-style: solid;
+            padding: 20px 20px 0px;
+            margin: 20px 0;
+            position: relative;
+            width: 100%;
+            -moz-border-image: -moz-linear-gradient(top, $main-color 1%, #ffd74d 100%);
+            -webkit-border-image: -webkit-linear-gradient(top, $main-color 1%, #ffd74d 100%);
+            border-image: linear-gradient(to bottom, $main-color 1%, #ffd74d 100%);
+            border-image-slice: 1;
+            -moz-box-shadow: 0px 0px 5px 1px #cfcfcf;
+            -webkit-box-shadow: 0px 0px 5px 1px #cfcfcf;
+            -o-box-shadow: 0px 0px 5px 1px #cfcfcf;
+            box-shadow: 0px 0px 5px 1px #cfcfcf;
+            .caption{
+                position: absolute;
+                top: -70px;
+                background: $dark-bg;
+                @include border-radius(6px);
+                color: $white-color;
+                padding: 10px 15px;
+                font-size: 20px;
+            }
+        }
+        .button-div{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}

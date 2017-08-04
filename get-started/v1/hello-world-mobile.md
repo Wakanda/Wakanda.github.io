@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 1
+page_step: false
 ---
 
 # Hello World: your first Mobile hybrid App
@@ -112,7 +113,3 @@ Wakanda Studio automatically detects supported device when connected to the USB 
 Open the _Run_ dropdown and select the device to run on:
 
 <img src="/img/mobile-run-devices.png" />
-
-<div class="navigation-step">
-  <a class="btn next-button" href="create-web-app-ng1.html">Next: Create a web app in Angular<i class="icon-chevron-right"></i></a>
-</div>

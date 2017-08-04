@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 2
+page_step: false
 ---
 
 # Client-side: Bind your data in your web app via AngularJS
@@ -60,7 +61,3 @@ Open `web/index.html` and add the following code into the body to display the li
         </div>
 ```
 <img src="../img/hww2-display-data-final.png" />
-
-<div class="navigation-step">
-  <a class="btn next-button" href="version-control.html">Next Step: Commit your mobile app <i class="icon-chevron-right"></i></a>
-</div>
