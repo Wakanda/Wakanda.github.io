@@ -15,7 +15,7 @@
             margin: 0 auto;
             text-align: center;
             h2{
-                @include font-size(54px);
+                @include font-size-em(54px);
                 font-weight: bold;
                 line-height: 1.04;
                 color: $dark-bg;
@@ -24,7 +24,7 @@
             }
             p{
                 font-family: Roboto;
-                @include font-size(38px);
+                @include font-size-em(38px);
                 font-weight: 300;
                 line-height: 1.47;
                 text-align: center;
@@ -80,14 +80,14 @@
                     }
                     h2{
                         font-family: Roboto;
-                        @include font-size(36px);
+                        @include font-size-em(36px);
                         line-height: 1.28;
                         text-align: center;
                         color: $btn-secondary-dark-bd;
                     }
                     ul{
                         font-family: Roboto;
-                        @include font-size(15px);
+                        @include font-size-em(15px);
                         line-height: 1.47;
                         color: $secondary-light-bg-color;
                         li{
@@ -112,17 +112,21 @@
 }
 
 #business-layout{
+    font-size: 16px;
+    @media (max-width: 1199px) {
+        font-size: 14px;
+    }
     h1{
         font-family: 'Roboto';
         font-weight: bold;
-        font-size: 52px;
+        @include font-size-em(52px);
         color: #212121;
         letter-spacing: 0;
         line-height: 66px;
     }
     .h2{
         font-weight: 500;
-        font-size: 28px;
+        @include font-size-em(28px);
         color: #212121;
         letter-spacing: 0;
     }
@@ -135,18 +139,43 @@
             .content-left, .content-right{
                 max-width: 80%;
                 margin-top: 50px;
-                padding: 0 85px;
+                //padding: 0 85px;
+                @media (max-width: 991px) {
+                    max-width: 100%;
+                    margin-top: initial;
+                }
             }
             .content-left{
                 max-width: 80%;
                 float: left;
+                @media (max-width: 991px) {
+                    max-width: 100%;
+                    float: none;
+                }
             }
             .content-right{
                 float: right;
+                @media (max-width: 991px) {
+                    float: none;
+                }
+            }
+            .image-left{
+                float: left;
+                @media (max-width: 991px) {
+                    float: none;
+                }
+            }
+            .image-right{
+                float: right;
+                margin-right: 20px;
+                @media (max-width: 991px) {
+                    float: none;
+                    margin: initial;
+                }
             }
             .strong{
                 font-family: 'Source Sans Pro';
-                @include font-size(22px);
+                @include font-size-em(22px);
                 color: $btn-secondary-dark-bd;
                 letter-spacing: 0;
                 line-height: 33px;
@@ -154,8 +183,7 @@
             }
             p{
                 font-family: 'Source Sans Pro';
-                @include font-size(18px);
-                font-size: 18px;
+                @include font-size-em(18px);
                 color: $secondary-light-bg-color;
                 letter-spacing: 0;
                 line-height: 27px;
@@ -170,12 +198,23 @@
                 width: 100%;
             }
         }
+        .last-one{
+            margin-top: 80px;
+            @media (max-width: 991px) {
+                margin-top: initial;
+            }
+        }
+        .item-row{
+            @media (max-width: 991px) {
+                margin-top: 40px;
+            }
+        }
     }
     #mentor{
         p{
             margin-bottom: 20px;
             font-family: 'Source Sans Pro';
-            @include font-size(18px);
+            @include font-size-em(18px);
             color: $secondary-light-bg-color;
             letter-spacing: 0;
             line-height: 27px;
@@ -206,7 +245,7 @@
                 @include border-radius(6px);
                 color: $white-color;
                 padding: 10px 15px;
-                font-size: 20px;
+                @include font-size-em(20px);
             }
         }
         .button-div{
@@ -223,13 +262,13 @@
         padding: 30px 50px;
         .sup{
             font-family: 'Roboto';
-            @include font-size(16px);
+            @include font-size-em(16px);
             color: #919191;
             letter-spacing: 0;
         }
         h2{
             font-family: 'Roboto';
-            @include font-size(26px);
+            @include font-size-em(26px);
             color: $dark-bg;
             letter-spacing: -0.26px;
             margin-bottom: 10px;
@@ -237,11 +276,11 @@
         }
         p{
             font-family: 'Source Sans Pro';
-            @include font-size(16px);
+            @include font-size-em(16px);
             color: #555555;
             letter-spacing: 0;
             strong{
-                font-size: 16px;
+                @include font-size-em(16px);
                 color: #252525;
                 letter-spacing: 0;
                 line-height: 20px;
@@ -257,7 +296,7 @@
                 li{
                     border-bottom: 1px solid #555555;
                     font-family: 'Source Sans Pro';
-                    font-size: 22px;
+                    @include font-size-em(22px);
                     color: #555555;
                     letter-spacing: 0;
                     line-height: 42px;
@@ -265,7 +304,7 @@
                         border-bottom: none;
                     }
                     strong{
-                        font-size: 16px;
+                        @include font-size-em(16px);
                         color: #252525;
                         letter-spacing: 0;
                         line-height: 42px;
@@ -280,13 +319,13 @@
         padding: 20px;
         p{
             font-family: 'Source Sans Pro';
-            font-size: 16px;
+            @include font-size-em(16px);
             color: #212121;
             letter-spacing: 0;
         }
         .btn{
             font-family: 'Source Sans Pro';
-            font-size: 14px;
+            @include font-size-em(14px);
             color: #393634;
             letter-spacing: 0;
             font-weight: 600;
