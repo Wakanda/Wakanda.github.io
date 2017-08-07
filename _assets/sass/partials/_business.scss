@@ -112,6 +112,20 @@
 }
 
 #business-layout{
+    h1{
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-size: 52px;
+        color: #212121;
+        letter-spacing: 0;
+        line-height: 66px;
+    }
+    .h2{
+        font-weight: 500;
+        font-size: 28px;
+        color: #212121;
+        letter-spacing: 0;
+    }
     #section-headline{
         padding: 120px 0 60px;
     }
@@ -121,6 +135,7 @@
             .content-left, .content-right{
                 max-width: 80%;
                 margin-top: 50px;
+                padding: 0 85px;
             }
             .content-left{
                 max-width: 80%;
@@ -130,19 +145,26 @@
                 float: right;
             }
             .strong{
-                font-family: SourceSansPro-Regular;
+                font-family: 'Source Sans Pro';
                 @include font-size(22px);
                 color: $btn-secondary-dark-bd;
                 letter-spacing: 0;
                 line-height: 33px;
+                margin-bottom: 30px;
             }
             p{
-                font-family: SourceSansPro-Regular;
+                font-family: 'Source Sans Pro';
                 @include font-size(18px);
                 font-size: 18px;
                 color: $secondary-light-bg-color;
                 letter-spacing: 0;
                 line-height: 27px;
+                strong{
+                    font-weight: 600;
+                    color: #252525;
+                    letter-spacing: 0;
+                    line-height: 27px;
+                }
             }
             img{
                 width: 100%;
@@ -152,7 +174,7 @@
     #mentor{
         p{
             margin-bottom: 20px;
-            font-family: SourceSansPro-Regular;
+            font-family: 'Source Sans Pro';
             @include font-size(18px);
             color: $secondary-light-bg-color;
             letter-spacing: 0;
@@ -166,7 +188,7 @@
             border-top-width: 50px;
             border-style: solid;
             padding: 20px 20px 0px;
-            margin: 20px 0;
+            margin: 40px 0;
             position: relative;
             width: 100%;
             -moz-border-image: -moz-linear-gradient(top, $main-color 1%, #ffd74d 100%);
@@ -190,6 +212,85 @@
         .button-div{
             text-align: center;
             margin-bottom: 20px;
+        }
+    }
+}
+
+#book-it{
+    padding: 0;
+    .content{
+        text-align: left;
+        padding: 30px 50px;
+        .sup{
+            font-family: 'Roboto';
+            @include font-size(16px);
+            color: #919191;
+            letter-spacing: 0;
+        }
+        h2{
+            font-family: 'Roboto';
+            @include font-size(26px);
+            color: $dark-bg;
+            letter-spacing: -0.26px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        p{
+            font-family: 'Source Sans Pro';
+            @include font-size(16px);
+            color: #555555;
+            letter-spacing: 0;
+            strong{
+                font-size: 16px;
+                color: #252525;
+                letter-spacing: 0;
+                line-height: 20px;
+                font-weight: 600;
+            }
+        }
+        .bottom-content{
+            margin-top: 40px;
+            ul{
+                margin: 10px 0;
+                list-style: none;
+                padding: 0;
+                li{
+                    border-bottom: 1px solid #555555;
+                    font-family: 'Source Sans Pro';
+                    font-size: 22px;
+                    color: #555555;
+                    letter-spacing: 0;
+                    line-height: 42px;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    strong{
+                        font-size: 16px;
+                        color: #252525;
+                        letter-spacing: 0;
+                        line-height: 42px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .footer-content{
+        background: #E9E9E9;
+        padding: 20px;
+        p{
+            font-family: 'Source Sans Pro';
+            font-size: 16px;
+            color: #212121;
+            letter-spacing: 0;
+        }
+        .btn{
+            font-family: 'Source Sans Pro';
+            font-size: 14px;
+            color: #393634;
+            letter-spacing: 0;
+            font-weight: 600;
+            padding: 10px 15px;
         }
     }
 }
