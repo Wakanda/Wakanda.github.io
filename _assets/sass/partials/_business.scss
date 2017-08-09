@@ -92,10 +92,15 @@
                 }
                 .item{
                     padding: 3% 6% 90px;
-                    img{
+                    .image-container{
                         margin: 0 auto;
-                        max-height: 128px;
-                        display: block;
+                        height: 128px;
+                        position: relative;
+                        img{
+                            margin: auto;
+                            position: absolute;
+                            top: 0; left: 0; bottom: 0; right: 0;
+                        }
                     }
                     h2{
                         //font-family: Roboto;
