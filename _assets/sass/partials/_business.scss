@@ -10,32 +10,51 @@
             background-color: $light-bg;
             top: 0;
             border-bottom: 4px solid $btn-default-bg;
+            @media (max-width: 768px) {
+                height: 70%;
+            }
         }
         .caroussel-body{
             margin: 0 auto;
             text-align: center;
+            width: 80%;
             h2{
                 @include font-size-em(54px);
                 font-weight: bold;
                 line-height: 1.04;
                 color: $dark-bg;
-                margin-bottom: 25px;
-                font-family: Roboto;
+                margin-bottom: 35px;
+                //font-family: Roboto;
             }
             p{
-                font-family: Roboto;
+                //font-family: Roboto;
                 @include font-size-em(38px);
                 font-weight: 300;
                 line-height: 1.47;
                 text-align: center;
                 color: $dark-bg;
             }
+
             .media{
-                max-height: 500px;
-                max-width: 85%;
+                //max-width: 85%;
+
+                position: relative;
                 margin: 0 auto;
-                img{
+                height: 400px;
+                img, iframe{
+                    max-height: 400px;
                     width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                }
+                @media (max-width: 991px) {
+                    height: 300px;
+                }
+                @media (max-width: 767px) {
+                    height: 230px;
                 }
             }
         }
@@ -79,15 +98,15 @@
                         display: block;
                     }
                     h2{
-                        font-family: Roboto;
+                        //font-family: Roboto;
                         @include font-size-em(36px);
                         line-height: 1.28;
                         text-align: center;
                         color: $btn-secondary-dark-bd;
                     }
                     ul{
-                        font-family: Roboto;
-                        @include font-size-em(15px);
+                        //font-family: Roboto;
+                        @include font-size-em(17px);
                         line-height: 1.47;
                         color: $secondary-light-bg-color;
                         li{
@@ -117,7 +136,7 @@
         font-size: 14px;
     }
     h1{
-        font-family: 'Roboto';
+        //font-family: 'Roboto';
         font-weight: bold;
         @include font-size-em(52px);
         color: #212121;
@@ -125,7 +144,7 @@
         line-height: 66px;
     }
     .h2{
-        font-weight: 500;
+        font-weight: 400;
         @include font-size-em(28px);
         color: #212121;
         letter-spacing: 0;
@@ -178,7 +197,7 @@
                 }*/
             }
             .strong{
-                font-family: 'Source Sans Pro';
+                //font-family: 'Source Sans Pro';
                 @include font-size-em(22px);
                 color: $btn-secondary-dark-bd;
                 letter-spacing: 0;
@@ -186,7 +205,7 @@
                 margin-bottom: 30px;
             }
             p{
-                font-family: 'Source Sans Pro';
+                //font-family: 'Source Sans Pro';
                 @include font-size-em(18px);
                 color: $secondary-light-bg-color;
                 letter-spacing: 0;
@@ -337,7 +356,7 @@
     #mentor{
         p{
             margin-bottom: 20px;
-            font-family: 'Source Sans Pro';
+            //font-family: 'Source Sans Pro';
             @include font-size-em(18px);
             color: $secondary-light-bg-color;
             letter-spacing: 0;
@@ -385,13 +404,13 @@
         text-align: left;
         padding: 30px 50px;
         .sup{
-            font-family: 'Roboto';
+            //font-family: 'Roboto';
             @include font-size-em(16px);
             color: #919191;
             letter-spacing: 0;
         }
         h2{
-            font-family: 'Roboto';
+            //font-family: 'Roboto';
             @include font-size-em(26px);
             color: $dark-bg;
             letter-spacing: -0.26px;
@@ -399,7 +418,7 @@
             font-weight: 400;
         }
         p{
-            font-family: 'Source Sans Pro';
+            //font-family: 'Source Sans Pro';
             @include font-size-em(16px);
             color: #555555;
             letter-spacing: 0;
@@ -419,7 +438,7 @@
                 padding: 0;
                 li{
                     border-bottom: 1px solid #555555;
-                    font-family: 'Source Sans Pro';
+                    //font-family: 'Source Sans Pro';
                     @include font-size-em(22px);
                     color: #555555;
                     letter-spacing: 0;
@@ -442,13 +461,13 @@
         background: #E9E9E9;
         padding: 20px;
         p{
-            font-family: 'Source Sans Pro';
+            //font-family: 'Source Sans Pro';
             @include font-size-em(16px);
             color: #212121;
             letter-spacing: 0;
         }
         .btn{
-            font-family: 'Source Sans Pro';
+            //font-family: 'Source Sans Pro';
             @include font-size-em(14px);
             color: #393634;
             letter-spacing: 0;
