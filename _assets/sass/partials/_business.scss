@@ -103,7 +103,7 @@
                         }
                     }
                     h2{
-                        //font-family: Roboto;
+                        //font-family: 'Roboto';
                         @include font-size-em(36px);
                         line-height: 1.28;
                         text-align: center;
@@ -111,7 +111,7 @@
                     }
                     ul{
                         //font-family: Roboto;
-                        @include font-size-em(17px);
+                        @include font-size-em(18px);
                         line-height: 1.47;
                         color: $secondary-light-bg-color;
                         li{
