@@ -2420,25 +2420,29 @@ form_newsletter.submit(function(ev) {
     return false;
 });
 /** End newsletter form **/
-if($('#player-business').length) {
+if($('.player-business').length) {
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    var player;
+    var players = [];
     function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player-business', {
-        height: '360',
-        width: '640',
-        playerVars: {rel: 0},
-        videoId: 'goAUfAk6NK0',
-        events: {
-            //'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
+        $('.player-business').each(function() {
+            var id=$(this).attr('id');
+            var player = new YT.Player(id, {
+                height: '360',
+                width: '640',
+                playerVars: {rel: 0},
+                videoId: id,
+                events: {
+                    //'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        })
     }
     function onPlayerStateChange(event) {
         if(event.data == YT.PlayerState.PLAYING) {
@@ -2449,7 +2453,10 @@ if($('#player-business').length) {
         }
     }
     $('#caroussel-business').on('slide.bs.carousel', function () {
-        player.pauseVideo();
+        for(var i=0; i<players.length; i++) {
+            players[i].pauseVideo();
+            
+        }
     })
 
 }

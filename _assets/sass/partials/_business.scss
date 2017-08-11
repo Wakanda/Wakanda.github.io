@@ -111,11 +111,11 @@
                     }
                     ul{
                         //font-family: Roboto;
-                        @include font-size-em(18px);
+                        @include font-size-em(19px);
                         line-height: 1.47;
                         color: $secondary-light-bg-color;
                         li{
-                            margin: 7px 0;
+                            margin: 25px 0;
                         }
                     }
                     .bottom{
