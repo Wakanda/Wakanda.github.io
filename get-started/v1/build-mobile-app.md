@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 1
+page_step: false
 ---
 
 # Build your app
@@ -16,7 +17,3 @@ Click on _Build_ to generate a binary based on your [config.xml](http://cordova.
 Then, click on the link to open the generated files:
 
 <img src="/img/mobile-build.png" />
-
-<div class="navigation-step">
-  <a class="btn next-button" href="deploy-your-app.html">Step 6: Deploy on your server <i class="icon-chevron-right"></i></a>
-</div>

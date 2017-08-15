@@ -510,7 +510,17 @@ h2{
 
 
 .square .path1{ background-color: $square-bg;}
-
+.page-has-step{
+   a {
+    font-family: Roboto-Regular;
+    font-size: 14px !important;
+    font-weight: bold;
+    color: $sub-title;
+    text-transform: initial !important;
+    letter-spacing: initial !important;
+    cursor: pointer;
+  }
+}
 .menu-expanded{
   & > a {
     font-family: Roboto-Regular;

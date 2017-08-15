@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 2
+page_step: true
 ---
 
 # Hello World: your first Web App with Angular
@@ -94,11 +95,6 @@ body {
 > **Tips:** The preview is automatically reloaded after each saving.
 
 <img src="../img/hww2-run-helloworld-ng1.png"/>
-
-
-<div class="navigation-step">
-  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
-</div>
 
 ---
 
