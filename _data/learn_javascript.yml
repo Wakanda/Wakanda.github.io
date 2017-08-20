@@ -1,0 +1,25 @@
+chapters:
+  - title: Chapter 1 - Variables and values
+    lessons:
+      - title: Data types
+        url: data-types.html
+      - title: Declare and initialize variables
+        url: declare-initialize-variables.html
+      - title: Assign primitive values
+        url: assign-primitive-values.html
+  - title: Chapter 2 - Object properties
+    lessons:
+      - title: Set properties
+        url: set-properties.html
+      - title: Assign object values
+        url: assign-object-values.html
+      - title: Access properties
+        url: access-properties-nested-objects.html
+  - title: Chapter 3 - Exercises
+    lessons:
+      - title: Variables
+        class: disabled
+      - title: Primitive values
+        class: disabled
+      - title: Objects
+        class: disabled

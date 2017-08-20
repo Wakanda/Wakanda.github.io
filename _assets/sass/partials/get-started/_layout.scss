@@ -49,10 +49,23 @@ section {
   min-height: 100%;
   text-align: justify;
 
-  h1, h2, h3, ul, ol, & > p, blockquote, pre, hr {
+  h1, h2, h3, ul, ol, & > p, blockquote, pre, hr, .player, .list-group {
     max-width: 800px;
     margin-left: 40px;
     margin-right: 40px;
+
+    .no-left-menu & {
+      margin-left: 0;
+    }
+  }
+
+  .player {
+    max-width: 740px;
+    margin: 20px 70px 70px 70px;
+  }
+
+  h2, h3 {
+    margin-top: 30px;
   }
 
   #contribute {
