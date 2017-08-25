@@ -1,6 +1,7 @@
 ---
 layout: get-started-default
 version: 1
+page_step: false
 ---
 
 # Deploy your app
@@ -25,6 +26,3 @@ You can now push, for example, on your `production` branch:
 Now, manage your app with Wakanda Cloud:
 
 
-<div class="navigation-step">
-  <a class="btn next-button" href="http://docs.wakcloud.com/en/latest/getting_started.html">Step 6: Deploy on Wakanda cloud <i class="icon-chevron-right"></i></a>
-</div>

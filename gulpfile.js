@@ -80,6 +80,7 @@ gulp.task('default', ['site_css', 'getstarted_css', 'site_js', 'getstarted_js'])
 
 gulp.task('watch', [], function(){
   gulp.watch(site_css, ['site_css']);
+  gulp.watch('_assets/sass/**/*.scss', ['site_css']);
   gulp.watch(getstarted_css, ['getstarted_css']);
   gulp.watch(site_js, ['site_js']);
   gulp.watch(getstarted_js, ['getstarted_js']);

@@ -1790,10 +1790,8 @@ window.cookieconsent.initialise({
     
   },
   onPopupClose: function() {
-
   }
 })});
-
 /** Start Fixed Menu **/
 var menu = $('.main-nav');
 var origOffsetY = menu.offset().top;
@@ -1809,7 +1807,7 @@ function scroll() {
     }
 
     if($('body.has-bg').length) {
-        if($(this).scrollTop()>=$('#section-headline p.text-center').position().top){
+        if($(this).scrollTop()>=$('#section-headline .h2').position().top){
             $('.main-nav').removeClass('full-bg-menu');
         }else {
             $('.main-nav').addClass('full-bg-menu');
@@ -2421,3 +2419,43 @@ form_newsletter.submit(function(ev) {
     return false;
 });
 /** End newsletter form **/
+if($('.player-business').length) {
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var players = [];
+    function onYouTubeIframeAPIReady() {
+        $('.player-business').each(function() {
+            var id=$(this).attr('id');
+            var player = new YT.Player(id, {
+                height: '360',
+                width: '640',
+                playerVars: {rel: 0},
+                videoId: id,
+                events: {
+                    //'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        })
+    }
+    function onPlayerStateChange(event) {
+        if(event.data == YT.PlayerState.PLAYING) {
+            $('#caroussel-business').carousel('pause');
+        }
+        else if(event.data == YT.PlayerState.ENDED) {
+            $('#caroussel-business').carousel('next');
+        }
+    }
+    $('#caroussel-business').on('slide.bs.carousel', function () {
+        for(var i=0; i<players.length; i++) {
+            players[i].pauseVideo();
+            
+        }
+    })
+
+}
