@@ -109,10 +109,6 @@ The preview is automatically reloaded after each saving.
 <img src="/img/hww-run-helloworld-ng1.png"/>
 
 
-<div class="navigation-step">
-  <a class="btn next-button" href="populate-database.html">Next: Populate your database <i class="icon-chevron-right"></i></a>
-</div>
-
 ---
 
 

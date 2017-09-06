@@ -15,6 +15,13 @@ box-shadow: $shadow;
   $remSize: $size / 16px;
   @return $remSize * 1rem;
 }
+/**
+* Calculate Rem from Pixel
+*/
+@function calculateEm($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1em;
+}
 
 /**
 * Add font size with rem support
@@ -22,6 +29,14 @@ box-shadow: $shadow;
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+
+/**
+* Add font size with rem support
+*/
+@mixin font-size-em($size) {
+  font-size: $size;
+  font-size: calculateEm($size);
 }
 
 /**

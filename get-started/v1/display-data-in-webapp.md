@@ -55,7 +55,3 @@ Open `web/index.html` and add the following code into the body to display the li
         </div>
 ```
 <img src="/img/display-data-final.png" />
-
-<!-- <div class="navigation-step">
-  <a class="btn next-button" href="build-mobile-app.html">Step 5: Build your mobile app <i class="icon-chevron-right"></i></a>
-</div> -->

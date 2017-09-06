@@ -67,14 +67,11 @@ menu:
      #   - title: Deploy to Wakanda Cloud
      #     url: //docs.wakcloud.com/en/latest/getting_started.html
 
-    - title: "Go further"
-      url: index.html#go-further     
-      pages:
-      - title: "Wakanda Server-Side"
-        url: //wakanda.github.io/doc/#/guide?section=main-data-ss   
-      - title: "Connect your MySQL DB"    
-        url: //wakanda.github.io/doc/#/guide?section=main-data-external   
-      - title: "Manage scalabality"   
-        url: //wakanda.github.io/doc/#/guide?section=main-auth-csm
+    - title: "Wakanda Server-Side"
+      url: //wakanda.github.io/doc/#/guide?section=main-data-ss   
+    - title: "Connect your MySQL DB"    
+      url: //wakanda.github.io/doc/#/guide?section=main-data-external   
+    - title: "Manage scalabality"   
+      url: //wakanda.github.io/doc/#/guide?section=main-auth-csm
     - title: "Build a todo app"
       url : https://wakanda.github.io/doc/#/tutorial?section=main

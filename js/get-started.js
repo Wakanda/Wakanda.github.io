@@ -144,7 +144,6 @@ $(function() {
     else $("head").append($("<link rel='stylesheet' href='"+ font_awsome +"' type='text/css' media='screen' />"));
 });
 //(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
-
 /** Start Fixed Menu **/
 var menu = $('.io-header-container');
 var origOffsetY = menu.offset().top;

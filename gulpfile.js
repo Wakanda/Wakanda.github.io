@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css');
 
 var site_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js', '_assets/js/lib/tether.min.js','_assets/js/lib/bootstrap.min.js', '_assets/js/layout.js', '_assets/js/lib/typed/typed.min.js'
-, '_assets/js/remodal.min.js', '_assets/js/lib/jquery-validate/jquery.validate.js', '_assets/js/lib/recaptcha.js', '_assets/js/isotope.pkgd.js', '_assets/js/select2.min.js'
+, '_assets/js/remodal.min.js', '_assets/js/lib/jquery-validate/jquery.validate.js', '_assets/js/isotope.pkgd.js', '_assets/js/select2.min.js'
 , '_assets/js/jquery.flip.min.js', '_assets/js/lib/cookieconsent.min.js', '_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/backoffice.js', '_assets/js/main.js'];
 
 var site_css = ['_assets/css/slick.css',  '_assets/css/lib/cookieconsent.min.css', '_assets/css/lib/remodal.css', '_assets/css/lib/remodal-default-theme.css', '_assets/css/lib/select2.min.css',
@@ -80,6 +80,7 @@ gulp.task('default', ['site_css', 'getstarted_css', 'site_js', 'getstarted_js'])
 
 gulp.task('watch', [], function(){
   gulp.watch(site_css, ['site_css']);
+  gulp.watch('_assets/sass/**/*.scss', ['site_css']);
   gulp.watch(getstarted_css, ['getstarted_css']);
   gulp.watch(site_js, ['site_js']);
   gulp.watch(getstarted_js, ['getstarted_js']);
