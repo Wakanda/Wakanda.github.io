@@ -1,10 +1,17 @@
 items:
 
-  - title: Get started
-    url: /get-started/index.html
-
-  - title: What we do
+  - title: Services
     url: /what-we-do.html
+
+  - title: Pricing
+    url: /pricing_services.html
+
+  - title: Download
+    url: /download.html
+
+  - title: Blog
+    url: https://blog.wakanda.io
+    target: _blank
 
   - title: Documentation
     url: //wakanda.github.io/doc
@@ -12,10 +19,6 @@ items:
 
   - title: Partners
     url: /marketplace.html
-
-  - title: Blog
-    url: https://blog.wakanda.io
-    target: _blank
 
   - title: Sign in
     url: https://console.wakanda.io

@@ -1,4 +1,4 @@
-h1: Develop and Run Web & Mobile Apps
+h1: Are you a Developer?<br><br> Code and run Web & Mobile Apps<br>
 
 h2:
   prefix: Full-Stack JavaScript Platform
@@ -170,3 +170,51 @@ services:
         description: "Build omnichannel apps with a single Back-End for multiple mobile and web Front-End.<br/>Specific project templates and previsualisation tools for web and mobile apps.<br/>All platforms are supported."
         link: "#"
         image: "/img/illu_webmobileapps.svg"
+
+
+pricing:
+  - title: Server Infrastructure
+    image: img/serverLogo_2x.png
+    id: server
+    items:
+      - orientation: right
+        title: Infrastructure
+        id: infra
+        description: "The server side <b>is our bread and butter</b>. Wakanda has been developing software for over 35 years. We will organise your data and your server to be <b>Scalable, Secure and Reliable</b>. We will create all the scripts and cloud infrastructure to support your business"
+        link: "#"
+        image: "/img/illu_database.svg"
+      - orientation: left
+        title: Save costs with Javascript from A to Z
+        id: js-a-z
+        description: "JavaScript is the language of the web and mobile. Our projects are 100% JavaScript, so you can save by having to worry with one language in both backend and frontend." 
+        link: "#"
+        image: "/img/illu_server-side.svg"
+      - orientation: right
+        title: "RESTful API"
+        id: rest-api
+        description: "Today everything is APIs. We can integrate any API or services available in the web, but more than that, we can standardise them into one data layer. This will speed development and integration with 3rd party systems"
+        link: "#"
+        image: "/img/illu_api.svg"
+    
+  - title: App design 
+    image: img/studioLogo_2x.png
+    id: studio
+    items:
+      - orientation: right
+        title: Apple, Android or Windows
+        id: all-ide
+        description: "We can deliver in all platforms for you. Not only that, you will not worry about managing the different accounts, we can also manage all the updates of your App." 
+        link: "#"
+        image: "/img/illu_allinone.svg"
+      - orientation: left
+        title: "Popular front-end frameworks integration"
+        id: front-end
+        description: "Use the strength of the best frameworks in the market such as Angular, React, Aurelia, Ionic. <br/>These are not just frameworks, but the guarantee that you will have the communities to support your project in the long run"
+        link: "#"
+        image: "/img/illu_angularionic.svg"
+      - orientation: right
+        title: Flow and User Experience
+        id: visual-data
+        description: "We will spend as much time as needed to Design and Validate your App flow and usability. 
+        link: "#"
+        image: "/img/illu_visualdata.svg"
