@@ -222,6 +222,8 @@ pricing:
 clients:
   - name: Agnium
     logo: agnium_logo.png
+  - name: Carrer Card
+    logo: carrer-card.png
   - name: Ajar
     logo: ajar_logo.png
   - name: BMS
@@ -230,12 +232,16 @@ clients:
     logo: deep_current_logo.png
   - name: Ermine soft
     logo: erminesoft.png
+  - name: Liechtenstein
+    logo: liechtenstein.png
   - name: Expertise code
     logo: expertise_code_logo.png
   - name: Formation tech
     logo: formation-tech.svg
   - name: Gebeya
     logo: Gebeya - logo-V1-01.png
+  - name: Elster
+    logo: elster.png
   - name: Hybapss
     logo: hybapps_logo.png
   - name: IP ventures
@@ -244,6 +250,8 @@ clients:
     logo: kagiso_logo.png
   - name: Ktudu
     logo: ktudu.png
+  - name: Infocap
+    logo: infocap.png
   - name: Slate APPS
     logo: large_Slate_App_Logo.png
   - name: Mergeye
@@ -254,5 +262,9 @@ clients:
     logo: punch.svg
   - name: Relinchos
     logo: relinchos_logo_0.png
+  - name: Actea Consulting
+    logo: actea-consulting.png
   - name: Tolmai
     logo: tolmai.jpg
+  - name: RavnAlaska
+    logo: RavnAlaska.jpg
