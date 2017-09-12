@@ -621,3 +621,10 @@ body.mobile-bg{
 		right: 0;
 	}
 }
+.section-title{
+	@include font-size(42px);
+    letter-spacing: 0;
+    line-height: 66px;
+    margin-bottom: 20px;
+    text-align: center;
+}
