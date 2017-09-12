@@ -226,6 +226,8 @@ clients:
     logo: carrer-card.png
   - name: Ajar
     logo: ajar_logo.png
+  - name: RavnAlaska
+    logo: RavnAlaska.jpg
   - name: BMS
     logo: bms-logo.png
   - name: Deep current
@@ -266,5 +268,3 @@ clients:
     logo: actea-consulting.png
   - name: Tolmai
     logo: tolmai.jpg
-  - name: RavnAlaska
-    logo: RavnAlaska.jpg
