@@ -51,9 +51,10 @@ $(document).ready(function() {
             items:3,
             autoplay:true,
             autoplayTimeout:3000,
-            mouseDrag: false,
-            touchDrag: false,
-            pullDrag: false,
+            loop:true,
+            //mouseDrag: false,
+            //touchDrag: false,
+            //pullDrag: false,
             responsive:{
                 0:{
                     items:1

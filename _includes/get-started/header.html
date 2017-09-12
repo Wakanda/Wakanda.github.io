@@ -7,39 +7,11 @@
                     <img src="/img/logo/wakanda-full-light-bg.png">
                 </a>
                 <ul>
-
-
-                    <li class="hidden-sm-down ">
-                        <a class="menu-active" href="/get-started/">Get started</a>
+                    {% for item in site.data.menu.items %}
+                    <li class="hidden-sm-down {% if item.highlighted %}highlighted-item{% endif %}" {% if page.url contains item.url %} class="active" {% endif %}>
+                        <a class="{{ item.class }} {% if page.url == item.url %} menu-active {% endif %}" href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
                     </li>
-
-
-                    <li class="hidden-sm-down ">
-                        <a class="" href="/what-we-do.html">What we do</a>
-                    </li>
-
-                    <li class="hidden-sm-down ">
-                        <a class="" href="//wakanda.github.io/doc" target="_blank">Documentation</a>
-                    </li>
-
-
-                    <li class="hidden-sm-down ">
-                        <a class="" href="/marketplace.html">Partners</a>
-                    </li>
-
-                    <li class="hidden-sm-down ">
-                        <a class="" href="https://blog.wakanda.io" target="_blank">Blog</a>
-                    </li>
-
-                    <li class="hidden-sm-down highlighted-item">
-                        <a class="" href="https://console.wakanda.io">Sign in</a>
-                    </li>
-
-                    <li class="hidden-md-up">
-                        <a class="mobile-nav-trigger icon" href="#mobile-nav">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             </div>
