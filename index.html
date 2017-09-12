@@ -22,7 +22,7 @@ scripts:
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
               <div class="caroussel-body">
-                <h2>Wakanda</h2>
+                <h2 class="h2">Wakanda</h2>
                 <p>Your next platform for building Web & Mobile Apps</p>
                 <div class="media">
                   <div class="embed-responsive embed-responsive-16by9">
@@ -119,8 +119,7 @@ scripts:
       </div>
     </div>
   </section>
-  <section id="clients" style="margin-top:-10%" >
-
+  <section id="clients" style="margin-top:-10%; padding-bottom: 0;" >
     <div id="banniere" style="margin:30px 0;">
         <div class="container" >
             <div class="content">
@@ -129,11 +128,20 @@ scripts:
             </div>
         </div>
     </div>
-    <br><br>
+  </section>
+  <section id="client" style="padding:0; min-height: auto;">
     <div class="container">
-      <div class="row" style="position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%);">
-        <div class="col col-lg-8 col-md-8 col-sm-12 item">
-          <img  src="/img/companies_flat_logos.png" alt="Wakanda Clients and Partners" />
+      <div class="row">
+        <div class="col-md-12">
+          <div class="owl-carousel">
+            
+            {% for item in site.data.content.clients %}
+              <div class="item">
+                <div class="client-logo">
+                  <img src="/img/marketplace/consultant/{{ item.logo }}" alt="{{ item.nom }}">
+                </div>
+              </div>
+            {% endfor %}
         </div>
       </div>
     </div>

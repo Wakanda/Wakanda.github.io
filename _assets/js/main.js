@@ -43,6 +43,32 @@ function scroll() {
 }
 document.onscroll = scroll;
 
+$(document).ready(function() {
+    if($('.owl-carousel').length) {
+        
+        var owl = $('.owl-carousel').owlCarousel({
+            loop: true,
+            items:3,
+            autoplay:true,
+            autoplayTimeout:3000,
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                768:{
+                    items:3
+                },
+                1024:{
+                    items:5
+                }
+            }
+        });
+    }
+})
+
 $('#navbarmenu-toggle').click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });

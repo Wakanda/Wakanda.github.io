@@ -218,3 +218,41 @@ pricing:
         description: "We will spend as much time as needed to Design and Validate your App flow and usability. 
         link: "#"
         image: "/img/illu_visualdata.svg"
+
+clients:
+  - name: Agnium
+    logo: agnium_logo.png
+  - name: Ajar
+    logo: ajar_logo.png
+  - name: BMS
+    logo: bms-logo.png
+  - name: Deep current
+    logo: deep_current_logo.png
+  - name: Ermine soft
+    logo: erminesoft.png
+  - name: Expertise code
+    logo: expertise_code_logo.png
+  - name: Formation tech
+    logo: formation-tech.svg
+  - name: Gebeya
+    logo: Gebeya - logo-V1-01.png
+  - name: Hybapss
+    logo: hybapps_logo.png
+  - name: IP ventures
+    logo: ipv.svg
+  - name: Kagiso
+    logo: kagiso_logo.png
+  - name: Ktudu
+    logo: ktudu.png
+  - name: Slate APPS
+    logo: large_Slate_App_Logo.png
+  - name: Mergeye
+    logo: mergeye.png
+  - name: MIABIT
+    logo: logo_MIABIT.png
+  - name: Punch
+    logo: punch.svg
+  - name: Relinchos
+    logo: relinchos_logo_0.png
+  - name: Tolmai
+    logo: tolmai.jpg
