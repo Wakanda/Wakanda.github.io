@@ -26,18 +26,18 @@ class="form-horizontal" novalidate>
         </select>
     </div>
     <div class="form-group">
-        <label for="mce-" FNAME class="control-label">First Name <span class="bowak-asterisk">*</span>
+        <label for="mce-FNAME"  class="control-label">First Name <span class="bowak-asterisk">*</span>
         </label>
         <input class="form-control" type="text" name="FNAME" id="mce-FNAME" required>
     </div>
     <div class="form-group">
-        <label for="mce-" LNAME class="control-label">Last Name <span class="bowak-asterisk">*</span>
+        <label for="mce-LNAME"  class="control-label">Last Name <span class="bowak-asterisk">*</span>
         </label>
         <input class="form-control" type="text" name="LNAME" id="mce-LNAME" required>
     </div>
     <div class="form-group">
-        <label for="mce-" PHONE class="control-label">Phone</label>
-        <input class="form-control" type="tel" name="PHONE" id="mce-PHONE">
+        <label for="mce-phone-country" class="control-label">Phone <span class="bowak-asterisk">*</span></label>
+        <input class="form-control" type="tel" id="mce-phone-country" required>
     </div>
     <div class="form-group">
         <label for="mce-" COMPANY class="control-label">Company name</label>
@@ -46,12 +46,14 @@ class="form-horizontal" novalidate>
     </div>  
     <div class="mc-field-group input-group float-error">
         <label for="mce-group[4701]-4701-0">I have read, understood and agreed to the <a href="//www.wakanda.io/license-enterprise" target="_blank">Subscription Agreement</a></label>
-        <input type="checkbox" value="1" name="group[4701][1]" id="mce-group[4701]-4701-0" class="required" style="float: left;">
+        <input type="checkbox" value="1" name="" id="mce-group[4701]-4701-0" class="required" style="float: left;">
     </div>
+    
     <div id="recaptcha-container">
         <div class="g-recaptcha" data-sitekey="6Ld-KhcUAAAAACtJjfu--O3TtbfDkwmyRGs2KpT7"></div>
         <div class="error hidden">This field is required</div>
     </div>
+    <input type="hidden" name="COUNTRY" id="mce-COUNTRY">
     <input type="submit" value="Submit" class="btn btn-primary">
 </form>
                           
