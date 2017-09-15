@@ -86,3 +86,30 @@ if($('#download-timing').length) {
         return false;
     });
 /** End Donwload Enterprise */
+
+
+var frm = $('form#bowak-contact-15');
+frm.submit(function(ev) {
+    if (frm.valid()) {
+        $.ajax({
+            type: frm.attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: frm.attr("action"),
+            data: frm.serialize(),
+            success: function(data) {
+                $(".success-bowak").show();
+                $(".error-bowak").hide();
+                window.location.href = "https://gallery.mailchimp.com/f0f5ce5be3ec91715eb87cf9c/files/Wakanda_WP_mobileapps.pdf";
+            },
+            error: function(jqXHR, textStatus) {
+                $(".success-bowak").hide();
+                $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                $(".error-bowak").show();
+            }
+        });
+    }
+    ev.preventDefault();
+    return false;
+});
