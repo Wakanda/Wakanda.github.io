@@ -82,22 +82,22 @@ if($('#download-timing').length) {
                 });
             }
         }
-        //ev.preventDefault();
+        ev.preventDefault();
         return false;
     });
 /** End Donwload Enterprise */
 
 
-var frm = $('form#bowak-contact-15');
-frm.submit(function(ev) {
-    if (frm.valid()) {
+var frm_whitepaper = $('form#bowak-contact-15');
+frm_whitepaper.submit(function(ev) {
+    if (frm_whitepaper.valid()) {
         $.ajax({
-            type: frm.attr("method"),
+            type: frm_whitepaper.attr("method"),
             headers: {
                 "X-Requested-With": "XMLHttpRequest"
             },
-            url: frm.attr("action"),
-            data: frm.serialize(),
+            url: frm_whitepaper.attr("action"),
+            data: frm_whitepaper.serialize(),
             success: function(data) {
                 $(".success-bowak").show();
                 $(".error-bowak").hide();
@@ -105,7 +105,7 @@ frm.submit(function(ev) {
             },
             error: function(jqXHR, textStatus) {
                 $(".success-bowak").hide();
-                $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                $(".error-bowak", frm_whitepaper).html('An error handler when saving to our database, please try again !');
                 $(".error-bowak").show();
             }
         });
