@@ -124,13 +124,14 @@ function communityLinks(stableOrPreview) {
  */
 
 $(function() {
+    /*
     var options = {
       stringsElement: $('#typed-strings'),
       startDelay: 1500,
       backDelay: 1000,
       typeSpeed: 80
     }
-    $(".typed-text").typed(options);
+    $(".typed-text").typed(options);*/
 });
 
 /*

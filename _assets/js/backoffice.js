@@ -30,6 +30,31 @@ if($('#download-timing').length) {
 
 /** Start Donwload Enterprise */
     var frm = $('form#form-download-enterprise');
+    if($('#mce-phone-country').length>0) {
+        //$("#mce-PHONE").intlTelInput();
+        var countryData_all = $.fn.intlTelInput.getCountryData(),
+        telInput = $("#mce-phone-country"),
+        addressField = $("#mce-COUNTRY");
+    
+    // set it's initial value
+    var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
+    addressField.val(initialCountry);
+    telInput.intlTelInput({
+        initialCountry: "auto",
+        hiddenInput: "PHONE",
+        geoIpLookup: function(callback) {
+            $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+                var country_code = data['country_code'] ? data['country_code'] : "";
+                callback(country_code);
+            
+            });
+        }});
+    // listen to the telephone input for changes
+    telInput.on("countrychange", function(e, countryData) {
+        addressField.val(countryData.name);
+    });
+    
+    }
     frm.submit(function(ev) {
         if (grecaptcha.getResponse() == '') {
             $('#recaptcha-container .error').removeClass('hidden');
@@ -57,7 +82,34 @@ if($('#download-timing').length) {
                 });
             }
         }
-        ev.preventDefault();
+        //ev.preventDefault();
         return false;
     });
 /** End Donwload Enterprise */
+
+
+var frm = $('form#bowak-contact-15');
+frm.submit(function(ev) {
+    if (frm.valid()) {
+        $.ajax({
+            type: frm.attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: frm.attr("action"),
+            data: frm.serialize(),
+            success: function(data) {
+                $(".success-bowak").show();
+                $(".error-bowak").hide();
+                window.location.href = "https://gallery.mailchimp.com/f0f5ce5be3ec91715eb87cf9c/files/Wakanda_WP_mobileapps.pdf";
+            },
+            error: function(jqXHR, textStatus) {
+                $(".success-bowak").hide();
+                $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                $(".error-bowak").show();
+            }
+        });
+    }
+    ev.preventDefault();
+    return false;
+});
