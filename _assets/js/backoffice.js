@@ -56,31 +56,50 @@ if($('#download-timing').length) {
     
     }
     frm.submit(function(ev) {
+        var errorMsg = $("#error-msg"), recaptchaMsg = $('#recaptcha-container .error');
+        var error_valiation = true;
+        frm.valid();
         if (grecaptcha.getResponse() == '') {
-            $('#recaptcha-container .error').removeClass('hidden');
-            return false;
-        }else {
-            $('#recaptcha-container .error').addClass('hidden');
-            if (frm.valid()) {
-                $.ajax({
-                    type: frm.attr("method"),
-                    headers: {
-                        "X-Requested-With": "XMLHttpRequest"
-                    },
-                    url: frm.attr("action"),
-                    data: frm.serialize(),
-                    success: function(data) {
-                        //$("#success-bowak").show();
-                        $(".error-bowak", frm).hide();
-                        download_enterprise_succes();
-                    },
-                    error: function(jqXHR, textStatus) {
-                        $(".success-bowak", frm).hide();
-                        $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
-                        $(".error-bowak", frm).show();
-                    }
-                });
+            recaptchaMsg.removeClass('hidden');
+            error_valiation = false;
+        } else {
+            recaptchaMsg.addClass('hidden');
+        }
+        if ($.trim(telInput.val())) {
+            console.log('We are here'); console.log(telInput.intlTelInput("isValidNumber"));
+            if (!telInput.intlTelInput("isValidNumber")) {
+                console.log('Error bro');
+                telInput.addClass("error");
+                errorMsg.removeClass("hidden");
+                errorMsg.show();
+                error_valiation = false;
+            } else {
+                errorMsg.addClass("hidden");
+                errorMsg.hide();
+                console.log('Success bitch');
             }
+        }
+        if (frm.valid() && error_valiation) {
+            errorMsg.addClass("hidden");
+            recaptchaMsg.addClass('hidden');
+            $.ajax({
+                type: frm.attr("method"),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                url: frm.attr("action"),
+                data: frm.serialize(),
+                success: function(data) {
+                    //$("#success-bowak").show();
+                    $(".error-bowak", frm).hide();
+                    download_enterprise_succes();
+                },
+                error: function(jqXHR, textStatus) {
+                    $(".success-bowak", frm).hide();
+                    $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                    $(".error-bowak", frm).show();
+                }
+            });
         }
         ev.preventDefault();
         return false;

@@ -159,10 +159,13 @@
         font-weight: normal !important;
     }
     label.error{
-        display: block !important;
+        display: block;
         width: 100%;
         color: red;
         margin: 0 !important;
+    }
+    span.error{
+        color: red;
     }
 
     input.error, select.error{
