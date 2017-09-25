@@ -19,7 +19,3 @@ items:
 
   - title: Partners
     url: /marketplace.html
-
-  - title: Sign in
-    url: https://console.wakanda.io
-    highlighted: true
