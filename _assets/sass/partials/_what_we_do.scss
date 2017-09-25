@@ -482,7 +482,7 @@
 }
 
 
-#banniere{
+.banniere{
     background-color: $dark-bg;
     .content{
         padding: 40px 0;
@@ -501,4 +501,8 @@
             font-weight: bold;
         }
     }
+}
+.banniere-info{
+    font-size: 16px;
+    color: #000;
 }
