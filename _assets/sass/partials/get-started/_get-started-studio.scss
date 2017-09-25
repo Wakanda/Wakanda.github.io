@@ -87,7 +87,7 @@ body{
     }
 }
 
-#new-get-started{
+.new-get-started{
     h1, h3, h2{
         max-width: 100%;
         margin: 20px 0 40px 0 !important;
@@ -180,4 +180,29 @@ body{
             margin-left: 5px;
         }
     }
+}
+
+.banniere{
+    background-color: $dark-bg;
+    .content{
+        padding: 40px 0;
+        text-align: center;
+        p{
+            font-family: Roboto;
+            font-size: 44px;
+            font-weight: bold;
+            line-height: 1.36;
+            color: #859BB7;
+        }
+        .btn-blue{
+            padding: 15px 30px;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
+.banniere-info{
+    font-size: 16px;
+    color: #000;
 }
