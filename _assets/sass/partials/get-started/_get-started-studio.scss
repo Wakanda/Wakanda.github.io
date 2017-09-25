@@ -200,6 +200,14 @@ body{
             font-size: 20px;
             font-weight: bold;
         }
+        .btn-blue {
+            background-color: #859BB7 !important;
+            color: white !important;
+            &:hover, &:focus, &:active {
+                background-color: #94b8e5 !important;
+                color: #fff !important;
+            }
+        }
     }
 }
 .banniere-info{
