@@ -15,45 +15,48 @@ scripts:
   - https://www.google.com/recaptcha/api.js
 ---
 
-<section id="section-slideshow">
-  <div class="container">
-    <h2>How much does an App cost?</h2>
-    <div class="row">
-      <div class="col-md-4 item">
-        <div class="img-container">
-          <img src="/img/tube.png" alt="Business" style="width: 60%; height: 60%;">
-        </div>
-        <p><h2>Business</h2></p>
-        <p><h3>How can we, together, <br>make your business successful?<br><br> Is it possible to 
-        relate your costs with your growth? <br><br> Yes, that is what we believe. We will put your business evolution at the core of our conversation<h3></p>
-      </div>
-      <div class="col-md-4 item">
-        <div class="img-container">
-          <img src="/img/js-action-layer.png" alt="Right Technologies">
-        </div>
-        <h2>Technologies</h2>
-        <p><h3>By choosing the best technologies and frameworks we will guide your future.<br><br>Yes, it is that important<br><br>The right technologies mean that your customers will have the best experience and you will save in  maintenance. <br><br>User-driven and Maintenance is where we will help you a great length.</h3> </p>
-      </div>
-      <div class="col-md-4 item">
-        <div class="img-container">
-          <img src="/img/new-db.png" alt="New Databases Support">
-        </div>
-        <h2>Future</h2>
-        <p><h3>Your idea is probably targetting an specific market. Your App will help others to solve problems.<br><br> But, could your App also be used in other markets with similar needs?<br><br>We will architecture your App to take advantage of future opportunities.</h3></p>
-      </div>
-    </div>
-  </div>
-</section>
 
+<div class="what-we-do">
+  <section id="were-lazy">
+      <div class="container">
+          <div class="row">
+              <h2 class="title">How much does an App cost?</h2>
+          </div>
+          <div class="row pricing-service">
+              <div class="col-md-4 item">
+                  <div class="img-container">
+                    <img src="/img/tube.png" alt="Business">
+                  </div>
+                  <h3>Business</h3>
+                  <p>How can we, together, <br>make your business successful?<br><br> Is it possible to 
+                  relate your costs with your growth? <br><br> Yes, that is what we believe. We will put your business evolution at the core of our conversation.</p>
+              </div>
+              <div class="col-md-4 item">
+                  <div class="img-container">
+                    <img src="/img/js-action-layer.png" alt="Right Technologies">
+                  </div>
+                  <h3>Technologies</h3>
+                  <p>By choosing the best technologies and frameworks we will guide your future.<br><br>Yes, it is that important.<br><br>The right technologies mean that your customers will have the best experience and you will save in  maintenance. <br><br>User-driven and Maintenance is where we will help you a great length.</p>
+              </div>
+              <div class="col-md-4 item">
+                  <div class="img-container">
+                    <img src="/img/new-db.png" alt="New Databases Support">
+                  </div>
+                  <h3>Future</h3>
+                  <p>Your idea is probably targetting a specific market. Your App will help others to solve problems.<br><br> But, could your App also be used in other markets with similar needs?<br><br>We will architecture your App to take advantage of future opportunities.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
 
-
-<section id="get-started">
+<section id="get-started" class="green-get-started">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h3>The steps to get a quote</h3>
 
-        <b><h4 style="color:black" >There is no magic bullet for App development. </b>
+        <p><b>There is no magic bullet for App development. </b>
         <br><br>We need to schedule <b>a chat</b> 
         to develop your App wireframing, 
         <br>how many screens you need, 
@@ -62,7 +65,7 @@ scripts:
         <br>what is your business model.
         <br>
         <br> We are confident that, from our first questions, you will see that 
-        <br>we are the best partners for your project.</h4>   
+        <br>we are the best partners for your project.</p>   
 
         <a target="_blank" href="https://calendly.com/ricardo-mello/one-on-one" class="btn btn-transparent">Book a one-on-one conversation!</a>
         <p></p>
@@ -73,45 +76,3 @@ scripts:
 
 
 
-
-
-{% for service in site.data.content.pricing %}
-<section class="wakanda-service" id="{{ service.id }}">
-  <h2><img src="{{ service.image }}" alt="{{ service.title }}"> {{ service.title }}</h2>
-  {% for item in service.items %}
-  <div class="item {{ item.orientation }}-item" id="{{ item.id }}">
-    <div class="container">
-      <div class="row">
-        {% if item.orientation == 'left' %}
-          <div class="col-md-4">
-            <div class=" img-container">
-              <img src="{{ item.image }}" alt="{{ item.title }}">
-            </div>
-          </div>
-        {% endif %}
-        <div class="col-md-8">
-          <div class="content-container">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>          
-          </div>
-        </div>
-        {% if item.orientation == 'right' %}
-          <div class="col-md-4">
-            <div class=" img-container">
-              <img src="{{ item.image }}" alt="{{ item.title }}">
-            </div>
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</section>
-{% endfor %}
-
-
-
-
-<div id="section-newsletter">
-  {% include newsletter-services.html %}
-</div>
