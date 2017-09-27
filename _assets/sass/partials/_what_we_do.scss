@@ -506,3 +506,30 @@
     font-size: 16px;
     color: #000;
 }
+
+
+
+
+.what-we-do #were-lazy .pricing-service{
+    .item{
+        .img-container{
+            height: 70px;
+        }
+        h3{
+            margin: 20px 0 15px;
+            @include font-size(32px);
+        }
+        p{
+            @include font-size(18px);
+        }
+    }
+}
+.green-get-started{
+    p{
+        font-weight: 300; 
+        font-size: 18px;
+        b{
+            font-weight: bold;
+        }
+    }
+}
