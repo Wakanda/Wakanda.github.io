@@ -10,7 +10,7 @@ scripts:
   - js/remodal.min.js
   - js/lib/jquery-validate/jquery.validate.js
   #- js/lib/jquery.uniform.js
-  - https://www.google.com/recaptcha/api.js
+  - https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit
 ---
 
 <section id="section-headline" class="module parallax parallax-bg-1" style="background-image:url('img/business/build-with-a-mentor-header.png');">
@@ -74,7 +74,12 @@ scripts:
       </div>
     </div>
   </div>
+</section>
+
+
   
+
+<div class="banniere-container">
   <div class="banniere" style="margin-bottom:30px;">
       <div class="container">
           <div class="content">
@@ -92,9 +97,7 @@ scripts:
       </div>
     </div>
   </div>
-</section>
-
-
+</div>
 
 <div class="remodal" data-remodal-id="book-it" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" id="book-it">
     <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>

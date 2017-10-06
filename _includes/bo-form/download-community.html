@@ -1,13 +1,13 @@
 <div class="error-bowak alert alert-danger">Response server here</div>
-<div class="success-bowak alert alert-success">The download succeeded. Now, check your email to get your licence key.</div>
+<div class="success-bowak alert alert-success">The download succeeded.</div>
 <div class="row">
     <div class="col-md-12">
-        <h2 class="bowak-center">Entreprise Edition : 30 days trial</h2>
+        <h2 class="bowak-center">Community Edition</h2>
     </div>
 </div>
-<form name="bowak-contact" id="form-download-enterprise" method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member"
+<form name="bowak-contact" id="form-download-community" method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member" 
 class="form-horizontal" novalidate>
-    <input type="hidden" value="38" name="list_id">
+    <input type="hidden" value="39" name="list_id">
     <div class="form-group">
         <label class="control-label" for="mce-email">Email <span class="bowak-asterisk">*</span>
         </label>
@@ -48,7 +48,7 @@ class="form-horizontal" novalidate>
         <label for="mce-group[4701]-4701-0">I have read, understood and agreed to the <a href="//www.wakanda.io/license-enterprise" target="_blank">Subscription Agreement</a></label>
         <input type="checkbox" value="1" name="" id="mce-group[4701]-4701-0" class="required" style="float: left;">
     </div>
-    
+
     <div class="recaptcha-container">
         <div class="g-recaptcha" data-sitekey="6LfIKS0UAAAAAG_sZHYdguIJvv1sNvpRC7YPiXeK"></div>
         <div class="error hidden">This field is required</div>
@@ -56,4 +56,7 @@ class="form-horizontal" novalidate>
     <input type="hidden" name="COUNTRY" id="mce-COUNTRY">
     <input type="submit" value="Submit" class="btn btn-primary">
 </form>
+<script>
+    //var frm = $('form#bowak-contact-38');  frm.submit(function (ev) { if(frm.valid()) {$.ajax({ type: frm.attr("method"),  headers: { "X-Requested-With": "XMLHttpRequest" },url: frm.attr("action"), data: frm.serialize(), success: function (data) { $("#success-bowak").show(); $("#error-bowak").hide();download_enterprise_succes();},error: function(jqXHR, textStatus) {$("#success-bowak").hide(); $("#error-bowak").html(jqXHR.responseText); $("#error-bowak").show();} });}ev.preventDefault();return false;});
+</script>
                           

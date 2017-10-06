@@ -10,7 +10,7 @@ scripts:
   - js/remodal.min.js
   - js/lib/jquery-validate/jquery.validate.js
   #- js/lib/jquery.uniform.js
-  - https://www.google.com/recaptcha/api.js
+  - https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit
 ---
 
 <section id="section-headline" class="module parallax parallax-bg-1" style="background-image:url('img/business/build-with-our-team-header.png');">
@@ -120,7 +120,11 @@ scripts:
     </div>
   </div>
   
-  <div class="banniere" style="margin:30px 0;">
+</section>
+
+
+<div class="banniere-container">
+  <div class="banniere" style="margin-bottom:30px;">
       <div class="container">
           <div class="content">
               <p>Start your App right now</p>
@@ -137,6 +141,4 @@ scripts:
       </div>
     </div>
   </div>
-</section>
-
-
+</div>

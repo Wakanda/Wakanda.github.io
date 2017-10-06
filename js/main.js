@@ -2196,11 +2196,11 @@ if($('#download-timing').length) {
 
 /** Start Donwload Enterprise */
     var frm = $('form#form-download-enterprise');
-    if($('#mce-phone-country').length>0) {
+    if($('#mce-phone-country', frm).length>0) {
         //$("#mce-PHONE").intlTelInput();
         var countryData_all = $.fn.intlTelInput.getCountryData(),
-        telInput = $("#mce-phone-country"),
-        addressField = $("#mce-COUNTRY");
+        telInput = $("#mce-phone-country", frm),
+        addressField = $("#mce-COUNTRY", frm);
     
     // set it's initial value
     var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
@@ -2222,19 +2222,18 @@ if($('#download-timing').length) {
     
     }
     frm.submit(function(ev) {
-        var errorMsg = $("#error-msg"), recaptchaMsg = $('#recaptcha-container .error');
+        var errorMsg = $("#error-msg",frm), recaptchaMsg = $('.recaptcha-container .error', frm);
         var error_valiation = true;
         frm.valid();
-        if (grecaptcha.getResponse() == '') {
+        var recaptcha = $(".g-recaptcha-response", frm).val();
+        if (recaptcha === "") {
             recaptchaMsg.removeClass('hidden');
             error_valiation = false;
         } else {
             recaptchaMsg.addClass('hidden');
         }
         if ($.trim(telInput.val())) {
-            console.log('We are here'); console.log(telInput.intlTelInput("isValidNumber"));
             if (!telInput.intlTelInput("isValidNumber")) {
-                console.log('Error bro');
                 telInput.addClass("error");
                 errorMsg.removeClass("hidden");
                 errorMsg.show();
@@ -2242,7 +2241,6 @@ if($('#download-timing').length) {
             } else {
                 errorMsg.addClass("hidden");
                 errorMsg.hide();
-                console.log('Success bitch');
             }
         }
         if (frm.valid() && error_valiation) {
@@ -2298,6 +2296,89 @@ frm_whitepaper.submit(function(ev) {
     ev.preventDefault();
     return false;
 });
+
+
+/** Start Donwload Community */
+    var frm_community = $('form#form-download-community');
+    if($('#mce-phone-country', frm_community).length>0) {
+        //$("#mce-PHONE").intlTelInput();
+        var countryData_all = $.fn.intlTelInput.getCountryData(),
+        telInput = $("#mce-phone-country",frm_community),
+        addressField = $("#mce-COUNTRY", frm_community);
+    
+    // set it's initial value
+    var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
+    addressField.val(initialCountry);
+    telInput.intlTelInput({
+        initialCountry: "auto",
+        hiddenInput: "PHONE",
+        geoIpLookup: function(callback) {
+            $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+                var country_code = data['country_code'] ? data['country_code'] : "";
+                callback(country_code);
+            
+            });
+        }});
+    // listen to the telephone input for changes
+    telInput.on("countrychange", function(e, countryData) {
+        addressField.val(countryData.name);
+    });
+    
+    }
+    frm_community.submit(function(ev) {
+        var errorMsg = $("#error-msg",frm_community), recaptchaMsg = $('.recaptcha-container .error',frm_community);
+        var error_valiation = true;
+        frm_community.valid();
+        var recaptcha = $(".g-recaptcha-response", frm_community).val();
+        if (recaptcha === "") {
+            recaptchaMsg.removeClass('hidden');
+            error_valiation = false;
+        } else {
+            recaptchaMsg.addClass('hidden');
+        }
+        if ($.trim(telInput.val())) {
+            if (!telInput.intlTelInput("isValidNumber")) {
+                telInput.addClass("error");
+                errorMsg.removeClass("hidden");
+                errorMsg.show();
+                error_valiation = false;
+            } else {
+                errorMsg.addClass("hidden");
+                errorMsg.hide();
+            }
+        }
+        if (frm_community.valid() && error_valiation) {
+            errorMsg.addClass("hidden");
+            recaptchaMsg.addClass('hidden');
+            $.ajax({
+                type: frm_community.attr("method"),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                url: frm_community.attr("action"),
+                data: frm_community.serialize(),
+                success: function(data) {
+                    //$("#success-bowak").show();
+                    $(".error-bowak", frm_community).hide();
+                    download_community_success();
+                },
+                error: function(jqXHR, textStatus) {
+                    $(".success-bowak", frm_community).hide();
+                    $(".error-bowak", frm_community).html('An error handler when saving to our database, please try again !');
+                    $(".error-bowak", frm_community).show();
+                }
+            });
+        }
+        ev.preventDefault();
+        return false;
+    });
+/** End Donwload Enterprise */
+
+var CaptchaCallback = function() {
+    $('.g-recaptcha').each(function(index, el) {
+        grecaptcha.render(el, {'sitekey' : '6LfIKS0UAAAAAG_sZHYdguIJvv1sNvpRC7YPiXeK'});
+    });
+};
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "content": {
@@ -2494,10 +2575,10 @@ $("#version-stable").append(versionLinks.communiy_stable);
 $("sup.version-community").append(versionLinks.communiy_stable);
 $("sup.version-enterprise").append(versionLinks.enterprise);
 //$("#version-preview").append(versionLinks.preview);
-$("#community-dl").attr('href', stableLinks[platform]);
-$(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
+//$("#community-dl").attr('href', stableLinks[platform]);
+//$(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
 
-for (var key in platformNames) {
+/*for (var key in platformNames) {
     document.createElement("td", document.createElement)
     $( "#all-downloads" ).append(
         "<tr> \
@@ -2506,7 +2587,7 @@ for (var key in platformNames) {
             " + //<td><a class=\"fa fa-download preview\" href=\""+previewLinks[key]+"\"></a></td> \
         "</tr>"
     );
-};
+};*/
 
 /**
  * Home page
@@ -2535,20 +2616,65 @@ if($('#form-download-enterprise').length) {
     
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
-        $('#download-community', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+        $('#download-enterprise-link', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
         $.each(data, function(index, value) {
             if(needed.indexOf(index) >= 0)
-            $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+            $('#download-enterprise-link', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
         }); 
     });
     function download_enterprise_succes() {
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
         var selectedPlateform = os[$( "#mce-OS", form).val()];
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
-        $('#download-community').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
-        $('#download-community').attr('action', link);
-        $('#download-community').submit();
+        $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-enterprise-link').attr('action', link);
+        $('#download-enterprise-link').submit();
         redirectAfterDownload("enterprise");
+    }
+}
+
+if($('#form-download-community').length) {
+    
+    var form = $('#form-download-community');
+    //@TODO START REMOVE LINE
+    var OS_enterprise = {
+        "macOS": "Mac",
+        "win64": "Windows 64 bits",
+        "win32": "Windows 32 bits",
+        "linux32": "Linux 32bits (Server Only)",
+        "linux64": "Linux 64bits (Server Only)",
+    };
+    var wakanda_support = {
+        "macOS": "MacOS 10.11 or above",
+        "win64": "Windows 10, Windows Server 2016",
+        "win32": "Windows 10, Windows Server 2016",
+        "linux32": "Ubuntu 16.04 LTS",
+        "linux64": "Ubuntu 16.04 LTS",
+    }
+    //console.log();
+    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+        var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
+        $('#download-community-link', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+        $.each(data, function(index, value) {
+            if(needed.indexOf(index) >= 0)
+            $('#download-community-link', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+        }); 
+    });
+    function download_community_success() {
+        /*var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+        var selectedPlateform = os[$('select[name="OS"]', form).val()];
+        var osURL = stableLinks[selectedPlateform];
+        window.open( osURL );
+        redirectAfterDownload("community");*/
+        var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+        var selectedPlateform = os[$( "#mce-OS", form).val()];
+        var link = 'https://backoffice.wakanda.io/api/file/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
+        $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-community-link').attr('action', link);
+        $('#download-community-link').submit();
+        redirectAfterDownload("community");
     }
 }
 
