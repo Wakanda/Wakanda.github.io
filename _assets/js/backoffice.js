@@ -30,11 +30,11 @@ if($('#download-timing').length) {
 
 /** Start Donwload Enterprise */
     var frm = $('form#form-download-enterprise');
-    if($('#mce-phone-country').length>0) {
+    if($('#mce-phone-country', frm).length>0) {
         //$("#mce-PHONE").intlTelInput();
         var countryData_all = $.fn.intlTelInput.getCountryData(),
-        telInput = $("#mce-phone-country"),
-        addressField = $("#mce-COUNTRY");
+        telInput = $("#mce-phone-country", frm),
+        addressField = $("#mce-COUNTRY", frm);
     
     // set it's initial value
     var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
@@ -56,19 +56,18 @@ if($('#download-timing').length) {
     
     }
     frm.submit(function(ev) {
-        var errorMsg = $("#error-msg"), recaptchaMsg = $('#recaptcha-container .error');
+        var errorMsg = $("#error-msg",frm), recaptchaMsg = $('.recaptcha-container .error', frm);
         var error_valiation = true;
         frm.valid();
-        if (grecaptcha.getResponse() == '') {
+        var recaptcha = $(".g-recaptcha-response", frm).val();
+        if (recaptcha === "") {
             recaptchaMsg.removeClass('hidden');
             error_valiation = false;
         } else {
             recaptchaMsg.addClass('hidden');
         }
         if ($.trim(telInput.val())) {
-            console.log('We are here'); console.log(telInput.intlTelInput("isValidNumber"));
             if (!telInput.intlTelInput("isValidNumber")) {
-                console.log('Error bro');
                 telInput.addClass("error");
                 errorMsg.removeClass("hidden");
                 errorMsg.show();
@@ -76,7 +75,6 @@ if($('#download-timing').length) {
             } else {
                 errorMsg.addClass("hidden");
                 errorMsg.hide();
-                console.log('Success bitch');
             }
         }
         if (frm.valid() && error_valiation) {
@@ -132,3 +130,86 @@ frm_whitepaper.submit(function(ev) {
     ev.preventDefault();
     return false;
 });
+
+
+/** Start Donwload Community */
+    var frm_community = $('form#form-download-community');
+    if($('#mce-phone-country', frm_community).length>0) {
+        //$("#mce-PHONE").intlTelInput();
+        var countryData_all = $.fn.intlTelInput.getCountryData(),
+        telInput = $("#mce-phone-country",frm_community),
+        addressField = $("#mce-COUNTRY", frm_community);
+    
+    // set it's initial value
+    var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
+    addressField.val(initialCountry);
+    telInput.intlTelInput({
+        initialCountry: "auto",
+        hiddenInput: "PHONE",
+        geoIpLookup: function(callback) {
+            $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+                var country_code = data['country_code'] ? data['country_code'] : "";
+                callback(country_code);
+            
+            });
+        }});
+    // listen to the telephone input for changes
+    telInput.on("countrychange", function(e, countryData) {
+        addressField.val(countryData.name);
+    });
+    
+    }
+    frm_community.submit(function(ev) {
+        var errorMsg = $("#error-msg",frm_community), recaptchaMsg = $('.recaptcha-container .error',frm_community);
+        var error_valiation = true;
+        frm_community.valid();
+        var recaptcha = $(".g-recaptcha-response", frm_community).val();
+        if (recaptcha === "") {
+            recaptchaMsg.removeClass('hidden');
+            error_valiation = false;
+        } else {
+            recaptchaMsg.addClass('hidden');
+        }
+        if ($.trim(telInput.val())) {
+            if (!telInput.intlTelInput("isValidNumber")) {
+                telInput.addClass("error");
+                errorMsg.removeClass("hidden");
+                errorMsg.show();
+                error_valiation = false;
+            } else {
+                errorMsg.addClass("hidden");
+                errorMsg.hide();
+            }
+        }
+        if (frm_community.valid() && error_valiation) {
+            errorMsg.addClass("hidden");
+            recaptchaMsg.addClass('hidden');
+            $.ajax({
+                type: frm_community.attr("method"),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                url: frm_community.attr("action"),
+                data: frm_community.serialize(),
+                success: function(data) {
+                    //$("#success-bowak").show();
+                    $(".error-bowak", frm_community).hide();
+                    download_community_success();
+                },
+                error: function(jqXHR, textStatus) {
+                    $(".success-bowak", frm_community).hide();
+                    $(".error-bowak", frm_community).html('An error handler when saving to our database, please try again !');
+                    $(".error-bowak", frm_community).show();
+                }
+            });
+        }
+        ev.preventDefault();
+        return false;
+    });
+/** End Donwload Enterprise */
+
+var CaptchaCallback = function() {
+    $('.g-recaptcha').each(function(index, el) {
+        grecaptcha.render(el, {'sitekey' : '6LfIKS0UAAAAAG_sZHYdguIJvv1sNvpRC7YPiXeK'});
+    });
+};

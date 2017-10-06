@@ -194,10 +194,10 @@ $("#version-stable").append(versionLinks.communiy_stable);
 $("sup.version-community").append(versionLinks.communiy_stable);
 $("sup.version-enterprise").append(versionLinks.enterprise);
 //$("#version-preview").append(versionLinks.preview);
-$("#community-dl").attr('href', stableLinks[platform]);
-$(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
+//$("#community-dl").attr('href', stableLinks[platform]);
+//$(".community-dl").each(function()  { $(this).attr('href', stableLinks[platform]) });
 
-for (var key in platformNames) {
+/*for (var key in platformNames) {
     document.createElement("td", document.createElement)
     $( "#all-downloads" ).append(
         "<tr> \
@@ -206,7 +206,7 @@ for (var key in platformNames) {
             " + //<td><a class=\"fa fa-download preview\" href=\""+previewLinks[key]+"\"></a></td> \
         "</tr>"
     );
-};
+};*/
 
 /**
  * Home page
@@ -235,20 +235,65 @@ if($('#form-download-enterprise').length) {
     
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
-        $('#download-community', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+        $('#download-enterprise-link', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
         $.each(data, function(index, value) {
             if(needed.indexOf(index) >= 0)
-            $('#download-community', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+            $('#download-enterprise-link', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
         }); 
     });
     function download_enterprise_succes() {
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
         var selectedPlateform = os[$( "#mce-OS", form).val()];
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
-        $('#download-community').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
-        $('#download-community').attr('action', link);
-        $('#download-community').submit();
+        $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-enterprise-link').attr('action', link);
+        $('#download-enterprise-link').submit();
         redirectAfterDownload("enterprise");
+    }
+}
+
+if($('#form-download-community').length) {
+    
+    var form = $('#form-download-community');
+    //@TODO START REMOVE LINE
+    var OS_enterprise = {
+        "macOS": "Mac",
+        "win64": "Windows 64 bits",
+        "win32": "Windows 32 bits",
+        "linux32": "Linux 32bits (Server Only)",
+        "linux64": "Linux 64bits (Server Only)",
+    };
+    var wakanda_support = {
+        "macOS": "MacOS 10.11 or above",
+        "win64": "Windows 10, Windows Server 2016",
+        "win32": "Windows 10, Windows Server 2016",
+        "linux32": "Ubuntu 16.04 LTS",
+        "linux64": "Ubuntu 16.04 LTS",
+    }
+    //console.log();
+    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+        var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
+        $('#download-community-link', document).append('<input type="hidden" name="date" value="'+new Date()+'">');
+        $.each(data, function(index, value) {
+            if(needed.indexOf(index) >= 0)
+            $('#download-community-link', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
+        }); 
+    });
+    function download_community_success() {
+        /*var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+        var selectedPlateform = os[$('select[name="OS"]', form).val()];
+        var osURL = stableLinks[selectedPlateform];
+        window.open( osURL );
+        redirectAfterDownload("community");*/
+        var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
+        var selectedPlateform = os[$( "#mce-OS", form).val()];
+        var link = 'https://backoffice.wakanda.io/api/file/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
+        $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-community-link').attr('action', link);
+        $('#download-community-link').submit();
+        redirectAfterDownload("community");
     }
 }
 

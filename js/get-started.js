@@ -298,10 +298,10 @@ $(document).ready(function(){
     $(".platform-name").append(platformNames[getPlatform()]);
     $("#version-stable").append(versionCommunityLink.stable);
     $("#version-preview").append(versionCommunityLink.preview);
-    $("#community-dl").attr('href', stableLinks[platform]);
+    //$("#community-dl").attr('href', stableLinks[platform]);
 
     var versionLinks = communityLinks($("#guide-switcher").val());
-    $(".download-version").attr('href', versionLinks[platform]);
+    /*$(".download-version").attr('href', versionLinks[platform]);
 
     for (var key in platformNames) {
         document.createElement("td", document.createElement)
@@ -313,7 +313,7 @@ $(document).ready(function(){
             </tr>"
         );
     };
-
+    */
 
 
 });
