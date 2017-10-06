@@ -89,8 +89,9 @@ if($('#download-timing').length) {
                 data: frm.serialize(),
                 success: function(data) {
                     //$("#success-bowak").show();
+                    
                     $(".error-bowak", frm).hide();
-                    download_enterprise_succes();
+                    download_enterprise_success();
                 },
                 error: function(jqXHR, textStatus) {
                     $(".success-bowak", frm).hide();

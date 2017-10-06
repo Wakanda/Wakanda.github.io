@@ -2255,8 +2255,9 @@ if($('#download-timing').length) {
                 data: frm.serialize(),
                 success: function(data) {
                     //$("#success-bowak").show();
+                    
                     $(".error-bowak", frm).hide();
-                    download_enterprise_succes();
+                    download_enterprise_success();
                 },
                 error: function(jqXHR, textStatus) {
                     $(".success-bowak", frm).hide();
@@ -2610,7 +2611,7 @@ if($('#form-download-enterprise').length) {
         "linux64": "Ubuntu 16.04 LTS",
     }
     //console.log();
-    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    $('#form-download-enterprise select[name="OS"]').val(OS_enterprise[getPlatform()]);
     $('#wakanda-support').html("Wakanda supports " + wakanda_support[getPlatform()]);
     //@TODO END REMOVE LINE
     
@@ -2622,12 +2623,13 @@ if($('#form-download-enterprise').length) {
             $('#download-enterprise-link', document).append('<input type="hidden" name="'+index+'" value="'+value+'">');
         }); 
     });
-    function download_enterprise_succes() {
+    function download_enterprise_success() {
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
-        var selectedPlateform = os[$( "#mce-OS", form).val()];
+        var selectedPlateform = os[$('#form-download-enterprise select[name="OS"]').val()];
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
-        $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#form-download-enterprise input[name="email"]').val()+'">');
         $('#download-enterprise-link').attr('action', link);
+        ///console.log($('#form-download-enterprise select[name="OS"]').val());
         $('#download-enterprise-link').submit();
         redirectAfterDownload("enterprise");
     }
@@ -2652,7 +2654,7 @@ if($('#form-download-community').length) {
         "linux64": "Ubuntu 16.04 LTS",
     }
     //console.log();
-    $('select[name="OS"]', form).val(OS_enterprise[getPlatform()]);
+    $('#form-download-community select[name="OS"]').val(OS_enterprise[getPlatform()]);
     
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
         var needed = ['ip', 'country_code', 'time_zone', 'latitude', 'longitude'];
@@ -2669,9 +2671,9 @@ if($('#form-download-community').length) {
         window.open( osURL );
         redirectAfterDownload("community");*/
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
-        var selectedPlateform = os[$( "#mce-OS", form).val()];
+        var selectedPlateform = os[$( '#form-download-community select[name="OS"]').val()];
         var link = 'https://backoffice.wakanda.io/api/file/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
-        $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#mce-email', form).val()+'">');
+        $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#form-download-community input[name="email"]').val()+'">');
         $('#download-community-link').attr('action', link);
         $('#download-community-link').submit();
         redirectAfterDownload("community");
