@@ -1,0 +1,188 @@
+---
+id: index
+layout: business
+title: Build with our Team
+show_chat: true
+css:
+  - css/lib/remodal.css
+  - css/lib/remodal-default-theme.css
+scripts:
+  - js/remodal.min.js
+  - js/lib/jquery-validate/jquery.validate.js
+  #- js/lib/jquery.uniform.js
+  - https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit
+---
+
+<section id="section-headline" class="module parallax parallax-bg-1" style="background-image:url('img/business/build-with-our-team-header.png');">
+    <div class="section-wrapper-parallax bg-overlay bg-overlay-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Construa seu App</h1>
+            <div class="h2">
+                <span>O melhor time do mundo nas suas mãos
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section id="client" style="background-color:white;padding:0; min-height: auto;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="owl-carousel">
+            
+            {% for item in site.data.content.clients %}
+              <div class="item">
+                <div class="client-logo">
+                  <img src="/img/marketplace/consultant/{{ item.logo }}" alt="{{ item.nom }}">
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section id="section-content">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-12 col-md-12 col-sm-12 item">
+        <div class="row item-row">
+          <div class="content-container">           
+            <div class="content content-left">
+              <div class="strong">
+                <b>No mundo das aplicaçōes móveis</b> (smartphone e web), um dos aspectos mais importantes é testar a sua idéia o mais cedo possível.
+                </div> 
+              <p>
+                No Wakanda, nós entendemos  esse conceito desde o primeiro encontro.  Chegar ao mercado antes dos concorrentes representa uma grande avantagem no mundo da mobilidade.  
+              </p>
+              <p>
+                O time do Wakanda vai criar e desenvolver o seu (PVM) produto mínimo viável <strong>em tempo recorde</strong> 
+              </p>
+              <p>            
+                Nós preparemos seu futuro com uma arquitetura escalável que protegerá o seu investimento tanto no âmbito to crescimento quanto da segurança.   
+              </p>
+            </div>
+            <div class="image-right">
+              <img src="/img/business/phone-stats.png" alt="Phone stats">
+            </div>
+          </div>
+        </div>
+
+        <div class="row item-row" style="margin-top:10%;">
+          <div class="content-container">
+            <div class="image-left desktop-only">
+              <img src="/img/business/computer-application.png" alt="Application with Wakanda">
+            </div>
+            <div class="content content-right">
+              <div class="strong">
+                Construir um App em etapas, validando os aspectos do negócio e a usabilidade do client final é nosso ponto forte. 
+              </div>
+              <p>
+                O Wakanda tem um time internacional com mais de 150 profissionais espalhados em 5 continentes. O melhor? Estamos no Brasil com um time pronto para desenvoler e manter o seu projeto para os anos que virão. 
+              </p>
+            </div>
+            <div class="image-left mobile-only">
+              <img src="/img/business/computer-application.png" alt="Application with Wakanda">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<section id="clients" style="margin-top:-15%;background-color:white;" >
+    <div class="banniere" style="margin:30px 0;">
+        <div class="container" >
+            <div class="content">
+                <p>Mais de 6000 clientes<br>Excelência em Serviços</p>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+<section id="section-content" style="margin-top:-10%;">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-12 col-md-12 col-sm-12 item">
+        <div class="row item-row">
+          <div class="content-container">
+            <div class="content content-left">
+              <div class="strong">
+                Temos uma longa história intimamente ligada ao desenvolvimento de bancos de dados. 
+              </div>
+                <p>
+                  Para nós, a fluidez da informação representa a linha de frente para o sucesso do seu negócio.  
+                </p>
+                <p> 
+                Seus clientes vão trazer um grande volume de dados para o seu App que deve ser integrado a bancos de dados, APIs, outras empresas (terceiros) e em alguns casos, sistemas mais antigos.  
+                </p>
+                <p> Nós temos <strong>a tecnologia de ponta</strong>
+                para criar o seu App com o visual e a navegabilidade que seus dados necessitam.  
+              </p>
+            </div>
+            <div class="image-right">
+              <img src="/img/business/cristal.png" alt="Application with Wakanda">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row item-row last-one" style="margin-top:10%;" >
+          <div class="content-container">
+            <div class="image-left desktop-only">
+              <img src="/img/business/phone-appli.png" alt="Phone application">
+            </div>
+            <div class="content content-right" style="margin-top: 20px;">
+              <div class="strong">
+                Nossa Proposta:
+              </div>
+                <p>Vamos conversar sobre a sua idéia e como nós vamos implementar as mais novas tendências do mercado móvel ao seu negócio. </p>
+                <p>Vamos desenhar e prototipar como os seus clientes vão ter a melhor experiência usando seu App</p>
+                <p>Vamos construir seu PVM (beta) gratuitamente e em menos de 1 semana.  Você vai poder mostrar seu App aos seus investidores e clients em tempo recorde</p>
+
+                <p style="font-size:24px; margin-top:20px; font-weight:bold">Converse com a gente</p>
+            </div>
+            <div class="image-left mobile-only">
+              <img src="/img/business/phone-appli.png" alt="Phone application">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<div class="banniere-container">
+  <div class="banniere" style="margin-bottom:30px;">
+      <div class="container">
+          <div class="content">
+              <a href="https://calendly.com/ricardo-mello/one-on-one" target="_blank" class="btn btn-blue"
+              style="font-size:30px;">Comece o seu App agora !</a>
+          </div>
+      </div>
+  </div>
+  <div class="banniere-info">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-8 col-md-8 col-sm-12 item">
+          <p><i>O agendamento leva menos de 1 minuto: escolha a data e o horário de sua conveniência e pronto! <br><br>Você estará acessando a agenda do Diretor de Projetos Global do Wakanda (escritório no Canadá). Mas nao se preocupe, ele fala português !</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
