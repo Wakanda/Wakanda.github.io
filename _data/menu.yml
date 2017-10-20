@@ -23,7 +23,7 @@ items:
 multilingue:
   - title: English
     code: us
-    page: /build-with-our-team.html
+    page: /
   - title: Português
     code: pt
     page: /wakanda-intro-pt.html
