@@ -19,3 +19,11 @@ items:
 
   - title: Partners
     url: /marketplace.html
+
+multilingue:
+  - title: English
+    code: us
+    page: /build-with-our-team.html
+  - title: Português
+    code: pt
+    page: /wakanda-intro-pt.html

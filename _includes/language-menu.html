@@ -1,0 +1,23 @@
+<li class="language-menu">
+  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {% assign exist = 'us' %}
+    {% for item in site.data.menu.multilingue %}
+      {% if page.url == item.page and item.code != 'us' %}
+        {% assign exist = item.code %}
+        <img src="/flags/4x3/{{ item.code }}.svg" alt="{{ item.title }}"> {{ item.title }}
+      {% endif %}
+    {% endfor %}
+    {% if exist == 'us' %}
+      <img src="/flags/4x3/us.svg" alt="English"> English
+    {% endif %}
+  </a>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+    {% for item in site.data.menu.multilingue %}
+      {% if item.code != exist %}
+        <a class="dropdown-item" href="{{ item.page }}" title="{{ item.title }}">
+          <img src="/flags/4x3/{{ item.code }}.svg" alt="{{ item.title }}"> {{ item.title }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</li>
