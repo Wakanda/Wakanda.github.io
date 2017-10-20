@@ -44,9 +44,12 @@ function scroll() {
 document.onscroll = scroll;
 
 $(document).ready(function() {
-    if($('.owl-carousel').length) {
-        
-        var owl = $('.owl-carousel').owlCarousel({
+    var owl_carousel = $('.owl-carousel');
+    if(owl_carousel.length) {
+        var length = parseInt(owl_carousel.attr('data-count'));
+        length = length > 0 ? length : 5;
+        console.log('Length') ; console.log(length);
+        var owl = owl_carousel.owlCarousel({
             loop: true,
             items:3,
             autoplay:true,
@@ -63,7 +66,7 @@ $(document).ready(function() {
                     items:3
                 },
                 1024:{
-                    items:5
+                    items:length
                 }
             }
         });
