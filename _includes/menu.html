@@ -18,7 +18,6 @@
                   <a class="{{ item.class }} {% if page.url == item.url %} menu-active {% endif %}" href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
               </li>
             {% endfor %}
-            {% include language-menu.html %}
             <li class="hidden-md-up">
               <a class="mobile-nav-trigger icon" href="#mobile-nav">
                 <i class="fa fa-bars"></i>
