@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="first-option">
+            <h2 class="bowak-center">We will contact you</h2>
+            <form name="bowak-contact" id="form-request-demo"
+            method="POST" action="https://backoffice.wakanda.io/api/mail-api/add-member"
+            class="bowak-contact form-horizontal" novalidate>
+            <div class="error-bowak alert alert-danger">Response server here</div>
+            <div class="success-bowak alert alert-success">Thank you for submitting this form</div>
+                <div class="form-group">
+                    <label class="control-label" for="mce-email">Email <span class="bowak-asterisk">*</span>
+                    </label>
+                    <input class="form-control" type="email" name="email" id="mce-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mce-FNAME" class="control-label">First Name <span class="bowak-asterisk">*</span>
+                    </label>
+                    <input class="form-control" type="text" name="FNAME" id="mce-FNAME" required>
+                </div>
+                <div class="form-group">
+                    <label for="mce-LNAME" class="control-label">Last Name <span class="bowak-asterisk">*</span>
+                    </label>
+                    <input class="form-control" type="text" name="LNAME" id="mce-LNAME" required>
+                </div>
+                <div class="form-group">
+                    <label for="mce-phone-country" class="control-label">Phone <span class="bowak-asterisk">*</span></label>
+                    <input class="form-control" type="tel" id="mce-phone-country" required>
+                    <span id="error-msg" class="error hidden">Invalid number</span>
+                </div>
+                <div class="recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6LfIKS0UAAAAAG_sZHYdguIJvv1sNvpRC7YPiXeK"></div>
+                    <div class="error hidden">This field is required</div>
+                </div>
+                <input type="hidden" value="41" name="list_id">
+                <input type="hidden" name="COUNTRY" id="mce-COUNTRY">
+                <input type="submit" value="Submit" class="btn btn-primary" style="margin-top: 10px;">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6" style="padding: 120px 0;">
+            <h2 class="bowak-center" style="font-size: 30px !important;">Or ... you may also</h2>
+            <p class="bowak-center" style="font-size: 18px;">
+                Schedule a one-on-one conversation directly <br/>
+                <a style="padding: 5px 15px; margin: 10px;" href="https://calendly.com/ricardo-mello/one-on-one" class="btn btn-primary" target="_blank">Calendly</a>
+            </p>
+    </div>
+</div>

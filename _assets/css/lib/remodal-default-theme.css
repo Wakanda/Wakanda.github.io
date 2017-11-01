@@ -309,6 +309,9 @@
   .remodal {
     max-width: 700px;
   }
+  .remodal-lg{
+    max-width: 900px;
+  }
 }
 
 /* IE8
