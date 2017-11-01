@@ -214,3 +214,81 @@ var CaptchaCallback = function() {
         grecaptcha.render(el, {'sitekey' : '6LfIKS0UAAAAAG_sZHYdguIJvv1sNvpRC7YPiXeK'});
     });
 };
+
+
+/** Start demo form */
+
+var frm_demo = $('form#form-request-demo');
+if($('#mce-phone-country', frm_demo).length>0) {
+    //$("#mce-PHONE").intlTelInput();
+    var countryData_all = $.fn.intlTelInput.getCountryData(),
+    telInput = $("#mce-phone-country",frm_demo),
+    addressField = $("#mce-COUNTRY", frm_demo);
+
+// set it's initial value
+var initialCountry = telInput.intlTelInput("getSelectedCountryData").iso2;
+addressField.val(initialCountry);
+telInput.intlTelInput({
+    initialCountry: "auto",
+    hiddenInput: "PHONE",
+    geoIpLookup: function(callback) {
+        $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+            var country_code = data['country_code'] ? data['country_code'] : "";
+            callback(country_code);
+        });
+    }});
+// listen to the telephone input for changes
+telInput.on("countrychange", function(e, countryData) {
+    addressField.val(countryData.name);
+});
+
+}
+frm_demo.submit(function(ev) {
+    var errorMsg = $("#error-msg",frm_demo), recaptchaMsg = $('.recaptcha-container .error',frm_demo);
+    var error_valiation = true;
+    frm_demo.valid();
+    var recaptcha = $(".g-recaptcha-response", frm_demo).val();
+    if (recaptcha === "") {
+        recaptchaMsg.removeClass('hidden');
+        error_valiation = false;
+    } else {
+        recaptchaMsg.addClass('hidden');
+    }
+    if ($.trim(telInput.val())) {
+        if (!telInput.intlTelInput("isValidNumber")) {
+            telInput.addClass("error");
+            errorMsg.removeClass("hidden");
+            errorMsg.show();
+            error_valiation = false;
+        } else {
+            errorMsg.addClass("hidden");
+            errorMsg.hide();
+        }
+    }
+    if (frm_demo.valid() && error_valiation) {
+        errorMsg.addClass("hidden");
+        recaptchaMsg.addClass('hidden');
+        $.ajax({
+            type: frm_demo.attr("method"),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            },
+            url: frm_demo.attr("action"),
+            data: frm_demo.serialize(),
+            success: function(data) {
+                console.log('Success');
+                $(".success-bowak", frm_demo).show();
+                $(".error-bowak", frm_demo).hide();
+                //download_community_success();
+            },
+            error: function(jqXHR, textStatus) {
+                $(".success-bowak", frm_demo).hide();
+                $(".error-bowak", frm_demo).html('An error handler when saving to our database, please try again !');
+                $(".error-bowak", frm_demo).show();
+            }
+        });
+    }
+    ev.preventDefault();
+    return false;
+});
+/** End demo form */

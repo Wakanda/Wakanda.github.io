@@ -38,7 +38,7 @@
         @include font-size(35px);
     }
 }
-#community-download, #contact-partners, #enterprise-download{
+#community-download, #contact-partners, #enterprise-download, #request-demo{
     width: 35%;
     //@import "uniform";
     padding: 5px 15px;
@@ -177,6 +177,10 @@
         .error{
             color: red;
         }
+    }
+    #mc_embed_signup form{
+        padding: 10px 20px;
+        
     }
 
 }
