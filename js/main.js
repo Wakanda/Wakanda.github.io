@@ -2442,8 +2442,11 @@ frm_demo.submit(function(ev) {
             url: frm_demo.attr("action"),
             data: frm_demo.serialize(),
             success: function(data) {
-                console.log('Success');
-                $(".success-bowak", frm_demo).show();
+                //console.log('Success');
+                $('.request-demo-content').fadeOut('slow', function() {
+                    $('.request-demo-message').fadeIn('slow');
+                });
+                //$(".success-bowak", frm_demo).show();
                 $(".error-bowak", frm_demo).hide();
                 //download_community_success();
             },
