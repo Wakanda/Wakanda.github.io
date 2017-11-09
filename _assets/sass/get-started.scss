@@ -621,6 +621,9 @@ h2{
   text-align: center;
   width: 35%;
   padding: 25px 15px;
+  .intl-tel-input {
+    display: block;
+  }
   .form-group {
     text-align: left;
   }
@@ -660,6 +663,7 @@ h2{
       padding: 5px 40px !important;
       height: 100% !important;
       cursor: pointer;
+      margin-top: 10px !important;
       &:hover, &:focus, &:active {
           background-color: #F9B50F !important;
           color: #fff !important;
@@ -690,6 +694,11 @@ h2{
   }
   label.error{
       display: block;
+      width: 100%;
+      color: red;
+      margin: 0 !important;
+  }
+  .recaptcha-container .error{
       width: 100%;
       color: red;
       margin: 0 !important;

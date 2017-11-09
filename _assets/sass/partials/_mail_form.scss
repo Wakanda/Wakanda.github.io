@@ -72,6 +72,7 @@
         color: white;
         padding: 5px 40px;
         height: 100%;
+        margin-top: 10px !important;
         &:hover, &:focus, &:active {
             background-color: $main-color-transition;
             color: $btn-default-color;
@@ -107,7 +108,12 @@
     span.error{
         color: red;
     }
-
+    .recaptcha-container .error{
+        width: 100%;
+        color: red;
+        margin: 0 !important;
+    }
+    
     input.error, select.error{
         color: red;
         @include box-shadow(0 0 3px red);
