@@ -615,3 +615,104 @@ h2{
 .menu-active{
   font-weight: bold !important;
 }
+
+
+#request-demo{
+  text-align: center;
+  width: 35%;
+  padding: 25px 15px;
+  .form-group {
+    text-align: left;
+  }
+  h2{
+      text-align: center;
+      font-size: 22px !important;
+      margin-bottom: 5px !important;
+  }
+  h3{
+      text-align: center;
+      @include font-size(18px);
+  }
+  .btn-primary {
+      background-color: #ffc600 !important;
+      border-color: #ffc600 !important;
+      color: #fff !important;
+  }
+  .mc-field-group{
+      width: 100% !important;
+      margin: 0 auto;
+      //text-align: center;
+  }
+  .input-group{
+      display: block;
+      a{
+          font-weight: 700;
+          color: #212121;
+          text-decoration: underline;
+          &:hover{
+              color: #8a8b8c;
+          }
+      }
+  }
+  input[type="submit"] {
+      background-color: #ffc600 !important;
+      color: #fff !important;
+      padding: 5px 40px !important;
+      height: 100% !important;
+      cursor: pointer;
+      &:hover, &:focus, &:active {
+          background-color: #F9B50F !important;
+          color: #fff !important;
+      }
+  }
+
+  input, select{
+      display: block;
+      color: #464a4c;
+      background-color: #fff;
+      background-image: none;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid rgba(0,0,0,.15) !important;
+      border-radius: .25rem;
+      &:focus{
+          outline: none !important;
+          -webkit-box-shadow: 0 0 3px #232A33;
+          -moz-box-shadow: 0 0 3px #232A33;
+          box-shadow: 0 0 3px #232A33;
+      }
+  }
+  input[type="checkbox"]{
+      margin-right: 5px;
+  }
+  label{
+      font-weight: normal !important;
+  }
+  label.error{
+      display: block;
+      width: 100%;
+      color: red;
+      margin: 0 !important;
+  }
+  span.error{
+      color: red;
+  }
+
+  input.error, select.error{
+      color: red;
+      -webkit-box-shadow: 0 0 3px red;
+      -moz-box-shadow: 0 0 3px red;
+      box-shadow: 0 0 3px red;
+  }
+  #recaptcha-container{
+      margin-bottom: 20px;
+      .error{
+          color: red;
+      }
+  }
+  #mc_embed_signup form{
+      padding: 10px 20px;
+      
+  }
+
+}

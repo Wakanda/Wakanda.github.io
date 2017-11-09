@@ -17,7 +17,8 @@ var site_css = ['_assets/css/slick.css',  '_assets/css/lib/cookieconsent.min.css
 '_assets/css/lib/flag-icon.min.css', '_assets/css/lib/classic-10_7.css', '_assets/css/lib/intlTelInput.css',  '_assets/sass/main.scss'];
 
 var getstarted_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js',  '_assets/js/remodal.min.js', '_assets/js/lib/tether.min.js', '_assets/js/lib/bootstrap.min.js', 
-'_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/get-started.js' ];
+'_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/lib/jquery-validate/jquery.validate.js',
+'_assets/js/intlTelInput-utils.min.js', '_assets/js/backoffice.js',  '_assets/js/get-started.js' ];
 
 var getstarted_css = ['_assets/css/lib/remodal.css', '_assets/css/lib/remodal-default-theme.css', '_assets/sass/get-started.scss'];
 
