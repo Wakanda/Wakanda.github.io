@@ -2461,6 +2461,16 @@ frm_demo.submit(function(ev) {
     return false;
 });
 /** End demo form */
+
+$(document).ajaxSuccess(function( event, xhr, settings ) {
+    //console.log('Ajax success');
+		dataLayer.push({
+			'event': 'ajaxSuccess',
+			'eventCategory': 'AJAX',
+			'eventAction': settings.url,
+			'eventLabel': xhr.responseText
+		});
+	});
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "content": {
