@@ -80,10 +80,6 @@
 
     input, select{
         display: block;
-        //width: 100%;
-        //padding: .5rem .75rem;
-        //font-size: 1rem;
-        //line-height: 1.25;
         color: #464a4c;
         background-color: #fff;
         background-image: none;
@@ -91,7 +87,6 @@
         background-clip: padding-box;
         border: 1px solid rgba(0,0,0,.15) !important;
         border-radius: .25rem;
-        //@include transition(border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s);
         &:focus{
             outline: none !important;
             @include box-shadow(0 0 3px $dark-bg);
@@ -100,61 +95,6 @@
     input[type="checkbox"]{
         margin-right: 5px;
     }
-    /*
-    input[type="checkbox"]{
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        -ms-appearance: none !important;
-        -o-appearance: none !important;
-        appearance: none !important;
-        position: relative;
-        top: 7px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 25px;
-        width: 25px  !important;
-        transition: all 0.15s ease-out 0s;
-        background: #cbd1d8;
-        border: none  !important;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block  !important;
-        margin-right: 0.5rem;
-        outline: none;
-        position: relative;
-        z-index: 1000;
-    }
-    input[type="checkbox"]:hover{
-        background: #9faab7;
-    }
-    input[type="checkbox"]:checked{
-        background: $dark-bg;
-    }
-    input[type="checkbox"]:checked::before{
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        content: '\f00c';
-        font-family:'FontAwesome';
-        display: inline-block;
-        @include font-size(20px);
-        text-align: center;
-        line-height: 10px;
-    }
-    input[type="checkbox"]:checked::after{
-        background: $dark-bg;
-        content: '';
-        display: block;
-        position: relative;
-        z-index: 100;
-    }
-    
-    select{
-        padding: 10px 8px !important;
-        width: 100% !important;
-        height: 38px !important;
-    }*/
     label{
         font-weight: normal !important;
     }
