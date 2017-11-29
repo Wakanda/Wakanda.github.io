@@ -2364,15 +2364,20 @@ $.ajaxSetup({
             recaptchaMsg.addClass('hidden');
             $.ajax({
                 type: frm.attr("method"),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                },
                 url: frm.attr("action"),
-                data: frm.serialize()
-            }).fail(function(a, b, c) {
-                $(".success-bowak", frm).hide();
-                $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
-                $(".error-bowak", frm).show();
-            }).done(function (r) {
-                $(".error-bowak", frm).hide();
-                download_enterprise_success();
+                data: frm.serialize(),
+                success: function(data) {
+                    $(".success-bowak", frm).hide();
+                    $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                    $(".error-bowak", frm).show();
+                },
+                error: function(jqXHR, textStatus) {
+                    $(".error-bowak", frm).hide();
+                    download_enterprise_success();
+                }
             });
         }
         ev.preventDefault();
@@ -2460,6 +2465,7 @@ frm_whitepaper.submit(function(ev) {
         if (frm_community.valid() && error_valiation) {
             errorMsg.addClass("hidden");
             recaptchaMsg.addClass('hidden');
+
             $.ajax({
                 type: frm_community.attr("method"),
                 headers: {
@@ -2468,7 +2474,6 @@ frm_whitepaper.submit(function(ev) {
                 url: frm_community.attr("action"),
                 data: frm_community.serialize(),
                 success: function(data) {
-                    //$("#success-bowak").show();
                     $(".error-bowak", frm_community).hide();
                     download_community_success();
                 },
