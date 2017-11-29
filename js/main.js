@@ -2323,7 +2323,6 @@ var API_CLEF = {
     }
 }
 if($.cookie('token') == undefined) {
-    console.log('AJAX to get token');
     $.ajax({
         type: API_CLEF.method,
         headers: {
@@ -2341,7 +2340,6 @@ if($.cookie('token') == undefined) {
 }
 $.ajaxSetup({
     beforeSend: function(xhr) {
-        console.log('TOKEN'); console.log($.cookie('token'));
         xhr.setRequestHeader('x-access-token', $.cookie('token'));
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     }
@@ -2595,7 +2593,6 @@ frm_demo.submit(function(ev) {
             url: frm_demo.attr("action"),
             data: frm_demo.serialize(),
             success: function(data) {
-                //console.log('Success');
                 $('.request-demo-content').fadeOut('slow', function() {
                     $('.request-demo-message').fadeIn('slow');
                 });
@@ -2616,7 +2613,6 @@ frm_demo.submit(function(ev) {
 /** End demo form */
 
 $(document).ajaxSuccess(function( event, xhr, settings ) {
-    //console.log('Ajax success');
 		dataLayer.push({
 			'event': 'ajaxSuccess',
 			'eventCategory': 'AJAX',
@@ -2651,8 +2647,6 @@ var origOffsetY = menu.offset().top;
 
 function scroll() {
     var origOffsetY = menu.offset().top;
-    //console.log('window'); console.log($(window).scrollTop());
-    //console.log('origOffsetY'); console.log(origOffsetY);
     if ($(window).scrollTop() >= origOffsetY && origOffsetY>0) {
         $('.fixed-top').addClass('sticky');
     } else {
@@ -2674,7 +2668,6 @@ $(document).ready(function() {
     if(owl_carousel.length) {
         var length = parseInt(owl_carousel.attr('data-count'));
         length = length > 0 ? length : 5;
-        console.log('Length') ; console.log(length);
         var owl = owl_carousel.owlCarousel({
             loop: true,
             items:3,
@@ -2857,7 +2850,6 @@ if($('#form-download-enterprise').length) {
         "linux32": "Ubuntu 16.04 LTS",
         "linux64": "Ubuntu 16.04 LTS",
     }
-    //console.log();
     $('#form-download-enterprise select[name="OS"]').val(OS_enterprise[getPlatform()]);
     $('#wakanda-support').html("Wakanda supports " + wakanda_support[getPlatform()]);
     //@TODO END REMOVE LINE
@@ -2876,7 +2868,6 @@ if($('#form-download-enterprise').length) {
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
         $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#form-download-enterprise input[name="email"]').val()+'">');
         $('#download-enterprise-link').attr('action', link);
-        ///console.log($('#form-download-enterprise select[name="OS"]').val());
         $('#download-enterprise-link').submit();
         redirectAfterDownload("enterprise");
     }
@@ -2900,7 +2891,6 @@ if($('#form-download-community').length) {
         "linux32": "Ubuntu 16.04 LTS",
         "linux64": "Ubuntu 16.04 LTS",
     }
-    //console.log();
     $('#form-download-community select[name="OS"]').val(OS_enterprise[getPlatform()]);
     
     $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
@@ -3241,7 +3231,6 @@ if($('.what-we-do').length) {
             if($(this).hasClass('active')){
                 sum += parseFloat($(this).attr('data-price-container'));
                 var id = $(this).attr('href');
-                //console.log('ID'); console.log(id);
                 if(id) {
                     $('[data-price]', id).each(function() {
                         if($(this).hasClass('active') || $(this).is(':checked')) {
@@ -3306,14 +3295,11 @@ if($('#before-leaving').length && false) {
     var modal =  $('#before-leaving').remodal({});
     var i = 0;
     $(window).on('load', function(e) {
-        //console.log('Loaded');
         setTimeout(function() {
             i++;
-            //console.log('from load ===> i : '+i);
         }, 2000);
     });
     $('body').mouseleave(function(){
-        //console.log('from leave ===> i : '+i);
         if($.cookie('before_leaving') != 'true' && i>0) {
             if(modal.getState() != 'opened') {
                 modal.open();
