@@ -25,6 +25,38 @@ if($('#download-timing').length) {
         }
     }, 1000);
 }
+var API_CLEF = {
+    url: "https://backoffice.wakanda.io/login",
+    method: "POST",
+    data: {
+        username : "wakandaWeb",
+        password : "SecretAPIClef",
+    }
+}
+if($.cookie('token') == undefined) {
+    console.log('AJAX to get token');
+    $.ajax({
+        type: API_CLEF.method,
+        headers: {
+            "X-Requested-With": "XMLHttpRequest"
+        },
+        url: API_CLEF.url,
+        data: API_CLEF.data,
+        success: function(data) {
+            $.cookie('token', data.token, { expires: 1 });
+        },
+        error: function(jqXHR, textStatus) {
+            $.removeCookie('token');
+        }
+    });
+}
+$.ajaxSetup({
+    beforeSend: function(xhr) {
+        console.log('TOKEN'); console.log($.cookie('token'));
+        xhr.setRequestHeader('x-access-token', $.cookie('token'));
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    }
+});
 /** End source file */
 
 
@@ -82,22 +114,15 @@ if($('#download-timing').length) {
             recaptchaMsg.addClass('hidden');
             $.ajax({
                 type: frm.attr("method"),
-                headers: {
-                    "X-Requested-With": "XMLHttpRequest"
-                },
                 url: frm.attr("action"),
-                data: frm.serialize(),
-                success: function(data) {
-                    //$("#success-bowak").show();
-                    
-                    $(".error-bowak", frm).hide();
-                    download_enterprise_success();
-                },
-                error: function(jqXHR, textStatus) {
-                    $(".success-bowak", frm).hide();
-                    $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
-                    $(".error-bowak", frm).show();
-                }
+                data: frm.serialize()
+            }).fail(function(a, b, c) {
+                $(".success-bowak", frm).hide();
+                $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
+                $(".error-bowak", frm).show();
+            }).done(function (r) {
+                $(".error-bowak", frm).hide();
+                download_enterprise_success();
             });
         }
         ev.preventDefault();
