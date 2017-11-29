@@ -120,13 +120,13 @@ $.ajaxSetup({
                 url: frm.attr("action"),
                 data: frm.serialize(),
                 success: function(data) {
+                    $(".error-bowak", frm).hide();
+                    download_enterprise_success();
+                },
+                error: function(jqXHR, textStatus) {
                     $(".success-bowak", frm).hide();
                     $(".error-bowak", frm).html('An error handler when saving to our database, please try again !');
                     $(".error-bowak", frm).show();
-                },
-                error: function(jqXHR, textStatus) {
-                    $(".error-bowak", frm).hide();
-                    download_enterprise_success();
                 }
             });
         }
