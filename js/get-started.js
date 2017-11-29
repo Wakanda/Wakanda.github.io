@@ -2284,7 +2284,6 @@ var API_CLEF = {
     }
 }
 if($.cookie('token') == undefined) {
-    console.log('AJAX to get token');
     $.ajax({
         type: API_CLEF.method,
         headers: {
@@ -2302,7 +2301,6 @@ if($.cookie('token') == undefined) {
 }
 $.ajaxSetup({
     beforeSend: function(xhr) {
-        console.log('TOKEN'); console.log($.cookie('token'));
         xhr.setRequestHeader('x-access-token', $.cookie('token'));
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     }
@@ -2556,7 +2554,6 @@ frm_demo.submit(function(ev) {
             url: frm_demo.attr("action"),
             data: frm_demo.serialize(),
             success: function(data) {
-                //console.log('Success');
                 $('.request-demo-content').fadeOut('slow', function() {
                     $('.request-demo-message').fadeIn('slow');
                 });
@@ -2577,7 +2574,6 @@ frm_demo.submit(function(ev) {
 /** End demo form */
 
 $(document).ajaxSuccess(function( event, xhr, settings ) {
-    //console.log('Ajax success');
 		dataLayer.push({
 			'event': 'ajaxSuccess',
 			'eventCategory': 'AJAX',
