@@ -2865,7 +2865,7 @@ if($('#form-download-enterprise').length) {
     function download_enterprise_success() {
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
         var selectedPlateform = os[$('#form-download-enterprise select[name="OS"]').val()];
-        var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
+        var link = 'https://backoffice.wakanda.io/api/webservice/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
         $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#form-download-enterprise input[name="email"]').val()+'">');
         $('#download-enterprise-link').append('<input type="hidden" name="token" value="'+$.cookie('token')+'">');
         $('#download-enterprise-link').attr('action', link);
