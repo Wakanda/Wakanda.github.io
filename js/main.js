@@ -2910,7 +2910,7 @@ if($('#form-download-community').length) {
         redirectAfterDownload("community");*/
         var os = { 'Windows 64 bits': 'win64', 'Mac': 'macos', 'Linux 32bits (Server Only)': 'linux32', 'Linux 64bits (Server Only)': 'linux64' }
         var selectedPlateform = os[$( '#form-download-community select[name="OS"]').val()];
-        var link = 'https://backoffice.wakanda.io/api/file/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
+        var link = 'https://backoffice.wakanda.io/api/webservice/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
         $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#form-download-community input[name="email"]').val()+'">');
         $('#download-community-link').append('<input type="hidden" name="token" value="'+$.cookie('token')+'">');
         $('#download-community-link').attr('action', link);
