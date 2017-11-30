@@ -245,6 +245,7 @@ if($('#form-download-enterprise').length) {
         var selectedPlateform = os[$('#form-download-enterprise select[name="OS"]').val()];
         var link = 'https://backoffice.wakanda.io/api/file/enterprise/'+selectedPlateform+'/'+versionLinks.enterprise+'/wakanda';
         $('#download-enterprise-link').append('<input type="hidden" name="email" value="'+$('#form-download-enterprise input[name="email"]').val()+'">');
+        $('#download-enterprise-link').append('<input type="hidden" name="token" value="'+$.cookie('token')+'">');
         $('#download-enterprise-link').attr('action', link);
         $('#download-enterprise-link').submit();
         redirectAfterDownload("enterprise");
@@ -289,6 +290,7 @@ if($('#form-download-community').length) {
         var selectedPlateform = os[$( '#form-download-community select[name="OS"]').val()];
         var link = 'https://backoffice.wakanda.io/api/file/community/'+selectedPlateform+'/'+versionLinks.communiy_stable+'/wakanda';
         $('#download-community-link').append('<input type="hidden" name="email" value="'+$('#form-download-community input[name="email"]').val()+'">');
+        $('#download-community-link').append('<input type="hidden" name="token" value="'+$.cookie('token')+'">');
         $('#download-community-link').attr('action', link);
         $('#download-community-link').submit();
         redirectAfterDownload("community");
