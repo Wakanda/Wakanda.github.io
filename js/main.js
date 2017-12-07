@@ -2720,9 +2720,9 @@ $("#community-dl").click(function() {
  */
 
 var versionLinks = { 
-    communiy_stable: "2.2.1",
+    communiy_stable: "2.3.0",
     //preview: "2.0.1",
-    enterprise: "2.2.1"
+    enterprise: "2.3.0"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
