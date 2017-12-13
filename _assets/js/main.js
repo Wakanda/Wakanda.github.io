@@ -293,7 +293,7 @@ if($('#form-download-community').length) {
         $('#download-community-link').append('<input type="hidden" name="token" value="'+$.cookie('token')+'">');
         $('#download-community-link').attr('action', link);
         $('#download-community-link').submit();
-        redirectAfterDownload("community");
+        //redirectAfterDownload("community");
     }
 }
 
