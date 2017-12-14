@@ -107,6 +107,15 @@
         color: $gray-bold;
     }
 }
+.btn-white{
+    background-color: $white-color;
+    color: $highlighted-color-transition;
+    border: 1px solid $white-color;
+    &:hover, &:focus, &:active {
+        background-color: transparent !important;
+        color: $white-color !important;
+    }
+}
 
 
 
