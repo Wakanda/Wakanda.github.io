@@ -1,3 +1,4 @@
+{% include tag_manager_head.html %}
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 {% include seo.html %}
@@ -11,17 +12,4 @@
 {% if page.show_chat %}
 {% include olark.html %}
 {% endif %}
-
-<!--A/B testing on Home Page-->
-<!--{% if page.home %}
-  <style>.async-hide { opacity: 0 !important} </style>
-<script>
-(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
-h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
-})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-WLJTRHS':true});
-</script> 
-{% endif %} -->
-
-{% include tag_manager_head.html %}
   <link rel="stylesheet" href="/css/main.css?{{ site.time | date: '%s%N' }}">
