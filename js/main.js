@@ -2611,7 +2611,7 @@ frm_demo.submit(function(ev) {
     return false;
 });
 /** End demo form */
-
+/*
 $(document).ajaxSuccess(function( event, xhr, settings ) {
 		dataLayer.push({
 			'event': 'ajaxSuccess',
@@ -2620,6 +2620,8 @@ $(document).ajaxSuccess(function( event, xhr, settings ) {
 			'eventLabel': xhr.responseText
 		});
 	});
+	*/
+
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "content": {
