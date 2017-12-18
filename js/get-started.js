@@ -2572,16 +2572,18 @@ frm_demo.submit(function(ev) {
     return false;
 });
 /** End demo form */
-/*
+
+
+// Tracking form for google tag manager
 $(document).ajaxSuccess(function( event, xhr, settings ) {
-		dataLayer.push({
-			'event': 'ajaxSuccess',
-			'eventCategory': 'AJAX',
-			'eventAction': settings.url,
-			'eventLabel': xhr.responseText
-		});
-	});
-	*/
+    dataLayer.push({
+        'event': 'ajaxSuccess',
+        'eventCategory': 'AJAX',
+        'eventAction': settings.url,
+        'eventLabel': xhr.responseText
+    });
+});
+	
 
 //(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
 /** Start Fixed Menu **/
