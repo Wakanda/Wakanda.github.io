@@ -75,17 +75,15 @@ $(document).ready(function(){
         window.location.href = $(this).find(":selected").attr('data-href');
     });
 
-
-
     /*
     * Download Community Edition links configuration
     */
 
     var versionCommunityLink = { 
-        stable: "2.3.0",
+        stable: "2.4.0",
        // preview: "2.0.1",
         1: "1.1.4",
-        2: "2.3.0"
+        2: "2.4.0"
     };
 
     var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
