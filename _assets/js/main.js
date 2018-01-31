@@ -98,9 +98,9 @@ $("#community-dl").click(function() {
  */
 
 var versionLinks = { 
-    communiy_stable: "2.3.0",
+    communiy_stable: "2.4.0",
     //preview: "2.0.1",
-    enterprise: "2.3.0"
+    enterprise: "2.4.0"
 };
 
 var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
