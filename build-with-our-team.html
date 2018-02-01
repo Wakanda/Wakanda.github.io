@@ -1,5 +1,5 @@
 ---
-id: index
+id: build-with-our-team
 layout: business
 title: Build with our Team
 show_chat: true
@@ -12,16 +12,14 @@ scripts:
   #- js/lib/jquery.uniform.js
   - https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit
 ---
-
-<section id="section-headline" class="module parallax parallax-bg-1" style="background-image:url('img/business/build-with-our-team-header.png');">
+  <section id="section-headline" class="module parallax parallax-bg-1" style="background-image:url('img/business/HeaderBg.png');">
     <div class="section-wrapper-parallax bg-overlay bg-overlay-dark">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <h1>{{page.title}}</h1>
+          <div class="col-md-6 offset-md-6">
+            <h1>Build<br/>with our Team</h1>
             <div class="h2">
-                <span>We develop high-quality, data-intensive, <br><br>mobile and web apps <br><br><b>to the world</b>.
-                </span>
+                We develop <span>high-quality, data-intensive,</span><br/> mobile and web apps to the world.
             </div>
           </div>
         </div>
@@ -29,12 +27,100 @@ scripts:
     </div>
 </section>
 
-<section id="client" style="background-color:white;padding:0; min-height: auto;">
+
+
+<section id="section-content">
+  <div  id="world-app">
+    <div class="container">
+        <div class="justify-content-md-center">
+            <div class="row top-block">
+                <div class="col-xl-4 col-lg-5 col-md-6">
+                  <div class="text-block">
+                      <h2>In the App world (mobile and web), it is vital to <b>test your idea</b> as soon as possible.</h2>
+                      <p>
+                        At Wakanda, we deeply understand that time to Market is your first 
+                        advantage. 
+                      </p>
+                  </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 col-md-6">
+                  <div class="image-block">
+                    <img src="/img/business/Image@2x.png" alt="Computer & Watch">
+                  </div>
+                </div>
+              </div>
+              <div class="row bottom-block">
+                <div class="col-md-6">
+                  <div class="text-block">
+                      <p>
+                        The Wakanda team will architecture and 
+                        develop your <b>Minimal Value Product (MVP)</b>
+                        in record times.
+                      </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-block">
+                      <p>            
+                          We will also prepare your 
+                          future with a scalable architecture that will 
+                          take care of your <b>growth and security.</b>   
+                        </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="button-block">
+                        <a href="#about-minimize" class="btn btn-gray">Tell me more</a>
+                        <a href="#" class="btn btn-orange">I’m ready, let’s chat</a>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+  <div id="about-minimize">
+    <div class="container">
+      <div class="justify-content-md-center">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="image-block">
+              <img src="/img/business/Like.png" alt="Like">
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="text-block">
+              <h2>
+                How about minimize costs with automated tests and 
+                high-quality deliverables ? <b>We have it.</b> 
+              </h2>
+              <p>
+                Wakanda has the professional team, the
+                history, top 500 clients and,  the mobile and web 
+                knowledge to develop and maintain your 
+                project through the years to come.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="button-block">
+                  <a href="#client" class="btn btn-gray">Tell me more</a>
+                  <a href="#" class="btn btn-orange">I’m ready, let’s chat</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="client">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <h2>Our Customers</h2>
           <div class="owl-carousel" data-count="7">
-            
             {% for item in site.data.content.clients %}
               <div class="item">
                 <div class="client-logo">
@@ -42,164 +128,148 @@ scripts:
                 </div>
               </div>
             {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-<section id="section-content">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-12 col-md-12 col-sm-12 item">
-        <div class="row item-row">
-          <div class="content-container">           
-            <div class="content content-left">
-              <div class="strong">
-                <b>In the App world</b> (mobile and web), it is vital to test your idea as soon as possible.
-                </div> 
-              <p>
-                At Wakanda, we deeply understand that time to Market is your first 
-                advantage. 
-              </p>
-              <p>
-                The Wakanda team will architecture and 
-                develop your Minimal Value Product (MVP) 
-                <strong>in record times. </strong> 
-              </p>
-              <p>            
-                We will also prepare your 
-                future with a scalable architecture that will 
-                take care of your growth and security.   
-              </p>
-            </div>
-            <div class="image-right">
-              <img src="/img/business/phone-stats.png" alt="Phone stats">
-            </div>
           </div>
         </div>
-
-        <div class="row item-row">
-          <div class="content-container">
-            <div class="image-left desktop-only">
-              <img src="/img/business/computer-application.png" alt="Application with Wakanda">
-            </div>
-            <div class="content content-right">
-              <div class="strong">
-                How about minimize costs with automated tests and 
-                high-quality deliverables ? We have it. 
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="button-block">
+                  <a href="#stats" class="btn btn-gray">Tell me more</a>
+                  <a href="#" class="btn btn-orange">I’m ready, let’s chat</a>
               </div>
-              <p>
-                Wakanda has the professional team, the
-                history, top 500 clients and,  the mobile and web 
-                knowledge to develop and maintain your 
-                project <strong>through the years to come. </strong>
-              </p>
-            </div>
-            <div class="image-left mobile-only">
-              <img src="/img/business/computer-application.png" alt="Application with Wakanda">
-            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
-  
-</section>
-
-<section id="clients" style="margin-top:-180px;background-color:white; padding-bottom: 10px;" >
-    <div class="banniere" style="margin:30px 0;">
-        <div class="container" >
-            <div class="content">
-                <p>
-                  Over 30 years developing software</br>
-                  More than 6000 clients</br>
-                  Excellence in services
-                </p>
-                
-            </div>
-        </div>
-    </div>
-  </section>
-
-
-
-<section id="section-content" style="margin-top:0;">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-12 col-md-12 col-sm-12 item">
-        <div class="row item-row">
-          <div class="content-container">
-            <div class="content content-left">
-              <div class="strong">
-                We believe data is knowledge. 
-              </div>
-                <p>
-                  Today, data is coming from everywhere.
-                </p>
-                <p> 
-                Your clients will bring to your system tons of data that will need to be integrated into databases, APIs, legacy systems, 3rd 
-                party companies. 
-                </p>
-                <p> We have the <strong>cutting-edge
-                platform to  transform data into<br/>
-                business</strong> for your company.  
-              </p>
-            </div>
-            <div class="image-right">
-              <img src="/img/business/cristal.png" alt="Application with Wakanda">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row item-row last-one" style="margin-top:10%;" >
-          <div class="content-container">
-            <div class="image-left desktop-only">
-              <img src="/img/business/phone-appli.png" alt="Phone application">
-            </div>
-            <div class="content content-right" style="margin-top: 20px;">
-              <div class="strong">
-                Here’s our proposal:
-              </div>
-                <p>Let's discuss your idea and add the current best innovations from mobile and web App development;</p>
-                <p>Let's design how users will have the best App experience;</p>
-                <p>Let's build your MVP (beta) for free and in less than 1 week, so you have already something to show to your investors</p>
-
-                <p style="font-size:24px; margin-top:20px; font-weight:bold">Let's talk!</p>
-            </div>
-            <div class="image-left mobile-only">
-              <img src="/img/business/phone-appli.png" alt="Phone application">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-
-<div class="banniere-container">
-  <div class="banniere" style="margin-bottom:30px;">
-      <div class="container">
-          <div class="content">
-              <a href="#request-demo" class="btn btn-blue"
-              style="font-size:30px;">Start your App right now !</a>
-          </div>
-      </div>
-  </div>
-  <div class="banniere-info">
+  <div id="stats" style="background-image:url('img/business/BackgroundPhoto.png');">
     <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col col-lg-8 col-md-8 col-sm-12 item">
-          <p><i>Booking takes less than 1 minute: choose the date and time of your convenience and you are done!
-            We have English, Portuguese, Spanish, Italian, Chinese options</i></p>
+      <div class="justify-content-md-center">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="content">
+              <div class="row">
+                <div class="text-block">
+                    <p>Over <b>30 years</b> developing software</p>
+                    <i class="fa fa-circle"></i>
+                    <p>More than <b>6000 clients</b></p>
+                    <i class="fa fa-circle"></i>
+                    <p><b>Excellence</b> in services</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="button-block">
+                        <a href="#believe-data" class="btn btn-gray">Tell me more</a>
+                        <a href="#" class="btn btn-orange">I’m ready, let’s chat</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div id="believe-data">
+    <div class="container">
+      <div class="justify-content-md-center">
+        <div class="row title-flottant">
+          <h2>We believe <b>Data is knowledge.</b></h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="image-block">
+                <img src="/img/business/dataIsKnowledge@2x.png" alt="Data is knowledge">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="text-block">
+                    <p>
+                        Today, data is coming from everywhere.
+                      </p>
+                      <p> 
+                      Your clients will bring to your system tons of data that will need to be integrated into databases, APIs, legacy systems, 3rd 
+                      party companies. 
+                      </p>
+                      <p> We have the <strong>cutting-edge
+                      platform to  transform data into<br/>
+                      business</strong> for your company.  
+                    </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="button-block">
+                        <a href="#our-proposal" class="btn btn-gray">Tell me more</a>
+                        <a href="#" class="btn btn-orange">I’m ready, let’s chat</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="our-proposal">
+    <div class="container">
+      <div class="justify-content-md-center">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Here’s our proposal</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="content">
+              <div class="row">
+                <div class="text-block">
+                  <i class="fa fa-circle"></i>
+                  <p><b>Let's discuss</b> your idea and add the current best innovations from mobile and web App development;</p>
+                  <i class="fa fa-circle"></i>
+                  <p><b>Let's design</b> how users will have the best App experience;</p>
+                  <i class="fa fa-circle"></i>                  
+                  <p><b>Let's build</b> your MVP (beta) for free and in less than 1 week, so you have already something to show to your investors</p>
+                  <i class="fa fa-circle"></i>
+                  <h3>Let's talk!</h3>                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="start-app" style="background-image:url('img/business/BackgroundPhoto.png');">
+    <div class="container">
+      <div class="justify-content-md-center">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="button-block">
+                            <a href="#" class="btn btn-orange">Start your app</a>
+                        </div>
+                    </div>
+                  </div>
+              <div class="row">
+                <div class="text-block">
+                    <p>Booking takes less than 1 minute:</p>
+                    <p>choose the date and time of your convenience and you’re done!</p>
+                    <p class="bottom-paragraph">We have English, Portuguese, Spanish, Italian, Chinese options.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 {% include request-demo-modal.html %}
+
+
+
+
