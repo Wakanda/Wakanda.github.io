@@ -510,7 +510,7 @@
         }
     }
     #section-content{
-        padding-bottom: 0;
+        padding: 0;
     }
     #section-headline{
         min-height: 700px;
@@ -525,7 +525,7 @@
         }
         .h2{
             font-family: SourceSansPro-Regular;
-            @include font-size(22px);
+            @include font-size(32px);
             line-height: 39px;
             text-align: left;
             color: $white-color;
@@ -537,7 +537,8 @@
         }
     }
     #world-app{
-        margin: 60px 0;
+        padding: 60px 0;
+        overflow: hidden;
         .justify-content-md-center:before {
             width: 900px;
             height: 900px;
