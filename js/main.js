@@ -2716,7 +2716,6 @@ function redirectAfterDownload(type) {
     }, 3000);
 }
 
-
 $("#community-dl").click(function() {
     redirectAfterDownload("community");
 });
