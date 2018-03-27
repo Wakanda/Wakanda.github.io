@@ -19,6 +19,13 @@ window.cookieconsent.initialise({
   onPopupClose: function() {
   }
 })});
+
+$('ul.e li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').show();
+  }, function() {
+    $(this).find('.dropdown-menu').hide();
+  });
+
 /** Start Fixed Menu **/
 var menu = $('.main-nav');
 var origOffsetY = menu.offset().top;

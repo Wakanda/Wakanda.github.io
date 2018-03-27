@@ -4,7 +4,12 @@ items:
     url: /what-we-do.html
 
   - title: Pricing
-    url: /pricing_services.html
+    url: #
+    subdomain:
+      - title: Enterprise pricing
+        url: /pricing.html
+      - title: Pricing service
+        url: /pricing_services.html
 
   - title: Download
     url: /download.html
