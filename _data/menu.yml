@@ -6,10 +6,12 @@ items:
   - title: pricing
     url: #
     subdomain:
-      - title: Enterprise pricing
-        url: /pricing.html
-      - title: Pricing service
+      - title: Services
         url: /pricing-services.html
+      - title: Platform
+        url: /pricing.html
+      - title: App Cost Calculator
+        url: https://goo.gl/forms/OsvXOLZC86icaZ9g1
 
   - title: Download
     url: /download.html
