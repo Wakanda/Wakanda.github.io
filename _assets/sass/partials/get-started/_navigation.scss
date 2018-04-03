@@ -65,6 +65,7 @@
         line-height: 1em;
         margin-left: 9px;
         padding: 8px 7px 9px;
+        text-transform: capitalize;
 
         @media(max-width: 991px){
           padding-left: 5px;
@@ -241,4 +242,7 @@
   to{ 
     margin-left: 0; 
   }
+}
+a.dropdown-item {
+  font-size: 16px;
 }
