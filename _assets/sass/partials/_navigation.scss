@@ -57,6 +57,7 @@
         line-height: 1em;
         margin-left: 9px;
         padding: 8px 7px 9px;
+        text-transform: capitalize;
 
         @media(max-width: 991px){
           padding-left: 5px;
@@ -189,6 +190,7 @@
         font-size: 1.45rem;
         line-height: 70px;
         transition-timing-function: ease;
+        text-transform: capitalize;
  
         @media (max-height: 480px){
           font-size: 28px;

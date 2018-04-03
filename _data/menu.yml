@@ -3,13 +3,13 @@ items:
   - title: Services
     url: /what-we-do.html
 
-  - title: Pricing
+  - title: pricing
     url: #
     subdomain:
       - title: Enterprise pricing
         url: /pricing.html
       - title: Pricing service
-        url: /pricing_services.html
+        url: /pricing-services.html
 
   - title: Download
     url: /download.html

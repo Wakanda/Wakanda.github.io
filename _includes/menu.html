@@ -14,12 +14,12 @@
           {% endif %}
           <ul>
             {% for item in site.data.menu.items %}
-              <li class="hidden-sm-down {% if item.highlighted %}highlighted-item{% endif %} {% if item.subdomain %} nav-item dropdown {% endif %} {% if page.url contains item.url %} active {% endif %}">
-                  <a class="{{ item.class }} {% if page.url == item.url %} menu-active {% endif %} {% if item.subdomain %} nav-link dropdown-toggle {% endif %}" href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}  {% if item.subdomain %} id="navbarDropdown-{{forloop.index}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>{{ item.title }}</a>
+              <li class="hidden-sm-down {% if item.highlighted %}highlighted-item{% endif %} {% if item.subdomain %} nav-item dropdown {% endif %} {% if page.url contains item.url or page.url contains item.title  %} active {% endif %}">
+                  <a class="{{ item.class }} {% if page.url == item.url or page.url contains item.title %} menu-active {% endif %} {% if item.subdomain %} nav-link dropdown-toggle {% endif %}" href="{{ item.url }}" {% if item.target %} target="{{ item.target }}" {% endif %}  {% if item.subdomain %} id="navbarDropdown-{{forloop.index}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}>{{ item.title }}</a>
                   {% if item.subdomain %}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{forloop.index}}">
                       {% for subitem in item.subdomain %}
-                        <a class="dropdown-item" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                        <a class="dropdown-item {% if page.url == subitem.url %} menu-active {% endif %} " href="{{ subitem.url }}">{{ subitem.title }}</a>
                       {% endfor %}
                     </div>
                   {% endif %}
