@@ -80,10 +80,10 @@ $(document).ready(function(){
     */
 
     var versionCommunityLink = { 
-        stable: "2.4.0",
+        stable: "2.5.0",
        // preview: "2.0.1",
         1: "1.1.4",
-        2: "2.4.0"
+        2: "2.5.0"
     };
 
     var baseCommunityLink = "https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/";
