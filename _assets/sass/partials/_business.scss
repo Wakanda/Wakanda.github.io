@@ -526,7 +526,7 @@
         .h2{
             font-family: SourceSansPro-Regular;
             @include font-size(32px);
-            line-height: 39px;
+            line-height: 100px;
             text-align: left;
             color: $white-color;
             span{
