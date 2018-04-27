@@ -564,12 +564,38 @@ section#step-quote{
 	text-align: center;
 	padding: 60px 0;
 	min-height: initial;
+	h2{
+		font-family: Roboto;
+		@include font-size(48px);
+		font-weight: bold;
+        line-height: 1.57;
+        display: block;
+        width: 100%;
+        margin: 0;
+	}
 	h3{
 		font-family: Roboto;
-		@include font-size(42px);
+		@include font-size(34px);
 		font-weight: bold;
 		line-height: 1.57;
-	}
+        display: block;
+        width: 100%;
+    }
+    h4{
+		font-family: Roboto;
+		@include font-size(26px);
+		font-weight: bold;
+		line-height: 1.57;
+        display: block;
+        width: 100%;
+    }
+    .item{
+        padding: 60px;
+        text-align: center;
+        img{
+            width: 60px;
+        }
+    }
 	a{
 		font-family: Roboto;
 		@include font-size(20px);
