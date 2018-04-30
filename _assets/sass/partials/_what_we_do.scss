@@ -575,11 +575,12 @@ section#step-quote{
 	}
 	h3{
 		font-family: Roboto;
-		@include font-size(34px);
+		@include font-size(30px);
 		font-weight: bold;
 		line-height: 1.57;
         display: block;
         width: 100%;
+        margin: 40px 0;
     }
     h4{
 		font-family: Roboto;
@@ -588,13 +589,26 @@ section#step-quote{
 		line-height: 1.57;
         display: block;
         width: 100%;
+        margin: 20px 0;
     }
     .item{
-        padding: 60px;
+        padding: 10px 60px;
         text-align: center;
         img{
             width: 60px;
         }
+    }
+    .button-block{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        a{
+            padding: 15px 60px;
+        }
+    }
+    .desc {
+        margin-bottom: 70px;
     }
 	a{
 		font-family: Roboto;
