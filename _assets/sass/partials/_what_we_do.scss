@@ -564,12 +564,52 @@ section#step-quote{
 	text-align: center;
 	padding: 60px 0;
 	min-height: initial;
+	h2{
+		font-family: Roboto;
+		@include font-size(48px);
+		font-weight: bold;
+        line-height: 1.57;
+        display: block;
+        width: 100%;
+        margin: 0;
+	}
 	h3{
 		font-family: Roboto;
-		@include font-size(42px);
+		@include font-size(30px);
 		font-weight: bold;
 		line-height: 1.57;
-	}
+        display: block;
+        width: 100%;
+        margin: 40px 0;
+    }
+    h4{
+		font-family: Roboto;
+		@include font-size(26px);
+		font-weight: bold;
+		line-height: 1.57;
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .item{
+        padding: 10px 60px;
+        text-align: center;
+        img{
+            width: 60px;
+        }
+    }
+    .button-block{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        a{
+            padding: 15px 110px;
+        }
+    }
+    .desc {
+        margin-bottom: 70px;
+    }
 	a{
 		font-family: Roboto;
 		@include font-size(20px);
@@ -591,5 +631,11 @@ section#step-quote{
         a{
             font-weight: 400;
         }
+    }
+    .btn-orange{
+        @include box-shadow(0px 0px 4px 1px $secondary-color);
+    }
+    .btn-gray{
+        @include box-shadow(0px 0px 4px 1px $secondary-light-bg-color);
     }
 }
