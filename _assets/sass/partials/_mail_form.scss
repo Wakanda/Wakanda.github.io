@@ -132,6 +132,7 @@
 }
 
 #section-newsletter{
+    display: none;
     .newsletter{
         background: $highlighted-color-transition;
         color: $white-color;
@@ -224,5 +225,16 @@
             max-width: 90%;
             margin-bottom: 10px;
         }
+    }
+}
+.w-privacy-policy-link{
+    text-align: center;
+    margin-top:30px; 
+    width: 100%;
+    a{
+        font-weight: 700;
+        color: $btn-dark-bg;
+        text-decoration: underline;
+        display: inline-block;
     }
 }
