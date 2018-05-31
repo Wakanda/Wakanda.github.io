@@ -156,9 +156,29 @@
         @include font-size-em(28px);
         color: #212121;
         letter-spacing: 0;
+        span{
+            display: block;
+        }
+        span.small{
+            font-size: 20px;
+            margin: 20px 0;
+        }
     }
     #section-headline{
         padding: 120px 0 60px;
+        .button-block{
+            text-align: center;
+            margin: 40px 0;
+            .btn{
+                font-family: 'Open Sans', sans-serif;
+                @include font-size(22px);
+                color: $white-color;
+                padding: 10px 40px;
+                @include border-radius(80px);
+                margin: 5px 10px;
+                width: auto;
+            }
+        } 
     }
     #section-content{
         background-color: $white-color;
