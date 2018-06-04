@@ -551,9 +551,9 @@
             text-align: left;
             color: $white-color;
             span{
-                color: #1B1816;
-                background-color: $main-color;
+                color:  $main-color;
                 padding: 2px;
+				display:inline-block;
             }
         }
         .button-block{
