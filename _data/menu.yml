@@ -11,7 +11,7 @@ items:
       - title: Platform
         url: /pricing.html
       - title: App Cost Calculator
-        url: https://goo.gl/forms/OsvXOLZC86icaZ9g1
+        url: /app-calculator.html
 
   - title: Download
     url: /download.html
