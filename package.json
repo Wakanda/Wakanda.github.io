@@ -20,5 +20,8 @@
     "gulp-rename": "1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "1.2.0"
+  },
+  "dependencies": {
+    "os-tmpdir": "^1.0.2"
   }
 }
