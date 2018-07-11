@@ -19,6 +19,8 @@ body{
 	width: 100%;
 	overflow-x: hidden;
 }
+.async-hide { opacity: 0 !important} 
+
 #section-slideshow,
 #section-community{
     background-color: $dark-bg;
