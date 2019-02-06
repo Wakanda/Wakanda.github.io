@@ -2701,6 +2701,15 @@ $(document).ready(function() {
             }
         });
     }
+    $('.accordion-end-of .accordion-title').click(function() {
+        if( $(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).next().slideDown(); 
+        }else{
+            $(this).addClass('active');
+            $(this).next().slideUp();
+        } 
+    });
 })
 
 $('#navbarmenu-toggle').click(function () {
