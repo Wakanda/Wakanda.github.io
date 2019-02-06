@@ -8,10 +8,10 @@ page_step: true
 
 ## Step 1 : Install Wakanda
 
-First, download and install **Wakanda Community Edition**
+First, download and install **Wakanda Enterprise Edition**
 
-- On [Windows](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.3/wakanda-community-all_2.0.3_x64.msi "download")
-- On [Mac OS X](https://github.com/Wakanda/wakanda-digital-app-factory/releases/download/v2.0.3/wakanda-community-all_2.0.3_x64.dmg "download")
+- On [Windows](https://wakanda.github.io/download.html#section-download "download")
+- On [Mac OS X](https://wakanda.github.io/download.html#section-download "download")
 
 
 > **TIPS**: 
