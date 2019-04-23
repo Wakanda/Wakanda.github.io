@@ -1,0 +1,220 @@
+---
+id: license
+layout: page
+title: ChangeLogs for wakanda
+subtitle: The ChangeLogs list The update deatils in each version of wakanda in the v2 
+---
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="region region-content">
+                <section id="block-system-main" class="block block-system clearfix">
+                    <article id="node-14" class="node node-page clearfix">
+                    </article>
+                    <div class="version">
+                        <h2>v2.7.0</h2>
+                        <h3>Server</h3>
+                        <ul>
+                        <li> Feature: Config and method to set request timeout for 4D Mobile Queries.</li>
+                        <li> Feature: <code>OnSendRequest</code> event to customize Rest Requests on the fly.</li>
+                        <li> Fix: Timestamp compatibility issue with 4D V17</li>
+                        <li> Fix: Single Quote issue in Rest Queries</li>
+                        <li> Fix: Disabled community mode, License is now required to start the server. </li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.6.0</h2>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>Ubuntu 18.04 only support</li>
+                        <li>Upgrade Ubuntu package from <code>upstart</code> to <code>systemd</code> (<a href="https://wakanda.github.io/doc/#/guide?section=main-prod" rel="nofollow">doc</a>) (<a href="https://github.com/Wakanda/wakanda-issues/issues/152" >#152</a>, <a href="https://github.com/Wakanda/wakanda-issues/issues/213">#213</a>, <a href="https://github.com/Wakanda/wakanda-issues/issues/220">#220</a>, <a href="https://github.com/Wakanda/wakanda-issues/issues/243">#243</a>, <a href="https://github.com/Wakanda/wakanda-issues/issues/244">#244</a>)</li>
+                        <li>Fix: Readable error on wrong relatedEntity/ies (<a href="https://github.com/Wakanda/wakanda-issues/issues/209">#209</a>)</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.5.0</h2>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>[BETA] Solution build (<a href="https://trello.com/c/c6lY5xb3/9-solution-build" rel="nofollow">more details</a>)</li>
+                        <li>Fix: Start / Stop Server issues from Wakanda Studio (<a href="https://github.com/Wakanda/wakanda-issues/issues/210">#210</a> <a href="https://github.com/Wakanda/wakanda-issues/issues/212">#212</a> <a href="https://github.com/Wakanda/wakanda-issues/issues/227" >#227</a> <a href="https://github.com/Wakanda/wakanda-issues/issues/228">#228</a>)</li>
+                        </ul>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>Add restrict event on 4D / MySQL remote dataclasses</li>
+                        <li>Add global custom HTTP headers <a href="https://wakanda.github.io/doc/#/guide?section=main-http" rel="nofollow">(doc)</a></li>
+                        <li>Add forward secrecy and HSTS (<a href="https://github.com/Wakanda/wakanda-issues/issues/231">#231</a>)<a href="https://wakanda.github.io/doc/#/guide?section=main-http" rel="nofollow">(doc)</a></li>
+                        <li>Export requireNode.cache attribute</li>
+                        <li>Security fix: Specific HTTP request causes server crash</li>
+                        <li>Security fix: scope not working on remote dataclasses (<a href="https://github.com/Wakanda/wakanda-issues/issues/240">#240</a>)</li>
+                        <li>Fix: crashing duplicated <code>addRemoteStore()</code> with same parameters</li>
+                        <li>Fix: orderBy issue on type object sorts by ID (<a href="https://github.com/Wakanda/wakanda-issues/issues/242">#242</a>)</li>
+                        <li>Fix: system worker with array or string params does not use the same PATH</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.4.0</h2>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Fix: Studio cannot start Server if its path contains space character</li>
+                        </ul>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>Use <code>Accept</code> HTTP request header to format HTTP error response <a href="https://github.com/Wakanda/wakanda-issues/issues/203">[issue 203]</a></li>
+                        <li>Add XHR timeout <a href="https://wakanda.github.io/api-reference/interfaces/xmlhttprequest.html#timeout" rel="nofollow">(doc)</a> <a href="https://github.com/Wakanda/wakanda-issues/issues/189">[issue 189]</a></li>
+                        <li>Set cookie's <code>Secure</code> flag on HTTPS</li>
+                        <li>Authorise requests where <code>Origin</code> header's protocol is HTTP on HTTPS port (Case of reverse proxies)</li>
+                        <li>Fix: Server crash with NodeWorker &amp; Windows Service</li>
+                        <li>Fix: <code>query()</code> on <code>Object</code> attribute <a href="https://github.com/Wakanda/wakanda-issues/issues/237" data-hovercard-type="issue" >[issue 237]</a></li>
+                        <li>Fix: Multiparameter <code>orderBy()</code> on <code>Object</code> attribute <a href="https://github.com/Wakanda/wakanda-issues/issues/233">[issue 233]</a></li>
+                        <li>Fix: <code>getStorage()</code> returned a storage with volatile prototype</li>
+                        <li>Fix: storage's <code>clear()</code> was missing (shared storage)</li>
+                        <li>Fix: storage's <code>removeItem()</code> was missing (shared storage)</li>
+                        <li>Fix: <code>NodeWorker</code> and <code>SharedWorker</code> now accept a <code>File</code> object as parameter <a href="https://wakanda.github.io/api-reference/interfaces/nodeworker.html#constructor" rel="nofollow">(doc)</a></li>
+                        <li>Doc: Fix <code>slice()</code> documentation <a href="https://wakanda.github.io/api-reference/interfaces/entitycollection.html#slice" rel="nofollow">(doc)</a></li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.3.0</h2>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>Add server routing HTTP to HTTPS <a href="https://wakanda.github.io/doc/#/guide?section=main-http" rel="nofollow">(doc)</a></li>
+                        <li>Add Multi stage deployment feature <a href="https://wakanda.github.io/doc/#/guide?section=main-prod" rel="nofollow">(doc)</a></li>
+                        <li>Fix: Error returned on wrong NodeWorker or SharedWorker definition</li>
+                        <li>Fix: Error on 'File already exist' with Linux <code>copyTo</code></li>
+                        <li>Fix: Image insertion in a remote ODBC database</li>
+                        <li>Fix: Duplicated entity on <code>n-1</code> query on a remote ODBC database</li>
+                        </ul>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Fix <a href="https://github.com/Wakanda/wakanda-issues/issues/210">issue 210</a></li>
+                        <li>Fix <a href="https://github.com/Wakanda/wakanda-issues/issues/212">issue 212</a></li>
+                        <li>Fix <a href="https://github.com/Wakanda/wakanda-issues/issues/218">issue 218</a></li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.2.1</h2>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Fix <a href="https://github.com/Wakanda/wakanda-issues/issues/212">#212</a></li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.2.0</h2>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>NodeWorkers now are based on NodeJS v8.1.3.
+                        <ul>
+                        <li>NodeJS v6 has a garbage collector issue fixed in NodeJS v8 <a href="https://github.com/Wakanda/wakanda-issues/issues/167">#167</a></li>
+                        </ul>
+                        </li>
+                        <li>Add datastore <code>pauseTransaction()</code> and <code>resumeTransaction()</code> : <a href="https://wakanda.github.io/api-reference/interfaces/datastore.html#pausetransaction" rel="nofollow">doc</a></li>
+                        <li>Add dataclass <code>setCollectionPageLength()</code> and <code>getCollectionPageLength()</code>: <a href="https://wakanda.github.io/api-reference/interfaces/datastoreclass.html#setcollectionpagelength" rel="nofollow">doc</a></li>
+                        <li>Add entity collection <code>splice()</code> method: <a href="https://wakanda.github.io/api-reference/interfaces/entitycollection.html#splice" rel="nofollow">doc</a></li>
+                        <li>Add datastore <code>distinctPath()</code> method: <a href="https://wakanda.github.io/api-reference/interfaces/datastoreclass.html#distinctpaths" rel="nofollow">doc</a></li>
+                        <li>Add shared storage <code>tryLock()</code> method: <a href="https://wakanda.github.io/api-reference/interfaces/lockablekeyvaluestorage.html#trylock" rel="nofollow">doc</a></li>
+                        <li>Fix: Dataclass method calls must use POST request (GET not supported anymore for security reasons).</li>
+                        <li>Fix: Worker exceptions not passed to <code>port.onerror</code> callback</li>
+                        </ul>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Fix <a href="https://github.com/Wakanda/wakanda-issues/issues/208">#208</a></li>
+                        <li>Fix: backend user templates get mixed up with user mobile templates</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.1.0</h2>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Write and run tests for your Wakanda backend : <a href="https://user-images.githubusercontent.com/6703912/28726827-05acfc72-73c3-11e7-9a0a-4d74c3836d96.png" rel="nofollow">screenshot</a>, <a href="https://wakanda.github.io/doc/#/guide?section=main-test" rel="nofollow">doc</a></li>
+                        <li>Configure and manage your Android packages from the studio preferences : <a href="https://user-images.githubusercontent.com/6703912/28725383-8c2d2a84-73bd-11e7-8f3c-59c2c15af90e.png" rel="nofollow">screenshot-1</a>, <a href="https://user-images.githubusercontent.com/6703912/28725391-91f4fc6c-73bd-11e7-9d2b-676a58d34a17.png" rel="nofollow">screenshot-2</a></li>
+                        <li>Configure your environment variables from the studio preferences : <a href="https://user-images.githubusercontent.com/6703912/28725516-f6e7e3c8-73bd-11e7-85bb-5d2ce6d70cb8.png" rel="nofollow">screenshot</a></li>
+                        <li>Interact with command line tools directly from the studio as in the command line : <a href="https://user-images.githubusercontent.com/6703912/28725745-b40943f2-73be-11e7-94e8-8131176160b9.png" rel="nofollow">screenshot-1</a>, <a href="https://user-images.githubusercontent.com/6703912/28725749-b61882f2-73be-11e7-9b6e-de85c13ab098.png" rel="nofollow">screenshot-2</a></li>
+                        <li><code>.wakanda</code> folder versioning and update support (to get fixes and enhancements for tasks, troubleshooting when downloading new Wakanda Versions)</li>
+                        <li>Create your own project templates by putting them inside <code>Documents/Wakanda/templates</code> : <a href="https://user-images.githubusercontent.com/6703912/28726004-a8bf76fa-73bf-11e7-8cb4-14f8e74d1a24.png" rel="nofollow">screenshot</a></li>
+                        <li>Change Server administration ports from studio preferences : <a href="https://user-images.githubusercontent.com/6703912/28726169-759d89f0-73c0-11e7-8151-b7f8f39f6f82.png" rel="nofollow">screenshot</a></li>
+                        <li>Add visual feedback when task is terminated : <a href="https://user-images.githubusercontent.com/6703912/28726314-12e80e1a-73c1-11e7-8895-a43ab43e7456.png" rel="nofollow">screenshot</a></li>
+                        <li>Better Server restart handling</li>
+                        <li>Save user default solutions path in preferences</li>
+                        <li>Add OS specific<code>PATH</code> env variable default values</li>
+                        <li>Update Ionic &amp; Angular templates</li>
+                        <li>Better Ionic &amp; Ionic1 troubleshooting</li>
+                        <li>Change template defaults : Angular &amp; Ionic instead of Angular 1 &amp; Ionic 1</li>
+                        <li>Fix default solution creation template for Mobile</li>
+                        <li>Fix project add <a href="https://github.com/Wakanda/wakanda-issues/issues/204">#204</a></li>
+                        </ul>
+                        <h3>Server</h3>
+                        <ul>
+                        <li>NodeWorkers now are based on NodeJS v6.10.2 LTS</li>
+                        <li>New server module <code>Threadify</code> included in the server <a href="https://github.com/Wakanda/threadify">github</a>, <a href="https://wakanda.github.io/doc/#/guide?section=main-workers-threadify" rel="nofollow">doc</a></li>
+                        <li>New <code>getStorage</code> and <code>removeStorage</code> API <a href="https://wakanda.github.io/api-reference/interfaces/wakstorage.html#getstorage" rel="nofollow">doc</a></li>
+                        <li>SystemWorker API can now emulate a terminal <a href="https://wakanda.github.io/api-reference/interfaces/waksystemworkeroptions.html#emulateterminal" rel="nofollow">doc</a></li>
+                        <li>Admin UI Jobs now run inside of a NodeWorker</li>
+                        <li>Enterprise feature: <code>setLogListener()</code> API <a href="https://wakanda.github.io/api-reference/interfaces/wakcore.html#setloglistener" rel="nofollow">doc</a></li>
+                        <li>Add <code>compute()</code> controlMethod to Virtual DataClass</li>
+                        <li>No need to declare controlMethods with default or inherited behaviour for Virtual DataClass</li>
+                        <li>Better placeholders handling for db drivers</li>
+                        <li>Fix: <code>getUserSessions()</code> date <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="217191141" data-permission-text="Issue title is private" data-url="https://github.com/Wakanda/wakanda-issues/issues/168" data-hovercard-type="issue" data-hovercard-url="/Wakanda/wakanda-issues/issues/168/hovercard" href="https://github.com/Wakanda/wakanda-issues/issues/168">Wakanda/wakanda-issues#168</a></li>
+                        <li>Fix: crash when using <code>forEach()</code> V8 garbage collector <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="216876230" data-permission-text="Issue title is private" data-url="https://github.com/Wakanda/wakanda-issues/issues/167" data-hovercard-type="issue" data-hovercard-url="/Wakanda/wakanda-issues/issues/167/hovercard" href="https://github.com/Wakanda/wakanda-issues/issues/167">Wakanda/wakanda-issues#167</a></li>
+                        <li>Fix: <code>describe</code> permission issue</li>
+                        <li>Fix: Untie describe &amp; read model permissions</li>
+                        <li>Fix: alias attribut not updated when related attribut is <a href="https://github.com/Wakanda/wakanda-issues/issues/148">Wakanda/wakanda-issues#148</a></li>
+                        <li>Fix: forEach and toArray slower in wakanda v2.0 than v1.1.4 on 4D MOBILE</li>
+                        <li>Fix: getTimestamp returns a wrong value on 4D MOBILE</li>
+                        <li>Fix: query with NULL value on 3rd level relations for MySQL Pro Connector</li>
+                        </ul>
+                    </div>
+                    <div class="version">    
+                        <h2>v2.0.3</h2>
+                        <ul>
+                        <li>Fix: [Server] Linux service cannot start after a reboot</li>
+                        <li>Fix: [Server] Unparsable CS-URI* fields in HTTP logs</li>
+                        <li>Fix: [MySQL Connector] Save Bool with null value</li>
+                        <li>Fix: [Virtual Model] Init event triggered twice</li>
+                        <li>Fix: [Oracle Driver] Blob and Dates Type</li>
+                        <li>Fix: [Studio] lack of visual feedback during package installation (Angular4 &amp; Ionic2)</li>
+                        <li>Fix: [Studio] no more <code>brew install android-sdk</code></li>
+                        <li>Fix: [Studio] focus issue on Windows 10 &amp; macOS Sierra for dialogs with webviews</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.0.2</h2>
+                        <ul>
+                        <li>Fix: Installer cannot update a previous installed version</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.0.1</h2>
+                        <h3>Studio</h3>
+                        <ul>
+                        <li>Fix: Studio runtime missing (Windows only)</li>
+                        <li>Git : disable diff on removed files</li>
+                        <li>Fix: Studio becomes unresponsive for a while if git UI is open and a run solution is performed on Angular2</li>
+                        </ul>
+                    </div>
+                    <div class="version">
+                        <h2>v2.0.0</h2>
+                        <h3>New SSJS APIs</h3>
+                        <ul>
+                        <li><strong>NodeWorker</strong> <a href="https://wakanda.github.io/doc/#/guide?section=main-workers-node" rel="nofollow">https://wakanda.github.io/doc/#/guide?section=main-workers-node</a></li>
+                        <li><strong>setLoginManager</strong> <a href="https://wakanda.github.io/doc/#/guide?section=main-auth-custom" rel="nofollow">https://wakanda.github.io/doc/#/guide?section=main-auth-custom</a></li>
+                        </ul>
+                        <h3>How to use the new admin dashboard</h3>
+                        <ul>
+                        <li><code>addHttpRequestHandler</code> &amp; <code>removeHttpRequestHandler</code> replaced by <code>httpServer.addRequestHandler</code> &amp; <code>httpServer.removeRequestHandler</code></li>
+                        <li><code>currentUser</code> &amp; <code>currentSession</code> replaced by <code>directory.currentUser</code> &amp; <code>directory.currentSession</code></li>
+                        <li><code>createUserSession</code> replaced by <code>directory.createUserSession</code></li>
+                        <li><code>directory.setLoginListener</code> replaced by <code>directory.setLoginManager</code> (not the same APIs)</li>
+                        <li><code>getSession()</code> replaced by <code>directory.getSession()</code></li>
+                        <li><code>getUserSessions()</code> replaced by <code>directory.getUserSessions()</code></li>
+                        <li><code>loginByKey()</code> replaced by <code>directory.loginByKey()</code></li>
+                        <li><code>loginByPassword()</code> replaced by <code>directory.loginByPassword()</code></li>
+                        <li><code>logout()</code> replaced by <code>directory.logout()</code></li>
+                        <li><code>setCurrentSession()</code> replaced by <code>directory.setCurrentSession()</code></li>
+                        <li><code>solution.quitServer()</code> removed for security reasons</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
