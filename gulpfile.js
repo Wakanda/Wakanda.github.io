@@ -1,90 +1,147 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    cache = require('gulp-cache'),
-    sass = require('gulp-sass'),
-    cleanCSS = require('gulp-clean-css');
+const { src, dest, series, watch } = require("gulp");
+const plumber = require("gulp-plumber");
+const rename = require("gulp-rename");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const sass = require("gulp-sass");
+const cleanCSS = require("gulp-clean-css");
 
-var site_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js', '_assets/js/lib/tether.min.js','_assets/js/lib/bootstrap.min.js', '_assets/js/layout.js',
- '_assets/js/remodal.min.js', '_assets/js/lib/jquery-validate/jquery.validate.js', '_assets/js/isotope.pkgd.js', '_assets/js/select2.min.js'
-, '_assets/js/jquery.flip.min.js', '_assets/js/lib/cookieconsent.min.js','_assets/js/lib/owl.carousel.min.js', '_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/intlTelInput.min.js',
-'_assets/js/intlTelInput-utils.min.js', '_assets/js/jquery.cookie.js', '_assets/js/axios.min.js', '_assets/js/backoffice.js', '_assets/js/main.js'];
+const site_js_files = [
+  "_assets/js/lib/jquery-3.1.1.min.js",
+  "_assets/js/lib/jquery.cookie.js",
+  "_assets/js/lib/tether.min.js",
+  "_assets/js/lib/bootstrap.min.js",
+  "_assets/js/layout.js",
+  "_assets/js/remodal.min.js",
+  "_assets/js/lib/jquery-validate/jquery.validate.js",
+  "_assets/js/isotope.pkgd.js",
+  "_assets/js/select2.min.js",
+  "_assets/js/jquery.flip.min.js",
+  "_assets/js/lib/cookieconsent.min.js",
+  "_assets/js/lib/owl.carousel.min.js",
+  "_assets/js/lib/mc-validate.js",
+  "_assets/js/defer-external.js",
+  "_assets/js/intlTelInput.min.js",
+  "_assets/js/intlTelInput-utils.min.js",
+  "_assets/js/jquery.cookie.js",
+  "_assets/js/axios.min.js",
+  "_assets/js/backoffice.js",
+  "_assets/js/main.js",
+];
 
-var site_css = ['_assets/css/slick.css',  '_assets/css/lib/cookieconsent.min.css','_assets/css/lib/owl.carousel.min.css', '_assets/css/lib/remodal.css', '_assets/css/lib/remodal-default-theme.css', '_assets/css/lib/select2.min.css',
-'_assets/css/lib/flag-icon.min.css', '_assets/css/lib/classic-10_7.css', '_assets/css/lib/intlTelInput.css',  '_assets/sass/main.scss'];
+const site_css_files = [
+  "_assets/css/slick.css",
+  "_assets/css/lib/cookieconsent.min.css",
+  "_assets/css/lib/owl.carousel.min.css",
+  "_assets/css/lib/remodal.css",
+  "_assets/css/lib/remodal-default-theme.css",
+  "_assets/css/lib/select2.min.css",
+  "_assets/css/lib/flag-icon.min.css",
+  "_assets/css/lib/classic-10_7.css",
+  "_assets/css/lib/intlTelInput.css",
+  "_assets/sass/main.scss",
+];
 
-var getstarted_js = ['_assets/js/lib/jquery-3.1.1.min.js', '_assets/js/lib/jquery.cookie.js',  '_assets/js/remodal.min.js', '_assets/js/lib/tether.min.js', '_assets/js/lib/bootstrap.min.js', 
-'_assets/js/lib/mc-validate.js', '_assets/js/defer-external.js', '_assets/js/lib/jquery-validate/jquery.validate.js',
-'_assets/js/intlTelInput.min.js', '_assets/js/intlTelInput-utils.min.js', '_assets/js/jquery.cookie.js', '_assets/js/axios.min.js', '_assets/js/backoffice.js',  '_assets/js/get-started.js' ];
+const getstarted_js_files = [
+  "_assets/js/lib/jquery-3.1.1.min.js",
+  "_assets/js/lib/jquery.cookie.js",
+  "_assets/js/remodal.min.js",
+  "_assets/js/lib/tether.min.js",
+  "_assets/js/lib/bootstrap.min.js",
+  "_assets/js/lib/mc-validate.js",
+  "_assets/js/defer-external.js",
+  "_assets/js/lib/jquery-validate/jquery.validate.js",
+  "_assets/js/intlTelInput.min.js",
+  "_assets/js/intlTelInput-utils.min.js",
+  "_assets/js/jquery.cookie.js",
+  "_assets/js/axios.min.js",
+  "_assets/js/backoffice.js",
+  "_assets/js/get-started.js",
+];
 
-var getstarted_css = ['_assets/css/lib/remodal.css', '_assets/css/lib/flag-icon.min.css', '_assets/css/lib/classic-10_7.css', '_assets/css/lib/intlTelInput.css', 
-'_assets/css/lib/remodal-default-theme.css', '_assets/sass/get-started.scss'];
+const getstarted_css_files = [
+  "_assets/css/lib/remodal.css",
+  "_assets/css/lib/flag-icon.min.css",
+  "_assets/css/lib/classic-10_7.css",
+  "_assets/css/lib/intlTelInput.css",
+  "_assets/css/lib/remodal-default-theme.css",
+  "_assets/sass/get-started.scss",
+];
 
-gulp.task('site_css', function(){
-  gulp.src(site_css)
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('css/'))
-    .pipe(cleanCSS({compatibility: 'ie7'}))
-    .pipe(gulp.dest('css/'));
+const site_css = (exports.site_css = function site_css() {
+  return src(site_css_files)
+    .pipe(
+      plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit("end");
+        },
+      })
+    )
+    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(concat("main.css"))
+    .pipe(dest("css/"))
+    .pipe(cleanCSS({ compatibility: "ie7" }))
+    .pipe(dest("css/"));
 });
 
-gulp.task('getstarted_css', function(){
-  gulp.src(getstarted_css)
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(concat('get-started.css'))
-    .pipe(gulp.dest('css/'))
-    .pipe(cleanCSS({compatibility: 'ie7', rebase: false}))
-    .pipe(gulp.dest('css/'));
+const getstarted_css = (exports.getstarted_css = function getstarted_css() {
+  return src(getstarted_css_files)
+    .pipe(
+      plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit("end");
+        },
+      })
+    )
+    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(concat("get-started.css"))
+    .pipe(dest("css/"))
+    .pipe(cleanCSS({ compatibility: "ie7", rebase: false }))
+    .pipe(dest("css/"));
 });
 
-gulp.task('site_js', function(){
-  return gulp.src(site_js)
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('js/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify({compress:true}))
-    .pipe(gulp.dest('js/'))
+const site_js = (exports.site_js = function site_js() {
+  return src(site_js_files)
+    .pipe(
+      plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit("end");
+        },
+      })
+    )
+    .pipe(concat("main.js"))
+    .pipe(dest("js/"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(uglify({ compress: true }))
+    .pipe(dest("js/"));
 });
 
-gulp.task('getstarted_js', function(){
-  return gulp.src(getstarted_js)
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(concat('get-started.js'))
-    .pipe(gulp.dest('js/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify({compress:true}))
-    .pipe(gulp.dest('js/'))
+const getstarted_js = (exports.getstarted_js = function getstarted_js() {
+  return src(getstarted_js_files)
+    .pipe(
+      plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit("end");
+        },
+      })
+    )
+    .pipe(concat("get-started.js"))
+    .pipe(dest("js/"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(uglify({ compress: true }))
+    .pipe(dest("js/"));
 });
 
-gulp.task('default', ['site_css', 'getstarted_css', 'site_js', 'getstarted_js']);
+exports.default = series(site_css, getstarted_css, site_js, getstarted_js);
 
-gulp.task('watch', [], function(){
-  gulp.watch(site_css, ['site_css']);
-  gulp.watch('_assets/sass/**/*.scss', ['site_css']);
-  gulp.watch(getstarted_css, ['getstarted_css']);
-  gulp.watch(site_js, ['site_js']);
-  gulp.watch(getstarted_js, ['getstarted_js']);
-});
+exports.watch = function watch() {
+  watch(site_css_files, site_css);
+  watch("_assets/sass/**/*.scss", site_css);
+  watch(getstarted_css_files, getstarted_css);
+  watch(site_js_files, site_js);
+  watch(getstarted_js_files, getstarted_js);
+};
